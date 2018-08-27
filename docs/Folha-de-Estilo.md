@@ -13,7 +13,7 @@ Comentários devem ser em português
 ### 2.1 Declaração de clases
 Classes sempre começam com letra maiúscula e em caso de uma classe com nome composto usa-se camel case. Por exemplo:
 ```cpp
-iserir exemplo
+iserirExemplo
 ```
 ### 2.2 Depois da declação da classe
 Depois da declação da classe e suas dependências deve-se pular uma linha para escrever os métodos. Por exemplo:
