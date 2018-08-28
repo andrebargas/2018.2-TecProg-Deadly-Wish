@@ -87,3 +87,5 @@ Todos os cometários devem ser na lingua inglesa e ser relevante para um maior e
 
 
 ## 5. Referencias<a name="referencias"></a>
+Folha de Estilo - NeonEdge, Disponivel em  https://github.com/tecnicas-de-programacao-2017-2-grupo-3/neon-edge/wiki/Folha-de-Estilo
+Folha de Estilo - SIGS, Disponivel em https://github.com/fga-eps-mds/2017.1-SIGS/wiki/Folha-de-Estilo
