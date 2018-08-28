@@ -1,0 +1,16 @@
+make bin/ije02_game
+make[1]: Entrando no diretório `/home/makrau/Área de Trabalho/unb/ije/game'
+Building obj/character_choose_level.o
+Building obj/character.o
+Building obj/character_factory.o
+Building obj/character_selection.o
+Building obj/fireball.o
+Building obj/ije02_game.o
+Building obj/mage.o
+Building obj/main.o
+Building obj/main_level.o
+Building obj/menu_level.o
+Building obj/skill.o
+Building obj/test_level_factory.o
+Building obj/translator.o
+make[1]: Saindo do diretório `/home/makrau/Área de Trabalho/unb/ije/game'

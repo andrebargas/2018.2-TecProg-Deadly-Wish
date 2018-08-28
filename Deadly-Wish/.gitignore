@@ -1,0 +1,11 @@
+*.swp
+*.o
+*~
+libs
+obj
+*.d
+test/test
+*.so*
+bin*
+!ijengine/ijengine.tar.gz
+Deadly_Wish
