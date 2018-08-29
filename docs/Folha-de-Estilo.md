@@ -92,6 +92,16 @@ void TestLevelFactory::release(Level *level) {
 ### 4.1 Geral
 Todos os cometários devem ser na lingua inglesa e ser relevante para um maior entendimento do código. Comentários com conteúdo que já pode ser inferido devem ser descartados.
 
+### 4.2 Estilo do comentário
+Usar a sintaxe ' / *  * / ' . Seja consistente com a forma como você comenta e com o estilo que você usa onde.
+Exemplo:
+```cpp
+/*Comentário*/
+class foo() {
+
+}
+
+```
 
 ## 5. Referencias<a name="referencias"></a>
 Folha de Estilo - NeonEdge, Disponivel em  https://github.com/tecnicas-de-programacao-2017-2-grupo-3/neon-edge/wiki/Folha-de-Estilo
