@@ -82,7 +82,8 @@ class Soldier : public Character {
 ### 2.5 Espaçamento dos parentêses na definição dos métodos
 Deixar sem espaço depois do nome do método
 
-```void TestLevelFactory::release(Level *level) {
+```cpp
+void TestLevelFactory::release(Level *level) {
     delete level;
 ```
 
