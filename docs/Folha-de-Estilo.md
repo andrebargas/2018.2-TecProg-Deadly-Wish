@@ -98,11 +98,26 @@ Exemplo:
 ```cpp
 /*Comentário*/
 class foo() {
-
 }
-
 ```
 
+### 4.3 Devem ser identados como código
+```cpp
+   /*
+      Objective: it objective of the function.
+     
+      @param none.
+      @return none.
+   */
+
+    void Player::updatePosition() {
+      	  int xAxis 
+      	  int yAxis
+
+      	  if (!on_ground()) {
+		  positionY += gravity.
+    }
+```
 ## 5. Referencias<a name="referencias"></a>
 Folha de Estilo - NeonEdge, Disponivel em  https://github.com/tecnicas-de-programacao-2017-2-grupo-3/neon-edge/wiki/Folha-de-Estilo
 Folha de Estilo - SIGS, Disponivel em https://github.com/fga-eps-mds/2017.1-SIGS/wiki/Folha-de-Estilo
