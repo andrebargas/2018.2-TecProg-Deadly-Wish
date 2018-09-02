@@ -5,7 +5,7 @@
 <p align="center">
   <div >
     <a href="https://andrebargas.github.io/2018.2-TecProg-Deadly-Wish/">
-      <img src="docs/assets/images/frame.png"alt="Github pages">
+      <img src="docs/assets/images/frame.png"alt="Github pages" style="display:block;margin-left:auto;margin-right:auto;">
     </a>
 </div>
 </p>
