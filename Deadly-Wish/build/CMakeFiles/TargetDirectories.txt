@@ -1,3 +1,0 @@
-/home/andre/Desktop/2018.2/tecprog/repos/2018.2-TecProg-Deadly-Wish/Deadly-Wish/build/CMakeFiles/edit_cache.dir
-/home/andre/Desktop/2018.2/tecprog/repos/2018.2-TecProg-Deadly-Wish/Deadly-Wish/build/CMakeFiles/rebuild_cache.dir
-/home/andre/Desktop/2018.2/tecprog/repos/2018.2-TecProg-Deadly-Wish/Deadly-Wish/build/CMakeFiles/Deadly_Wish.dir
