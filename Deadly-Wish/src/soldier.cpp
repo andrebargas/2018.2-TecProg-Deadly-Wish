@@ -8,7 +8,8 @@
 #define RECHARGE_HEAVY_ATTACK 2000
 #define RECHARGE_LIGHT_ATTACK 300
 #define RECHARGE_DEFENSE 300
-#define MOVIMENT 15
+#define LIGHT_MOVIMENT 15 
+#define HEAVY_MOVIMENT 20 
 
 Soldier::Soldier(vector<string> sprite_paths, unsigned id,
     double x, double y, int character_code)
@@ -36,11 +37,11 @@ void Soldier::DoHeavyAttack() {
 
     if(m_moving_state == MOVING_RIGHT) {
         spear_dx = 1.0;
-        spear_x_pos = x() + 20;
+        spear_x_pos = x() + HEAVY_MOVIMENT;
     }
     else{
         spear_dx = -1.0;
-        spear_x_pos = x() - 20;
+        spear_x_pos = x() - HEAVY_MOVIMENT;
     }
 
     p->add_child(new Spear(p, id(), spear_x_pos, y(), spear_dx, 0.0));
@@ -56,10 +57,10 @@ void Soldier::DoLightAttack() {
     double light_attack_x_pos = 0.0;
     
     if(m_moving_state == MOVING_RIGHT) {
-        light_attack_x_pos = x() + MOVIMENT;
+        light_attack_x_pos = x() + LIGHT_MOVIMENT;
     }
     else{
-        light_attack_x_pos = x() - MOVIMENT;
+        light_attack_x_pos = x() - LIGHT_MOVIMENT;
     }
 
     p->add_child(new DoLightAttack(p, id(), light_attack_x_pos, y()));
