@@ -59,7 +59,7 @@ public:
 
 
     virtual bool is_active() const;
-    const Rectangle& bounding_box() const;
+    const Rectangle& get_bounding_box() const;
     const list<Rectangle>& hit_boxes() const;
 
     void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);

@@ -28,7 +28,7 @@ DeathMatchLevel::DeathMatchLevel(const string& next_level, vector < int > player
     m_map[0][0] = 0;
     m_map[0][MAX_H - 1] = 0;
     m_map[MAX_W - 1][0] = 0;
-    m_map[MAX_W - 1][MAX_H - 1] = 0;    
+    m_map[MAX_W - 1][MAX_H - 1] = 0;
 
     m_players_characters = players_characters;
     double x =0.0;
@@ -41,7 +41,7 @@ DeathMatchLevel::DeathMatchLevel(const string& next_level, vector < int > player
         Base *current_base = new Base(player_id);
         current_character->set_base(current_base);
         m_characters.push_back(current_character);
-        current_base->set_base_status(8 - current_character->number_of_lives());
+        current_base->set_base_status(8 - current_character->get_number_of_lives());
         add_child(current_character);
         add_child(current_base);
         player_id++;
@@ -73,11 +73,11 @@ void
 DeathMatchLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     canvas->clear();
-    
+
     canvas->draw(m_texture.get(), 0, 0);
 }
 
-void 
+void
 DeathMatchLevel::verify_characters()
 {
     int count = 0;
