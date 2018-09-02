@@ -30,9 +30,9 @@ namespace ijengine {
         typedef enum {NONE, SHIFT, CONTROL, ALT, CAPS} Modifier;
 
         KeyboardEvent(unsigned t, State s, Key k, Modifier m, bool r = false) :
-            Event(t), m_state(s), m_key(k), m_modifier(m), m_repeated(r) {}
+            Event(t), state(s), m_key(k), m_modifier(m), m_repeated(r) {}
 
-        State state() const { return m_state; }
+        State state() const { return state; }
         Key key() const { return m_key; }
         Modifier modifier() const { return m_modifier; }
         bool repeated() const { return m_repeated; }
@@ -40,14 +40,14 @@ namespace ijengine {
         string serialize() const 
         {
             ostringstream os;
-            os << KEYBOARD_EVENT_ID << "," << (int) m_state << ","
+            os << KEYBOARD_EVENT_ID << "," << (int) state << ","
                 << (int) m_key << "," << (int) m_modifier;
 
             return os.str();
         }
 
     private:
-        State m_state;
+        State state;
         Key m_key;
         Modifier m_modifier;
         bool m_repeated;

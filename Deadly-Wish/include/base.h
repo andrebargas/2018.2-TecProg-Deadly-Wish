@@ -45,14 +45,14 @@ protected:
 protected:
     unsigned m_player_id;
     int m_life;
-    int m_frame;
+    int frame;
     int m_start;
     int m_w;
     int m_h;
     int m_base_status;
     vector <string> m_sprite_paths;
     shared_ptr<Texture> m_texture;
-    Rectangle m_bounding_box;
+    Rectangle bounding_box;
     double m_x_speed;
     double m_y_speed;
 

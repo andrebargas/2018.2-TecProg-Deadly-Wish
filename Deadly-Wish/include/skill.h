@@ -24,9 +24,9 @@ public:
     int damage() const { return m_damage; }
     int collided() const {return m_collided;}
 protected:
-    unsigned m_character_id;
-    int m_damage;
-    double m_speed;
+    unsigned character_id;
+    int damage;
+    double speed;
     int m_collided;
 
 };

@@ -262,7 +262,7 @@ Character::on_collision(const Collidable *who, const Rectangle& where, unsigned 
 }
 
 void
-Character::change_character_state(State next_state, bool respawning ) 
+Character::ChangeCharacterState(State next_state, bool respawning ) 
 {
     if(respawning) {
         printf("respawnando");
