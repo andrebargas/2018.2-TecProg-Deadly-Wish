@@ -6,21 +6,22 @@
 #include <ijengine/game_object.h>
 
 #define LIGHT_ATTACK_BASE_DAMAGE 10
+#define SPEED_ATTACK 100
 
 
 using namespace std;
 using namespace ijengine;
 
 
-LightAttack::LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp)
-    : Skill(parent, xp, yp, LIGHT_ATTACK_BASE_DAMAGE, mage_id), m_character_id(mage_id), m_speed(100.0) 
+LightAttack::LightAttack(GameObject *parent, unsigned hero_id, double x_position, double y_position)
+    : Skill(parent, x_position, y_position, LIGHT_ATTACK_BASE_DAMAGE, hero_id), character_id(hero_id), speed_attack(SPEED_ATTACK) 
 {
-    m_frame = 0;
-    m_start = 0;
-    m_x = xp;
-    m_y = yp;
-    m_bounding_box = Rectangle(m_x, m_y, 10.00, 10.00);
-    m_damage = LIGHT_ATTACK_BASE_DAMAGE;
+    frame = 0;
+    start = 0;
+    position_axis_x = x_position;
+    position_axis_y = y_position;
+    bounding_box = Rectangle(position_axis_x, position_axis_y, 10.00, 10.00);
+    damage_attack = LIGHT_ATTACK_BASE_DAMAGE;
 }
 
 LightAttack::~LightAttack()
@@ -35,45 +36,45 @@ LightAttack::draw_self(Canvas *canvas, unsigned, unsigned)
 }
 
 void
-LightAttack::update_self(unsigned now, unsigned last)
+LightAttack::update_self(unsigned now_moment, unsigned last_moment)
 {
-    update_time(now);
+    update_time(now_moment);
 }
 
 bool
-LightAttack::active() const
+LightAttack::is_active() const
 {
     return true;
 }
 
 const Rectangle& 
-LightAttack::bounding_box() const
+LightAttack::get_bounding_box() const
 {
-    return m_bounding_box;
+    return bounding_box;
 }
 
 const list<Rectangle>&
-LightAttack::hit_boxes() const {
-    static list<Rectangle> boxes {m_bounding_box};
+LightAttack::get_hit_boxes() const {
+    static list<Rectangle> boxes {bounding_box};
     return boxes;
 }
 
 pair<double, double>
-LightAttack::direction() const
+LightAttack::get_direction() const
 {
-    return pair<double, double>(m_dx, m_dy);
+    return pair<double, double>(x_direction, y_direction);
 }
 
 void
-LightAttack::update_time(unsigned now)
+LightAttack::update_time(unsigned now_moment)
 {
     // if it's the first update self
-    if(m_start == 0) {
-        m_start = now;
-        m_current_time = now;
+    if(start == 0) {
+        start = now_moment;
+        current_time = now_moment;
     }
 
-    if((now - m_start) > 100) {
+    if((now_moment - start) > 100) {
         invalidate();
     }
 }
