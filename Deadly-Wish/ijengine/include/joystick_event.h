@@ -23,16 +23,16 @@ namespace ijengine {
         typedef enum {LEFTX, LEFTY, RIGHTX, RIGHTY, TRIGGERLEFT, TRIGGERRIGHT, AXIS_MAX, AXIS_INVALID} Axis;
 
         JoystickEvent(unsigned t, State s, Button b, Axis a, int _which, int _value) :
-            Event(t), m_state(s), m_button(b), m_axis(a), m_which(_which), m_value(_value) {}
+            Event(t), state(s), m_button(b), m_axis(a), m_which(_which), m_value(_value) {}
 
-        State state() const { return m_state; }
+        State state() const { return state; }
         Button button() const { return m_button; }
         Axis axis() const { return m_axis; }
         int which() const { return m_which; }
         int value() const { return m_value; }
 
     private:
-        State m_state;
+        State state;
         Button m_button;
         Axis m_axis;
         int m_which;

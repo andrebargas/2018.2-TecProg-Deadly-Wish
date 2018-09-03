@@ -67,22 +67,23 @@ public:
 
     unsigned get_id() const { return id; }
     int get_number_of_lives() const { return number_of_lives; }
+
     void set_base(Base *base);
 
 protected:
-    void update_self(unsigned now, unsigned last);
-    void draw_self(Canvas *canvas, unsigned now, unsigned last);
-    void change_character_state(State next_state, bool respawning = false);
+    void UpdateSelf(unsigned now, unsigned last);
+    void DrawSelf(Canvas *canvas, unsigned now, unsigned last);
+    void ChangeCharacterState(State next_state, bool respawning = false);
     void handle_state();
     void set_spawn_position();
     void respawn_character();
     void kill_character();
-    string choose_sprite_path(unsigned player_id);
+    string ChooseSpritePath(unsigned player_id);
     bool on_event(const GameEvent& event);
-    virtual void heavy_attack() = 0;
-    virtual void light_attack() = 0;
-    virtual void defense() = 0;
-    virtual void special() = 0;
+    virtual void HeavyAttack() = 0;
+    virtual void LightAttack() = 0;
+    virtual void Defense() = 0;
+    virtual void Special() = 0;
 
     typedef enum {MOVING_RIGHT, MOVING_LEFT} MovingState;
 
@@ -122,8 +123,7 @@ protected:
     unordered_map<string, pair<double, double> > speed_vector;
     Rectangle bounding_box;
     vector<string> sprite_paths;
-
-    inline void update_position(const unsigned &now, const unsigned &last, bool backwards = false);
+    inline void UpdatePosition(const unsigned &now, const unsigned &last, bool backwards = false);
 };
 
 #endif

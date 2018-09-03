@@ -45,7 +45,7 @@ private:
     bool m_done;
     string m_next;
     int m_start;
-    int m_frame;
+    int frame;
     vector<int> m_selected_characters;
     int m_current_player;
     int m_number_of_players;

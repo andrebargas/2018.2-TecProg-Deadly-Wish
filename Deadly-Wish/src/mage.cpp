@@ -28,7 +28,7 @@ Mage::Mage(vector<string> sprite_paths, unsigned id, double x, double y, int cha
 }
 
 void
-Mage::heavy_attack()
+Mage::DoHeavyAttack()
 {
     audio::play_sound_effect("res/sound/fx/mago_heavy.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
@@ -48,11 +48,11 @@ Mage::heavy_attack()
 
     p->add_child(new Fireball(p, get_id(), fireball_x_pos, y(), fireball_dx, 0.0));
 
-    change_character_state(HEAVY_ATTACK_STATE);
+    ChangeCharacterState(HEAVY_ATTACK_STATE);
 }
 
 void
-Mage::light_attack() {
+Mage::DoLightAttack() {
     audio::play_sound_effect("res/sound/fx/mago_light.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
     printf("p = %p\n", (void *) p);
@@ -66,19 +66,21 @@ Mage::light_attack() {
         light_attack_x_pos = x() - 15;
     }
 
+
     p->add_child(new LightAttack(p, get_id(), light_attack_x_pos, y()));
 
-    change_character_state(LIGHT_ATTACK_STATE);
+
+    ChangeCharacterState(LIGHT_ATTACK_STATE);
 }
 
 void
-Mage::defense() {
+Mage::DoDefense() {
     audio::play_sound_effect("res/sound/fx/mago_block.ogg", EFFECTS_VOLUME, 0);
-    change_character_state(DEFENSE_STATE);
+    ChangeCharacterState(DEFENSE_STATE);
 }
 
 void
-Mage::special() {
+Mage::DoSpecial() {
     audio::play_sound_effect("res/sound/fx/mago_ultimate.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
     printf("p = %p\n", (void *) p);

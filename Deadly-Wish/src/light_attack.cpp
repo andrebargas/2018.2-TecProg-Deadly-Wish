@@ -6,74 +6,72 @@
 #include <ijengine/game_object.h>
 
 #define LIGHT_ATTACK_BASE_DAMAGE 10
-
+#define SPEED
 
 using namespace std;
 using namespace ijengine;
 
 
 LightAttack::LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp)
-    : Skill(parent, xp, yp, LIGHT_ATTACK_BASE_DAMAGE, mage_id), m_character_id(mage_id), m_speed(100.0) 
+    : Skill(parent, xp, yp, LIGHT_ATTACK_BASE_DAMAGE, mage_id), character_id(mage_id), speed(SPEED) 
 {
-    m_frame = 0;
-    m_start = 0;
+    frame = 0;
+    start = 0;
     m_x = xp;
     m_y = yp;
-    m_bounding_box = Rectangle(m_x, m_y, 10.00, 10.00);
-    m_damage = LIGHT_ATTACK_BASE_DAMAGE;
+    bounding_box = Rectangle(m_x, m_y, 10.00, 10.00);
+    damage = LIGHT_ATTACK_BASE_DAMAGE;
 }
 
-LightAttack::~LightAttack()
-{
-
+LightAttack::~LightAttack() {
 }
 
 void
-LightAttack::draw_self(Canvas *canvas, unsigned, unsigned)
+LightAttack::DrawSelf(Canvas *canvas, unsigned, unsigned)
 {
    
 }
 
 void
-LightAttack::update_self(unsigned now, unsigned last)
+LightAttack::UpdateSelf(unsigned now, unsigned last)
 {
-    update_time(now);
+    UpdateTime(now);
 }
 
 bool
-LightAttack::active() const
+LightAttack::Active() const
 {
     return true;
 }
 
 const Rectangle& 
-LightAttack::bounding_box() const
+LightAttack::BoundingBox() const
 {
-    return m_bounding_box;
+    return bounding_box;
 }
 
 const list<Rectangle>&
-LightAttack::hit_boxes() const {
-    static list<Rectangle> boxes {m_bounding_box};
+LightAttack::HitBoxes() const {
+    static list<Rectangle> boxes {bounding_box};
     return boxes;
 }
 
 pair<double, double>
-LightAttack::direction() const
+LightAttack::Direction() const
 {
     return pair<double, double>(m_dx, m_dy);
 }
 
 void
-LightAttack::update_time(unsigned now)
+LightAttack::UpdateTime(unsigned now)
 {
     // if it's the first update self
-    if(m_start == 0) {
-        m_start = now;
-        m_current_time = now;
+    if(start == 0) {
+        start = now;
+        current_time = now;
     }
 
-    if((now - m_start) > 100) {
+    if((now - start) > 100) {
         invalidate();
     }
 }
