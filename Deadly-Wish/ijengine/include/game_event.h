@@ -21,7 +21,7 @@ namespace ijengine
     public:
         GameEvent(unsigned i = 0, unsigned ts = 0) : Event(ts), m_id(i) {}
 
-        unsigned id() const { return m_id; }
+        unsigned get_id() const { return m_id; }
 
         template<typename T>
         void set_property(const string& property, const T& value)

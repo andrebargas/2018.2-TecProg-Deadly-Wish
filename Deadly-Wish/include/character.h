@@ -57,31 +57,31 @@ public:
     };
 
 
-    virtual bool active() const;
-    const Rectangle& bounding_box() const;
-    const list<Rectangle>& hit_boxes() const;
+    virtual bool Active() const;
+    const Rectangle& BoundingBox() const;
+    const list<Rectangle>& HitBoxes() const;
 
     void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);
-    pair<double, double> direction() const;
+    pair<double, double> Direction() const;
 
-    unsigned id() const { return m_id; }
-    int number_of_lives() const { return m_number_of_lives; }
+    unsigned get_id() const { return id; }
+    int number_of_lives() const { return number_of_lives; }
     void set_base(Base *base);
 
 protected:
-    void update_self(unsigned now, unsigned last);
-    void draw_self(Canvas *canvas, unsigned now, unsigned last);
-    void change_character_state(State next_state, bool respawning = false);
+    void UpdateSelf(unsigned now, unsigned last);
+    void DrawSelf(Canvas *canvas, unsigned now, unsigned last);
+    void ChangeCharacterState(State next_state, bool respawning = false);
     void handle_state();
     void set_spawn_position();
     void respawn_character();
     void kill_character();
-    string choose_sprite_path(unsigned player_id);
+    string ChooseSpritePath(unsigned player_id);
     bool on_event(const GameEvent& event);
-    virtual void heavy_attack() = 0;
-    virtual void light_attack() = 0;
-    virtual void defense() = 0;
-    virtual void special() = 0;
+    virtual void HeavyAttack() = 0;
+    virtual void LightAttack() = 0;
+    virtual void Defense() = 0;
+    virtual void Special() = 0;
 
     typedef enum {MOVING_RIGHT, MOVING_LEFT} MovingState;
     
@@ -91,38 +91,38 @@ protected:
     MovingState m_moving_state;
     CharacterState* m_state;
     CharacterStateFactory m_character_state_factory;
-    bool m_active;
-    unsigned m_id;
-    int m_max_life;
-    int m_current_life;
-    int m_number_of_lives;
-    int m_frame;
-    int m_start;
+    bool active;
+    unsigned id;
+    int max_life;
+    int current_life;
+    int number_of_lives;
+    int frame;
+    int start;
     int m_w;
     int m_h;
-    int m_heavy_attack_cooldown;
-    int m_light_attack_cooldown;
-    int m_defense_cooldown;
-    int m_special_cooldown;
-    int m_last_used_heavy_attack;
-    int m_last_used_light_attack;
-    int m_last_used_defense;
-    int m_last_used_special;
-    int m_respawn_time;
-    int m_character_code;
-    int m_last_sound_played;
-    bool m_freeze;
-    bool m_dead;
+    int heavy_attack_cooldown;
+    int light_attack_cooldown;
+    int defense_cooldown;
+    int special_cooldown;
+    int last_used_heavy_attack;
+    int last_used_light_attack;
+    int last_used_defense;
+    int last_used_special;
+    int respawn_time;
+    int character_code;
+    int last_sound_played;
+    bool freeze;
+    bool dead;
     double m_x_speed;
     double m_y_speed;
-    double m_speed;
+    double speed;
     Base* m_base;
     vector< shared_ptr<Texture> > m_textures;
     unordered_map<string, pair<double, double> > m_speed_vector;
-    Rectangle m_bounding_box;
+    Rectangle bounding_box;
     vector<string> m_sprite_paths;
 
-    inline void update_position(const unsigned &now, const unsigned &last, bool backwards = false);
+    inline void UpdatePosition(const unsigned &now, const unsigned &last, bool backwards = false);
 };
 
 #endif

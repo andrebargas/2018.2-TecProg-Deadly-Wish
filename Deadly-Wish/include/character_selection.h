@@ -38,7 +38,7 @@ protected:
 
 private:
     int m_player_id;
-    int m_frame;
+    int frame;
     int m_start;
     int m_current_selection;
     int m_w;
