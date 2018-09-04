@@ -19,7 +19,7 @@ public:
     ~CharacterStateFactory();
 
 
-    CharacterState* change_character_state(int next_state);
+    CharacterState* ChangeCharacterState(int next_state);
 
 protected:
     

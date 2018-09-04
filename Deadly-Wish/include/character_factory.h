@@ -7,20 +7,18 @@
 #include "soldier.h"
 #include "knight.h"
 #include "util.h"
-
 #include <vector>
 #include <string>
 
 
 using std::vector;
 using std::string;
-
 using namespace util;
 
-class CharacterFactory {
-public:
-    CharacterFactory();
-    ~CharacterFactory();
+    class CharacterFactory {
+        public:
+            CharacterFactory();
+            ~CharacterFactory();
 
     enum {
         KNIGHT,
@@ -29,14 +27,21 @@ public:
         INFILTRATOR
     };
 
-    Character* make_character(int character_code, unsigned player_id, double x_pos, double y_pos);
+    Character* MakeCharacter(int character_code, unsigned player_id,
+     double axis_x_position, double axis_y_position);
 
 protected:
-    typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
+    typedef 
+        enum {
+            PLAYER_1,
+            PLAYER_2,
+            PLAYER_3,
+            PLAYER_4
+        } Players;
 
-    vector<string> choose_sprite_path(int character_code, unsigned player_id);
+    vector<string> ChooseSpritePath(int character_code, unsigned player_id);
 
 protected:
-    vector<string> m_sprites_paths;
+    vector<string> moviment_sprites_paths;
 };
 #endif
