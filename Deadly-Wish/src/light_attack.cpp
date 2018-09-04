@@ -6,21 +6,21 @@
 #include <ijengine/game_object.h>
 
 #define LIGHT_ATTACK_BASE_DAMAGE 10
-#define SPEED
+#define SPEED_ATTACK 100
 
 using namespace std;
 using namespace ijengine;
 
 
-LightAttack::LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp)
-    : Skill(parent, xp, yp, LIGHT_ATTACK_BASE_DAMAGE, mage_id), character_id(mage_id), speed(SPEED) 
+LightAttack::LightAttack(GameObject *parent, unsigned hero_id, double x_position, double y_position)
+    : Skill(parent, x_position, y_position, LIGHT_ATTACK_BASE_DAMAGE, hero_id), character_id(hero_id), speed_attack(SPEED_ATTACK) 
 {
     frame = 0;
     start = 0;
-    m_x = xp;
-    m_y = yp;
-    bounding_box = Rectangle(m_x, m_y, 10.00, 10.00);
-    damage = LIGHT_ATTACK_BASE_DAMAGE;
+    position_axis_x = x_position;
+    position_axis_y = y_position;
+    bounding_box = Rectangle(position_axis_x, position_axis_y, 10.00, 10.00);
+    damage_attack = LIGHT_ATTACK_BASE_DAMAGE;
 }
 
 LightAttack::~LightAttack() {
@@ -33,45 +33,45 @@ LightAttack::DrawSelf(Canvas *canvas, unsigned, unsigned)
 }
 
 void
-LightAttack::UpdateSelf(unsigned now, unsigned last)
+LightAttack::update_self(unsigned now_moment, unsigned last_moment)
 {
-    UpdateTime(now);
+    update_time(now_moment);
 }
 
 bool
-LightAttack::Active() const
+LightAttack::is_active() const
 {
     return true;
 }
 
-const Rectangle& 
-LightAttack::BoundingBox() const
+Rectangle&
+LightAttack::get_bounding_box() const
 {
     return bounding_box;
 }
 
 const list<Rectangle>&
-LightAttack::HitBoxes() const {
+LightAttack::get_hit_boxes() const {
     static list<Rectangle> boxes {bounding_box};
     return boxes;
 }
 
 pair<double, double>
-LightAttack::Direction() const
+LightAttack::get_direction() const
 {
-    return pair<double, double>(m_dx, m_dy);
+    return pair<double, double>(x_direction, y_direction);
 }
 
 void
-LightAttack::UpdateTime(unsigned now)
+LightAttack::update_time(unsigned now_moment)
 {
     // if it's the first update self
     if(start == 0) {
-        start = now;
-        current_time = now;
+        start = now_moment;
+        current_time = now_moment;
     }
 
-    if((now - start) > 100) {
+    if((now_moment - start) > 100) {
         invalidate();
     }
 }

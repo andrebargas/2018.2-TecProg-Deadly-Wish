@@ -12,8 +12,8 @@ using namespace std;
 using namespace ijengine;
 using namespace util;
 
-CreditsLevel::CreditsLevel(const string& next_level)
-    : m_done(false), m_next(next_level), m_start(-1)
+CreditsLevel::CreditsLevel(const string& next)
+    : exit(false), next_level(next_level), start(-1)
 {
     printf("Construtor dos créditos!\n");
     audio::stop_audio_channel(0);
@@ -28,10 +28,10 @@ CreditsLevel::~CreditsLevel()
 }
 
 void
-CreditsLevel::update_self(unsigned now, unsigned)
+CreditsLevel::update_self(unsigned now_moment, unsigned)
 {
-    if (m_start == -1)
-        m_start = now;
+    if (start == -1)
+        start = now_moment;
 }
 
 void
@@ -41,11 +41,11 @@ CreditsLevel::draw_self(Canvas *canvas, unsigned, unsigned)
     canvas->set_font(font);
     canvas->clear();
     canvas->draw("Créditos: ", 0, 0);
-    int y_pos = 25;
+    int y_position = 25;
 
-    for(string credit : m_credits_strings) {
-        canvas->draw(credit, 10, y_pos);
-        y_pos += 25;
+    for(string credit : credits_text) {
+        canvas->draw(credit, 10, y_position);
+        y_position += 25;
     }
 
     canvas->draw("Aperte 'X' para voltar ao menu", 10, 200);
@@ -53,35 +53,35 @@ CreditsLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 }
 
 void
-CreditsLevel::set_credits_strings()
+CreditsLevel::set_credits_text()
 {
-    m_credits_strings.push_back("Arte: Vitor Dias & Fred");
-    m_credits_strings.push_back("Programação: Iago Rodrigues & Lucas Mattioli");
-    m_credits_strings.push_back("Música: Thiago Hardman & Gabriela Marla");
-    m_credits_strings.push_back("");
-    m_credits_strings.push_back("Agradecimentos especiais aos professores e monitores");
-    m_credits_strings.push_back("que nos auxiliaram durante a construção do jogo! ");
+    credits_text.push_back("Arte: Vitor Dias & Fred");
+    credits_text.push_back("Programação: Iago Rodrigues & Lucas Mattioli");
+    credits_text.push_back("Música: Thiago Hardman & Gabriela Marla");
+    credits_text.push_back("");
+    credits_text.push_back("Agradecimentos especiais aos professores e monitores");
+    credits_text.push_back("que nos auxiliaram durante a construção do jogo! ");
 }
 
 bool
 CreditsLevel::on_event(const GameEvent& event) 
 {
      if(event.id() == game_event::LIGHT_ATTACK_P1) {
-        m_done = true;
+        exit = true;
         return true;
      }
 }
 
 bool
-CreditsLevel::done() const
+CreditsLevel::exit_level() const
 {
-    return m_done;
+    return exit;
 }
 
 string
-CreditsLevel::next() const
+CreditsLevel::go_to_next_level() const
 {
-    return m_next;
+    return next_level;
 }
 string
 CreditsLevel::audio() const {

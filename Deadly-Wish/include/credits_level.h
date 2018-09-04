@@ -18,32 +18,32 @@ using std::shared_ptr;
 
 using namespace ijengine;
 
-#define MAX_W 16
-#define MAX_H 12
+#define MAX_WIDTH 16
+#define MAX_HEIGHT 12
 
 class CreditsLevel : public Level, public GameEventsListener  {
 public:
     CreditsLevel(const string& next = "");
     ~CreditsLevel();
 
-    bool done() const;
-    string next() const;
+    bool exit_level() const;
+    string go_to_next_level() const;
     string audio() const;
 
 protected:
-    void update_self(unsigned now, unsigned last);
-    void draw_self(Canvas *canvas, unsigned now, unsigned last);
-    void set_credits_strings();
+    void update_self(unsigned now_moment, unsigned last_moment);
+    void draw_self(Canvas *canvas, unsigned now_moment, unsigned last_moment);
+    void set_credits_text();
     bool on_event(const GameEvent& event);
 
 private:
-    bool m_done;
-    string m_next;
-    vector <string> m_credits_strings;
-    int m_start;
-    int m_winner_player;
+    bool exit;
+    string next_level;
+    vector <string> credits_text;
+    int start;
+    int winner_player;
 
-    shared_ptr<Texture> m_texture;
+    shared_ptr<Texture> texture;
 };
 
 #endif
