@@ -22,7 +22,7 @@ void
 Knight::do_heavy_attack()
 {
     audio::play_sound_effect("res/sound/fx/pesadao_heavy.ogg", EFFECTS_VOLUME, 0);
-    ChangeCharacterState(HEAVY_ATTACK_STATE);
+    change_character_state(HEAVY_ATTACK_STATE);
 }
 
 void
@@ -41,13 +41,14 @@ Knight::do_light_attack() {
     }
 
     p->add_child(new LightAttack(p, player_id(), light_attack_x_position, y_position()));
-    ChangeCharacterState(LIGHT_ATTACK_STATE);
+
+    change_character_state(LIGHT_ATTACK_STATE);
 }
 
 void
 Knight::do_defense() {
     audio::play_sound_effect("res/sound/fx/pesadao_block.ogg", EFFECTS_VOLUME, 0);
-    ChangeCharacterState(DEFENSE_STATE);
+    change_character_state(DEFENSE_STATE);
 }
 
 void

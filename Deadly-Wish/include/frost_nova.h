@@ -56,7 +56,6 @@ protected:
     shared_ptr<Texture> texture;
     Rectangle bounding_box;
 
-
 //    bool on_event(const GameEvent& event);
 };
 

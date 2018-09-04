@@ -44,7 +44,7 @@ LightAttack::is_active() const
     return true;
 }
 
-const Rectangle&
+Rectangle&
 LightAttack::get_bounding_box() const
 {
     return bounding_box;
