@@ -13,3 +13,4 @@ build/
 CMakeCache.txt
 .metadata/
 ijengine/
+.vscode/

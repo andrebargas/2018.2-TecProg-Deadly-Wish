@@ -26,9 +26,9 @@ public:
         INFILTRATOR
     };
 
-    int current_selection() const { return m_current_selection; }
+    int get_current_selection() const { return current_selection; }
     int player_id() const { return m_player_id;}
-    bool chosen() const {return m_chosen;}
+    bool chosen() const {return chosen;}
 
 protected:
     void update_self(unsigned now, unsigned last);
@@ -39,13 +39,13 @@ protected:
 private:
     int m_player_id;
     int frame;
-    int m_start;
-    int m_current_selection;
-    int m_w;
-    int m_h;
-    int m_base_x;
-    int m_base_y;
-    bool m_chosen;
+    int start;
+    int current_selection;
+    int width;
+    int height;
+    int axis_base_x;
+    int axis_base_y;
+    bool chosen;
     shared_ptr<Texture> m_texture;
 };
 
