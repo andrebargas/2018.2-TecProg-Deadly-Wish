@@ -72,14 +72,14 @@ Character::update_self(unsigned now, unsigned last)
         respawn_character();
     }
 
-    if (not m_dead and now - m_start > m_state->refresh_rate())
+    if (not m_dead and now - m_start > m_state->get_refresh_rate())
     {
-        m_start += m_state->refresh_rate();
-        m_frame = (m_frame + 1) % (m_textures[m_state->current_state()]->w() / 32);
+        m_start += m_state->get_refresh_rate();
+        m_frame = (m_frame + 1) % (m_textures[m_state->get_current_state()]->w() / 32);
     }
 
     if(m_y_speed == 0.0 && m_x_speed == 0.0) {
-        if(m_character_code == INFILTRATOR && m_state->current_state() == HEAVY_ATTACK_STATE) {
+        if(m_character_code == INFILTRATOR && m_state->get_current_state() == HEAVY_ATTACK_STATE) {
             update_position(now, last);
         }
         return;
@@ -115,7 +115,7 @@ inline void
 Character::update_position(const unsigned &now, const unsigned &last, bool backwards) {
     int multiplier = (backwards) ? -1 : 1;
     double summer = 1.0;
-    bool ok = m_character_code == INFILTRATOR && m_state->current_state() == HEAVY_ATTACK_STATE;
+    bool ok = m_character_code == INFILTRATOR && m_state->get_current_state() == HEAVY_ATTACK_STATE;
     if(ok) {
         summer *= 1.75;
     }
@@ -138,7 +138,7 @@ Character::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     if(not m_dead) {
         Rectangle rect {(double) m_w * m_frame, (double) m_h * m_moving_state, (double) m_w, (double) m_h};
-        canvas->draw(m_textures[m_state->current_state()].get(), rect, x(), y());
+        canvas->draw(m_textures[m_state->get_current_state()].get(), rect, x(), y());
     }
 }
 
@@ -255,7 +255,7 @@ Character::on_collision(const Collidable *who, const Rectangle& where, unsigned 
     if(c or b) {
         update_position(now, last, true);
     }
-    else if(m_state->current_state() != DEFENSE_STATE and s->get_character_id() != m_id and
+    else if(m_state->get_current_state() != DEFENSE_STATE and s->get_character_id() != m_id and
             s->valid() and (((1 << m_id) & s->get_collided()) == 0)) {
         m_current_life -= s->get_damage();
         printf("Sofreu dano! Vida atual: %d\n", m_current_life);
@@ -270,10 +270,10 @@ Character::change_character_state(State next_state, bool respawning )
         m_state = m_character_state_factory.change_character_state(next_state);
         return;
     }
-    if((m_state != nullptr and m_state->current_state() == DEATH_STATE) and not respawning) {
+    if((m_state != nullptr and m_state->get_current_state() == DEATH_STATE) and not respawning) {
         return;
     }
-    if(m_state != nullptr and next_state == m_state->current_state()) {
+    if(m_state != nullptr and next_state == m_state->get_current_state()) {
         return;
     }
     if(not m_freeze) {
@@ -288,7 +288,7 @@ void Character::handle_state()
         change_character_state(DEATH_STATE);
     }
 
-    if(m_state->current_state() == HEAVY_ATTACK_STATE) {
+    if(m_state->get_current_state() == HEAVY_ATTACK_STATE) {
         m_freeze = true;
     }
     else {
@@ -296,25 +296,25 @@ void Character::handle_state()
         m_active = true;
     }
 
-    if(m_state->current_state() == DEATH_STATE and
-        (m_frame + 1) % (m_textures[m_state->current_state()]->w() / 32) == 0) {
+    if(m_state->get_current_state() == DEATH_STATE and
+        (m_frame + 1) % (m_textures[m_state->get_current_state()]->w() / 32) == 0) {
         kill_character();
         return;
     }
 
-    if(m_state->current_state() != DEATH_STATE && m_state->current_state() != MOVING_STATE and
-        (m_frame + 1) % (m_textures[m_state->current_state()]->w() / 32) == 0) {
+    if(m_state->get_current_state() != DEATH_STATE && m_state->get_current_state() != MOVING_STATE and
+        (m_frame + 1) % (m_textures[m_state->get_current_state()]->w() / 32) == 0) {
         m_freeze = false;
         change_character_state(IDLE_STATE);
     }
 
     if(m_x_speed == 0.0 && m_y_speed == 0.0) {
-        if(m_state->current_state() == MOVING_STATE ||
-          (m_state->current_state() == IDLE_STATE && ((m_frame + 1) % (m_textures[IDLE_STATE]->w() / 32)) == 0)) {
+        if(m_state->get_current_state() == MOVING_STATE ||
+          (m_state->get_current_state() == IDLE_STATE && ((m_frame + 1) % (m_textures[IDLE_STATE]->w() / 32)) == 0)) {
             change_character_state(IDLE_STATE);
         }
     }
-    else if(m_state->current_state() == IDLE_STATE) {
+    else if(m_state->get_current_state() == IDLE_STATE) {
         change_character_state(MOVING_STATE);
     }
 }

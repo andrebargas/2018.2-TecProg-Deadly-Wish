@@ -35,8 +35,6 @@ protected:
     typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
 
     vector<string> choose_sprite_path(int character_code, unsigned player_id);
-
-protected:
-    vector<string> m_sprites_paths;
+    vector<string> character_sprites_paths;
 };
 #endif

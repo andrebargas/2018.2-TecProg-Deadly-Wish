@@ -1,8 +1,8 @@
 #include "light_attack_state.h"
 
-LightAttackState::LightAttackState() 
+LightAttackState::LightAttackState()
     :CharacterState()
 {
-    m_current_state = LIGHT_ATTACK_STATE;
-    m_refresh_rate = 100;
+    current_state = LIGHT_ATTACK_STATE;
+    state_refresh_rate = 100;
 }

@@ -18,12 +18,12 @@ public:
     ~CharacterState();
 
 
-    State current_state() const { return m_current_state; }
-    unsigned refresh_rate() const { return m_refresh_rate; }
+    State get_current_state() const { return current_state; }
+    unsigned get_refresh_rate() const { return state_refresh_rate; }
 
 protected:
-    State m_current_state;
-    unsigned m_refresh_rate;
+    State current_state;
+    unsigned state_refresh_rate;
 
 };
 
