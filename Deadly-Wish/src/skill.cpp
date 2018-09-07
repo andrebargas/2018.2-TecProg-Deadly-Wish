@@ -6,12 +6,12 @@
 #include <ijengine/rectangle.h>
 
 
-Skill::Skill(GameObject *parent, double xp, double yp, int damage, int character_id)
-    : GameObject(parent, xp, yp), m_character_id(character_id)
+Skill::Skill(GameObject *parent, double x_posiotion, double yp, int damage, int character_id)
+    : GameObject(parent, x_posiotion, y_posiotion), skill_character_id(character_id)
 {
-    m_collided = 0;
+    skill_collided = 0;
     printf("registrando skill nas fisica\n");
-    m_damage = damage;
+    skill_damage = damage;
     physics::register_object(this);
 }
 
@@ -28,7 +28,7 @@ Skill::on_collision(const Collidable *who, const Rectangle& where, unsigned now,
     const Base *b = dynamic_cast<const Base *>(who);
 
 
-    if ((c and c->id() != m_character_id) || (b and b->get_base_player_id() != m_character_id))
+    if ((c and c->id() != skill_character_id) || (b and b->get_base_player_id() != skill_character_id))
     {
         printf("OI\n");
         invalidate();
