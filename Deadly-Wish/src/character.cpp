@@ -255,8 +255,9 @@ Character::on_collision(const Collidable *who, const Rectangle& where, unsigned 
     if(c or b) {
         update_position(now, last, true);
     }
-    else if(m_state->current_state() != DEFENSE_STATE and s->character_id() != m_id and s->valid() and (((1 << m_id) & s->collided()) == 0)) {
-        m_current_life -= s->damage();
+    else if(m_state->current_state() != DEFENSE_STATE and s->get_character_id() != m_id and
+            s->valid() and (((1 << m_id) & s->get_collided()) == 0)) {
+        m_current_life -= s->get_damage();
         printf("Sofreu dano! Vida atual: %d\n", m_current_life);
     }
 }

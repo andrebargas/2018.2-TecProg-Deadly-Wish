@@ -6,6 +6,7 @@
 #include <ijengine/game_object.h>
 
 #define LIGHT_ATTACK_BASE_DAMAGE 10
+#define LIGHT_ATTACK_WIDTH 10
 
 
 using namespace std;
@@ -13,14 +14,15 @@ using namespace ijengine;
 
 
 LightAttack::LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp)
-    : Skill(parent, xp, yp, LIGHT_ATTACK_BASE_DAMAGE, mage_id), m_character_id(mage_id), m_speed(100.0) 
+    : Skill(parent, xp, yp, LIGHT_ATTACK_BASE_DAMAGE, mage_id), light_attack_character_id(mage_id),
+            light_attack_speed(100.0)
 {
-    m_frame = 0;
-    m_start = 0;
+    light_attack_frame = 0;
+    light_attack_start = 0;
     m_x = xp;
     m_y = yp;
-    m_bounding_box = Rectangle(m_x, m_y, 10.00, 10.00);
-    m_damage = LIGHT_ATTACK_BASE_DAMAGE;
+    light_attack_bounding_box = Rectangle(m_x, m_y, (double)LIGHT_ATTACK_WIDTH, (double)LIGHT_ATTACK_WIDTH);
+    light_attack_damage = LIGHT_ATTACK_BASE_DAMAGE;
 }
 
 LightAttack::~LightAttack()
@@ -31,7 +33,7 @@ LightAttack::~LightAttack()
 void
 LightAttack::draw_self(Canvas *canvas, unsigned, unsigned)
 {
-   
+
 }
 
 void
@@ -46,34 +48,34 @@ LightAttack::active() const
     return true;
 }
 
-const Rectangle& 
+const Rectangle&
 LightAttack::bounding_box() const
 {
-    return m_bounding_box;
+    return light_attack_bounding_box;
 }
 
 const list<Rectangle>&
 LightAttack::hit_boxes() const {
-    static list<Rectangle> boxes {m_bounding_box};
+    static list<Rectangle> boxes {light_attack_bounding_box};
     return boxes;
 }
 
 pair<double, double>
 LightAttack::direction() const
 {
-    return pair<double, double>(m_dx, m_dy);
+    return pair<double, double>(light_attack_axis_x_direction, light_attack_axis_y_direction);
 }
 
 void
 LightAttack::update_time(unsigned now)
 {
     // if it's the first update self
-    if(m_start == 0) {
-        m_start = now;
-        m_current_time = now;
+    if(light_attack_start == 0) {
+      light_attack_start = now;
+      light_attack_current_time = now;
     }
 
-    if((now - m_start) > 100) {
+    if((now - light_attack_start) > 100) {
         invalidate();
     }
 }

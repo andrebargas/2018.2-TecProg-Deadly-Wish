@@ -6,7 +6,7 @@
 #include <ijengine/rectangle.h>
 
 
-Skill::Skill(GameObject *parent, double x_posiotion, double yp, int damage, int character_id)
+Skill::Skill(GameObject *parent, double x_posiotion, double y_posiotion, int damage, int character_id)
     : GameObject(parent, x_posiotion, y_posiotion), skill_character_id(character_id)
 {
     skill_collided = 0;

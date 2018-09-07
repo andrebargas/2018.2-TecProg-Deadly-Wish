@@ -37,21 +37,21 @@ protected:
     void update_time(unsigned now);
     string choose_sprite_path(unsigned player_id);
 
-    unsigned m_character_id;
+    unsigned light_attack_character_id;
     typedef enum { MOVING_LEFT, MOVING_RIGHT} State;
     typedef enum { CASTING, MOVING, HITTING } SpriteState;
     typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
     State m_state;
     SpriteState m_sprite_state;
-    double m_dx, m_dy;
-    int m_damage;
-    double m_speed;
-    int m_frame;
-    string m_sprite_path;
-    unsigned m_start;
-    unsigned m_current_time;
-    shared_ptr<Texture> m_texture;
-    Rectangle m_bounding_box;
+    double light_attack_axis_x_direction, light_attack_axis_y_direction;
+    int light_attack_damage;
+    double light_attack_speed;
+    int light_attack_frame;
+    string light_attack_sprite_path;
+    unsigned light_attack_start;
+    unsigned light_attack_current_time;
+    shared_ptr<Texture> light_attack_texture;
+    Rectangle light_attack_bounding_box;
 
 
 //    bool on_event(const GameEvent& event);

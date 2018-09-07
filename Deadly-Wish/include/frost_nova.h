@@ -24,10 +24,9 @@ class FrostNova : public Skill {
 public:
     FrostNova(GameObject *parent, unsigned mage_id, double xp, double yp,
         double dx, double dy);
-
-
-
     ~FrostNova();
+
+    // Metodos virtual de Collidable
     bool active() const;
     const Rectangle& bounding_box() const;
     const list<Rectangle>& hit_boxes() const;
@@ -35,27 +34,31 @@ public:
     void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);
 
 protected:
+
+    // Metodos virtual de GameObject
     void update_self(unsigned now, unsigned last);
     void draw_self(Canvas *canvas, unsigned, unsigned);
+
+    // Metodos de FrostNova
     void update_sprite_state();
     void update_time(unsigned now);
     string choose_sprite_path(unsigned player_id);
 
-    unsigned m_character_id;
+    unsigned frost_character_id;
     typedef enum { MOVING_LEFT, MOVING_RIGHT} State;
     typedef enum { CASTING, MOVING, HITTING } SpriteState;
     typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
-    State m_state;
-    SpriteState m_sprite_state;
-    double m_dx, m_dy;
-    int m_damage;
-    double m_speed;
-    int m_frame;
-    string m_sprite_path;
-    unsigned m_start;
-    unsigned m_current_time;
-    shared_ptr<Texture> m_texture;
-    Rectangle m_bounding_box;
+    State frost_state;
+    SpriteState frost_sprite_state;
+    double frost_axis_x_direction, frost_axis_y_direction;
+    int frost_damage;
+    double frost_speed;
+    int frost_frame;
+    string frost_sprite_path;
+    unsigned frost_start;
+    unsigned frost_current_time;
+    shared_ptr<Texture> frost_texture;
+    Rectangle frost_bounding_box;
 
 
 //    bool on_event(const GameEvent& event);

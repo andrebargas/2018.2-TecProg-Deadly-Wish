@@ -116,10 +116,10 @@ Base::on_collision(const Collidable *who, const Rectangle& where, unsigned now, 
     if(game_mode::choosen_mode == "base-mode"){
         const Skill *s = dynamic_cast<const Skill *>(who);
 
-        if(s and s->character_id() != base_player_id and s->valid() and (((1 << (base_player_id + 4))
-           & s->collided()) == 0)) {
+        if(s and s->get_character_id() != base_player_id and s->valid() and
+          (((1 << (base_player_id + 4)) & s->get_collided()) == 0)) {
 
-            base_life -= s->damage();
+            base_life -= s->get_damage();
             printf("BASE HP: %d\n", base_life);
             printf("Vida da base: %d\n", base_life);
         }

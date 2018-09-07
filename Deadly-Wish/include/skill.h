@@ -11,10 +11,11 @@ using namespace ijengine;
 
 class Skill : public GameObject, public Collidable  {
 public:
-    Skill(GameObject *parent, double xp, double yp, int damage, int character_id);
+    Skill(GameObject *parent, double x_posiotion, double y_posiotion, int damage,
+          int character_id);
     ~Skill();
 
-    unsigned get_character_id() const { return skil_character_id; }
+    unsigned get_character_id() const { return skill_character_id; }
     int get_damage() const { return skill_damage; }
     int get_collided() const {return skill_collided;}
 

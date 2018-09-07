@@ -40,21 +40,21 @@ protected:
     void update_time(unsigned now);
     string choose_sprite_path(unsigned player_id);
 
-    unsigned m_character_id;
+    unsigned fireball_character_id;
     typedef enum { MOVING_LEFT, MOVING_RIGHT} State;
     typedef enum { CASTING, MOVING, HITTING } SpriteState;
     typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
-    State m_state;
-    SpriteState m_sprite_state;
-    double m_dx, m_dy;
-    int m_damage;
-    double m_speed;
-    int m_frame;
-    string m_sprite_path;
-    unsigned m_start;
-    unsigned m_current_time;
-    shared_ptr<Texture> m_texture;
-    Rectangle m_bounding_box;
+    State fireball_state;
+    SpriteState fireball_sprite_state;
+    double fireball_axis_x_direction, fireball_axis_y_direction;
+    int fireball_damage;
+    double fireball_speed;
+    int fireball_frame;
+    string fireball_sprite_path;
+    unsigned fireball_start;
+    unsigned fireball_current_time;
+    shared_ptr<Texture> fireball_texture;
+    Rectangle fireball_bounding_box;
 
 
 //    bool on_event(const GameEvent& event);

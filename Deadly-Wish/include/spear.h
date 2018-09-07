@@ -23,36 +23,43 @@ using namespace ijengine;
 class Spear : public Skill {
 public:
     Spear(GameObject *parent, unsigned soldier_id, double xp, double yp,
-        double dx, double dy);
+          double dx, double dy);
 
     ~Spear();
+
+    //metodos virtual de Collidable
     bool active() const;
     const Rectangle& bounding_box() const;
     const list<Rectangle>& hit_boxes() const;
     pair<double, double> direction() const;
 
 protected:
+    //metodos virtual de GameObject
     void update_self(unsigned now, unsigned last);
     void draw_self(Canvas *canvas, unsigned, unsigned);
+
+    //Metodo de Spear
     void update_sprite_state();
     void update_time(unsigned now);
     string choose_sprite_path(unsigned player_id);
 
-    unsigned m_character_id;
     typedef enum { MOVING_LEFT, MOVING_RIGHT} State;
     typedef enum { THROW, MOVING, FALLING, HITTING } SpriteState;
     typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
-    State m_state;
-    SpriteState m_sprite_state;
-    double m_dx, m_dy;
-    int m_damage;
-    double m_speed;
-    int m_frame;
-    string m_sprite_path;
-    unsigned m_start;
-    unsigned m_current_time;
-    shared_ptr<Texture> m_texture;
-    Rectangle m_bounding_box;
+
+    unsigned spear_character_id;
+    State spear_state;
+    SpriteState spear_sprite_state;
+    double spear_axis_x_direction;
+    double spear_axis_y_direction;
+    int spear_damage;
+    double spear_speed;
+    int spear_frame;
+    string spear_sprite_path;
+    unsigned spear_start;
+    unsigned spear_current_time;
+    shared_ptr<Texture> spear_texture;
+    Rectangle spear_bounding_box;
 
 
 //    bool on_event(const GameEvent& event);
