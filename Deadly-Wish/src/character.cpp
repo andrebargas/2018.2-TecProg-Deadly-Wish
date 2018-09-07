@@ -57,8 +57,8 @@ Character::update_self(unsigned now, unsigned last)
 {
 
     handle_state();
-    
-    if(((game_mode::choosen_mode == "base-mode") and m_base->life() <= 0) ||
+
+    if(((game_mode::choosen_mode == "base-mode") and m_base->get_base_life() <= 0) ||
         (game_mode::choosen_mode == "deathmatch-mode") and m_number_of_lives <= 0) {
         invalidate();
     }
@@ -181,7 +181,7 @@ Character::on_event(const GameEvent& event)
             else if(value < 0) {
                 m_moving_state = MOVING_LEFT;
             }
-        } 
+        }
         else if(axis == "Y") {
             m_y_speed = SPEED * ((double) value / 32768);
         }
@@ -204,7 +204,7 @@ Character::on_event(const GameEvent& event)
     }
     else if((p1_defense_validation || p2_defense_validation || p3_defense_validation || p4_defense_validation) &&
         (m_start - m_last_used_defense > m_defense_cooldown))
-    {   
+    {
         m_last_used_defense = m_start;
         defense();
         return true;
@@ -227,26 +227,26 @@ Character::direction() const
 }
 
 bool
-Character::active() const 
+Character::active() const
 {
     return m_active;
 }
 
 const Rectangle&
-Character::bounding_box() const 
+Character::bounding_box() const
 {
     return m_bounding_box;
 }
 
 const list<Rectangle>&
-Character::hit_boxes() const 
+Character::hit_boxes() const
 {
     static list<Rectangle> boxes {m_bounding_box};
     return boxes;
 }
 
 void
-Character::on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last) 
+Character::on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last)
 {
     const Skill *s = dynamic_cast<const Skill *>(who);
     const Character *c = dynamic_cast<const Character *>(who);
@@ -262,7 +262,7 @@ Character::on_collision(const Collidable *who, const Rectangle& where, unsigned 
 }
 
 void
-Character::change_character_state(State next_state, bool respawning ) 
+Character::change_character_state(State next_state, bool respawning )
 {
     if(respawning) {
         printf("respawnando");
@@ -283,7 +283,7 @@ Character::change_character_state(State next_state, bool respawning )
 
 void Character::handle_state()
 {
-    if((m_current_life <= 0) || (m_base->life() <= 0 and game_mode::choosen_mode == "base-mode")) {
+    if((m_current_life <= 0) || (m_base->get_base_life() <= 0 and game_mode::choosen_mode == "base-mode")) {
         change_character_state(DEATH_STATE);
     }
 
@@ -295,7 +295,7 @@ void Character::handle_state()
         m_active = true;
     }
 
-    if(m_state->current_state() == DEATH_STATE and 
+    if(m_state->current_state() == DEATH_STATE and
         (m_frame + 1) % (m_textures[m_state->current_state()]->w() / 32) == 0) {
         kill_character();
         return;
@@ -308,7 +308,7 @@ void Character::handle_state()
     }
 
     if(m_x_speed == 0.0 && m_y_speed == 0.0) {
-        if(m_state->current_state() == MOVING_STATE || 
+        if(m_state->current_state() == MOVING_STATE ||
           (m_state->current_state() == IDLE_STATE && ((m_frame + 1) % (m_textures[IDLE_STATE]->w() / 32)) == 0)) {
             change_character_state(IDLE_STATE);
         }

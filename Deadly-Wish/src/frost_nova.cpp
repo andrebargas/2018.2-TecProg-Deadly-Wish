@@ -15,7 +15,7 @@ using namespace ijengine;
 FrostNova::FrostNova(GameObject *parent, unsigned mage_id, double xp, double yp, double dx,
     double dy)
     : Skill(parent, xp, yp, FROST_NOVA_BASE_DAMAGE, mage_id), m_character_id(mage_id), m_dx(dx/hypot(dx, dy)),
-        m_dy(dy/hypot(dx, dy)), m_speed(100.0) 
+        m_dy(dy/hypot(dx, dy)), m_speed(100.0)
 {
     m_frame = 0;
     m_start = 0;
@@ -41,7 +41,7 @@ void
 FrostNova::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     Rectangle rect {(double) 96.0 * m_frame, 0.0, 96.00, 96.00};
-    canvas->draw(m_texture.get(),rect, x(), y()); 
+    canvas->draw(m_texture.get(),rect, x(), y());
 }
 
 void
@@ -56,7 +56,7 @@ FrostNova::active() const
     return true;
 }
 
-const Rectangle& 
+const Rectangle&
 FrostNova::bounding_box() const
 {
     return m_bounding_box;
@@ -135,13 +135,13 @@ FrostNova::on_collision(const Collidable *who, const Rectangle& where, unsigned 
     const Base *b = dynamic_cast<const Base *>(who);
 
     bool c_bool = c and c->id() != m_character_id;
-    bool b_bool = b and b->base_player_id() != m_character_id;
+    bool b_bool = b and b->get_base_player_id() != m_character_id;
 
     if(c_bool) {
         m_collided |= (1 << c->id());
     }
     if(b_bool) {
-        m_collided |= (1 << ((b->base_player_id() + 4)));
+        m_collided |= (1 << ((b->get_base_player_id() + 4)));
     }
 
     // if ( (c and c->id() != m_character_id) || (b and b->base_player_id() != m_character_id) )

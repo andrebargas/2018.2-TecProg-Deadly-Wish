@@ -28,7 +28,7 @@ Skill::on_collision(const Collidable *who, const Rectangle& where, unsigned now,
     const Base *b = dynamic_cast<const Base *>(who);
 
 
-    if ((c and c->id() != m_character_id) || (b and b->base_player_id() != m_character_id))
+    if ((c and c->id() != m_character_id) || (b and b->get_base_player_id() != m_character_id))
     {
         printf("OI\n");
         invalidate();
