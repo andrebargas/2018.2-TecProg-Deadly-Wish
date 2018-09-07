@@ -3,7 +3,9 @@
 
 #include <algorithm>
 
-bool Translator::translate(GameEvent& to, const MouseEvent& from) {
+bool
+Translator::translate(GameEvent& to, const MouseEvent& from)
+{
     to.set_timestamp(from.timestamp());
     to.set_property<double>("x", from.x());
     to.set_property<double>("y", from.y());
@@ -16,9 +18,11 @@ bool Translator::translate(GameEvent& to, const MouseEvent& from) {
     return true;
 }
 
-bool Translator::translate(GameEvent& to, const SystemEvent& from) {
-    if (from.action() == SystemEvent::QUIT) {
-
+bool
+Translator::translate(GameEvent& to, const SystemEvent& from)
+{
+    if (from.action() == SystemEvent::QUIT)
+    {
         to.set_timestamp(from.timestamp());
         to.set_id(game_event::QUIT);
 
@@ -28,7 +32,9 @@ bool Translator::translate(GameEvent& to, const SystemEvent& from) {
     return false;
 }
 
-bool Translator::translate(GameEvent& to, const KeyboardEvent& from) {
+bool
+Translator::translate(GameEvent& to, const KeyboardEvent& from)
+{
     to.set_timestamp(from.timestamp());
 
     bool done = true;
@@ -58,7 +64,9 @@ bool Translator::translate(GameEvent& to, const KeyboardEvent& from) {
     return done;
 }
 
-bool Translator::translate(GameEvent& to, const JoystickEvent& from) {
+bool
+Translator::translate(GameEvent& to, const JoystickEvent& from)
+{
     to.set_timestamp(from.timestamp());
 
     bool done = true;
@@ -69,31 +77,19 @@ bool Translator::translate(GameEvent& to, const JoystickEvent& from) {
 
     if(from.state() == JoystickEvent::BUTTON_PRESSED) {
         if(from.button() == JoystickEvent::SQUARE || from.button() == JoystickEvent::L1) {
-            vector<unsigned> heavy_attack_ids {game_event::HEAVY_ATTACK_P1, 
-                                               game_event::HEAVY_ATTACK_P2, 
-                                               game_event::HEAVY_ATTACK_P3, 
-                                               game_event::HEAVY_ATTACK_P4};
+            vector<unsigned> heavy_attack_ids {game_event::HEAVY_ATTACK_P1, game_event::HEAVY_ATTACK_P2, game_event::HEAVY_ATTACK_P3, game_event::HEAVY_ATTACK_P4};
             id = heavy_attack_ids[from.which()];
-        }       
+        }
         else if(from.button() == JoystickEvent::X || from.button() == JoystickEvent::R1) {
-            vector<unsigned> light_attack_ids {game_event::LIGHT_ATTACK_P1, 
-                                               game_event::LIGHT_ATTACK_P2, 
-                                               game_event::LIGHT_ATTACK_P3, 
-                                               game_event::LIGHT_ATTACK_P4};
+            vector<unsigned> light_attack_ids {game_event::LIGHT_ATTACK_P1, game_event::LIGHT_ATTACK_P2, game_event::LIGHT_ATTACK_P3, game_event::LIGHT_ATTACK_P4};
             id = light_attack_ids[from.which()];
         }
         else if(from.button() == JoystickEvent::CIRCLE || from.button() == JoystickEvent::R2) {
-            vector<unsigned> defense_ids {game_event::DEFENSE_P1, 
-                                          game_event::DEFENSE_P2, 
-                                          game_event::DEFENSE_P3, 
-                                          game_event::DEFENSE_P4};
+            vector<unsigned> defense_ids {game_event::DEFENSE_P1, game_event::DEFENSE_P2, game_event::DEFENSE_P3, game_event::DEFENSE_P4};
             id = defense_ids[from.which()];
         }
         else if(from.button() == JoystickEvent::TRIANGLE || from.button() == JoystickEvent::L2) {
-            vector<unsigned> special_ids {game_event::SPECIAL_P1, 
-                                          game_event::SPECIAL_P2, 
-                                          game_event::SPECIAL_P3, 
-                                          game_event::SPECIAL_P4};
+            vector<unsigned> special_ids {game_event::SPECIAL_P1, game_event::SPECIAL_P2, game_event::SPECIAL_P3, game_event::SPECIAL_P4};
             id = special_ids[from.which()];
         }
     }
@@ -132,9 +128,8 @@ bool Translator::translate(GameEvent& to, const JoystickEvent& from) {
     return done;
 }
 
-inline void Translator::set_movement_properties(GameEvent& to, const KeyboardEvent& from, 
-                                                const vector<unsigned> &moves) {
-    
+inline void
+Translator::set_movement_properties(GameEvent& to, const KeyboardEvent& from, const vector<unsigned> &moves) {
     if(from.state() == KeyboardEvent::PRESSED) {
         to.set_property<string>("action", "start");
     }

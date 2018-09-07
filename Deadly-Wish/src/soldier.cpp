@@ -3,80 +3,73 @@
 #include "light_attack.h"
 #include "ije02_game.h"
 
-#define MAX_LIFE 150
-#define RECHARGE_SPECIAL 5000
-#define RECHARGE_HEAVY_ATTACK 2000
-#define RECHARGE_LIGHT_ATTACK 300
-#define RECHARGE_DEFENSE 300
-#define LIGHT_MOVIMENT 15
-#define HEAVY_MOVIMENT 20
-#define VARIATION_DIRECTION_HEAVY_ATTACK 1.0
+#define MAX_LIFE 120
 
-Soldier::Soldier(vector<string> sprite_paths, unsigned new_character_id,
-                 double position_axis_x, double position_axis_y, int character_code)
-: Character(sprite_paths, new_character_id, position_axis_x, position_axis_y, MAX_LIFE, character_code) {
-
-    special_cooldown = RECHARGE_SPECIAL;
-    heavy_attack_cooldown = RECHARGE_HEAVY_ATTACK;
-    light_attack_cooldown = RECHARGE_LIGHT_ATTACK;
-    defense_cooldown = RECHARGE_DEFENSE;
-    last_used_special = -special_cooldown;
-    last_used_heavy_attack = -heavy_attack_cooldown;
-    last_used_light_attack = -light_attack_cooldown;
-    last_used_defense = -defense_cooldown;
-    active = true;
+Soldier::Soldier(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
+    : Character(sprite_paths, id, x, y, MAX_LIFE, character_code)
+{
+    m_special_cooldown = 5000;
+    m_heavy_attack_cooldown = 2000;
+    m_light_attack_cooldown = 300;
+    m_defense_cooldown = 300;
+    m_last_used_special = -m_special_cooldown;
+    m_last_used_heavy_attack = -m_heavy_attack_cooldown;
+    m_last_used_light_attack = -m_light_attack_cooldown;
+    m_last_used_defense = -m_defense_cooldown;
+    m_active = true;
 }
 
-void Soldier::do_heavy_attack() {
-
+void
+Soldier::heavy_attack()
+{
     audio::play_sound_effect("res/sound/fx/soldier_heavy.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
     printf("p = %p\n", (void *) p);
 
-    double spear_direction_x = 0.0;
-    double spear_x_position = 0.0;
+    double spear_dx = 0.0;
+    double spear_x_pos = 0.0;
 
-    if(moving_state == MOVING_RIGHT) {
-        spear_direction_x = VARIATION_DIRECTION_HEAVY_ATTACK;
-        spear_x_position = x() + HEAVY_MOVIMENT;
+    if(m_moving_state == MOVING_RIGHT) {
+        spear_dx = 1.0;
+        spear_x_pos = x() + 20;
     }
     else{
-        spear_direction_x = -(VARIATION_DIRECTION_HEAVY_ATTACK);
-        spear_x_position = x() - HEAVY_MOVIMENT;
+        spear_dx = -1.0;
+        spear_x_pos = x() - 20;
     }
+    p->add_child(new Spear(p, id(), spear_x_pos, y(), spear_dx, 0.0));
 
-    p->add_child(new Spear(p, get_id(), spear_x_position, y(), spear_dx, 0.0));
     change_character_state(HEAVY_ATTACK_STATE);
 }
 
-void Soldier::do_light_attack() {
-
+void
+Soldier::light_attack() {
     audio::play_sound_effect("res/sound/fx/soldier_light.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
     printf("p = %p\n", (void *) p);
 
-    double light_attack_x_position = 0.0;
-
-    if(moving_state == MOVING_RIGHT) {
-        light_attack_x_position = x() + LIGHT_MOVIMENT;
+    double light_attack_x_pos = 0.0;
+    
+    if(m_moving_state == MOVING_RIGHT) {
+        light_attack_x_pos = x() + 15;
     }
     else{
-        light_attack_x_position = x() - LIGHT_MOVIMENT;
+        light_attack_x_pos = x() - 15;
     }
 
-    p->add_child(new LightAttack(p, get_id(), light_attack_x_position, y()));
+    p->add_child(new LightAttack(p, id(), light_attack_x_pos, y()));
 
     change_character_state(LIGHT_ATTACK_STATE);
 }
 
-void Soldier::do_defense() {
-
+void
+Soldier::defense() {
     audio::play_sound_effect("res/sound/fx/soldier_block.ogg", EFFECTS_VOLUME, 0);
     change_character_state(DEFENSE_STATE);
 }
 
-void Soldier::do_special() {
-
+void
+Soldier::special() {
     audio::play_sound_effect("res/sound/fx/soldier_ultimate.ogg", EFFECTS_VOLUME, 0);
     change_character_state(SPECIAL_STATE);
 }

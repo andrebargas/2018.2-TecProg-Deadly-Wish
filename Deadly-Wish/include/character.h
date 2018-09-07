@@ -30,10 +30,9 @@ using namespace util;
 
 class Character : public GameObject, public GameEventsListener, public Collidable {
 public:
-	Character(const vector<string> sprite_paths, unsigned new_character_id, double position_axis_x,
-		 				double position_axis_y, int max_life, int character_code);
+	Character(const vector<string> sprite_paths, unsigned id, double x, double y, int max_life, int character_code);
 	~Character();
-
+    
     enum {
         KNIGHT,
         SOLDIER,
@@ -45,7 +44,7 @@ public:
         START_MOVING_DOWN,
         START_MOVING_LEFT,
         START_MOVING_RIGHT,
-        START_MOVING_UP,
+        START_MOVING_UP, 
         STOP_MOVING_DOWN,
         STOP_MOVING_LEFT,
         STOP_MOVING_RIGHT,
@@ -58,72 +57,72 @@ public:
     };
 
 
-    virtual bool is_active() const;
-    const Rectangle& get_bounding_box() const;
+    virtual bool active() const;
+    const Rectangle& bounding_box() const;
     const list<Rectangle>& hit_boxes() const;
 
     void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);
-    pair<double, double> get_direction() const;
+    pair<double, double> direction() const;
 
-    unsigned get_id() const { return id; }
-    int get_number_of_lives() const { return number_of_lives; }
-
+    unsigned id() const { return m_id; }
+    int number_of_lives() const { return m_number_of_lives; }
     void set_base(Base *base);
 
 protected:
-    void UpdateSelf(unsigned now, unsigned last);
-    void DrawSelf(Canvas *canvas, unsigned now, unsigned last);
-    void ChangeCharacterState(State next_state, bool respawning = false);
+    void update_self(unsigned now, unsigned last);
+    void draw_self(Canvas *canvas, unsigned now, unsigned last);
+    void change_character_state(State next_state, bool respawning = false);
     void handle_state();
     void set_spawn_position();
     void respawn_character();
     void kill_character();
-    string ChooseSpritePath(unsigned player_id);
+    string choose_sprite_path(unsigned player_id);
     bool on_event(const GameEvent& event);
-    virtual void HeavyAttack() = 0;
-    virtual void LightAttack() = 0;
-    virtual void Defense() = 0;
-    virtual void Special() = 0;
+    virtual void heavy_attack() = 0;
+    virtual void light_attack() = 0;
+    virtual void defense() = 0;
+    virtual void special() = 0;
 
     typedef enum {MOVING_RIGHT, MOVING_LEFT} MovingState;
-
+    
 
 
 protected:
-    MovingState moving_state;
-    CharacterState* state;
-    CharacterStateFactory character_state_factory;
-    bool active;
-    unsigned id;
-    int max_life;
-    int current_life;
-    int number_of_lives;
-    int frame;
-    int start;
-    int width;
-    int height;
-    int heavy_attack_cooldown;
-    int light_attack_cooldown;
-    int defense_cooldown;
-    int special_cooldown;
-    int last_used_heavy_attack;
-    int last_used_light_attack;
-    int last_used_defense;
-    int last_used_special;
-    int respawn_time;
-    int character_code;
-    int last_sound_played;
-    bool freeze;
-    bool dead;
-    double axis_x_speed;
-    double axis_y_speed;
-    double speed;
-    Base* base;
-    vector< shared_ptr<Texture> > textures;
-    unordered_map<string, pair<double, double> > speed_vector;
-    Rectangle bounding_box;
-    vector<string> sprite_paths;
-    inline void UpdatePosition(const unsigned &now, const unsigned &last, bool backwards = false);
+    MovingState m_moving_state;
+    CharacterState* m_state;
+    CharacterStateFactory m_character_state_factory;
+    bool m_active;
+    unsigned m_id;
+    int m_max_life;
+    int m_current_life;
+    int m_number_of_lives;
+    int m_frame;
+    int m_start;
+    int m_w;
+    int m_h;
+    int m_heavy_attack_cooldown;
+    int m_light_attack_cooldown;
+    int m_defense_cooldown;
+    int m_special_cooldown;
+    int m_last_used_heavy_attack;
+    int m_last_used_light_attack;
+    int m_last_used_defense;
+    int m_last_used_special;
+    int m_respawn_time;
+    int m_character_code;
+    int m_last_sound_played;
+    bool m_freeze;
+    bool m_dead;
+    double m_x_speed;
+    double m_y_speed;
+    double m_speed;
+    Base* m_base;
+    vector< shared_ptr<Texture> > m_textures;
+    unordered_map<string, pair<double, double> > m_speed_vector;
+    Rectangle m_bounding_box;
+    vector<string> m_sprite_paths;
+
+    inline void update_position(const unsigned &now, const unsigned &last, bool backwards = false);
 };
 
 #endif

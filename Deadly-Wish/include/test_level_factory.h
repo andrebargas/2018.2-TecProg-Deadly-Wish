@@ -9,14 +9,18 @@ using std::vector;
 
 using namespace ijengine;
 
-namespace ijengine {
-    namespace character_selection {
+namespace ijengine
+{
+    namespace character_selection
+    {
         extern vector<int> players_characters;
     }
-    namespace winner {
+    namespace winner
+    {
         extern int winner_player;
     }
-    namespace game_mode {
+    namespace game_mode
+    {
         extern string choosen_mode;
     }
 }
@@ -26,6 +30,7 @@ public:
     Level * make_level(const string& level_id);
     void release(Level *level);
 
+private:
 };
 
 #endif

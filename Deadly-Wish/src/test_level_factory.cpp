@@ -13,20 +13,25 @@ using std::cout;
 
 namespace ijengine
 {
-    namespace character_selection {
+    namespace character_selection
+    {
         vector<int> players_characters = vector<int>();
     }
-    namespace winner {
+    namespace winner
+    {
         int winner_player = -1;
     }
-    namespace game_mode {
+    namespace game_mode
+    {
         string choosen_mode = "base-mode";
     }
 }
 
 
-Level * TestLevelFactory::make_level(const string& level_id) {
-    if (level_id == "menu") {
+Level *
+TestLevelFactory::make_level(const string& level_id)
+{
+    if (level_id == "menu"){
         return new MenuLevel("choose-character");
     }
     else if (level_id == "choose-character") {
@@ -48,7 +53,9 @@ Level * TestLevelFactory::make_level(const string& level_id) {
         return nullptr;
 }
 
-void TestLevelFactory::release(Level *level) {
+void
+TestLevelFactory::release(Level *level)
+{
     delete level;
 }
 

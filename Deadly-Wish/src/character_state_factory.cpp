@@ -11,7 +11,7 @@ CharacterStateFactory::~CharacterStateFactory()
 }
 
 CharacterState*
-CharacterStateFactory::ChangeCharacterState(int next_state)
+CharacterStateFactory::change_character_state(int next_state)
 {
     switch(next_state) {
         case IDLE_STATE:
