@@ -138,11 +138,11 @@ FrostNova::on_collision(const Collidable *who, const Rectangle& where, unsigned 
     const Character *c = dynamic_cast<const Character *>(who);
     const Base *b = dynamic_cast<const Base *>(who);
 
-    bool c_bool = c and c->id() != frost_character_id;
+    bool c_bool = c and c->get_id() != frost_character_id;
     bool b_bool = b and b->get_base_player_id() != frost_character_id;
 
     if(c_bool) {
-        skill_collided |= (1 << c->id());
+        skill_collided |= (1 << c->get_id());
     }
     if(b_bool) {
         skill_collided |= (1 << ((b->get_base_player_id() + 4)));
