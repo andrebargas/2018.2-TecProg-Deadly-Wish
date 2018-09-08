@@ -13,3 +13,4 @@ Deadly_Wish
 .project
 .vscode
 CMakeCache.txt
+*.metadata
