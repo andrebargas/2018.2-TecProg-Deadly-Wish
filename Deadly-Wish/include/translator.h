@@ -11,7 +11,8 @@
 using namespace ijengine;
 using namespace std;
 
-class Translator : public EventsTranslator {
+class Translator : public EventsTranslator
+{
 public:
     bool translate(GameEvent& to, const MouseEvent& from);
     bool translate(GameEvent& to, const SystemEvent& from);

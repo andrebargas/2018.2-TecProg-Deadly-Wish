@@ -19,7 +19,6 @@ using std::shared_ptr;
 using namespace ijengine;
 
 class CharacterChooseLevel : public Level, public GameEventsListener {
-
 public:
     CharacterChooseLevel(const string& next = "");
     ~CharacterChooseLevel();
@@ -30,11 +29,11 @@ public:
         ICONS
     };
 
-    bool is_done() const;
-    string get_next() const;
-    string get_audio() const;
-    const vector < int > get_players_characters() const { return players_characters; }
-    vector < int > players_characters;
+    bool done() const;
+    string next() const;
+    string audio() const;
+    const vector < int > players_characters() const { return m_players_characters; }
+    vector < int > m_players_characters;
 
 protected:
     void update_self(unsigned now, unsigned last);
@@ -43,11 +42,10 @@ protected:
 
 
 private:
-<<<<<<< HEAD
     bool m_done;
     string m_next;
     int m_start;
-    int frame;
+    int m_frame;
     vector<int> m_selected_characters;
     int m_current_player;
     int m_number_of_players;
@@ -55,18 +53,6 @@ private:
     int m_current_player_character;
 
     vector< shared_ptr<Texture> > m_textures;
-=======
-    bool done;
-    string next_level;
-    int start_level;
-    int frame;
-    vector<int> selected_characters;
-    int current_player;
-    int number_of_players;
-    vector<CharacterSelection *> character_selections;
-    int current_player_character;
-    vector< shared_ptr<Texture> > textures;
->>>>>>> issue_05_mod2
 
 };
 

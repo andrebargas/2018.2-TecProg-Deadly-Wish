@@ -1,8 +1,8 @@
 #include "special_state.h"
 
-SpecialState::SpecialState() 
-    :CharacterState() {
-    	
-    m_current_state = SPECIAL_STATE;
-    m_refresh_rate = 100;
+SpecialState::SpecialState()
+    :CharacterState()
+{
+    current_state = SPECIAL_STATE;
+    state_refresh_rate = 100;
 }

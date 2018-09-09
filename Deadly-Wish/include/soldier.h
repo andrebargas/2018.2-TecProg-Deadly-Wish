@@ -7,8 +7,7 @@ using namespace ijengine;
 
 class Soldier : public Character {
 public:
-    Soldier(vector<string> sprite_paths, unsigned new_character_id,
-     double position_axis_x, double position_axis_y, int character_code);
+    Soldier(vector<string> sprite_paths, unsigned id, double x, double y, int character_code);
 
 protected:
     void do_heavy_attack();

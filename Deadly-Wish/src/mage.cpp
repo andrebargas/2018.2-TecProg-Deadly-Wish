@@ -9,84 +9,79 @@
 #include <string>
 
 #define MAX_LIFE 100
-#define LIGHT_ATTACK_POSITION_VAR 15
-#define HEAVY_ATTACK_POSITION_VAR 20
-#define LEFT_DIRECTION -1.0
-#define RIGHT_DIRECTION 1.0
+#define MAGE_SPECIAL_COOLDOWN 5000
+#define MAGE_HEAVY_ATTACK_COOLDOWN 2000
+#define MAGE_LIGHT_ATTACK_COOLDOWN 300
 
 using std::vector;
 using std::string;
 
-Mage::Mage(vector<string> sprite_paths, unsigned character_id, double x_position, double y_position, int character_code)
-    : Character(sprite_paths, character_id, x_position, y_position, MAX_LIFE, character_code)
+Mage::Mage(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
+    : Character(sprite_paths, id, x, y, MAX_LIFE, character_code)
 {
-
-    //nao ira usar #define por ja estar explicito
-    special_cooldown = 5000;
-    heavy_attack_cooldown = 2000;
-    light_attack_cooldown = 300;
-    defense_cooldown = 300;
-    last_used_special = -special_cooldown;
-    last_used_heavy_attack = -heavy_attack_cooldown;
-    last_used_light_attack = -light_attack_cooldown;
-    last_used_defense = -defense_cooldown;
-    active = true;
+    character_special_cooldown = MAGE_SPECIAL_COOLDOWN;
+    character_heavy_attack_cooldown = MAGE_HEAVY_ATTACK_COOLDOWN;
+    character_light_attack_cooldown = MAGE_LIGHT_ATTACK_COOLDOWN;
+    character_defense_cooldown = MAGE_LIGHT_ATTACK_COOLDOWN;
+    character_last_used_special = -character_special_cooldown;
+    character_last_used_heavy_attack = -character_heavy_attack_cooldown;
+    character_last_used_light_attack = -character_light_attack_cooldown;
+    character_last_used_defense = -character_defense_cooldown;
+    character_active = true;
 }
 
-void Mage::do_heavy_attack() {
+void
+Mage::do_heavy_attack()
+{
     audio::play_sound_effect("res/sound/fx/mago_heavy.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
     printf("p = %p\n", (void *) p);
-    double fireball_x_direction = 0.0;
-    double fireball_x_position = 0.0;
 
-    if(moving_state == MOVING_RIGHT) {
-        fireball_x_direction = RIGHT_DIRECTION;
-        fireball_x_position = x() + HEAVY_ATTACK_POSITION_VAR;
+    double fireball_dx = 0.0;
+    double fireball_x_pos = 0.0;
+
+    if(character_moving_state == MOVING_RIGHT) {
+        fireball_dx = 1.0;
+        fireball_x_pos = x() + 20;
     }
     else{
-        fireball_x_direction = LEFT_DIRECTION;
-        fireball_x_position = x() - HEAVY_ATTACK_POSITION_VAR;
+        fireball_dx = -1.0;
+        fireball_x_pos = x() - 20;
     }
 
+    p->add_child(new Fireball(p, get_id(), fireball_x_pos, y(), fireball_dx, 0.0));
 
-    p->add_child(new Fireball(p, get_id(), fireball_x_position, y(), fireball_x_direction, 0.0));
-
-    ChangeCharacterState(HEAVY_ATTACK_STATE);
+    change_character_state(HEAVY_ATTACK_STATE);
 }
 
-void Mage::do_light_attack() {
-
+void
+Mage::do_light_attack() {
     audio::play_sound_effect("res/sound/fx/mago_light.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
     printf("p = %p\n", (void *) p);
-    double light_attack_x_position = 0.0;
 
-    if(moving_state == MOVING_RIGHT) {
-        light_attack_x_position = x() + LIGHT_ATTACK_POSITION_VAR;
+    double light_attack_x_pos = 0.0;
+
+    if(character_moving_state == MOVING_RIGHT) {
+        light_attack_x_pos = x() + 15;
     }
     else{
-        light_attack_x_position = x() - LIGHT_ATTACK_POSITION_VAR;
+        light_attack_x_pos = x() - 15;
     }
-
-
-    p->add_child(new LightAttack(p, get_id(), light_attack_x_position, y()));
-
 
     p->add_child(new LightAttack(p, get_id(), light_attack_x_pos, y()));
 
-
-    ChangeCharacterState(LIGHT_ATTACK_STATE);
+    change_character_state(LIGHT_ATTACK_STATE);
 }
 
-void Mage::do_defense() {
-
+void
+Mage::do_defense() {
     audio::play_sound_effect("res/sound/fx/mago_block.ogg", EFFECTS_VOLUME, 0);
-    ChangeCharacterState(DEFENSE_STATE);
+    change_character_state(DEFENSE_STATE);
 }
 
-void Mage::do_special() {
-
+void
+Mage::do_special() {
     audio::play_sound_effect("res/sound/fx/mago_ultimate.ogg", EFFECTS_VOLUME, 0);
     auto p = parent();
     printf("p = %p\n", (void *) p);

@@ -31,7 +31,7 @@ MainLevel::MainLevel(const string& next_level, vector < int > players_characters
     m_map[0][0] = 0;
     m_map[0][MAX_H - 1] = 0;
     m_map[MAX_W - 1][0] = 0;
-    m_map[MAX_W - 1][MAX_H - 1] = 0;    
+    m_map[MAX_W - 1][MAX_H - 1] = 0;
 
     m_players_characters = players_characters;
     double x =0.0;
@@ -51,7 +51,7 @@ MainLevel::MainLevel(const string& next_level, vector < int > players_characters
 }
 
 MainLevel::~MainLevel() {
-    
+
 }
 
 bool
@@ -91,7 +91,7 @@ void
 MainLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     canvas->clear();
-    
+
     canvas->draw(m_texture.get(), 0, 0);
 }
 
@@ -126,18 +126,18 @@ MainLevel::set_players_characters_position(unsigned player_id, double& x_pos, do
     }
 }
 
-void 
+void
 MainLevel::verify_bases()
 {
     int count = 0;
     int winner_player_id = 0;
 
     for(int i = 0; i < 4; i++) {
-        if(m_bases[i]->life() <= 0) {
+        if(m_bases[i]->get_base_life() <= 0) {
             count++;
         }
         else {
-            winner_player_id = m_bases[i]->base_player_id();
+            winner_player_id = m_bases[i]->get_base_player_id();
         }
     }
 

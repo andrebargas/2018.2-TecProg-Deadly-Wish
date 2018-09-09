@@ -6,6 +6,7 @@
 #include <ijengine/game_object.h>
 
 #define FROST_NOVA_BASE_DAMAGE 40
+#define FROST_NOVA_WIDTH 96
 
 
 using namespace std;
@@ -14,23 +15,23 @@ using namespace ijengine;
 
 FrostNova::FrostNova(GameObject *parent, unsigned mage_id, double xp, double yp, double dx,
     double dy)
-    : Skill(parent, xp, yp, FROST_NOVA_BASE_DAMAGE, mage_id), character_id(mage_id), m_dx(dx/hypot(dx, dy)),
-        m_dy(dy/hypot(dx, dy)), speed(100.0)
-
+    : Skill(parent, xp, yp, FROST_NOVA_BASE_DAMAGE, mage_id), frost_character_id(mage_id),
+    frost_axis_x_direction(dx/hypot(dx, dy)), frost_axis_y_direction(dy/hypot(dx, dy)),
+    frost_speed(100.0)
 {
-    frame = 0;
-    start = 0;
-    sprite_path = ChooseSpritePath(mage_id);
+    frost_frame = 0;
+    frost_start = 0;
+    frost_sprite_path = choose_sprite_path(mage_id);
 
-    m_texture = ijengine::resources::get_texture(sprite_path);
+    frost_texture = ijengine::resources::get_texture(frost_sprite_path);
     m_x = xp;
     m_y = yp;
     double hip = sqrt(48 * 48 * 2);
     m_x -= hip / 2.0;
     m_y -= hip / 2.0;
-    bounding_box = Rectangle(m_x, m_y, 96.00, 96.00);
-    damage = FROST_NOVA_BASE_DAMAGE;
-    printf("Frost nova damage: %d\n", damage);
+    frost_bounding_box = Rectangle(m_x, m_y, 96.00, 96.00);
+    frost_damage = FROST_NOVA_BASE_DAMAGE;
+    printf("Frost nova damage: %d\n", frost_damage);
 }
 
 FrostNova::~FrostNova()
@@ -39,67 +40,67 @@ FrostNova::~FrostNova()
 }
 
 void
-FrostNova::DrawSelf(Canvas *canvas, unsigned, unsigned)
+FrostNova::draw_self(Canvas *canvas, unsigned, unsigned)
 {
-
-    Rectangle rect {(double) 96.0 * frame, 0.0, 96.00, 96.00};
-    canvas->draw(m_texture.get(),rect, x(), y());
-
+    Rectangle rect {(double)FROST_NOVA_WIDTH * frost_frame, 0.0, (double)FROST_NOVA_WIDTH,
+                    (double)FROST_NOVA_WIDTH};
+    canvas->draw(frost_texture.get(),rect, x(), y());
 }
 
 void
-FrostNova::UpdateSelf(unsigned now, unsigned last)
+FrostNova::update_self(unsigned now, unsigned last)
 {
-    UpdateTime(now);
+    update_time(now);
 }
 
 bool
-FrostNova::Active() const
+FrostNova::active() const
 {
     return true;
 }
 
-
-const Rectangle& FrostNova::bounding_box() const {
-  
-    return bounding_box;
+const Rectangle&
+FrostNova::bounding_box() const
+{
+    return frost_bounding_box;
 }
 
 const list<Rectangle>&
-FrostNova::HitBoxes() const {
-    static list<Rectangle> boxes {bounding_box};
+FrostNova::hit_boxes() const
+{
+    static list<Rectangle> boxes {frost_bounding_box};
     return boxes;
 }
 
 pair<double, double>
-FrostNova::Direction() const
+FrostNova::direction() const
 {
-    return pair<double, double>(m_dx, m_dy);
+    return pair<double, double>(frost_axis_x_direction, frost_axis_y_direction);
 }
 
 void
-FrostNova::UpdateTime(unsigned now)
+FrostNova::update_time(unsigned now)
 {
     // if it's the first update self
-    if(start == 0) {
-        start = now;
-        current_time = now;
+    if(frost_start == 0) {
+        frost_start = now;
+        frost_current_time = now;
     }
 
-    if (now - current_time > 100)
+    if (now - frost_current_time > 100)
     {
-        current_time += 100;
-        frame = (frame + 1) % (texture->w() / 96);
+        frost_current_time += 100;
+        frost_frame = (frost_frame + 1) % (frost_texture->w() / FROST_NOVA_WIDTH);
     }
 
-    if((current_time - start) > 100 * 6) {
+    if((frost_current_time - frost_start) > 100 * 6) {
         invalidate();
     }
 
 }
 
 string
-FrostNova::ChooseSpritePath(unsigned player_id)
+FrostNova::choose_sprite_path(unsigned player_id)
 {
     string directory = "Green";
     string sprite_path;
@@ -137,18 +138,17 @@ FrostNova::on_collision(const Collidable *who, const Rectangle& where, unsigned 
     const Character *c = dynamic_cast<const Character *>(who);
     const Base *b = dynamic_cast<const Base *>(who);
 
-    bool c_bool = c and c->id() != character_id;
-    bool b_bool = b and b->base_player_id() != character_id;
-
+    bool c_bool = c and c->get_id() != frost_character_id;
+    bool b_bool = b and b->get_base_player_id() != frost_character_id;
 
     if(c_bool) {
-        m_collided |= (1 << c->get_id());
+        skill_collided |= (1 << c->get_id());
     }
     if(b_bool) {
-        m_collided |= (1 << ((b->base_player_id() + 4)));
+        skill_collided |= (1 << ((b->get_base_player_id() + 4)));
     }
 
-    // if ( (c and c->get_id() != m_character_id) || (b and b->base_player_id() != m_character_id) )
+    // if ( (c and c->id() != m_character_id) || (b and b->base_player_id() != m_character_id) )
     // {
     //     printf("OI\n");
     //     invalidate();

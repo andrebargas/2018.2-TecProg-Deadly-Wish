@@ -25,7 +25,7 @@ namespace ijengine {
         string m_title;
         int m_w, m_h;
         double m_scale;
-        State state;
+        State m_state;
     };
 
 }

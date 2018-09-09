@@ -24,38 +24,41 @@ class FrostNova : public Skill {
 public:
     FrostNova(GameObject *parent, unsigned mage_id, double xp, double yp,
         double dx, double dy);
-
-
-
     ~FrostNova();
-    bool Active() const;
-    const Rectangle& BoundingBox() const;
-    const list<Rectangle>& HitBoxes() const;
-    pair<double, double> Direction() const;
+
+    // Metodos virtual de Collidable
+    bool active() const;
+    const Rectangle& bounding_box() const;
+    const list<Rectangle>& hit_boxes() const;
+    pair<double, double> direction() const;
     void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);
 
 protected:
-    void UpdateSelf(unsigned now, unsigned last);
-    void DrawSelf(Canvas *canvas, unsigned, unsigned);
-    void UpdateSprite_state();
-    void UpdateTime(unsigned now);
-    string ChooseSpritePath(unsigned player_id);
 
-    unsigned character_id;
+    // Metodos virtual de GameObject
+    void update_self(unsigned now, unsigned last);
+    void draw_self(Canvas *canvas, unsigned, unsigned);
+
+    // Metodos de FrostNova
+    void update_sprite_state();
+    void update_time(unsigned now);
+    string choose_sprite_path(unsigned player_id);
+
+    unsigned frost_character_id;
     typedef enum { MOVING_LEFT, MOVING_RIGHT} State;
     typedef enum { CASTING, MOVING, HITTING } SpriteState;
     typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
-    State state;
-    SpriteState sprite_state;
-    double attack_distance_x, attack_distance_y;
-    int damage;
-    double speed;
-    int frame;
-    string sprite_path;
-    unsigned start;
-    unsigned current_time;
-    shared_ptr<Texture> m_texture;
-    Rectangle bounding_box;
+    State frost_state;
+    SpriteState frost_sprite_state;
+    double frost_axis_x_direction, frost_axis_y_direction;
+    int frost_damage;
+    double frost_speed;
+    int frost_frame;
+    string frost_sprite_path;
+    unsigned frost_start;
+    unsigned frost_current_time;
+    shared_ptr<Texture> frost_texture;
+    Rectangle frost_bounding_box;
 
 
 //    bool on_event(const GameEvent& event);

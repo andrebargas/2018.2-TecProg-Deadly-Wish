@@ -53,7 +53,7 @@ namespace ijengine {
         State m_state;
         State m_buttons_state[BUTTONS_COUNT];
         int m_x, m_y;
-        int attack_distance_x, attack_distance_y;
+        int m_dx, m_dy;
     };
 }
 

@@ -1,158 +1,165 @@
 #include "fireball.h"
 #include "character.h"
+
 #include <ijengine/engine.h>
 #include <ijengine/rectangle.h>
 #include <ijengine/game_object.h>
 
 #define FIREBALL_BASE_DAMAGE 20
-#define HEIGHT_RECTANGLE 20
-#define WIDTH_RECTANGLE 20
-#define SPEED 100.0
-#define UPDATE_SPRITE_TIME 300
-#define UPDATE_SELF_TIME 1000
-#define CHARACTER_WIDTH 32
+#define FIREBALL_WIDTH 32
 
 
 using namespace std;
 using namespace ijengine;
 
-Fireball::Fireball(GameObject *parent, unsigned mage_id, double axis_position_x,
-                   double axis_position_y, double direction_x, double direction_y)
-: Skill(parent, axis_position_x, axis_position_y, FIREBALL_BASE_DAMAGE, mage_id),
-        character_id(mage_id), direction_axis_x(direction_x/hypot(direction_x, direction_y)),
-        direction_axis_y(direction_y/hypot(direction_x, direction_y)), skill_speed(SPEED) {
 
-    frame = 0;
-    start = 0;
-    sprite_path = ChooseSpritePath(mage_id);
-    texture = ijengine::resources::get_texture(sprite_path);
+Fireball::Fireball(GameObject *parent, unsigned mage_id, double xp, double yp, double dx,
+    double dy)
+    : Skill(parent, xp, yp, FIREBALL_BASE_DAMAGE, mage_id), fireball_character_id(mage_id),
+            fireball_axis_x_direction(dx/hypot(dx, dy)),
+            fireball_axis_y_direction(dy/hypot(dx, dy)), fireball_speed(100.0)
+{
+    fireball_frame = 0;
+    fireball_start = 0;
+    fireball_sprite_path = choose_sprite_path(mage_id);
+    fireball_texture = ijengine::resources::get_texture(fireball_sprite_path);
+    fireball_bounding_box = Rectangle(m_x, m_y, 20, 20);
 
-    /*
-     *m_x e m_y are protected by project scope
-     *
-    */
-    m_x = axis_position_x;
-    m_y = axis_position_y;
-    bounding_box = Rectangle(m_x, m_y, WIDTH_RECTANGLE, HEIGHT_RECTANGLE);
-    if(direction_axis_x > 0) {
-        state = MOVING_LEFT;
+    //Atributos de GameObject
+    fireball_axis_x_direction = xp;
+    fireball_axis_y_direction = yp;
+
+    if(fireball_axis_x_direction > 0) {
+        fireball_state = MOVING_LEFT;
     }
     else {
-        state = MOVING_RIGHT;
+        fireball_state = MOVING_RIGHT;
     }
 }
 
-Fireball::~Fireball() {
+Fireball::~Fireball()
+{
+
 }
 
-void Fireball::draw_self(Canvas *canvas, unsigned, unsigned) {
+void
+Fireball::draw_self(Canvas *canvas, unsigned, unsigned)
+{
+    Rectangle rect {(double)FIREBALL_WIDTH * fireball_frame,
+                    (double)FIREBALL_WIDTH * fireball_state,
+                    (double)FIREBALL_WIDTH, (double)FIREBALL_WIDTH};
 
-    Rectangle rect {(double) CHARACTER_WIDTH * frame, (double) CHARACTER_WIDTH * state,
-                    (double) CHARACTER_WIDTH, (double) CHARACTER_WIDTH};
-    canvas->draw(texture.get(),rect, x(), y());
+    canvas->draw(fireball_texture.get(),rect, x(), y());
 }
 
-void Fireball::update_self(unsigned actual_position_time, unsigned last_position_time) {
-    UpdateTime(actual_position_time);
+void
+Fireball::update_self(unsigned now, unsigned last)
+{
+    update_time(now);
 
-    if(current_time - start > UPDATE_SPRITE_TIME) {
+    if(fireball_current_time - fireball_start > 300) {
+        double new_y = y() + fireball_axis_y_direction *  fireball_speed * (now - last) / 1000.0;
+        double new_x = x() + fireball_axis_x_direction *  fireball_speed * (now - last) / 1000.0;
+        set_position(new_x, new_y);
 
-        double new_y_coordinate =
-        y() + direction_axis_y *  speed * (actual_position_time - last_position_time) / (double) UPDATE_SELF_TIME;
-
-        double new_x_coordinate =
-        x() + direction_axis_x *  speed * (actual_position_time - last_position_time) / (double) UPDATE_SELF_TIME;
-
-        set_position(new_x_coordinate, new_y_coordinate);
-
-        bounding_box.set_position(x(), y());
+        fireball_bounding_box.set_position(x(), y());
     }
 }
 
-bool Fireball::get_active() const {
+bool
+Fireball::active() const
+{
     return true;
 }
 
-const Rectangle& Fireball::get_bounding_box() const {
-    return bounding_box;
+const Rectangle&
+Fireball::bounding_box() const
+{
+    return fireball_bounding_box;
 }
 
-const list<Rectangle>& Fireball::get_hit_boxes() const {
-    static list<Rectangle> boxes {
-        bounding_box
-        };
+const list<Rectangle>&
+Fireball::hit_boxes() const {
+    static list<Rectangle> boxes {fireball_bounding_box};
     return boxes;
 }
 
-pair<double, double> Fireball::get_direction() const {
-    return pair<double, double>(direction_axis_x, direction_axis_y);
+pair<double, double>
+Fireball::direction() const
+{
+    return pair<double, double>(fireball_axis_x_direction, fireball_axis_y_direction);
 }
 
-void Fireball::update_sprite_state() {
-
-    if(current_time - start < UPDATE_SPRITE_TIME) {
-        frame = (frame + 1) % (texture->w() / CHARACTER_WIDTH);
+void
+Fireball::update_sprite_state()
+{
+    if(fireball_current_time - fireball_start < 300) {
+        fireball_frame = (fireball_frame + 1) % (fireball_texture->w() / FIREBALL_WIDTH);
     }
 
-    else if(current_time - start > UPDATE_SPRITE_TIME) {
-        frame = (frame + 1) % (texture->w() / CHARACTER_WIDTH);
+    else if(fireball_current_time - fireball_start > 300) {
+        fireball_frame = (fireball_frame + 1) % (fireball_texture->w() / FIREBALL_WIDTH);
 
-        if(frame >= 5){
-            frame = 2;
+        if(fireball_frame >= 5){
+            fireball_frame = 2;
         }
     }
 
-  //  else if(current_time < -1) {
-  //      frame = 5;
+  //  else if(m_current_time < -1) {
+  //      m_frame = 5;
   //  }
 }
 
-void Fireball::update_time(unsigned actual_position_time) {
+void
+Fireball::update_time(unsigned now)
+{
     // if it's the first update self
-    if(start == 0) {
-        start = actual_position_time;
-        current_time = actual_position_time;
+    if(fireball_start == 0) {
+        fireball_start = now;
+        fireball_current_time = now;
     }
 
-    if (actual_position_time - current_time > 150) {
-        current_time += 150;
+    if (now - fireball_current_time > 150)
+    {
+        fireball_current_time += 150;
         update_sprite_state();
     }
 
-    if((current_time - start) > 2000) {
+    if((fireball_current_time - fireball_start) > 2000) {
         invalidate();
     }
 
 }
 
-string Fireball::choose_sprite_path(unsigned player_id) {
-
-    string color_identifier = "Green";
+string
+Fireball::choose_sprite_path(unsigned player_id)
+{
+    string directory = "Green";
+    string sprite_path;
 
     switch(player_id) {
         case PLAYER_1:
-            color_identifier = "Green";
-        break;
+            directory = "Green";
+            break;
 
         case PLAYER_2:
-            color_identifier = "Blue";
-        break;
+            directory = "Blue";
+            break;
 
         case PLAYER_3:
-            color_identifier = "Yellow";
-        break;
+            directory = "Yellow";
+            break;
 
         case PLAYER_4:
-            color_identifier = "Red";
-        break;
+            directory = "Red";
+            break;
 
         default:
             printf("Valor inválido na Spear\n");
-        break;
+            break;
     }
 
-    string sprite_path;
-    sprite_path = "Spritesheets/" + color_identifier + "/ObjectHadouken" + color_identifier + ".png";
+    sprite_path = "Spritesheets/" + directory + "/ObjectHadouken" + directory + ".png";
 
     return sprite_path;
 }

@@ -17,7 +17,7 @@ namespace ijengine
     {
         if(m_current_state == RUNNING) {
             unsigned now = real_time_elapsed();
-            UpdateTime(now);
+            update_time(now);
             m_current_state = PAUSED;
         }
     }
@@ -33,7 +33,7 @@ namespace ijengine
     }
 
     void
-    Time::UpdateTime(unsigned now) {
+    Time::update_time(unsigned now) {
         m_time_elapsed += now - m_last_update;
         m_last_update = now;
     }

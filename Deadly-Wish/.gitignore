@@ -9,7 +9,3 @@ test/test
 bin*
 !ijengine/ijengine.tar.gz
 Deadly_Wish
-build/
-CMakeCache.txt
-.metadata/
-ijengine/
