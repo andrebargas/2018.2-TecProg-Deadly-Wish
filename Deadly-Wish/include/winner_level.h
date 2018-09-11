@@ -17,8 +17,8 @@ using std::shared_ptr;
 
 using namespace ijengine;
 
-#define MAX_W 16
-#define MAX_H 12
+#define MAX_WIDTH 16
+#define MAX_HEIGHT 12
 
 class WinnerLevel : public Level {
 public:
@@ -35,11 +35,11 @@ protected:
     void set_congratulations_string();
 
 private:
-    bool m_done;
-    string m_next;
-    string m_congratulations;
-    int m_start;
-    int m_winner_player;
+    bool winner_level_done;
+    string winner_level_next;
+    string winner_level_congratulations;
+    int winner_level_start;
+    int winner_level_winner_player;
 
     shared_ptr<Texture> m_texture;
 };
