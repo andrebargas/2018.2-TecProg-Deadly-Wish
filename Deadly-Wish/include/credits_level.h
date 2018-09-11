@@ -18,8 +18,8 @@ using std::shared_ptr;
 
 using namespace ijengine;
 
-#define MAX_W 16
-#define MAX_H 12
+#define MAX_WIDTH 16
+#define MAX_HEIGHT 12
 
 class CreditsLevel : public Level, public GameEventsListener  {
 public:
