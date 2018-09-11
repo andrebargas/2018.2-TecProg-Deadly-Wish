@@ -23,22 +23,24 @@ using ijengine::Canvas;
 using ijengine::Texture;
 using ijengine::Event;
 
-#define MAX_W 16
-#define MAX_H 12
+#define MAX_WIDTH 16
+#define MAX_HEIGHT 12
 
 class DeathMatchLevel : public Level {
 public:
     DeathMatchLevel(const string& next = "", vector < int > players_characters = {});
     ~DeathMatchLevel();
 
-    enum {
+    enum 
+    {
         INFILTRATOR,
         MAGE,
         SOLDIER,
         KNIGHT
     };
 
-    enum {
+    enum 
+    {
         PLAYER_1,
         PLAYER_2,
         PLAYER_3,
@@ -56,16 +58,16 @@ protected:
     void verify_characters();
 
 private:
-    bool m_done;
-    string m_next;
-    int m_start;
-    bool m_has_winner;
+    bool death_match_level_done;
+    string death match_level_next;
+    int death_match_level_start;
+    bool death_mtach_level_has_winner;
 
-    vector <Character* > m_characters;
-    vector < int > m_players_characters;
-    shared_ptr<Texture> m_texture;
-    int m_map[MAX_W][MAX_H];
-    CharacterFactory m_character_factory;
+    vector <Character* > death_match_level_characters;
+    vector < int > death_match_level_players_characters;
+    shared_ptr<Texture> death_match_level_texture;
+    int death_match_level_map[MAX_WIDTH][MAX_HEIGHT];
+    CharacterFactory death_match_level_character_factory;
 };
 
 #endif
