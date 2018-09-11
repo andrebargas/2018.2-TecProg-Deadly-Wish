@@ -43,7 +43,7 @@ CreditsLevel::draw_self(Canvas *canvas, unsigned, unsigned)
     canvas->draw("Créditos: ", 0, 0);
     int y_pos = 25;
 
-    for(string credit : m_credits_strings) {
+    for(string credit : credits_level_strings) {
         canvas->draw(credit, 10, y_pos);
         y_pos += 25;
     }
@@ -55,19 +55,19 @@ CreditsLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 void
 CreditsLevel::set_credits_strings()
 {
-    m_credits_strings.push_back("Arte: Vitor Dias & Fred");
-    m_credits_strings.push_back("Programação: Iago Rodrigues & Lucas Mattioli");
-    m_credits_strings.push_back("Música: Thiago Hardman & Gabriela Marla");
-    m_credits_strings.push_back("");
-    m_credits_strings.push_back("Agradecimentos especiais aos professores e monitores");
-    m_credits_strings.push_back("que nos auxiliaram durante a construção do jogo! ");
+    credits_level_strings.push_back("Arte: Vitor Dias & Fred");
+    credits_level_strings.push_back("Programação: Iago Rodrigues & Lucas Mattioli");
+    credits_level_strings.push_back("Música: Thiago Hardman & Gabriela Marla");
+    credits_level_strings.push_back("");
+    credits_level_strings.push_back("Agradecimentos especiais aos professores e monitores");
+    credits_level_strings.push_back("que nos auxiliaram durante a construção do jogo! ");
 }
 
 bool
 CreditsLevel::on_event(const GameEvent& event) 
 {
      if(event.id() == game_event::LIGHT_ATTACK_P1) {
-        m_done = true;
+        credits_level_done = true;
         return true;
      }
 }
@@ -75,13 +75,13 @@ CreditsLevel::on_event(const GameEvent& event)
 bool
 CreditsLevel::done() const
 {
-    return m_done;
+    return credits_level_done;
 }
 
 string
 CreditsLevel::next() const
 {
-    return m_next;
+    return credits_level_done;
 }
 string
 CreditsLevel::audio() const {
