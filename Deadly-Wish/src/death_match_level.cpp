@@ -10,6 +10,8 @@
 #include <cstdlib>
 #include <iostream>
 
+#define NUMBER_OF_CHARACTERS 4
+
 using namespace std;
 using namespace ijengine;
 
@@ -19,28 +21,30 @@ DeathMatchLevel::DeathMatchLevel(const string& next_level, vector < int > player
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/ingame.ogg", 30, 50);
     printf("Entrou na Death Match level!\n");
-    m_texture = resources::get_texture("map/Map003.jpg");
+    death_match_level_texture = resources::get_texture("map/Map003.jpg");
 
-    for (int i = 0; i < MAX_W; ++i)
-        for (int j = 0; j < MAX_H; ++j)
-            m_map[i][j] = 1;
+    for (int i = 0; i < MAX_WIDTH; ++i)
+        for (int j = 0; j < MAX_HEIGHT; ++j)
+            death_match_level_map[i][j] = 1;
 
-    m_map[0][0] = 0;
-    m_map[0][MAX_H - 1] = 0;
-    m_map[MAX_W - 1][0] = 0;
-    m_map[MAX_W - 1][MAX_H - 1] = 0;
+    death_match_level_map[0][0] = 0;
+    death_match_level_map[0][MAX_HEIGHT - 1] = 0;
+    death_match_level_map[MAX_WIDTH - 1][0] = 0;
+    death_match_level_map[MAX_WIDTH - 1][MAX_HEIGHT - 1] = 0;
 
-    m_players_characters = players_characters;
-    double x =0.0;
-    double y = 0.0;
+    death_match_level_players_characters = players_characters;
+    double axis_x =0.0;
+    double axis_y = 0.0;
     unsigned player_id = 0;
 
     for(const int &current_player_character : m_players_characters) {
         set_players_characters_position(player_id, x, y);
-        Character *current_character = m_character_factory.make_character(current_player_character, player_id, x, y);
+        Character *current_character = 
+        death_match_level_character_factory.make_character(current_player_character,player_id,
+                                                           axis_x, axis_y);
         Base *current_base = new Base(player_id);
         current_character->set_base(current_base);
-        m_characters.push_back(current_character);
+        death_match_level_characters.push_back(current_character);
         current_base->set_base_status(8 - current_character->get_number_of_lives());
         add_child(current_character);
         add_child(current_base);
@@ -56,16 +60,16 @@ DeathMatchLevel::~DeathMatchLevel()
 void
 DeathMatchLevel::update_self(unsigned now, unsigned)
 {
-    if (m_start == -1)
-        m_start = now;
+    if (death_match_level_start == -1)
+        death_match_level_start = now;
 
-    if(not m_has_winner and now - m_start > 200) {
-        m_start = now;
+    if(not death_match_level_has_winner and now - death_match_level_start > 200) {
+        death_match_level_start = now;
         verify_characters();
     }
 
-    if(m_has_winner and now - m_start > 3200) {
-        m_done = true;
+    if(death_match_level_has_winner and now - death_match_level_start > 3200) {
+        death_match_level_done = true;
     }
 }
 
@@ -80,18 +84,18 @@ DeathMatchLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 void
 DeathMatchLevel::verify_characters()
 {
-    int count = 0;
+    int player_counter = 0;
     int valid_index = 0;
 
-    for(int i = 0; i < 4; i++) {
-        if(m_characters[i]->valid()) {
-            count++;
+    for(int i = 0; i < NUMBER_OF_CHARACTERS; i++) {
+        if(death_match_level_characters[i]->valid()) {
+            player_counter++;
             valid_index = i;
         }
     }
 
-    if(count == 1) {
-        m_has_winner = true;
+    if(player_counter == 1) {
+        death_match_level_has_winner = true;
         audio::stop_audio_channel(0);
         audio::play_sound_effect("res/sound/music/winning.ogg", 30, 1);
         printf("Index valido: %d\n", valid_index);
@@ -138,13 +142,13 @@ DeathMatchLevel::set_players_characters_position(unsigned player_id, double& x_p
 bool
 DeathMatchLevel::done() const
 {
-    return m_done;
+    return death_match_level_done;
 }
 
 string
 DeathMatchLevel::next() const
 {
-    return m_next;
+    return death_match_level_next;
 }
 string
 DeathMatchLevel::audio() const {
