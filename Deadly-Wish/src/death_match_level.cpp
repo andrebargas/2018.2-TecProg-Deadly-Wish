@@ -40,6 +40,7 @@ DeathMatchLevel::DeathMatchLevel(const string& next_level, vector < int > player
 
     for(const int &current_player_character : death_match_level_players_characters) {
         set_players_characters_position(player_id, axis_x, axis_y);
+
         Character *current_character = 
         death_match_level_character_factory.make_character(current_player_character,player_id,
                                                            axis_x, axis_y);

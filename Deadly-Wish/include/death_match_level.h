@@ -63,6 +63,7 @@ private:
     int death_match_level_start;
     bool death_match_level_has_winner;
 
+
     vector <Character* > death_match_level_characters;
     vector < int > death_match_level_players_characters;
     shared_ptr<Texture> death_match_level_texture;

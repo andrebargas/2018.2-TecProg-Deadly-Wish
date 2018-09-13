@@ -43,6 +43,7 @@ MainLevel::MainLevel(const string& next_level, vector < int > players_characters
     unsigned player_id = 0;
 
     for(const int &current_player_character : main_level_players_characters) {
+
         set_players_characters_position(player_id, axis_x, axis_y);
         Character *current_character = main_level_character_factory.make_character(
                                                                     current_player_character,

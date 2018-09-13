@@ -82,7 +82,8 @@ string
 CreditsLevel::next() const
 {
     return credits_level_next;
-}
+
+
 string
 CreditsLevel::audio() const {
     return ".";
