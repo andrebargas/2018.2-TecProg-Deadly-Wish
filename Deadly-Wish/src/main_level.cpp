@@ -20,7 +20,8 @@ using std::endl;
 
 
 MainLevel::MainLevel(const string& next_level, vector < int > players_characters)
-    : m_done(false), m_next(next_level), m_start(-1), m_has_winner(false)
+    : main_level_done(false), main_level_next(next_level), main_level_start(-1),
+      main_level_has_winner(false)
 {
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/ingame.ogg", 30, 50);
@@ -41,7 +42,7 @@ MainLevel::MainLevel(const string& next_level, vector < int > players_characters
     double axis_y = 0.0;
     unsigned player_id = 0;
 
-    for(const int &current_player_character : m_players_characters) {
+    for(const int &current_player_character : main_level_players_characters) {
         set_players_characters_position(player_id, axis_x, axis_y);
         Character *current_character = main_level_character_factory.make_character(
                                                                     current_player_character,

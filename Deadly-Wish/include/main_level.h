@@ -26,9 +26,6 @@ using ijengine::Event;
 #define MAX_WIDTH 16
 #define MAX_HEIGHT 12
 
-//#define MAX_W 16
-//#define MAX_H 12
-
 // Level is from ijengine
 class MainLevel : public Level {
 public:
@@ -70,7 +67,7 @@ private:
     vector < int > main_level_players_characters;
     shared_ptr<Texture> main_level_texture;
     int main_level_map[MAX_WIDTH][MAX_HEIGHT];
-    CharacterFactory main_levelac_character_factory;
+    CharacterFactory main_level_character_factory;
 };
 
 #endif

@@ -14,7 +14,8 @@ using namespace std;
 #define CREDITS_OPTION_Y_POSITION 53
 
 MenuLevel::MenuLevel(const string& next_level)
-    :m_done(false), m_next(next_level), m_start(-1), m_current_option(0)
+    :menu_level_done(false), menu_level_next(next_level), menu_level_start(-1),
+     menu_level_current_option(0)
 {
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/menu.ogg", 60, 10);

@@ -59,9 +59,9 @@ protected:
 
 private:
     bool death_match_level_done;
-    string death match_level_next;
+    string death_match_level_next;
     int death_match_level_start;
-    bool death_mtach_level_has_winner;
+    bool death_match_level_has_winner;
 
     vector <Character* > death_match_level_characters;
     vector < int > death_match_level_players_characters;

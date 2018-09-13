@@ -12,7 +12,8 @@ using namespace ijengine;
 using namespace util;
 
 WinnerLevel::WinnerLevel(const string& next_level, int winner_player)
-    : m_done(false), m_next(next_level), m_start(-1), m_winner_player(winner_player)
+    : winner_level_done(false), winner_level_next(next_level), winner_level_start(-1),
+      winner_level_winner_player(winner_player)
 {
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/menu.ogg", 30, 3);

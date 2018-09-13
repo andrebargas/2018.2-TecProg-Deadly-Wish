@@ -13,7 +13,7 @@ using namespace ijengine;
 using namespace util;
 
 CreditsLevel::CreditsLevel(const string& next_level)
-    : m_done(false), m_next(next_level), m_start(-1)
+    : credits_level_done(false), credits_level_next(next_level), credits_level_start(-1)
 {
     printf("Construtor dos créditos!\n");
     audio::stop_audio_channel(0);
@@ -30,8 +30,8 @@ CreditsLevel::~CreditsLevel()
 void
 CreditsLevel::update_self(unsigned now, unsigned)
 {
-    if (m_start == -1)
-        m_start = now;
+    if (credits_level_start == -1)
+        credits_level_start = now;
 }
 
 void
@@ -81,7 +81,7 @@ CreditsLevel::done() const
 string
 CreditsLevel::next() const
 {
-    return credits_level_done;
+    return credits_level_next;
 }
 string
 CreditsLevel::audio() const {
