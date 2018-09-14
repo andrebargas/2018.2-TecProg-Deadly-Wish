@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Sobre o jogo</title>
+    <title>Modulo03</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,93 +50,84 @@
 
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Sobre o projeto</li>
+                    <li><a href="sobre_o_projeto.html">Sobre o projeto</a></li>
+                    <li class="active">módulo-03</li>
                 </ol>
             </div><!--//container-->
         </header><!--//header-->
         <div class="doc-wrapper">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><i class="icon fa fa-search"></i> Sobre o projeto</h1>
+                    <h1 class="doc-title"><i class="icon fa fa-search"></i> Modulo - 03</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Última alteração: 12/09/2018</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
                         <div class="content-inner">
-                            <section id="introduction-section" class="doc-section">
-                                <h2 class="section-title">Introdução</h2>
-                                <div class="section-block">
-                                        <p align="justify">&emsp;&emsp;O projeto Deadly Wish é um de muitos projetos disponiveis na organização
-                                           <a href="https://github.com/unbgames"> unb games</a>, o acervo digital central de jogos feitos na Universidade de Brasilia e em seus campi.</p>
+                            <section id="objective-section" class="doc-section">
+                                <h2 class="section-title">Objetivo</h2>
+                                <div  class="section-block">
+                                  <p>&emsp;&emsp; O objetivo deste módulo é a aplicação das primeiras técnicas de refatoração de código
+                                     dando enfase nas técnicas de estilo e desing, como identação nome de variáveis e funções. Também foi definido
+                                     quais ferramentas serão utilizadas no decorrer do projeto.
+                                   </p>
                                 </div>
                             </section><!--//doc-section-->
+                            <section id="estilo-desing" class="doc-section">
+                                <h2 class="section-title">Estilo e Desing</h2>
+                                <div  class="section-block">
+                                  <h3 class="block-title">Identação</h3>
+                                  <p>&emsp;&emsp; A identação deve ser padronizada para todo o documento. Deve também facilitar a leitura do código.</p>
+                                  <p>&emsp;&emsp; Exemplo de código mal identado:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de código bem identado:</p>
+                                  <h2>EXEMPLO AQUI</h2>
 
-                            <section class="cards-section text-center">
-                              <div class="content-fluid">
-                               <div id="cards-wrapper" class="cards-wrapper row-fluid">
-                                   <div class="item item-blue col-md-6 col-sm-6 col-xs-6">
-                                       <div class="item-inner">
-                                           <div class="icon-holder">
-                                               <span aria-hidden="true" class="icon fa fa-file-text"></span>
-                                           </div><!--//icon-holder-->
-                                           <h3 class="title">Modulo-02</h3>
-                                           <p class="intro">Estilo desing, nomes e identação</p>
-                                           <a class="link" href="modulo02.html"><span></span></a>
-                                       </div><!--//item-inner-->
-                                   </div><!--//item-->
-                                   <div class="item item-blue col-md-6 col-sm-6 col-xs-6">
-                                     <div class="item-inner">
-                                         <div class="icon-holder">
-                                             <span aria-hidden="true" class="icon fa fa-file-text"></span>
-                                         </div><!--//icon-holder-->
-                                         <h3 class="title">Modulo-03</h3>
-                                         <p class="intro">Comentarios!</p>
-                                         <a class="link" href="modulo03.html"><span></span></a>
-                                     </div><!--//item-inner-->
-                                   </div><!--//item-->
-                                 </div>
-                               </div><!--content  -->
-                             </section>
-
-                             <section id="content-section" class="doc-section">
-
-                                <h2 class="section-title"> Diagrama de classes</h2>
-                                  <p></p>
-                                  <div id="myModal" class="modal">
-                                   <span class="close">&times;</span>
-                                   <img class="modal-content" id="img01">
-                                   <div id="caption"></div>
-                                  </div>
-                                  <img id="myImg" src="assets/images/diagramadeclasses.png" alt="Snow" style="width:100%;max-width:650px;">
-
-                                    <h3 class="block-title">Telas do jogo</h3>
-                                    <p></p>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                          <img src="assets/images/main_level.png" alt="Snow" class="img-thumbnail">
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                          <img src="assets/images/credits_level.png" alt="Snow1" class="img-thumbnail">
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                          <img src="assets/images/fase_level.png" alt="Snow2" class="img-thumbnail">
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                          <img src="assets/images/character_level.png" alt="Snow3" class="img-thumbnail">
-                                        </div>
-                                    </div>
-
-                                </div><!--//section-block-->
+                                </div>
+                                <div  class="section-block">
+                                  <h3 class="block-title">Nome de Significativos</h3>
+                                  <p>&emsp;&emsp; Deve-se dar nomes auto explicativos para todos os arquivos, classes, variáveis e funções.
+                                     Esta prática reduz a necessidade de comentarios e torna o código mais auto explicativo.
+                                  </p>
+                                  <p>&emsp;&emsp; Exemplo de nome ruins:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de bons nomes:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                </div>
 
                             </section><!--//doc-section-->
 
+                            <section id="iniciar-variaveis" class="doc-section">
+                              <h2 class="section-title">Iniciação de Variaveis</h2>
+                              <div  class="section-block">
+                                <p>
+                                  &emsp;&emsp;É recomendado que todas a variáveis devem ser inicializadas no momento que são declaradas.
+                                  Isso garante que não haja valores indejados nas variáveis, código como C e C++ geram valores diferentes
+                                  para as variáveis cada vez que o código é rodado.
+                                </p>
+                                <p>&emsp;&emsp; Exemplo de má iniciação de variável:</p>
+                                <h2>EXEMPLO AQUI</h2>
+                                <p>&emsp;&emsp; Exemplo de boa iniciação de variável</p>
+                                <h2>EXEMPLO AQUI</h2>
 
-                            <section id="referencias-section" class="doc-section">
-                              <div class="row">
-                                <h2 class="section-title"> Referências:</h2>
-                                <a href="https://github.com/unbgames/Deadly-Wish"target="_blank">&emsp;&emsp;https://github.com/unbgames/Deadly-Wish</a>
                               </div>
                             </section><!--//doc-section-->
 
+                            <section id="analise-estatica" class="doc-section">
+                                <h2 class="section-title">Ferramenta de análise estática</h2>
+                                <div  class="section-block">
+                                  <p>&emsp;&emsp; O uso de ferramentas de análise estatica ajuda a
+                                      indentificar erros que o compilar não consegue reconhecer.
+                                  </p>
+
+                                </div>
+                                <div  class="section-block">
+                                  <h3 class="block-title">CppCheck</h3>
+                                  <p>
+                                    &emsp;&emsp; A ferramenta cppcheck fora escolhida para o auxilo nesta tarefa.
+                                  </p>
+                                </div>
+                            </section><!--//doc-section-->
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
                 </div><!--//doc-body-->
