@@ -72,11 +72,11 @@ public:
     int run(const string& level_id);
 
 private:
-	Game m_game;
-	Engine m_engine;
-	Translator m_translator;
-	TestLevelFactory m_level_factory;
-    
+	Game ije_game;
+	Engine ije_engine;
+	Translator ije_translator;
+	TestLevelFactory ije_level_factory;
+
 };
 
 #endif
