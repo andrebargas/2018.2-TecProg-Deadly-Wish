@@ -12,7 +12,8 @@ using namespace ijengine;
 using namespace util;
 
 WinnerLevel::WinnerLevel(const string& next_level, int winner_player)
-    : m_done(false), m_next(next_level), m_start(-1), m_winner_player(winner_player)
+    : winner_level_done(false), winner_level_next(next_level), winner_level_start(-1),
+      winner_level_winner_player(winner_player)
 {
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/menu.ogg", 30, 3);
@@ -27,11 +28,11 @@ WinnerLevel::~WinnerLevel()
 void
 WinnerLevel::update_self(unsigned now, unsigned)
 {
-    if (m_start == -1)
-        m_start = now;
+    if (winner_level_start == -1)
+        winner_level_start = now;
 
-    if (now - m_start > 3000)
-        m_done = true;
+    if (now - winner_level_start > 3000)
+        winner_level_start = true;
 }
 
 void
@@ -41,33 +42,33 @@ WinnerLevel::draw_self(Canvas *canvas, unsigned, unsigned)
     canvas->set_font(font);
 
     canvas->clear();
-    canvas->draw(m_congratulations, 60, 85);
+    canvas->draw(winner_level_congratulations, 60, 85);
 }
 
 void
 WinnerLevel::set_congratulations_string()
 {
-    switch(m_winner_player) {
+    switch(winner_level_winner_player) {
         case PLAYER_1:
-            m_congratulations = "Jogador 1 venceu!";
+            winner_level_congratulations = "Jogador 1 venceu!";
             break;
 
         case PLAYER_2:
-            m_congratulations = "Jogador 2 venceu!";
+            winner_level_congratulations = "Jogador 2 venceu!";
             break;
 
         case PLAYER_3:
-            m_congratulations = "Jogador 3 venceu!";
+            winner_level_congratulations = "Jogador 3 venceu!";
             break;
 
         case PLAYER_4:
-            m_congratulations = "Jogador 4 venceu!";
+            winner_level_congratulations = "Jogador 4 venceu!";
             break;
 
         default:
             printf("Error on set_congratulations_string!\n");
-            printf("Valor de winner player: %d\n", m_winner_player);
-            m_congratulations = "Houve um erro\n no jogo! :D";
+            printf("Valor de winner player: %d\n", winner_level_winner_player);
+            winner_level_congratulations = "Houve um erro\n no jogo! :D";
             break;
     }
 }
@@ -75,13 +76,13 @@ WinnerLevel::set_congratulations_string()
 bool
 WinnerLevel::done() const
 {
-    return m_done;
+    return winner_level_done;
 }
 
 string
 WinnerLevel::next() const
 {
-    return m_next;
+    return winner_level_next;
 }
 string
 WinnerLevel::audio() const {

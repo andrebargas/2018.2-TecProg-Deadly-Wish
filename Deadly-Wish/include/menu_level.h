@@ -21,8 +21,8 @@ using ijengine::Event;
 
 using namespace ijengine;
 
-#define MAX_W 16
-#define MAX_H 12
+#define MAX_WIDTH 16
+#define MAX_HEIGHT 12
 
 class MenuLevel : public Level, public GameEventsListener {
 public:
@@ -40,17 +40,25 @@ protected:
     bool on_event(const GameEvent& event);
 
 private:
-    bool m_done;
-    string m_next;
-    int m_start;
-    int m_option_y_position;
-    int m_current_option;
+    bool menu_level_done;
+    string menu_level_next;
+    int menu_level_start;
+    int menu_level_option_y_position;
+    int menu_level_current_option;
 
-    enum { BASE_OPTION, DEATHMATCH_OPTION, CREDITS };
-    enum { BACKGROUND, POINTER };
+    enum { 
+            BASE_OPTION, 
+            DEATHMATCH_OPTION, 
+            CREDITS 
+        };
 
-    vector< shared_ptr<Texture> > m_textures;
-    vector < string > m_options;
+    enum { 
+            BACKGROUND, 
+            POINTER 
+        };
+
+    vector< shared_ptr<Texture> > menu_level_textures;
+    vector < string > menu_level_options;
 };
 
 #endif

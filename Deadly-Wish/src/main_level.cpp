@@ -16,34 +16,41 @@ using namespace ijengine;
 using std::cout;
 using std::endl;
 
+#define NUMBER_OF_BASES 4
+
+
 MainLevel::MainLevel(const string& next_level, vector < int > players_characters)
-    : m_done(false), m_next(next_level), m_start(-1), m_has_winner(false)
+    : main_level_done(false), main_level_next(next_level), main_level_start(-1),
+      main_level_has_winner(false)
 {
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/ingame.ogg", 30, 50);
     printf("Entrou no main leven\n");
-    m_texture = resources::get_texture("map/Map003.jpg");
+    main_level_texture = resources::get_texture("map/Map003.jpg");
 
-    for (int i = 0; i < MAX_W; ++i)
-        for (int j = 0; j < MAX_H; ++j)
-            m_map[i][j] = 1;
+    for (int i = 0; i < MAX_WIDTH; ++i)
+        for (int j = 0; j < MAX_HEIGHT; ++j)
+            main_level_map[i][j] = 1;
 
-    m_map[0][0] = 0;
-    m_map[0][MAX_H - 1] = 0;
-    m_map[MAX_W - 1][0] = 0;
-    m_map[MAX_W - 1][MAX_H - 1] = 0;
+    main_level_map[0][0] = 0;
+    main_level_map[0][MAX_HEIGHT - 1] = 0;
+    main_level_map[MAX_WIDTH - 1][0] = 0;
+    main_level_map[MAX_WIDTH - 1][MAX_HEIGHT - 1] = 0;
 
-    m_players_characters = players_characters;
-    double x =0.0;
-    double y = 0.0;
+    main_level_players_characters = players_characters;
+    double axis_x =0.0;
+    double axis_y = 0.0;
     unsigned player_id = 0;
 
-    for(const int &current_player_character : m_players_characters) {
-        set_players_characters_position(player_id, x, y);
-        Character *current_character = m_character_factory.make_character(current_player_character, player_id, x, y);
+    for(const int &current_player_character : main_level_players_characters) {
+
+        set_players_characters_position(player_id, axis_x, axis_y);
+        Character *current_character = main_level_character_factory.make_character(
+                                                                    current_player_character,
+                                                                     player_id, axis_x, axis_y);
         Base *current_base = new Base(player_id);
         current_character->set_base(current_base);
-        m_bases.push_back(current_base);
+        main_level_bases.push_back(current_base);
         add_child(current_character);
         add_child(current_base);
         player_id++;
@@ -57,13 +64,13 @@ MainLevel::~MainLevel() {
 bool
 MainLevel::done() const
 {
-    return m_done;
+    return main_level_done;
 }
 
 string
 MainLevel::next() const
 {
-    return m_next;
+    return main_level_next;
 }
 
 string
@@ -74,16 +81,16 @@ MainLevel::audio() const {
 void
 MainLevel::update_self(unsigned now, unsigned)
 {
-    if (m_start == -1)
-        m_start = now;
+    if (main_level_start == -1)
+        main_level_start = now;
 
-    if(not m_has_winner and now - m_start > 200) {
-        m_start = now;
+    if(not main_level_has_winner and now - main_level_start > 200) {
+        main_level_start = now;
         verify_bases();
     }
 
-    if(m_has_winner and now - m_start > 3200) {
-        m_done = true;
+    if(main_level_has_winner and now - main_level_start > 3200) {
+        main_level_done = true;
     }
 }
 
@@ -92,7 +99,7 @@ MainLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     canvas->clear();
 
-    canvas->draw(m_texture.get(), 0, 0);
+    canvas->draw(main_level_texture.get(), 0, 0);
 }
 
 void
@@ -129,27 +136,27 @@ MainLevel::set_players_characters_position(unsigned player_id, double& x_pos, do
 void
 MainLevel::verify_bases()
 {
-    int count = 0;
+    int dead_base_counter = 0;
     int winner_player_id = 0;
 
-    for(int i = 0; i < 4; i++) {
-        if(m_bases[i]->get_base_life() <= 0) {
-            count++;
+    for(int i = 0; i < NUMBER_OF_BASES; i++) {
+        if(main_level_bases[i]->get_base_life() <= 0) {
+            dead_base_counter++;
         }
         else {
-            winner_player_id = m_bases[i]->get_base_player_id();
+            winner_player_id = main_level_bases[i]->get_base_player_id();
         }
     }
 
-    if(count == 3) {
-        m_has_winner = true;
+    if(dead_base_counter == 3) {
+        main_level_has_winner = true;
         audio::stop_audio_channel(0);
         audio::play_sound_effect("res/sound/music/winning.ogg", 30, 1);
         winner::winner_player = winner_player_id;
 
     }
 
-    if(count > 3) {
+    if(dead_base_counter > 3) {
         printf("Something is wrong.... \nMore than 3 bases destroyed!\n");
     }
 
