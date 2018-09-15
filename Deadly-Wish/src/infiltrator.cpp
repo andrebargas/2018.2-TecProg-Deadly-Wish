@@ -34,9 +34,9 @@ Infiltrator::Infiltrator(vector<string> sprite_paths, unsigned id, double x, dou
     character_defense_cooldown = INFILTRATOR_DEFENSE_COOLDOWN;
     //! Último uso do poder especial
     character_last_used_special = -INFILTRATOR_SPECIAL_COOLDOWN;
-    //! Último uso do poder pesado   
+    //! Último uso do poder heavy_atack   
     character_last_used_heavy_attack = -INFILTRATOR_HEAVY_ATTACK_COOLDOWN;
-    //! Último uso do poder leve
+    //! Último uso do poder ligth_atack
     character_last_used_light_attack = -INFILTRATOR_LIGHT_ATTACK_COOLDOWN;
     //! Último uso da defesa
     character_last_used_defense = -INFILTRATOR_DEFENSE_COOLDOWN;
@@ -92,7 +92,6 @@ Infiltrator::do_defense() {
     //! Muda o estado do personagem
     change_character_state(DEFENSE_STATE);
 }
-
 
 // Método void que retorna ataque especial, poder do ataque: 5000
 void
