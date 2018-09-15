@@ -11,13 +11,13 @@
 //! Vida total do personagem
 #define MAX_LIFE 100
 //! Poder de ataque (special) do mago
-#define SOLDIER_SPECIAL_COOLDOWN 5000
+#define MAGE_SPECIAL_COOLDOWN 5000
 //! Poder de ataque (heavy_atack) do mago
-#define SOLDIER_HEAVY_ATTACK_COOLDOWN 2000
+#define MAGE_HEAVY_ATTACK_COOLDOWN 2000
 //! Poder de ataque (light_atack) do mago
-#define SOLDIER_LIGHT_ATTACK_COOLDOWN 300
+#define MAGE_LIGHT_ATTACK_COOLDOWN 300
 //! Poder de defesa do mago
-#define SOLDIER_DEFENSE_COOLDOWN 300
+#define MAGE_DEFENSE_COOLDOWN 300
 
 using std::vector;
 using std::string;

@@ -5,13 +5,13 @@
 //! Vida total do personagem
 #define MAX_LIFE 100
 //! Poder de ataque (special) do infiltrador
-#define SOLDIER_SPECIAL_COOLDOWN 5000
+#define INFILTRATOR_SPECIAL_COOLDOWN 5000
 //! Poder de ataque (heavy_atack) do infiltrador
-#define SOLDIER_HEAVY_ATTACK_COOLDOWN 2000
+#define INFILTRATOR_ATTACK_COOLDOWN 2000
 //! Poder de ataque (light_atack) do infiltrador
-#define SOLDIER_LIGHT_ATTACK_COOLDOWN 300
+#define INFILTRATOR_LIGHT_ATTACK_COOLDOWN 300
 //! Poder de defesa do infiltrador
-#define SOLDIER_DEFENSE_COOLDOWN 300
+#define INFILTRATOR_DEFENSE_COOLDOWN 300
 
 //! Inicializando Método Construtor
 /*!
