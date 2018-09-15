@@ -1,0 +1,229 @@
+\hypertarget{classCharacter}{}\section{Referência à classe Character}
+\label{classCharacter}\index{Character@{Character}}
+Diagrama de heranças da classe Character\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCharacter}
+\end{center}
+\end{figure}
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6}\label{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6}} 
+enum \{ {\bfseries K\+N\+I\+G\+HT}, 
+{\bfseries S\+O\+L\+D\+I\+ER}, 
+{\bfseries M\+A\+GE}, 
+{\bfseries I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}
+ \}
+\item 
+\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075}} 
+enum \{ \newline
+{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}, 
+{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
+{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}, 
+\newline
+{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}, 
+{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
+{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}, 
+\newline
+{\bfseries L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK}, 
+{\bfseries H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK}, 
+{\bfseries D\+E\+F\+E\+N\+SE}, 
+{\bfseries S\+P\+E\+C\+I\+AL}, 
+\newline
+{\bfseries N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacter_a442a1c3c8e82823ef340f078c8f4bb50}\label{classCharacter_a442a1c3c8e82823ef340f078c8f4bb50}} 
+{\bfseries Character} (const vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int max\+\_\+life, int character\+\_\+code)
+\item 
+\mbox{\Hypertarget{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}\label{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}} 
+virtual bool {\bfseries active} () const
+\item 
+\mbox{\Hypertarget{classCharacter_a73c09996272b771f375a9514d0c465f1}\label{classCharacter_a73c09996272b771f375a9514d0c465f1}} 
+const Rectangle \& {\bfseries bounding\+\_\+box} () const
+\item 
+\mbox{\Hypertarget{classCharacter_acb89adb702cac9caca3178066f642443}\label{classCharacter_acb89adb702cac9caca3178066f642443}} 
+const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
+\item 
+\mbox{\Hypertarget{classCharacter_a9559ad61239800e744931814826ae39b}\label{classCharacter_a9559ad61239800e744931814826ae39b}} 
+void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classCharacter_a41e5ac6f8f3b9a15d78dd92de89768af}\label{classCharacter_a41e5ac6f8f3b9a15d78dd92de89768af}} 
+pair$<$ double, double $>$ {\bfseries direction} () const
+\item 
+\mbox{\Hypertarget{classCharacter_af5a0058d7cc922c1045f304b480a211c}\label{classCharacter_af5a0058d7cc922c1045f304b480a211c}} 
+unsigned {\bfseries get\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classCharacter_ad3fc9bf9dc3667f9d01b05f5e1940ae6}\label{classCharacter_ad3fc9bf9dc3667f9d01b05f5e1940ae6}} 
+int {\bfseries get\+\_\+number\+\_\+of\+\_\+lives} () const
+\item 
+\mbox{\Hypertarget{classCharacter_a4cb413b53515a09d025fa0b3fe5a4e9f}\label{classCharacter_a4cb413b53515a09d025fa0b3fe5a4e9f}} 
+void {\bfseries set\+\_\+base} (\mbox{\hyperlink{classBase}{Base}} $\ast$base)
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}\label{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}} 
+enum {\bfseries Moving\+State} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacter_a067f09af5430da58cc9698421fb84814}\label{classCharacter_a067f09af5430da58cc9698421fb84814}} 
+void {\bfseries change\+\_\+character\+\_\+state} (State next\+\_\+state, bool respawning=false)
+\item 
+\mbox{\Hypertarget{classCharacter_a2edbbba1c9e07eece34c25f651e364d9}\label{classCharacter_a2edbbba1c9e07eece34c25f651e364d9}} 
+void {\bfseries handle\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{classCharacter_a75f825ad6509fa1601d2e2bc2ac04b3c}\label{classCharacter_a75f825ad6509fa1601d2e2bc2ac04b3c}} 
+void {\bfseries set\+\_\+spawn\+\_\+position} ()
+\item 
+\mbox{\Hypertarget{classCharacter_afc90256ef2253670aee9def34f700247}\label{classCharacter_afc90256ef2253670aee9def34f700247}} 
+void {\bfseries respawn\+\_\+character} ()
+\item 
+\mbox{\Hypertarget{classCharacter_adb0d4f9c0ebbc0f9b19cb0a1f4b20df7}\label{classCharacter_adb0d4f9c0ebbc0f9b19cb0a1f4b20df7}} 
+void {\bfseries kill\+\_\+character} ()
+\item 
+\mbox{\Hypertarget{classCharacter_a5277e58a7a52a99a42bdb23c6295c7f1}\label{classCharacter_a5277e58a7a52a99a42bdb23c6295c7f1}} 
+string {\bfseries choose\+\_\+sprite\+\_\+path} (unsigned player\+\_\+id)
+\item 
+\mbox{\Hypertarget{classCharacter_a92d3a1ad2ceba203bf72584c4c4029d7}\label{classCharacter_a92d3a1ad2ceba203bf72584c4c4029d7}} 
+bool {\bfseries on\+\_\+event} (const Game\+Event \&event)
+\item 
+\mbox{\Hypertarget{classCharacter_aa9b20c9c53393c7aaf3a45e5c966c2ef}\label{classCharacter_aa9b20c9c53393c7aaf3a45e5c966c2ef}} 
+virtual void {\bfseries do\+\_\+heavy\+\_\+attack} ()=0
+\item 
+\mbox{\Hypertarget{classCharacter_ae45be8b8b1a7d2f54a2349a65e2e6c42}\label{classCharacter_ae45be8b8b1a7d2f54a2349a65e2e6c42}} 
+virtual void {\bfseries do\+\_\+light\+\_\+attack} ()=0
+\item 
+\mbox{\Hypertarget{classCharacter_ad8a87c4397e38fd4bd88c93a3d3cb70a}\label{classCharacter_ad8a87c4397e38fd4bd88c93a3d3cb70a}} 
+virtual void {\bfseries do\+\_\+defense} ()=0
+\item 
+\mbox{\Hypertarget{classCharacter_a447eb9fa4afa57619d6387e0ea178f93}\label{classCharacter_a447eb9fa4afa57619d6387e0ea178f93}} 
+virtual void {\bfseries do\+\_\+special} ()=0
+\item 
+\mbox{\Hypertarget{classCharacter_a94242f85f3afb3f12dd92e02797345bd}\label{classCharacter_a94242f85f3afb3f12dd92e02797345bd}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classCharacter_a80d2f8164974c6a5b8a3c144508ec4a1}\label{classCharacter_a80d2f8164974c6a5b8a3c144508ec4a1}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classCharacter_a990779ce4c7baf305b9f04ba831a1f0f}\label{classCharacter_a990779ce4c7baf305b9f04ba831a1f0f}} 
+void {\bfseries update\+\_\+position} (const unsigned \&now, const unsigned \&last, bool backwards=false)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacter_afebf14960658d88bd70df4f55de3d334}\label{classCharacter_afebf14960658d88bd70df4f55de3d334}} 
+\mbox{\hyperlink{classMovingState}{Moving\+State}} {\bfseries character\+\_\+moving\+\_\+state}
+\item 
+\mbox{\Hypertarget{classCharacter_a35427d8eb8464ae90149e31262f4dc57}\label{classCharacter_a35427d8eb8464ae90149e31262f4dc57}} 
+\mbox{\hyperlink{classCharacterState}{Character\+State}} $\ast$ {\bfseries character\+\_\+state}
+\item 
+\mbox{\Hypertarget{classCharacter_aa98c4b7a857fdb408cb790fdc1dd33b7}\label{classCharacter_aa98c4b7a857fdb408cb790fdc1dd33b7}} 
+\mbox{\hyperlink{classCharacterStateFactory}{Character\+State\+Factory}} {\bfseries new\+\_\+character\+\_\+state\+\_\+factory}
+\item 
+\mbox{\Hypertarget{classCharacter_acb93cf49560055ead552c5094a54184c}\label{classCharacter_acb93cf49560055ead552c5094a54184c}} 
+bool {\bfseries character\+\_\+active}
+\item 
+\mbox{\Hypertarget{classCharacter_ac967fe6670f51494ed141c54e20b1572}\label{classCharacter_ac967fe6670f51494ed141c54e20b1572}} 
+unsigned {\bfseries character\+\_\+id}
+\item 
+\mbox{\Hypertarget{classCharacter_a2f4be8102c8557a93b67b8fac9679dd8}\label{classCharacter_a2f4be8102c8557a93b67b8fac9679dd8}} 
+int {\bfseries character\+\_\+max\+\_\+life}
+\item 
+\mbox{\Hypertarget{classCharacter_a0e29776ad32bfcf2ca55838f00d29933}\label{classCharacter_a0e29776ad32bfcf2ca55838f00d29933}} 
+int {\bfseries character\+\_\+current\+\_\+life}
+\item 
+\mbox{\Hypertarget{classCharacter_a46b1ccac564ac16935cb22a82e62bc27}\label{classCharacter_a46b1ccac564ac16935cb22a82e62bc27}} 
+int {\bfseries character\+\_\+number\+\_\+of\+\_\+lives}
+\item 
+\mbox{\Hypertarget{classCharacter_adf140a8993f2a10b77ebf3415460f48b}\label{classCharacter_adf140a8993f2a10b77ebf3415460f48b}} 
+int {\bfseries character\+\_\+frame}
+\item 
+\mbox{\Hypertarget{classCharacter_a52bd80f30b5a19bae445d2566819704b}\label{classCharacter_a52bd80f30b5a19bae445d2566819704b}} 
+int {\bfseries character\+\_\+start}
+\item 
+\mbox{\Hypertarget{classCharacter_a8ede7c049b28ca40d1b35c0e14cc1c66}\label{classCharacter_a8ede7c049b28ca40d1b35c0e14cc1c66}} 
+int {\bfseries character\+\_\+width}
+\item 
+\mbox{\Hypertarget{classCharacter_a41926aae9cdfda3730ee7c1a334b0572}\label{classCharacter_a41926aae9cdfda3730ee7c1a334b0572}} 
+int {\bfseries character\+\_\+height}
+\item 
+\mbox{\Hypertarget{classCharacter_abf1d7cdaa318adeb9cee6edfe919cb8c}\label{classCharacter_abf1d7cdaa318adeb9cee6edfe919cb8c}} 
+int {\bfseries character\+\_\+heavy\+\_\+attack\+\_\+cooldown}
+\item 
+\mbox{\Hypertarget{classCharacter_a7b8e1c9ff525068d6f479b690af1ab09}\label{classCharacter_a7b8e1c9ff525068d6f479b690af1ab09}} 
+int {\bfseries character\+\_\+light\+\_\+attack\+\_\+cooldown}
+\item 
+\mbox{\Hypertarget{classCharacter_abab76567fdafbc8c185ff5d83d516e76}\label{classCharacter_abab76567fdafbc8c185ff5d83d516e76}} 
+int {\bfseries character\+\_\+defense\+\_\+cooldown}
+\item 
+\mbox{\Hypertarget{classCharacter_a9746df15f2ed60b63577055d0c77b534}\label{classCharacter_a9746df15f2ed60b63577055d0c77b534}} 
+int {\bfseries character\+\_\+special\+\_\+cooldown}
+\item 
+\mbox{\Hypertarget{classCharacter_a44cde6bc401f387f821d574a31d3bd23}\label{classCharacter_a44cde6bc401f387f821d574a31d3bd23}} 
+int {\bfseries character\+\_\+last\+\_\+used\+\_\+heavy\+\_\+attack}
+\item 
+\mbox{\Hypertarget{classCharacter_a279b7d863c09ae1c6df3aac72db2ca24}\label{classCharacter_a279b7d863c09ae1c6df3aac72db2ca24}} 
+int {\bfseries character\+\_\+last\+\_\+used\+\_\+light\+\_\+attack}
+\item 
+\mbox{\Hypertarget{classCharacter_aaee6eae1e5b981ddc2bed6823c5cfe68}\label{classCharacter_aaee6eae1e5b981ddc2bed6823c5cfe68}} 
+int {\bfseries character\+\_\+last\+\_\+used\+\_\+defense}
+\item 
+\mbox{\Hypertarget{classCharacter_a860b333991b5e12062cfafd164588719}\label{classCharacter_a860b333991b5e12062cfafd164588719}} 
+int {\bfseries character\+\_\+last\+\_\+used\+\_\+special}
+\item 
+\mbox{\Hypertarget{classCharacter_a87615038725b126168eaf4f47fd60836}\label{classCharacter_a87615038725b126168eaf4f47fd60836}} 
+int {\bfseries character\+\_\+respawn\+\_\+time}
+\item 
+\mbox{\Hypertarget{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}\label{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}} 
+int {\bfseries character\+\_\+code}
+\item 
+\mbox{\Hypertarget{classCharacter_a8fdf09c04765a29d63a1e92620c312bb}\label{classCharacter_a8fdf09c04765a29d63a1e92620c312bb}} 
+int {\bfseries character\+\_\+last\+\_\+sound\+\_\+played}
+\item 
+\mbox{\Hypertarget{classCharacter_ad2a4dbff5a815b1149d827d56c87a3ca}\label{classCharacter_ad2a4dbff5a815b1149d827d56c87a3ca}} 
+bool {\bfseries character\+\_\+freeze}
+\item 
+\mbox{\Hypertarget{classCharacter_a36146a3072561cf6774cf7585c23a686}\label{classCharacter_a36146a3072561cf6774cf7585c23a686}} 
+bool {\bfseries character\+\_\+dead}
+\item 
+\mbox{\Hypertarget{classCharacter_a5007dcc89bd0ada538659d13c6db8aae}\label{classCharacter_a5007dcc89bd0ada538659d13c6db8aae}} 
+double {\bfseries character\+\_\+axis\+\_\+x\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classCharacter_a2166b91a2e1de6360857187e8573823a}\label{classCharacter_a2166b91a2e1de6360857187e8573823a}} 
+double {\bfseries character\+\_\+axis\+\_\+y\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classCharacter_ad18353901814799f84c2f593cb5d672b}\label{classCharacter_ad18353901814799f84c2f593cb5d672b}} 
+double {\bfseries character\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classCharacter_a6a4394e283406c8fe024adc9b30e2471}\label{classCharacter_a6a4394e283406c8fe024adc9b30e2471}} 
+\mbox{\hyperlink{classBase}{Base}} $\ast$ {\bfseries character\+\_\+base}
+\item 
+\mbox{\Hypertarget{classCharacter_a142cb14d15395eeb4d70c8a23ad49424}\label{classCharacter_a142cb14d15395eeb4d70c8a23ad49424}} 
+vector$<$ shared\+\_\+ptr$<$ Texture $>$ $>$ {\bfseries character\+\_\+textures}
+\item 
+\mbox{\Hypertarget{classCharacter_aaf00f8db42d4342c84bf46ba7fe6aa5e}\label{classCharacter_aaf00f8db42d4342c84bf46ba7fe6aa5e}} 
+unordered\+\_\+map$<$ string, pair$<$ double, double $>$ $>$ {\bfseries character\+\_\+speed\+\_\+vector}
+\item 
+\mbox{\Hypertarget{classCharacter_ae8861076d477d30e7ecddfb020de4e6c}\label{classCharacter_ae8861076d477d30e7ecddfb020de4e6c}} 
+Rectangle {\bfseries character\+\_\+bounding\+\_\+box}
+\item 
+\mbox{\Hypertarget{classCharacter_a0f9aee064038c86932ebb44ef8f98d7d}\label{classCharacter_a0f9aee064038c86932ebb44ef8f98d7d}} 
+vector$<$ string $>$ {\bfseries character\+\_\+sprite\+\_\+paths}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/character.\+h\item 
+src/character.\+cpp\end{DoxyCompactItemize}

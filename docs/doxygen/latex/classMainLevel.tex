@@ -1,0 +1,61 @@
+\hypertarget{classMainLevel}{}\section{Referência à classe Main\+Level}
+\label{classMainLevel}\index{Main\+Level@{Main\+Level}}
+Diagrama de heranças da classe Main\+Level\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMainLevel}
+\end{center}
+\end{figure}
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainLevel_a19d15012888b099ef2d53e1a0e7d1b97}\label{classMainLevel_a19d15012888b099ef2d53e1a0e7d1b97}} 
+enum \{ {\bfseries I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}, 
+{\bfseries M\+A\+GE}, 
+{\bfseries S\+O\+L\+D\+I\+ER}, 
+{\bfseries K\+N\+I\+G\+HT}
+ \}
+\item 
+\mbox{\Hypertarget{classMainLevel_a25d9f3e3c424008626bd8bfc5c3e9dac}\label{classMainLevel_a25d9f3e3c424008626bd8bfc5c3e9dac}} 
+enum \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}\label{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}} 
+{\bfseries Main\+Level} (const string \&next=\char`\"{}\char`\"{}, vector$<$ int $>$ players\+\_\+characters=\{\})
+\item 
+\mbox{\Hypertarget{classMainLevel_ae4d34d88753d7ebe90320e3cdd3e9e17}\label{classMainLevel_ae4d34d88753d7ebe90320e3cdd3e9e17}} 
+bool {\bfseries done} () const
+\item 
+\mbox{\Hypertarget{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}\label{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}} 
+string {\bfseries next} () const
+\item 
+\mbox{\Hypertarget{classMainLevel_ae101ab154173ca819a5eb701508ad635}\label{classMainLevel_ae101ab154173ca819a5eb701508ad635}} 
+string {\bfseries audio} () const
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}\label{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classMainLevel_aabad926cf0366de353d716065ab792ad}\label{classMainLevel_aabad926cf0366de353d716065ab792ad}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classMainLevel_a8b5a146b3b3186081ca2a0ad49bbad29}\label{classMainLevel_a8b5a146b3b3186081ca2a0ad49bbad29}} 
+void {\bfseries set\+\_\+players\+\_\+characters\+\_\+position} (unsigned player\+\_\+id, double \&x\+\_\+pos, double \&y\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classMainLevel_a89ed36254771a662797d0ec50105015f}\label{classMainLevel_a89ed36254771a662797d0ec50105015f}} 
+void {\bfseries verify\+\_\+bases} ()
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/main\+\_\+level.\+h\item 
+src/main\+\_\+level.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{classSkill}{}\section{Referência à classe Skill}
+\label{classSkill}\index{Skill@{Skill}}
+Diagrama de heranças da classe Skill\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSkill}
+\end{center}
+\end{figure}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSkill_a179f277e58924d53051eae66896b3a74}\label{classSkill_a179f277e58924d53051eae66896b3a74}} 
+{\bfseries Skill} (Game\+Object $\ast$parent, double x\+\_\+posiotion, double y\+\_\+posiotion, int damage, int character\+\_\+id)
+\item 
+\mbox{\Hypertarget{classSkill_a69293c2a9324f011147d444aee01e319}\label{classSkill_a69293c2a9324f011147d444aee01e319}} 
+unsigned {\bfseries get\+\_\+character\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classSkill_ae24133703ea9307d93ea305115dc0175}\label{classSkill_ae24133703ea9307d93ea305115dc0175}} 
+int {\bfseries get\+\_\+damage} () const
+\item 
+\mbox{\Hypertarget{classSkill_a43a9dd5e3862f3698fe1b92724a6ab72}\label{classSkill_a43a9dd5e3862f3698fe1b92724a6ab72}} 
+int {\bfseries get\+\_\+collided} () const
+\item 
+\mbox{\Hypertarget{classSkill_a1744c0c7f03304b1a0444a1bd95661c0}\label{classSkill_a1744c0c7f03304b1a0444a1bd95661c0}} 
+virtual bool {\bfseries active} () const =0
+\item 
+\mbox{\Hypertarget{classSkill_aa8b6a26b2f3586ca28b354f2da132e09}\label{classSkill_aa8b6a26b2f3586ca28b354f2da132e09}} 
+virtual const Rectangle \& {\bfseries bounding\+\_\+box} () const =0
+\item 
+\mbox{\Hypertarget{classSkill_a9973d969044e6972e36338928b5c4571}\label{classSkill_a9973d969044e6972e36338928b5c4571}} 
+virtual const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const =0
+\item 
+\mbox{\Hypertarget{classSkill_a503e88f6eb131a401c7a7a49d87b1ab0}\label{classSkill_a503e88f6eb131a401c7a7a49d87b1ab0}} 
+virtual pair$<$ double, double $>$ {\bfseries direction} () const =0
+\item 
+\mbox{\Hypertarget{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}\label{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}} 
+virtual void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSkill_a6b836b689172c632c34ebf2010c7f94e}\label{classSkill_a6b836b689172c632c34ebf2010c7f94e}} 
+unsigned {\bfseries skill\+\_\+character\+\_\+id}
+\item 
+\mbox{\Hypertarget{classSkill_a68fa3060a454b635aada6662d9fb2322}\label{classSkill_a68fa3060a454b635aada6662d9fb2322}} 
+int {\bfseries skill\+\_\+damage}
+\item 
+\mbox{\Hypertarget{classSkill_a5616db66c8db4011c77a9850ade84940}\label{classSkill_a5616db66c8db4011c77a9850ade84940}} 
+double {\bfseries skill\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classSkill_acde70fa4d6b0b5f31310de514f3a9f4e}\label{classSkill_acde70fa4d6b0b5f31310de514f3a9f4e}} 
+int {\bfseries skill\+\_\+collided}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/skill.\+h\item 
+src/skill.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,114 @@
+\hypertarget{classSpear}{}\section{Referência à classe Spear}
+\label{classSpear}\index{Spear@{Spear}}
+Diagrama de heranças da classe Spear\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSpear}
+\end{center}
+\end{figure}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpear_a4c5d78dcf2ede1706e020394ef72a2c4}\label{classSpear_a4c5d78dcf2ede1706e020394ef72a2c4}} 
+{\bfseries Spear} (Game\+Object $\ast$parent, unsigned soldier\+\_\+id, double xp, double yp, double dx, double dy)
+\item 
+\mbox{\Hypertarget{classSpear_aff16da1572b3e683d83c3a9bcfddbd50}\label{classSpear_aff16da1572b3e683d83c3a9bcfddbd50}} 
+bool {\bfseries active} () const
+\item 
+\mbox{\Hypertarget{classSpear_a3e10056b0d810137a5df4a4830726f57}\label{classSpear_a3e10056b0d810137a5df4a4830726f57}} 
+const Rectangle \& {\bfseries bounding\+\_\+box} () const
+\item 
+\mbox{\Hypertarget{classSpear_ad633d9950ab0bb517d15064126ba5735}\label{classSpear_ad633d9950ab0bb517d15064126ba5735}} 
+const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
+\item 
+\mbox{\Hypertarget{classSpear_a21feee4e84706b71c1e63f3d9deb1e69}\label{classSpear_a21feee4e84706b71c1e63f3d9deb1e69}} 
+pair$<$ double, double $>$ {\bfseries direction} () const
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpear_a38f3f25555dd7c7891f373fc8479b717}\label{classSpear_a38f3f25555dd7c7891f373fc8479b717}} 
+enum {\bfseries State} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
+{\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}
+ \}
+\item 
+\mbox{\Hypertarget{classSpear_a375643d648eb52266f8d0c6f96c0a6b4}\label{classSpear_a375643d648eb52266f8d0c6f96c0a6b4}} 
+enum {\bfseries Sprite\+State} \{ {\bfseries T\+H\+R\+OW}, 
+{\bfseries M\+O\+V\+I\+NG}, 
+{\bfseries F\+A\+L\+L\+I\+NG}, 
+{\bfseries H\+I\+T\+T\+I\+NG}
+ \}
+\item 
+\mbox{\Hypertarget{classSpear_aa85adabe13c601a31bdc124f7d75b284}\label{classSpear_aa85adabe13c601a31bdc124f7d75b284}} 
+enum {\bfseries Players} \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpear_ade23821de1d6aaa031c4aa32d214a31c}\label{classSpear_ade23821de1d6aaa031c4aa32d214a31c}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classSpear_ad38e92681e400061b6755e88a5a0c4e6}\label{classSpear_ad38e92681e400061b6755e88a5a0c4e6}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned, unsigned)
+\item 
+\mbox{\Hypertarget{classSpear_ab6eeb54661a40ac51e8519e7999e76c8}\label{classSpear_ab6eeb54661a40ac51e8519e7999e76c8}} 
+void {\bfseries update\+\_\+sprite\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{classSpear_a7ee5af6e650203296de28f47ff1c2601}\label{classSpear_a7ee5af6e650203296de28f47ff1c2601}} 
+void {\bfseries update\+\_\+time} (unsigned now)
+\item 
+\mbox{\Hypertarget{classSpear_afb12bb656cde3ea943224874f2c1f54e}\label{classSpear_afb12bb656cde3ea943224874f2c1f54e}} 
+string {\bfseries choose\+\_\+sprite\+\_\+path} (unsigned player\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpear_a89f70df449018b3870010c72f9ffaea0}\label{classSpear_a89f70df449018b3870010c72f9ffaea0}} 
+unsigned {\bfseries spear\+\_\+character\+\_\+id}
+\item 
+\mbox{\Hypertarget{classSpear_ae921f354108401811fcd4cef9a9ee76f}\label{classSpear_ae921f354108401811fcd4cef9a9ee76f}} 
+State {\bfseries spear\+\_\+state}
+\item 
+\mbox{\Hypertarget{classSpear_a12887ba0f7fddb1d47c26a0efe6b2474}\label{classSpear_a12887ba0f7fddb1d47c26a0efe6b2474}} 
+Sprite\+State {\bfseries spear\+\_\+sprite\+\_\+state}
+\item 
+\mbox{\Hypertarget{classSpear_a198f28ef2aabb1a9fc3013de7324070f}\label{classSpear_a198f28ef2aabb1a9fc3013de7324070f}} 
+double {\bfseries spear\+\_\+axis\+\_\+x\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classSpear_af716b055d0d37cdfb57ce1b2f352d712}\label{classSpear_af716b055d0d37cdfb57ce1b2f352d712}} 
+double {\bfseries spear\+\_\+axis\+\_\+y\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classSpear_a11e9f24256eeaa389eaf8af20f70fbe8}\label{classSpear_a11e9f24256eeaa389eaf8af20f70fbe8}} 
+int {\bfseries spear\+\_\+damage}
+\item 
+\mbox{\Hypertarget{classSpear_abe9b7dfdc8334550b3c9a77df43accc0}\label{classSpear_abe9b7dfdc8334550b3c9a77df43accc0}} 
+double {\bfseries spear\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classSpear_a78be675fb88ce69127afc65682f7c8d5}\label{classSpear_a78be675fb88ce69127afc65682f7c8d5}} 
+int {\bfseries spear\+\_\+frame}
+\item 
+\mbox{\Hypertarget{classSpear_a93eb583483f14338e8063baea9cdc7b1}\label{classSpear_a93eb583483f14338e8063baea9cdc7b1}} 
+string {\bfseries spear\+\_\+sprite\+\_\+path}
+\item 
+\mbox{\Hypertarget{classSpear_ab29788b30cc2545adad3cfad55c14307}\label{classSpear_ab29788b30cc2545adad3cfad55c14307}} 
+unsigned {\bfseries spear\+\_\+start}
+\item 
+\mbox{\Hypertarget{classSpear_a112332750e8d8cf39ea335a93ffe5602}\label{classSpear_a112332750e8d8cf39ea335a93ffe5602}} 
+unsigned {\bfseries spear\+\_\+current\+\_\+time}
+\item 
+\mbox{\Hypertarget{classSpear_ab622ea5877722e47251e5d84fb87d35c}\label{classSpear_ab622ea5877722e47251e5d84fb87d35c}} 
+shared\+\_\+ptr$<$ Texture $>$ {\bfseries spear\+\_\+texture}
+\item 
+\mbox{\Hypertarget{classSpear_aeef3eeb6bbf4e92a65677f191ce04a68}\label{classSpear_aeef3eeb6bbf4e92a65677f191ce04a68}} 
+Rectangle {\bfseries spear\+\_\+bounding\+\_\+box}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/spear.\+h\item 
+src/spear.\+cpp\end{DoxyCompactItemize}
