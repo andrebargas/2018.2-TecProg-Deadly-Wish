@@ -22,7 +22,7 @@ protected:
     void do_heavy_attack();
     // método de ataque leve, poder do ataque: 300
     void do_light_attack();
-    // método para o personagem se defender
+    // método para o personagem se defender - poder da defesa: 300
     void do_defense();
     // método para o ataque especial, poder do ataque: 5000
     void do_special();
