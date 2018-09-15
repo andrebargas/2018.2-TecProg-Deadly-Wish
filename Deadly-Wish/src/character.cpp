@@ -12,11 +12,11 @@
 #include <algorithm>
 #include <cstdio>
 
-// tempo de reaparecimento - 10000
+//! Tempo de reaparecimento - 10000
 #define RESPAWN_TIME 10000
-// largura do personagem
+//! Largura do personagem
 #define CHARACTER_WIDTH 32
-// comprimento do personagem
+//! Comprimento do personagem
 #define CHARACTER_HEIGHT 32
 
 using std::cout;
@@ -24,9 +24,20 @@ using std::endl;
 using std::min;
 using std::max;
 
-// velocidade do personagem
+//! variável que define a velocidade do personagem
 const double SPEED = 80.00;
 
+
+//! Classe que descreve o personagem de forma geral
+/*! Permite que o personagem tenha poderes de defesa e ataque,
+personagem ativo ou não e suas posições nos eixos x e y
+\param sprite paths indica o vetor que desena o personagem
+\param id indica o identificado do personagem
+\param x indica a posição x do personagem
+\param y indica a posição y do personagem
+\param max_life indica a vida maxima do personagem
+\param character_Code indica o codigo do personagem
+*/
 Character::Character(const vector<string> sprite_paths, unsigned id, double x, double y,
                      int max_life, int character_code)
     :  character_id(id), character_max_life(max_life), character_frame(0), character_start(-1),
@@ -37,55 +48,66 @@ Character::Character(const vector<string> sprite_paths, unsigned id, double x, d
         character_textures.push_back(resources::get_texture(sprite_paths[i]));
     }
 
-    // estado atual do personagem
+    //! variável que indica estado atual do personagem
     character_state = nullptr;
+    //! variável que indica o tempo de reaparecimento do personagem  
     character_respawn_time = RESPAWN_TIME;
+    //! variável que indica o último som tocado
     character_last_sound_played = -RESPAWN_TIME;
+    //! variável que indica que o personagem está ativo
     character_active = true;
 
-    // caixa delimitadora do personagem (x,y, height, width)
+    //! variável que indica caixa delimitadora do personagem (x,y, height, width)
     character_bounding_box = Rectangle(x, y, 24, 24);
 
     m_x = x;
     m_y = y;
 
+    //! variável que indica a largura do personagem
     character_width = CHARACTER_WIDTH;
+    //! variável que indica a altura do personagem
     character_height = CHARACTER_HEIGHT;
 
-    // modo de jogo - deathmatch (cada jogador tem 5 vidas)
+    //! Modo de jogo - deathmatch (cada jogador tem 5 vidas)
     if(game_mode::choosen_mode == "deathmatch-mode") {
         character_number_of_lives = 5;
     }
 
-    // tempo de reaparecimento - 5 segundos
+    //! Tempo de reaparecimento - 5 segundos
     respawn_character();
 }
 
+//! Destrutor da classe caracter
 Character::~Character()
 {
     physics::unregister_object(this);
     event::unregister_listener(this);
 }
 
-// atualiza o personagem
+//! Método que indica atualizar o personagem
+/*!
+\param now indica atualização agora
+\param las indica a última atualizção
+*/
 void
 Character::update_self(unsigned now, unsigned last)
 {
 
+    //!Método que manipula o controle do estado
     handle_state();
 
-    // base-mode (vida das bases menor que 0) ou death-match-mode(numero de vidas menor que 0)
-    // invalida o jogo - alguem ganhou
+    //! base-mode (vida das bases menor que 0) ou death-match-mode(numero de vidas menor que 0)
+    //! invalida o jogo - alguem ganhou
     if(((game_mode::choosen_mode == "base-mode") and character_base->get_base_life() <= 0) ||
         (game_mode::choosen_mode == "deathmatch-mode") and character_number_of_lives <= 0) {
         invalidate();
     }
 
-    // atualiza o jogador
+    //! atualiza o jogador
     if (character_start == -1)
         character_start = now;
 
-    // se o personagem morreu, reaparece depois do tempo de 5 segundos
+    //! se o personagem morreu, reaparece depois do tempo de 5 segundos
     if((character_dead) and now - character_start > character_respawn_time) {
         character_start = now;
         character_dead = false;
@@ -106,7 +128,7 @@ Character::update_self(unsigned now, unsigned last)
         return;
     }
 
-    // atualiza o som de acordo com o personagem
+    //! Atualiza o som de acordo com o personagem
     if(now - character_last_sound_played > 400) {
         character_last_sound_played = now;
         switch(character_code) {
@@ -128,13 +150,20 @@ Character::update_self(unsigned now, unsigned last)
         }
     }
 
-    // atualiza posição do personagem
+
+   
     update_position(now, last);
 
     character_bounding_box.set_position(x(), y());
 }
 
-// atualiza posição de acordo com a velocidade do personagem
+
+// Método que indica que vai atualizar poisção do personagem com a velocidade
+/* 
+\param now indica o tempo atual
+\param last indica o último evento
+\param backwards indica a posição anterior
+*/ 
 inline void
 Character::update_position(const unsigned &now, const unsigned &last, bool backwards) {
     int multiplier = (backwards) ? -1 : 1;
@@ -157,7 +186,7 @@ Character::update_position(const unsigned &now, const unsigned &last, bool backw
     }
 }
 
-// desenha o personagem
+//! Métodos virtual de gameobject
 void
 Character::draw_self(Canvas *canvas, unsigned, unsigned)
 {
@@ -169,7 +198,7 @@ Character::draw_self(Canvas *canvas, unsigned, unsigned)
     }
 }
 
-// eventos do personagem
+//! Método que retorna os eventos em geral dos personagens
 bool
 Character::on_event(const GameEvent& event)
 {
@@ -249,21 +278,21 @@ Character::on_event(const GameEvent& event)
 }
 
 
-// direção do personagem
+//! Direção do personagem
 pair<double, double>
 Character::direction() const
 {
     return pair<double, double>(character_axis_x_speed, character_axis_y_speed);
 }
 
-// personagem ativo
+//! Personagem ativo
 bool
 Character::active() const
 {
     return character_active;
 }
 
-// delimitação do personagem
+//! Delimitação do personagem
 const Rectangle&
 Character::bounding_box() const
 {
@@ -277,7 +306,7 @@ Character::hit_boxes() const
     return boxes;
 }
 
-// Método que indica que o personagem sofreu dano
+//! Método que indica que o personagem sofreu dano
 void
 Character::on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last)
 {
@@ -296,7 +325,7 @@ Character::on_collision(const Collidable *who, const Rectangle& where, unsigned 
 }
 
 
-// Método que muda o estado do personagem
+//! Método que muda o estado do personagem
 void
 Character::change_character_state(State next_state, bool respawning )
 {
@@ -318,7 +347,7 @@ Character::change_character_state(State next_state, bool respawning )
 }
 
 
-// Verifica o estado do personagem
+//! Verifica o estado do personagem
 void Character::handle_state()
 {
     if((character_current_life <= 0) || (character_base->get_base_life() <= 0 and game_mode::choosen_mode == "base-mode")) {
@@ -357,7 +386,7 @@ void Character::handle_state()
 }
 
 
-// Define posição de desova do personagem
+//! Define posição de desova do personagem
 void
 Character::set_spawn_position()
 {
@@ -390,7 +419,7 @@ Character::set_spawn_position()
 }
 
 
-// Reaparecimento do personagem
+//! Reaparecimento do personagem
 void
 Character::respawn_character()
 {
@@ -418,7 +447,7 @@ Character::respawn_character()
 }
 
 
-// Indica a morte do personagem
+//! Indica a morte do personagem
 void
 Character::kill_character()
 {
@@ -436,7 +465,7 @@ Character::kill_character()
     }
 }
 
-// Indica a base de cada personagem
+//! Indica a base de cada personagem
 void
 Character::set_base(Base *base) {
     character_base = base;
