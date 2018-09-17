@@ -5,48 +5,52 @@
 
 //! Vida total do personagem
 #define MAX_LIFE 120
-//! Poder de ataque (special) do cavaleiro
+//! Intervalo de tempo de uso da Knight_special
 #define KNIGHT_SPECIAL_COOLDOWN 5000
-//! Poder de ataque (heavy_atack) do cavaleiro
+//! Intervalo de tempo de uso da heavy_atack
 #define KNIGHT_HEAVY_ATTACK_COOLDOWN 2000
-//! Poder de ataque (light_atack) do cavaleiro
+//! Intervalo de tempo de uso da light_atack
 #define KNIGHT_LIGHT_ATTACK_COOLDOWN 300
-//! Poder de defesa do cavaleiro
+//! Intervalo de tempo de uso da defense_cooldown
 #define KNIGHT_DEFENSE_COOLDOWN 300
 
     
-//! Método Construtor - público
-/*!
-\param sprite_paths - desenha personagem
-\param id - identificador do personagem
-\param x - posição no eixo x
-\param y - posição no eixo y
-\param character_code - codigo do personagem
+/** \fn Soldier(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
+  * \public
+  * \brief Método Construtor
+  * \param sprite_paths - desenha personagem
+  * \param id - identificador do personagem
+  * \param x - posição no eixo x
+  * \param y - posição no eixo y
+  *\param character_code - codigo do personagem
 */
 Soldier::Soldier(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
     : Character(sprite_paths, id, x, y, MAX_LIFE, character_code)
 {
-    //! poder de ataque - 5000
+    //! tempo de uso de ataque - 5000
     character_special_cooldown = SOLDIER_SPECIAL_COOLDOWN;
-    //! poder de ataque - 2000
+    //! tempo de uso de ataque - 2000
     character_heavy_attack_cooldown = SOLDIER_HEAVY_ATTACK_COOLDOWN;
-    //! poder de ataque - 300
+    //! tempo de uso de ataque - 300
     character_light_attack_cooldown = SOLDIER_LIGHT_ATTACK_COOLDOWN;
-    //! poder de defesa - 300
+    //! tempo de uso de defesa - 300
     character_defense_cooldown = SOLDIER_DEFENSE_COOLDOWN;
-    //! ultimo uso do poder especial
+    //! tempo de uso do poder especial
     character_last_used_special = -character_special_cooldown;
-    //! ultimo uso do poder pesado   
+    //! reseta ultimo uso do poder pesado   
     character_last_used_heavy_attack = -character_heavy_attack_cooldown;
-    //! ultimo uso do poder leve
+    //! reseta ultimo uso do poder leve
     character_last_used_light_attack = -character_light_attack_cooldown;
-    //! ultimo uso da defesa
+    //! reseta ultimo uso da defesa
     character_last_used_defense = -character_defense_cooldown;
-    //! personagem ativo 
+    //! reseta personagem ativo 
     character_active = true;
 }
 
-//! método que da o ataque pesado com poder de: 2000
+/** \fn do_heavy_attack()
+  * \protected
+  * \brief Método poder do ataque: 2000
+*/
 void
 Soldier::do_heavy_attack()
 {
@@ -76,7 +80,11 @@ Soldier::do_heavy_attack()
     change_character_state(HEAVY_ATTACK_STATE);
 }
 
-//! método que da o ataque leve com poder de: 300
+/** \fn do_light_atack()
+  * \protected
+  * \brief Método poder do ataque: 300
+*/
+
 void
 Soldier::do_light_attack() {
     //! som do poder
@@ -101,9 +109,10 @@ Soldier::do_light_attack() {
     //! muda o estado do personagem para o ataque
     change_character_state(LIGHT_ATTACK_STATE);
 }
-
-
-//! Método que aplica a defesa do personagem
+/** \fn do_defense()
+  * \protected
+  * \brief Método poder de defesa: 300
+*/
 void
 Soldier::do_defense() {
     //! som da defesa
@@ -112,7 +121,10 @@ Soldier::do_defense() {
     change_character_state(DEFENSE_STATE);
 }
 
-//! Método que da o ataque especial de poder: 5000
+/** \fn do_special()
+  * \protected
+  * \brief Método poder do ataque: 5000
+*/
 void
 Soldier::do_special() {
     //! som do ataque especial
