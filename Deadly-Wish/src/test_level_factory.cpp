@@ -1,3 +1,6 @@
+/** /file test_level_factory.cpp
+  * /brief Esta é o arquivo para a classe responsavel pela criação do Leveis do jogo
+  */
 #include "main_level.h"
 #include "menu_level.h"
 #include "winner_level.h"
@@ -27,10 +30,16 @@ namespace ijengine
     }
 }
 
-
+/** \fn make_level(const string& level_id)
+  * \public
+  * \brief Método parar criar um level
+  * \param level_id string& Codigo do level que se deseja criar.
+  * \return Level* O ponteiro para o level criado
+  */
 Level *
 TestLevelFactory::make_level(const string& level_id)
 {
+    // Para cada level_id será criado um Level diferente
     if (level_id == "menu"){
         return new MenuLevel("choose-character");
     }
@@ -53,9 +62,14 @@ TestLevelFactory::make_level(const string& level_id)
         return nullptr;
 }
 
+/** \fn release(Level *level)
+  * \public
+  * \brief Método detruir um level criado
+  * \param level Level* Ponteiro para o level que ira ser destruido
+  * \return void
+  */
 void
 TestLevelFactory::release(Level *level)
 {
     delete level;
 }
-

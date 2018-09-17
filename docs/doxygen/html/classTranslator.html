@@ -63,11 +63,17 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-methods">Membros privados</a> &#124;
 <a href="classTranslator-members.html">Mostrar lista completa dos membros</a>  </div>
   <div class="headertitle">
 <div class="title">Referência à classe Translator</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe responsavel por reconhecer os eventos dos inputs externos do jogo como botões do joystick, ou teclado, e traduzir eles para eventos do jogo.  
+ <a href="classTranslator.html#details">Mais...</a></p>
+
+<p><code>#include &quot;<a class="el" href="translator_8h_source.html">include/translator.h</a>&quot;</code></p>
 <div class="dynheader">
 Diagrama de heranças da classe Translator</div>
 <div class="dyncontent">
@@ -79,22 +85,244 @@ Diagrama de heranças da classe Translator</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:a223b870ca69e0b75b721b266a5aecd2a"><td class="memItemLeft" align="right" valign="top"><a id="a223b870ca69e0b75b721b266a5aecd2a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (GameEvent &amp;to, const MouseEvent &amp;from)</td></tr>
+<tr class="memitem:a223b870ca69e0b75b721b266a5aecd2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTranslator.html#a223b870ca69e0b75b721b266a5aecd2a">translate</a> (GameEvent &amp;to, const MouseEvent &amp;from)</td></tr>
+<tr class="memdesc:a223b870ca69e0b75b721b266a5aecd2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para traduzir os eventos vindo do mouse.  <a href="#a223b870ca69e0b75b721b266a5aecd2a">Mais...</a><br /></td></tr>
 <tr class="separator:a223b870ca69e0b75b721b266a5aecd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1910814cca5d0f3d9dbffa4721071ea"><td class="memItemLeft" align="right" valign="top"><a id="ad1910814cca5d0f3d9dbffa4721071ea"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (GameEvent &amp;to, const SystemEvent &amp;from)</td></tr>
+<tr class="memitem:ad1910814cca5d0f3d9dbffa4721071ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTranslator.html#ad1910814cca5d0f3d9dbffa4721071ea">translate</a> (GameEvent &amp;to, const SystemEvent &amp;from)</td></tr>
+<tr class="memdesc:ad1910814cca5d0f3d9dbffa4721071ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para traduzir os eventos vindo do sistema.  <a href="#ad1910814cca5d0f3d9dbffa4721071ea">Mais...</a><br /></td></tr>
 <tr class="separator:ad1910814cca5d0f3d9dbffa4721071ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23fe703107ba6e3b26e5da8e9f28777a"><td class="memItemLeft" align="right" valign="top"><a id="a23fe703107ba6e3b26e5da8e9f28777a"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (GameEvent &amp;to, const KeyboardEvent &amp;from)</td></tr>
+<tr class="memitem:a23fe703107ba6e3b26e5da8e9f28777a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTranslator.html#a23fe703107ba6e3b26e5da8e9f28777a">translate</a> (GameEvent &amp;to, const KeyboardEvent &amp;from)</td></tr>
+<tr class="memdesc:a23fe703107ba6e3b26e5da8e9f28777a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para traduzir os eventos vindo do teclado.  <a href="#a23fe703107ba6e3b26e5da8e9f28777a">Mais...</a><br /></td></tr>
 <tr class="separator:a23fe703107ba6e3b26e5da8e9f28777a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad75df11a67688dba45a23cecc9930970"><td class="memItemLeft" align="right" valign="top"><a id="ad75df11a67688dba45a23cecc9930970"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (GameEvent &amp;to, const JoystickEvent &amp;from)</td></tr>
+<tr class="memitem:ad75df11a67688dba45a23cecc9930970"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTranslator.html#ad75df11a67688dba45a23cecc9930970">translate</a> (GameEvent &amp;to, const JoystickEvent &amp;from)</td></tr>
+<tr class="memdesc:ad75df11a67688dba45a23cecc9930970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para traduzir os eventos vindo do joystick.  <a href="#ad75df11a67688dba45a23cecc9930970">Mais...</a><br /></td></tr>
 <tr class="separator:ad75df11a67688dba45a23cecc9930970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr class="memitem:ab61b9cc9e645f81a7b73629524c2e69e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTranslator.html#ab61b9cc9e645f81a7b73629524c2e69e">set_movement_properties</a> (GameEvent &amp;to, const KeyboardEvent &amp;from, const vector&lt; unsigned &gt; &amp;moves)</td></tr>
+<tr class="memdesc:ab61b9cc9e645f81a7b73629524c2e69e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para implementar o movimento direcional dos personagens.  <a href="#ab61b9cc9e645f81a7b73629524c2e69e">Mais...</a><br /></td></tr>
+<tr class="separator:ab61b9cc9e645f81a7b73629524c2e69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p class="">Classe responsavel por reconhecer os eventos dos inputs externos do jogo como botões do joystick, ou teclado, e traduzir eles para eventos do jogo. </p>
+</div><h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ab61b9cc9e645f81a7b73629524c2e69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61b9cc9e645f81a7b73629524c2e69e">&#9670;&nbsp;</a></span>set_movement_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Translator::set_movement_properties </td>
+          <td>(</td>
+          <td class="paramtype">GameEvent &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const KeyboardEvent &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>moves</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método para implementar o movimento direcional dos personagens. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>GameEvent&amp; Ponteiro para o evento do jogo que vai ser alterado </td></tr>
+    <tr><td class="paramname">from</td><td>const KeyboardEvent&amp; Ponteiro para o evento do teclado recebido </td></tr>
+    <tr><td class="paramname">moves</td><td>const vector&lt;unsigned&gt;&amp; Ponteiro para lista de unsigned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a223b870ca69e0b75b721b266a5aecd2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223b870ca69e0b75b721b266a5aecd2a">&#9670;&nbsp;</a></span>translate() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Translator::translate </td>
+          <td>(</td>
+          <td class="paramtype">GameEvent &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MouseEvent &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para traduzir os eventos vindo do mouse. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>GameEvent&amp; Ponteiro para o evento do jogo que vai ser alterado </td></tr>
+    <tr><td class="paramname">from</td><td>const MouseEvent&amp; Ponteiro para o evento do mouse recebido </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Booleano para quando ocorreu um evento </dd></dl>
+
+</div>
+</div>
+<a id="ad1910814cca5d0f3d9dbffa4721071ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1910814cca5d0f3d9dbffa4721071ea">&#9670;&nbsp;</a></span>translate() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Translator::translate </td>
+          <td>(</td>
+          <td class="paramtype">GameEvent &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SystemEvent &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para traduzir os eventos vindo do sistema. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>GameEvent&amp; Ponteiro para o evento do jogo que vai ser alterado </td></tr>
+    <tr><td class="paramname">from</td><td>const SystemEvent&amp; Ponteiro para o evento do teclado recebido </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Booleano para quando ocorreu um evento </dd></dl>
+
+</div>
+</div>
+<a id="a23fe703107ba6e3b26e5da8e9f28777a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fe703107ba6e3b26e5da8e9f28777a">&#9670;&nbsp;</a></span>translate() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Translator::translate </td>
+          <td>(</td>
+          <td class="paramtype">GameEvent &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const KeyboardEvent &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método para traduzir os eventos vindo do teclado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>GameEvent&amp; Ponteiro para o evento do jogo que vai ser alterado </td></tr>
+    <tr><td class="paramname">from</td><td>const KeyboardEvent&amp; Ponteiro para o evento do teclado recebido </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Booleano para quando ocorreu um evento </dd></dl>
+
+</div>
+</div>
+<a id="ad75df11a67688dba45a23cecc9930970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75df11a67688dba45a23cecc9930970">&#9670;&nbsp;</a></span>translate() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Translator::translate </td>
+          <td>(</td>
+          <td class="paramtype">GameEvent &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const JoystickEvent &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para traduzir os eventos vindo do joystick. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>GameEvent&amp; Ponteiro para o evento do jogo que vai ser alterado </td></tr>
+    <tr><td class="paramname">from</td><td>const JoystickEvent&amp; Ponteiro para o evento do teclado recebido </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Booleano para quando ocorreu um evento </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/<a class="el" href="translator_8h_source.html">translator.h</a></li>
-<li>src/translator.cpp</li>
+<li>src/<a class="el" href="translator_8cpp.html">translator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

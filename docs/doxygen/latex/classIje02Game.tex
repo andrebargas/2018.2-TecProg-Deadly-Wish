@@ -1,14 +1,84 @@
 \hypertarget{classIje02Game}{}\section{Referência à classe Ije02\+Game}
 \label{classIje02Game}\index{Ije02\+Game@{Ije02\+Game}}
+
+
+Classe usada para instanciar objetos da ijengine essenciais para montar o jogo.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/ije02\+\_\+game.\+h\char`\"{}}
+
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classIje02Game_ab31ee909d3cb4344d166f4402467bf93}\label{classIje02Game_ab31ee909d3cb4344d166f4402467bf93}} 
-{\bfseries Ije02\+Game} (const string \&title, int w, int h, double scale)
+\mbox{\hyperlink{classIje02Game_af24dc5ec68acaeeb66f74866a832133b}{Ije02\+Game}} (const string \&title, int weigth, int height, double scale)
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIje02Game_aeeebc6b2bdfc7dd9ccabffcf96a8299f}\label{classIje02Game_aeeebc6b2bdfc7dd9ccabffcf96a8299f}} 
+\mbox{\hyperlink{classIje02Game_aeeebc6b2bdfc7dd9ccabffcf96a8299f}{$\sim$\+Ije02\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIje02Game_ac93c42997b7e79698960057d7c395990}{run}} (const string \&level\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Método para rodar o jogo após crialo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classIje02Game_a7f7eadb4d54983aa19a067fa30386ecb}\label{classIje02Game_a7f7eadb4d54983aa19a067fa30386ecb}} 
+Game \mbox{\hyperlink{classIje02Game_a7f7eadb4d54983aa19a067fa30386ecb}{ije\+\_\+game}}
+\begin{DoxyCompactList}\small\item\em Variavel para instanciar jogo através da classe da Ij\+Engine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIje02Game_ad0d409f32af38af5aee785abd63f9287}\label{classIje02Game_ad0d409f32af38af5aee785abd63f9287}} 
+Engine \mbox{\hyperlink{classIje02Game_ad0d409f32af38af5aee785abd63f9287}{ije\+\_\+engine}}
+\begin{DoxyCompactList}\small\item\em Variavel para instanciar a engine através da classe da Engine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIje02Game_a7a07e95a79c99ff7900a57df06aedf92}\label{classIje02Game_a7a07e95a79c99ff7900a57df06aedf92}} 
+\mbox{\hyperlink{classTranslator}{Translator}} \mbox{\hyperlink{classIje02Game_a7a07e95a79c99ff7900a57df06aedf92}{ije\+\_\+translator}}
+\begin{DoxyCompactList}\small\item\em Variavel para instanciar translator do jogo que é reponsavel por capturar os eventos da entrada. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIje02Game_a716ea218d15acad4c3173e74c08df118}\label{classIje02Game_a716ea218d15acad4c3173e74c08df118}} 
+\mbox{\hyperlink{classTestLevelFactory}{Test\+Level\+Factory}} \mbox{\hyperlink{classIje02Game_a716ea218d15acad4c3173e74c08df118}{ije\+\_\+level\+\_\+factory}}
+\begin{DoxyCompactList}\small\item\em Variavel para instanciar a Teste\+Level\+Factory que por sua vez instancia os outros possives leveis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe usada para instanciar objetos da ijengine essenciais para montar o jogo. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classIje02Game_af24dc5ec68acaeeb66f74866a832133b}\label{classIje02Game_af24dc5ec68acaeeb66f74866a832133b}} 
+\index{Ije02\+Game@{Ije02\+Game}!Ije02\+Game@{Ije02\+Game}}
+\index{Ije02\+Game@{Ije02\+Game}!Ije02\+Game@{Ije02\+Game}}
+\subsubsection{\texorpdfstring{Ije02\+Game()}{Ije02Game()}}
+{\footnotesize\ttfamily Ije02\+Game\+::\+Ije02\+Game (\begin{DoxyParamCaption}\item[{const string \&}]{title,  }\item[{int}]{weigth,  }\item[{int}]{height,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+
+Método construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em title} & string\& Titulo do jogo. Valor constante == \char`\"{}\+Deadly Wish\char`\"{}. \\
+\hline
+{\em weigth} & int Altura da tela do jogo. \\
+\hline
+{\em height} & int Altura da tela do jogo. \\
+\hline
+{\em scale} & double Escala da tela do jogo. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
 \mbox{\Hypertarget{classIje02Game_ac93c42997b7e79698960057d7c395990}\label{classIje02Game_ac93c42997b7e79698960057d7c395990}} 
-int {\bfseries run} (const string \&level\+\_\+id)
-\end{DoxyCompactItemize}
+\index{Ije02\+Game@{Ije02\+Game}!run@{run}}
+\index{run@{run}!Ije02\+Game@{Ije02\+Game}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int Ije02\+Game\+::run (\begin{DoxyParamCaption}\item[{const string \&}]{level\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Método para rodar o jogo após crialo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em level\+\_\+id} & string\& Recebe o level que ira começar o jogo. Por default sera o \mbox{\hyperlink{classMenuLevel}{Menu\+Level}}. \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}

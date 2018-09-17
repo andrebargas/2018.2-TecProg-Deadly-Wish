@@ -68,6 +68,11 @@ $(function() {
 <div class="title">Referência à classe TestLevelFactory</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe usada para instanciar os leveis do jogo, podem ser chamados de fases também.  
+ <a href="classTestLevelFactory.html#details">Mais...</a></p>
+
+<p><code>#include &quot;<a class="el" href="test__level__factory_8h_source.html">include/test_level_factory.h</a>&quot;</code></p>
 <div class="dynheader">
 Diagrama de heranças da classe TestLevelFactory</div>
 <div class="dyncontent">
@@ -79,13 +84,70 @@ Diagrama de heranças da classe TestLevelFactory</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:ab661866cd93b21b0fa16cfd72ace461e"><td class="memItemLeft" align="right" valign="top"><a id="ab661866cd93b21b0fa16cfd72ace461e"></a>
-Level *&#160;</td><td class="memItemRight" valign="bottom"><b>make_level</b> (const string &amp;level_id)</td></tr>
+<tr class="memitem:ab661866cd93b21b0fa16cfd72ace461e"><td class="memItemLeft" align="right" valign="top">Level *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestLevelFactory.html#ab661866cd93b21b0fa16cfd72ace461e">make_level</a> (const string &amp;level_id)</td></tr>
+<tr class="memdesc:ab661866cd93b21b0fa16cfd72ace461e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para criar um novo level.  <a href="#ab661866cd93b21b0fa16cfd72ace461e">Mais...</a><br /></td></tr>
 <tr class="separator:ab661866cd93b21b0fa16cfd72ace461e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7771c01184257df25680ba0c8f3b5188"><td class="memItemLeft" align="right" valign="top"><a id="a7771c01184257df25680ba0c8f3b5188"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> (Level *level)</td></tr>
+<tr class="memitem:a7771c01184257df25680ba0c8f3b5188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestLevelFactory.html#a7771c01184257df25680ba0c8f3b5188">release</a> (Level *level)</td></tr>
+<tr class="memdesc:a7771c01184257df25680ba0c8f3b5188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método detruir um level criado.  <a href="#a7771c01184257df25680ba0c8f3b5188">Mais...</a><br /></td></tr>
 <tr class="separator:a7771c01184257df25680ba0c8f3b5188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p class="">Classe usada para instanciar os leveis do jogo, podem ser chamados de fases também. </p>
+</div><h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ab661866cd93b21b0fa16cfd72ace461e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab661866cd93b21b0fa16cfd72ace461e">&#9670;&nbsp;</a></span>make_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Level * TestLevelFactory::make_level </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>level_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para criar um novo level. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level_id</td><td>string&amp; Codigo do level que se deseja criar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Level* O ponteiro para o level criado </dd></dl>
+
+</div>
+</div>
+<a id="a7771c01184257df25680ba0c8f3b5188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7771c01184257df25680ba0c8f3b5188">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestLevelFactory::release </td>
+          <td>(</td>
+          <td class="paramtype">Level *&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método detruir um level criado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Level* Ponteiro para o level que ira ser destruido </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/<a class="el" href="test__level__factory_8h_source.html">test_level_factory.h</a></li>
 <li>src/test_level_factory.cpp</li>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['heavyattackstate',['HeavyAttackState',['../classHeavyAttackState.html',1,'']]]
+  ['fireball',['Fireball',['../classFireball.html',1,'']]],
+  ['frostnova',['FrostNova',['../classFrostNova.html',1,'']]]
 ];

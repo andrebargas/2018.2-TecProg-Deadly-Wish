@@ -1,5 +1,14 @@
 \hypertarget{classTestLevelFactory}{}\section{Referência à classe Test\+Level\+Factory}
 \label{classTestLevelFactory}\index{Test\+Level\+Factory@{Test\+Level\+Factory}}
+
+
+Classe usada para instanciar os leveis do jogo, podem ser chamados de fases também.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/test\+\_\+level\+\_\+factory.\+h\char`\"{}}
+
 Diagrama de heranças da classe Test\+Level\+Factory\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,12 +18,52 @@ Diagrama de heranças da classe Test\+Level\+Factory\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
+Level $\ast$ \mbox{\hyperlink{classTestLevelFactory_ab661866cd93b21b0fa16cfd72ace461e}{make\+\_\+level}} (const string \&level\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Método para criar um novo level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTestLevelFactory_a7771c01184257df25680ba0c8f3b5188}{release}} (Level $\ast$level)
+\begin{DoxyCompactList}\small\item\em Método detruir um level criado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe usada para instanciar os leveis do jogo, podem ser chamados de fases também. 
+
+\subsection{Documentação dos métodos}
 \mbox{\Hypertarget{classTestLevelFactory_ab661866cd93b21b0fa16cfd72ace461e}\label{classTestLevelFactory_ab661866cd93b21b0fa16cfd72ace461e}} 
-Level $\ast$ {\bfseries make\+\_\+level} (const string \&level\+\_\+id)
-\item 
+\index{Test\+Level\+Factory@{Test\+Level\+Factory}!make\+\_\+level@{make\+\_\+level}}
+\index{make\+\_\+level@{make\+\_\+level}!Test\+Level\+Factory@{Test\+Level\+Factory}}
+\subsubsection{\texorpdfstring{make\+\_\+level()}{make\_level()}}
+{\footnotesize\ttfamily Level $\ast$ Test\+Level\+Factory\+::make\+\_\+level (\begin{DoxyParamCaption}\item[{const string \&}]{level\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Método para criar um novo level. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em level\+\_\+id} & string\& Codigo do level que se deseja criar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Level$\ast$ O ponteiro para o level criado 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTestLevelFactory_a7771c01184257df25680ba0c8f3b5188}\label{classTestLevelFactory_a7771c01184257df25680ba0c8f3b5188}} 
-void {\bfseries release} (Level $\ast$level)
-\end{DoxyCompactItemize}
+\index{Test\+Level\+Factory@{Test\+Level\+Factory}!release@{release}}
+\index{release@{release}!Test\+Level\+Factory@{Test\+Level\+Factory}}
+\subsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void Test\+Level\+Factory\+::release (\begin{DoxyParamCaption}\item[{Level $\ast$}]{level }\end{DoxyParamCaption})}
+
+
+
+Método detruir um level criado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em level} & Level$\ast$ Ponteiro para o level que ira ser destruido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
