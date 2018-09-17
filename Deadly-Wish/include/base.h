@@ -1,6 +1,15 @@
 #ifndef BASE_H
 #define BASE_H
-
+// padrao do doxygen (apagar antes do merge depois)
+/** \fn Character* make_character(int character_code, unsigned player_id, double x_pos, double y_pos)
+      * \public
+      * \brief Fução que instacia um pesornagem
+      * \param character_code int codigo relacionado ao personagem do enum. Valor entre 0 e 3.
+      * \param player_id unsigned id do players. Valor entre 1 e 4.
+      * \param x_position double  posição inicial do personagem a ser criado no eixo x
+      * \param y_position double  posição inicial do personagem a ser criado no eixo y
+      * \return um ponteiro para um Character.
+      */
 #include <ijengine/game_object.h>
 #include <ijengine/texture.h>
 #include <ijengine/collidable.h>
