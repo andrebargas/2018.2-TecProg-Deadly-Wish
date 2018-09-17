@@ -1,0 +1,113 @@
+\hypertarget{classFireball}{}\section{Referência à classe Fireball}
+\label{classFireball}\index{Fireball@{Fireball}}
+Diagrama de heranças da classe Fireball\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classFireball}
+\end{center}
+\end{figure}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFireball_a4035f700f882afc6e0760b4195e90ffc}\label{classFireball_a4035f700f882afc6e0760b4195e90ffc}} 
+{\bfseries Fireball} (Game\+Object $\ast$parent, unsigned mage\+\_\+id, double xp, double yp, double dx, double dy)
+\item 
+\mbox{\Hypertarget{classFireball_a4c669319c3cfa500f352c758f1156801}\label{classFireball_a4c669319c3cfa500f352c758f1156801}} 
+bool {\bfseries active} () const
+\item 
+\mbox{\Hypertarget{classFireball_a3c91f2eceddb1d7f317cc6961976ac68}\label{classFireball_a3c91f2eceddb1d7f317cc6961976ac68}} 
+const Rectangle \& {\bfseries bounding\+\_\+box} () const
+\item 
+\mbox{\Hypertarget{classFireball_af65513f81a16dc83b3afb6b672ffacdc}\label{classFireball_af65513f81a16dc83b3afb6b672ffacdc}} 
+const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
+\item 
+\mbox{\Hypertarget{classFireball_a312843f3db953d32b52d337bdc07cc1d}\label{classFireball_a312843f3db953d32b52d337bdc07cc1d}} 
+pair$<$ double, double $>$ {\bfseries direction} () const
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFireball_a70306ad9672fafa625fe67c7895cca38}\label{classFireball_a70306ad9672fafa625fe67c7895cca38}} 
+enum {\bfseries State} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
+{\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}
+ \}
+\item 
+\mbox{\Hypertarget{classFireball_a5bac3189f4a2d9d0fd1862f77fc8a29d}\label{classFireball_a5bac3189f4a2d9d0fd1862f77fc8a29d}} 
+enum {\bfseries Sprite\+State} \{ {\bfseries C\+A\+S\+T\+I\+NG}, 
+{\bfseries M\+O\+V\+I\+NG}, 
+{\bfseries H\+I\+T\+T\+I\+NG}
+ \}
+\item 
+\mbox{\Hypertarget{classFireball_a0bc57dc4939ad1cc8b5b0e1653b61825}\label{classFireball_a0bc57dc4939ad1cc8b5b0e1653b61825}} 
+enum {\bfseries Players} \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFireball_a73c9722b10f4d811031f270184265c4d}\label{classFireball_a73c9722b10f4d811031f270184265c4d}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classFireball_a18f3cb8810d2e7e9bc5886b41fa03618}\label{classFireball_a18f3cb8810d2e7e9bc5886b41fa03618}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned, unsigned)
+\item 
+\mbox{\Hypertarget{classFireball_a991b36830d1e36863ebca52dea50f9c3}\label{classFireball_a991b36830d1e36863ebca52dea50f9c3}} 
+void {\bfseries update\+\_\+sprite\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{classFireball_a0692c0ef038abdf5128f2bac3bfc5388}\label{classFireball_a0692c0ef038abdf5128f2bac3bfc5388}} 
+void {\bfseries update\+\_\+time} (unsigned now)
+\item 
+\mbox{\Hypertarget{classFireball_a4a5554e5ffa7f3b7811815515dfcf6a4}\label{classFireball_a4a5554e5ffa7f3b7811815515dfcf6a4}} 
+string {\bfseries choose\+\_\+sprite\+\_\+path} (unsigned player\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFireball_a84186298340b89e4255ef0bc2bbf4e88}\label{classFireball_a84186298340b89e4255ef0bc2bbf4e88}} 
+unsigned {\bfseries fireball\+\_\+character\+\_\+id}
+\item 
+\mbox{\Hypertarget{classFireball_a68da1f63b2154ecb1d14706d410245ee}\label{classFireball_a68da1f63b2154ecb1d14706d410245ee}} 
+State {\bfseries fireball\+\_\+state}
+\item 
+\mbox{\Hypertarget{classFireball_aacb9344cf4e34345774f518faec82425}\label{classFireball_aacb9344cf4e34345774f518faec82425}} 
+Sprite\+State {\bfseries fireball\+\_\+sprite\+\_\+state}
+\item 
+\mbox{\Hypertarget{classFireball_af8bd0c78844e754f32f86362f659d875}\label{classFireball_af8bd0c78844e754f32f86362f659d875}} 
+double {\bfseries fireball\+\_\+axis\+\_\+x\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classFireball_a1d912b1e4229e9de2864024fc8b7f0a9}\label{classFireball_a1d912b1e4229e9de2864024fc8b7f0a9}} 
+double {\bfseries fireball\+\_\+axis\+\_\+y\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classFireball_a2ec7e1493414e15be2eef47f58010622}\label{classFireball_a2ec7e1493414e15be2eef47f58010622}} 
+int {\bfseries fireball\+\_\+damage}
+\item 
+\mbox{\Hypertarget{classFireball_a75c66d806eac5f25c076f3bcf37b9613}\label{classFireball_a75c66d806eac5f25c076f3bcf37b9613}} 
+double {\bfseries fireball\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classFireball_a19675b5df10783f6ba27d4af14ac85b0}\label{classFireball_a19675b5df10783f6ba27d4af14ac85b0}} 
+int {\bfseries fireball\+\_\+frame}
+\item 
+\mbox{\Hypertarget{classFireball_ac380cbdccf28a87ee27fae555a22561b}\label{classFireball_ac380cbdccf28a87ee27fae555a22561b}} 
+string {\bfseries fireball\+\_\+sprite\+\_\+path}
+\item 
+\mbox{\Hypertarget{classFireball_a4d1ebf057ecd8623b13b990b0176d322}\label{classFireball_a4d1ebf057ecd8623b13b990b0176d322}} 
+unsigned {\bfseries fireball\+\_\+start}
+\item 
+\mbox{\Hypertarget{classFireball_a9c1277eb7ce60712afe86ac37ad5371c}\label{classFireball_a9c1277eb7ce60712afe86ac37ad5371c}} 
+unsigned {\bfseries fireball\+\_\+current\+\_\+time}
+\item 
+\mbox{\Hypertarget{classFireball_a1b970a7da9435c5b43b431a89b3c8592}\label{classFireball_a1b970a7da9435c5b43b431a89b3c8592}} 
+shared\+\_\+ptr$<$ Texture $>$ {\bfseries fireball\+\_\+texture}
+\item 
+\mbox{\Hypertarget{classFireball_ad2f50d05e164069864ed50ad5d044b87}\label{classFireball_ad2f50d05e164069864ed50ad5d044b87}} 
+Rectangle {\bfseries fireball\+\_\+bounding\+\_\+box}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/fireball.\+h\item 
+src/fireball.\+cpp\end{DoxyCompactItemize}

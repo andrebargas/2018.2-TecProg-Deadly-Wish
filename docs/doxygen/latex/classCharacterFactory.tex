@@ -1,0 +1,120 @@
+\hypertarget{classCharacterFactory}{}\section{Referência à classe Character\+Factory}
+\label{classCharacterFactory}\index{Character\+Factory@{Character\+Factory}}
+
+
+Classe usada para instanciar objetos de personagens do jogo. Sendo relativos a escolha dos jogadores em cada partida.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/character\+\_\+factory.\+h\char`\"{}}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries K\+N\+I\+G\+HT}, 
+{\bfseries S\+O\+L\+D\+I\+ER}, 
+{\bfseries M\+A\+GE}, 
+{\bfseries I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacterFactory_a0014a7de42b681ce872c728ea91bcfc1}\label{classCharacterFactory_a0014a7de42b681ce872c728ea91bcfc1}} 
+\mbox{\hyperlink{classCharacterFactory_a0014a7de42b681ce872c728ea91bcfc1}{Character\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCharacterFactory_a27508feea862d22571bb6b9344f34f44}\label{classCharacterFactory_a27508feea862d22571bb6b9344f34f44}} 
+\mbox{\hyperlink{classCharacterFactory_a27508feea862d22571bb6b9344f34f44}{$\sim$\+Character\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCharacter}{Character}} $\ast$ \mbox{\hyperlink{classCharacterFactory_a6ebcf8e9408d89dc4c40ef12e9d09c15}{make\+\_\+character}} (int character\+\_\+code, unsigned player\+\_\+id, double x\+\_\+position, double y\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Fução que instacia um pesornagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classCharacterFactory_ab974578549c551e10056540617a269df}{Players}} \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{classCharacterFactory_ae34183113755bfceb1a2906686e999af}{choose\+\_\+sprite\+\_\+path}} (int character\+\_\+code, unsigned player\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Função que escolhe qual sera o caminho para o sprite de cada um dos jogadores e personagem, ja as cores e densenhos de cada um são diferentes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacterFactory_adc71232fb6551d9f1dd80941dee7c7f9}\label{classCharacterFactory_adc71232fb6551d9f1dd80941dee7c7f9}} 
+vector$<$ string $>$ \mbox{\hyperlink{classCharacterFactory_adc71232fb6551d9f1dd80941dee7c7f9}{character\+\_\+sprites\+\_\+paths}}
+\begin{DoxyCompactList}\small\item\em Variavel para armazenar os caminhos para os sprites do personagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe usada para instanciar objetos de personagens do jogo. Sendo relativos a escolha dos jogadores em cada partida. 
+
+\subsection{Documentação das enumerações}
+\mbox{\Hypertarget{classCharacterFactory_a9c158e1e9a98eb86795a1b19367a9ded}\label{classCharacterFactory_a9c158e1e9a98eb86795a1b19367a9ded}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+enum para os tipos de persongens possiveis \mbox{\Hypertarget{classCharacterFactory_ab974578549c551e10056540617a269df}\label{classCharacterFactory_ab974578549c551e10056540617a269df}} 
+\index{Character\+Factory@{Character\+Factory}!Players@{Players}}
+\index{Players@{Players}!Character\+Factory@{Character\+Factory}}
+\subsubsection{\texorpdfstring{Players}{Players}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCharacterFactory_ab974578549c551e10056540617a269df}{Character\+Factory\+::\+Players}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+enum paras cada um dos playes 
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classCharacterFactory_ae34183113755bfceb1a2906686e999af}\label{classCharacterFactory_ae34183113755bfceb1a2906686e999af}} 
+\index{Character\+Factory@{Character\+Factory}!choose\+\_\+sprite\+\_\+path@{choose\+\_\+sprite\+\_\+path}}
+\index{choose\+\_\+sprite\+\_\+path@{choose\+\_\+sprite\+\_\+path}!Character\+Factory@{Character\+Factory}}
+\subsubsection{\texorpdfstring{choose\+\_\+sprite\+\_\+path()}{choose\_sprite\_path()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Character\+Factory\+::choose\+\_\+sprite\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{character\+\_\+code,  }\item[{unsigned}]{player\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Função que escolhe qual sera o caminho para o sprite de cada um dos jogadores e personagem, ja as cores e densenhos de cada um são diferentes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em character\+\_\+code} & int Código de para o personagem \\
+\hline
+{\em player} & unsigned Código de para o player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o vetor com paths paras as sprites no formato de String. 
+\end{DoxyReturn}
+Varaivel para salver nome do tipo de personagem a partir de seu código\mbox{\Hypertarget{classCharacterFactory_a6ebcf8e9408d89dc4c40ef12e9d09c15}\label{classCharacterFactory_a6ebcf8e9408d89dc4c40ef12e9d09c15}} 
+\index{Character\+Factory@{Character\+Factory}!make\+\_\+character@{make\+\_\+character}}
+\index{make\+\_\+character@{make\+\_\+character}!Character\+Factory@{Character\+Factory}}
+\subsubsection{\texorpdfstring{make\+\_\+character()}{make\_character()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCharacter}{Character}} $\ast$ Character\+Factory\+::make\+\_\+character (\begin{DoxyParamCaption}\item[{int}]{character\+\_\+code,  }\item[{unsigned}]{player\+\_\+id,  }\item[{double}]{x\+\_\+pos,  }\item[{double}]{y\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Fução que instacia um pesornagem. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em character\+\_\+code} & int codigo relacionado ao personagem do enum. Valor entre 0 e 3. \\
+\hline
+{\em player\+\_\+id} & unsigned id do players. Valor entre 1 e 4. \\
+\hline
+{\em x\+\_\+position} & double posição inicial do personagem a ser criado no eixo x \\
+\hline
+{\em y\+\_\+position} & double posição inicial do personagem a ser criado no eixo y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+um ponteiro para um \mbox{\hyperlink{classCharacter}{Character}}. 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{character__factory_8h}{character\+\_\+factory.\+h}}\item 
+src/\mbox{\hyperlink{character__factory_8cpp}{character\+\_\+factory.\+cpp}}\end{DoxyCompactItemize}

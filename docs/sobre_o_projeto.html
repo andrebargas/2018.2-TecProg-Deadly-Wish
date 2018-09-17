@@ -58,7 +58,6 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><i class="icon fa fa-search"></i> Sobre o projeto</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Última alteração: 01/09/2018</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
@@ -67,11 +66,49 @@
                                 <h2 class="section-title">Introdução</h2>
                                 <div class="section-block">
                                         <p align="justify">&emsp;&emsp;O projeto Deadly Wish é um de muitos projetos disponiveis na organização
-                                           <a href="https://github.com/unbgames"> unb games</a>, o acervo digital central de jogos feitos na Universidade de Brasilia e em seus campi.</p> 
+                                           <a href="https://github.com/unbgames"> unb games</a>, o acervo digital central de jogos feitos na Universidade de Brasilia e em seus campi.</p>
                                 </div>
                             </section><!--//doc-section-->
 
-                            <section id="nomes-section" class="doc-section">
+                            <section class="cards-section text-center">
+                              <div class="content-fluid">
+                               <div id="cards-wrapper" class="cards-wrapper row-fluid">
+                                   <div class="item item-blue col-md-12 col-sm-12 col-xs-12">
+                                       <div class="item-inner">
+                                           <div class="icon-holder">
+                                               <span aria-hidden="true" class="icon fa fa-eye"></span>
+                                           </div><!--//icon-holder-->
+                                           <h3 class="title">Documentação do Projeto</h3>
+                                           <p class="intro">Documentação gerada pela ferramenta Doxygen</p>
+                                           <a class="link" href="doxygen/html/index.html"><span></span></a>
+                                       </div><!--//item-inner-->
+                                   </div><!--//item-->
+                                   <div class="item item-blue col-md-6 col-sm-6 col-xs-6">
+                                       <div class="item-inner">
+                                           <div class="icon-holder">
+                                               <span aria-hidden="true" class="icon fa fa-file-text"></span>
+                                           </div><!--//icon-holder-->
+                                           <h3 class="title">Modulo-02</h3>
+                                           <p class="intro">Estilo desing, nomes e identação</p>
+                                           <a class="link" href="modulo02.html"><span></span></a>
+                                       </div><!--//item-inner-->
+                                   </div><!--//item-->
+                                   <div class="item item-blue col-md-6 col-sm-6 col-xs-6">
+                                     <div class="item-inner">
+                                         <div class="icon-holder">
+                                             <span aria-hidden="true" class="icon fa fa-file-text"></span>
+                                         </div><!--//icon-holder-->
+                                         <h3 class="title">Modulo-03</h3>
+                                         <p class="intro">Comentarios!</p>
+                                         <a class="link" href="modulo03.html"><span></span></a>
+                                     </div><!--//item-inner-->
+                                   </div><!--//item-->
+                                 </div>
+                               </div><!--content  -->
+                             </section>
+
+                             <section id="content-section" class="doc-section">
+
                                 <h2 class="section-title"> Diagrama de classes</h2>
                                   <p></p>
                                   <div id="myModal" class="modal">
@@ -80,33 +117,34 @@
                                    <div id="caption"></div>
                                   </div>
                                   <img id="myImg" src="assets/images/diagramadeclasses.png" alt="Snow" style="width:100%;max-width:650px;">
-                                    <h3 class="block-title">Menu principal</h3>
+
+                                    <h3 class="block-title">Telas do jogo</h3>
                                     <p></p>
-                                    <div id="myModal" class="modal">
-                                        <span class="close">&times;</span>
-                                        <img class="modal-content" id="img01">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <img src="assets/images/main_level.png" alt="Snow" class="img-thumbnail">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <img src="assets/images/credits_level.png" alt="Snow1" class="img-thumbnail">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <img src="assets/images/fase_level.png" alt="Snow2" class="img-thumbnail">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <img src="assets/images/character_level.png" alt="Snow3" class="img-thumbnail">
+                                        </div>
                                     </div>
-                                    <img id="myImg" src="assets/images/main_level.png" alt="Snow" style="width:100%;max-width:650px;">
-                                <div id="nome-constantes"  class="section-block">
-                                  <h3 class="block-title">Modo bases</h3>
-                                  <p></p>
-                                  <img id="myImg" src="assets/images/character_level.png" alt="Snow" style="width:100%;max-width:650px;">
-                                </div>
-                                  <h3 class="block-title">Campo de batalha</h3>
-                                  <p></p>
-                                  <img id="myImg" src="assets/images/fase_level.png" alt="Snow" style="width:100%;max-width:650px;">
-                                <div id="nome-classes"  class="section-block">
-                                  <h3 class="block-title">Créditos</h3>
-                                  <p></p>
-                                  <img id="myImg" src="assets/images/credits_level.png" alt="Snow" style="width:100%;max-width:650px;">
+
                                 </div><!--//section-block-->
 
                             </section><!--//doc-section-->
 
 
                             <section id="referencias-section" class="doc-section">
-                              <h2 class="section-title"> Referências:</h2>
-                              <a href="https://github.com/unbgames/Deadly-Wish"target="_blank">&emsp;&emsp;https://github.com/unbgames/Deadly-Wish</a>
+                              <div class="row">
+                                <h2 class="section-title"> Referências:</h2>
+                                <a href="https://github.com/unbgames/Deadly-Wish"target="_blank">&emsp;&emsp;https://github.com/unbgames/Deadly-Wish</a>
+                              </div>
                             </section><!--//doc-section-->
 
                         </div><!--//content-inner-->

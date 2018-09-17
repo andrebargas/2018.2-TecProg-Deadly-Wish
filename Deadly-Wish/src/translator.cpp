@@ -1,8 +1,19 @@
+/** \file translator.cpp
+  * \brief Este é o arquivo da classe que traduz os eventos dos inputs em eventos do jogo.
+  */
 #include "translator.h"
 #include "ije02_game.h"
 
 #include <algorithm>
 
+
+/** \fn  translate(GameEvent& to, const MouseEvent& from)
+  * \public
+  * \brief Método para traduzir os eventos vindo do mouse
+  * \param to GameEvent& Ponteiro para o evento do jogo que vai ser alterado
+  * \param from const MouseEvent& Ponteiro para o evento do mouse recebido
+  * \return Booleano para quando ocorreu um evento
+  */
 bool
 Translator::translate(GameEvent& to, const MouseEvent& from)
 {
@@ -18,6 +29,13 @@ Translator::translate(GameEvent& to, const MouseEvent& from)
     return true;
 }
 
+/** \fn  translate(GameEvent& to, const SystemEvent& from)
+  * \public
+  * \brief Método para traduzir os eventos vindo do sistema
+  * \param to GameEvent& Ponteiro para o evento do jogo que vai ser alterado
+  * \param from const SystemEvent& Ponteiro para o evento do teclado recebido
+  * \return Booleano para quando ocorreu um evento
+  */
 bool
 Translator::translate(GameEvent& to, const SystemEvent& from)
 {
@@ -32,6 +50,13 @@ Translator::translate(GameEvent& to, const SystemEvent& from)
     return false;
 }
 
+/** \fn  translate(GameEvent& to, const KeyboardEvent& from)
+  * \public
+  * \brief Método para traduzir os eventos vindo do teclado
+  * \param to GameEvent& Ponteiro para o evento do jogo que vai ser alterado
+  * \param from const KeyboardEvent& Ponteiro para o evento do teclado recebido
+  * \return Booleano para quando ocorreu um evento
+  */
 bool
 Translator::translate(GameEvent& to, const KeyboardEvent& from)
 {
@@ -64,6 +89,13 @@ Translator::translate(GameEvent& to, const KeyboardEvent& from)
     return done;
 }
 
+/** \fn  translate(GameEvent& to, const JoystickEvent& from)
+  * \public
+  * \brief Método para traduzir os eventos vindo do joystick
+  * \param to GameEvent& Ponteiro para o evento do jogo que vai ser alterado
+  * \param from const JoystickEvent& Ponteiro para o evento do teclado recebido
+  * \return Booleano para quando ocorreu um evento
+  */
 bool
 Translator::translate(GameEvent& to, const JoystickEvent& from)
 {
@@ -75,27 +107,35 @@ Translator::translate(GameEvent& to, const JoystickEvent& from)
     // vector<unsigned> p1_moves {KeyboardEvent::LEFT, KeyboardEvent::RIGHT, KeyboardEvent::UP, KeyboardEvent::DOWN};
     // vector<unsigned> p2_moves {KeyboardEvent::A, KeyboardEvent::D, KeyboardEvent::W, KeyboardEvent::S};
 
+    // Sequencia de condicionais para cada um dos possiveis botões do joystick.
     if(from.state() == JoystickEvent::BUTTON_PRESSED) {
+        // caso aperte o quadrado ou o l1, o personagem realisa um Heavy attack
         if(from.button() == JoystickEvent::SQUARE || from.button() == JoystickEvent::L1) {
             vector<unsigned> heavy_attack_ids {game_event::HEAVY_ATTACK_P1, game_event::HEAVY_ATTACK_P2, game_event::HEAVY_ATTACK_P3, game_event::HEAVY_ATTACK_P4};
             id = heavy_attack_ids[from.which()];
         }
+        // caso aperte o x ou o R1, o personagem realisa um Light attack
         else if(from.button() == JoystickEvent::X || from.button() == JoystickEvent::R1) {
             vector<unsigned> light_attack_ids {game_event::LIGHT_ATTACK_P1, game_event::LIGHT_ATTACK_P2, game_event::LIGHT_ATTACK_P3, game_event::LIGHT_ATTACK_P4};
             id = light_attack_ids[from.which()];
         }
+        // caso aperte o Bola ou R2, o persoangem realisa um defense move
         else if(from.button() == JoystickEvent::CIRCLE || from.button() == JoystickEvent::R2) {
             vector<unsigned> defense_ids {game_event::DEFENSE_P1, game_event::DEFENSE_P2, game_event::DEFENSE_P3, game_event::DEFENSE_P4};
             id = defense_ids[from.which()];
         }
+        // caso aperte o Triangulo ou L2, o persoangem realisa um attack especial
         else if(from.button() == JoystickEvent::TRIANGLE || from.button() == JoystickEvent::L2) {
             vector<unsigned> special_ids {game_event::SPECIAL_P1, game_event::SPECIAL_P2, game_event::SPECIAL_P3, game_event::SPECIAL_P4};
             id = special_ids[from.which()];
         }
     }
+    //Caso o usuario tenha soltado o botão, o retorno é falso
     else if(from.state() == JoystickEvent::BUTTON_RELEASED) {
         done = false;
     }
+    
+    //Condicionais para controlar o movimento do personagem
     else if(from.state() == JoystickEvent::AXIS_MOTION && (from.axis() == JoystickEvent::LEFTY || from.axis() == JoystickEvent::LEFTX)) {
         if(from.axis() == JoystickEvent::LEFTX) {
             to.set_property<string>("axis", "X");
@@ -127,7 +167,14 @@ Translator::translate(GameEvent& to, const JoystickEvent& from)
 
     return done;
 }
-
+/** \fn  set_movement_properties(GameEvent& to, const KeyboardEvent& from, const vector<unsigned> &moves);
+  * \private
+  * \brief Método para implementar o movimento direcional dos personagens
+  * \param to GameEvent& Ponteiro para o evento do jogo que vai ser alterado
+  * \param from const KeyboardEvent& Ponteiro para o evento do teclado recebido
+  * \param moves const vector<unsigned>& Ponteiro para lista de unsigned
+  * \return void
+  */
 inline void
 Translator::set_movement_properties(GameEvent& to, const KeyboardEvent& from, const vector<unsigned> &moves) {
     if(from.state() == KeyboardEvent::PRESSED) {

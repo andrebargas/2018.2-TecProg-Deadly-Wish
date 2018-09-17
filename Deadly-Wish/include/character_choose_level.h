@@ -28,31 +28,35 @@ public:
         PORTRAITS,
         ICONS
     };
+    const vector < int >
+      get_players_characters() const { return character_choose_level_players_characters; }
+    vector < int > character_choose_level_players_characters;
 
+    //Metodos virtual de Level
     bool done() const;
     string next() const;
     string audio() const;
-    const vector < int > players_characters() const { return m_players_characters; }
-    vector < int > m_players_characters;
 
 protected:
     void update_self(unsigned now, unsigned last);
     void draw_self(Canvas *canvas, unsigned now, unsigned last);
+
+    //metodo virtual de GameEvent
     bool on_event(const GameEvent& event);
 
 
 private:
-    bool m_done;
-    string m_next;
-    int m_start;
-    int m_frame;
-    vector<int> m_selected_characters;
-    int m_current_player;
-    int m_number_of_players;
-    vector<CharacterSelection *> m_character_selections;
-    int m_current_player_character;
+    bool character_choose_level_done;
+    string character_choose_level_next;
+    int character_choose_level_start;
+    int character_choose_level_frame;
+    vector<int> character_choose_level_selected_characters;
+    int character_choose_level_current_player;
+    int character_choose_level_number_of_players;
+    vector<CharacterSelection *> character_choose_level_character_selections;
+    int character_choose_level_current_player_character;
 
-    vector< shared_ptr<Texture> > m_textures;
+    vector< shared_ptr<Texture> > character_choose_level_textures;
 
 };
 

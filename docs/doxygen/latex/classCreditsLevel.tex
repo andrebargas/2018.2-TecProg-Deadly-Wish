@@ -1,0 +1,65 @@
+\hypertarget{classCreditsLevel}{}\section{Referência à classe Credits\+Level}
+\label{classCreditsLevel}\index{Credits\+Level@{Credits\+Level}}
+Diagrama de heranças da classe Credits\+Level\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCreditsLevel}
+\end{center}
+\end{figure}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a2516ba82d10b2eb959d03eea3df0a32c}\label{classCreditsLevel_a2516ba82d10b2eb959d03eea3df0a32c}} 
+{\bfseries Credits\+Level} (const string \&next=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a80b93759949ba662627b52d0a51325ce}\label{classCreditsLevel_a80b93759949ba662627b52d0a51325ce}} 
+bool {\bfseries done} () const
+\item 
+\mbox{\Hypertarget{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}\label{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}} 
+string {\bfseries next} () const
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a6bf8924562bb2ce7f8b85c35a9b8a52e}\label{classCreditsLevel_a6bf8924562bb2ce7f8b85c35a9b8a52e}} 
+string {\bfseries audio} () const
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a2df0795f16916cab12337010ee18f46c}\label{classCreditsLevel_a2df0795f16916cab12337010ee18f46c}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classCreditsLevel_af980e138ebbad6f73b3835f38ee4dfe6}\label{classCreditsLevel_af980e138ebbad6f73b3835f38ee4dfe6}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a627849460d0ed66cfdc491fbdd313388}\label{classCreditsLevel_a627849460d0ed66cfdc491fbdd313388}} 
+void {\bfseries set\+\_\+credits\+\_\+strings} ()
+\item 
+\mbox{\Hypertarget{classCreditsLevel_afa4ec08490398e3532fce7815c77aa46}\label{classCreditsLevel_afa4ec08490398e3532fce7815c77aa46}} 
+bool {\bfseries on\+\_\+event} (const Game\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a2b7dd48d2e3def60499d4f6143b61923}\label{classCreditsLevel_a2b7dd48d2e3def60499d4f6143b61923}} 
+bool {\bfseries credits\+\_\+level\+\_\+done}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a4203423c76e8ba68f943f39d2f0d05c7}\label{classCreditsLevel_a4203423c76e8ba68f943f39d2f0d05c7}} 
+string {\bfseries credits\+\_\+level\+\_\+next}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a90e3043e37443cb6f2c7841ac4ae5525}\label{classCreditsLevel_a90e3043e37443cb6f2c7841ac4ae5525}} 
+vector$<$ string $>$ {\bfseries credits\+\_\+level\+\_\+strings}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_ab7ac1647d977be5650daee20614bdede}\label{classCreditsLevel_ab7ac1647d977be5650daee20614bdede}} 
+int {\bfseries credits\+\_\+level\+\_\+start}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a7bbf616f51bff1fedbbc06d2b068b974}\label{classCreditsLevel_a7bbf616f51bff1fedbbc06d2b068b974}} 
+int {\bfseries credits\+\_\+level\+\_\+winner\+\_\+player}
+\item 
+\mbox{\Hypertarget{classCreditsLevel_a27faf20ac97534bd328a2c8a017ca5ea}\label{classCreditsLevel_a27faf20ac97534bd328a2c8a017ca5ea}} 
+shared\+\_\+ptr$<$ Texture $>$ {\bfseries m\+\_\+texture}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/credits\+\_\+level.\+h\item 
+src/credits\+\_\+level.\+cpp\end{DoxyCompactItemize}

@@ -49,7 +49,7 @@ CreditsLevel::draw_self(Canvas *canvas, unsigned, unsigned)
     }
 
     canvas->draw("Aperte 'X' para voltar ao menu", 10, 200);
-    
+
 }
 
 void
@@ -64,7 +64,7 @@ CreditsLevel::set_credits_strings()
 }
 
 bool
-CreditsLevel::on_event(const GameEvent& event) 
+CreditsLevel::on_event(const GameEvent& event)
 {
      if(event.id() == game_event::LIGHT_ATTACK_P1) {
         credits_level_done = true;
@@ -82,7 +82,7 @@ string
 CreditsLevel::next() const
 {
     return credits_level_next;
-
+}
 
 string
 CreditsLevel::audio() const {

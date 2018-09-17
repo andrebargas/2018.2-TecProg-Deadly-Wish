@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Deadly_Wish: Referência à classe MainLevel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Deadly_Wish
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Tipos Públicos</a> &#124;
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pro-methods">Membros protegidos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="classMainLevel-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à classe MainLevel</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece.  
+ <a href="classMainLevel.html#details">Mais...</a></p>
+
+<p><code>#include &quot;<a class="el" href="main__level_8h_source.html">include/main_level.h</a>&quot;</code></p>
+<div class="dynheader">
+Diagrama de heranças da classe MainLevel</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMainLevel.png" usemap="#MainLevel_map" alt=""/>
+  <map id="MainLevel_map" name="MainLevel_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Tipos Públicos</h2></td></tr>
+<tr class="memitem:a19d15012888b099ef2d53e1a0e7d1b97"><td class="memItemLeft" align="right" valign="top"><a id="a19d15012888b099ef2d53e1a0e7d1b97"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>INFILTRATOR</b>, 
+<b>MAGE</b>, 
+<b>SOLDIER</b>, 
+<b>KNIGHT</b>
+ }</td></tr>
+<tr class="separator:a19d15012888b099ef2d53e1a0e7d1b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d9f3e3c424008626bd8bfc5c3e9dac"><td class="memItemLeft" align="right" valign="top"><a id="a25d9f3e3c424008626bd8bfc5c3e9dac"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>PLAYER_1</b>, 
+<b>PLAYER_2</b>, 
+<b>PLAYER_3</b>, 
+<b>PLAYER_4</b>
+ }</td></tr>
+<tr class="separator:a25d9f3e3c424008626bd8bfc5c3e9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:a0d8c61bddf5781cea1ba8496bd0a3d80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainLevel.html#a0d8c61bddf5781cea1ba8496bd0a3d80">MainLevel</a> (const string &amp;<a class="el" href="classMainLevel.html#ac5631405cb489d6ca9d90eb385c91293">next</a>=&quot;&quot;, vector&lt; int &gt; players_characters={})</td></tr>
+<tr class="memdesc:a0d8c61bddf5781cea1ba8496bd0a3d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método construtor.  <a href="#a0d8c61bddf5781cea1ba8496bd0a3d80">Mais...</a><br /></td></tr>
+<tr class="separator:a0d8c61bddf5781cea1ba8496bd0a3d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8795dada6fdf0c1c0fb19695ae236d2"><td class="memItemLeft" align="right" valign="top"><a id="ad8795dada6fdf0c1c0fb19695ae236d2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainLevel.html#ad8795dada6fdf0c1c0fb19695ae236d2">~MainLevel</a> ()</td></tr>
+<tr class="memdesc:ad8795dada6fdf0c1c0fb19695ae236d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método destrutor. <br /></td></tr>
+<tr class="separator:ad8795dada6fdf0c1c0fb19695ae236d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d34d88753d7ebe90320e3cdd3e9e17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainLevel.html#ae4d34d88753d7ebe90320e3cdd3e9e17">done</a> () const</td></tr>
+<tr class="memdesc:ae4d34d88753d7ebe90320e3cdd3e9e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto.  <a href="#ae4d34d88753d7ebe90320e3cdd3e9e17">Mais...</a><br /></td></tr>
+<tr class="separator:ae4d34d88753d7ebe90320e3cdd3e9e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5631405cb489d6ca9d90eb385c91293"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainLevel.html#ac5631405cb489d6ca9d90eb385c91293">next</a> () const</td></tr>
+<tr class="memdesc:ac5631405cb489d6ca9d90eb385c91293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto.  <a href="#ac5631405cb489d6ca9d90eb385c91293">Mais...</a><br /></td></tr>
+<tr class="separator:ac5631405cb489d6ca9d90eb385c91293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae101ab154173ca819a5eb701508ad635"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainLevel.html#ae101ab154173ca819a5eb701508ad635">audio</a> () const</td></tr>
+<tr class="memdesc:ae101ab154173ca819a5eb701508ad635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto.  <a href="#ae101ab154173ca819a5eb701508ad635">Mais...</a><br /></td></tr>
+<tr class="separator:ae101ab154173ca819a5eb701508ad635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Membros protegidos</h2></td></tr>
+<tr class="memitem:a4978a0e152f6a7b55bed0bad74dc7d5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainLevel.html#a4978a0e152f6a7b55bed0bad74dc7d5a">update_self</a> (unsigned now, unsigned last)</td></tr>
+<tr class="memdesc:a4978a0e152f6a7b55bed0bad74dc7d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para atualizar o tempo de inicio do level, e setar atributo #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto.  <a href="#a4978a0e152f6a7b55bed0bad74dc7d5a">Mais...</a><br /></td></tr>
+<tr class="separator:a4978a0e152f6a7b55bed0bad74dc7d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabad926cf0366de353d716065ab792ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainLevel.html#aabad926cf0366de353d716065ab792ad">draw_self</a> (Canvas *canvas, unsigned now, unsigned last)</td></tr>
+<tr class="memdesc:aabad926cf0366de353d716065ab792ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto.  <a href="#aabad926cf0366de353d716065ab792ad">Mais...</a><br /></td></tr>
+<tr class="separator:aabad926cf0366de353d716065ab792ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5a146b3b3186081ca2a0ad49bbad29"><td class="memItemLeft" align="right" valign="top"><a id="a8b5a146b3b3186081ca2a0ad49bbad29"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_players_characters_position</b> (unsigned player_id, double &amp;x_pos, double &amp;y_pos)</td></tr>
+<tr class="separator:a8b5a146b3b3186081ca2a0ad49bbad29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ed36254771a662797d0ec50105015f"><td class="memItemLeft" align="right" valign="top"><a id="a89ed36254771a662797d0ec50105015f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>verify_bases</b> ()</td></tr>
+<tr class="separator:a89ed36254771a662797d0ec50105015f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:ac73ac0af37dc694036a7da248d70ba75"><td class="memItemLeft" align="right" valign="top"><a id="ac73ac0af37dc694036a7da248d70ba75"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_done</b></td></tr>
+<tr class="separator:ac73ac0af37dc694036a7da248d70ba75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17ebbec1a36f9001ce5d8a9e282bbcf"><td class="memItemLeft" align="right" valign="top"><a id="aa17ebbec1a36f9001ce5d8a9e282bbcf"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_next</b></td></tr>
+<tr class="separator:aa17ebbec1a36f9001ce5d8a9e282bbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bd52645923038402ab92b25af97b59"><td class="memItemLeft" align="right" valign="top"><a id="a65bd52645923038402ab92b25af97b59"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_start</b></td></tr>
+<tr class="separator:a65bd52645923038402ab92b25af97b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6322c1a74e91e0b54dfa8368602963ad"><td class="memItemLeft" align="right" valign="top"><a id="a6322c1a74e91e0b54dfa8368602963ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_has_winner</b></td></tr>
+<tr class="separator:a6322c1a74e91e0b54dfa8368602963ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8095418f188c09501ada69571a131594"><td class="memItemLeft" align="right" valign="top"><a id="a8095418f188c09501ada69571a131594"></a>
+vector&lt; <a class="el" href="classBase.html">Base</a> *&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_bases</b></td></tr>
+<tr class="separator:a8095418f188c09501ada69571a131594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19560b2041a11b7780e5921b52dd7bb6"><td class="memItemLeft" align="right" valign="top"><a id="a19560b2041a11b7780e5921b52dd7bb6"></a>
+vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_players_characters</b></td></tr>
+<tr class="separator:a19560b2041a11b7780e5921b52dd7bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7f81373b053b58b0755934e5ec75b9"><td class="memItemLeft" align="right" valign="top"><a id="acf7f81373b053b58b0755934e5ec75b9"></a>
+shared_ptr&lt; Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_texture</b></td></tr>
+<tr class="separator:acf7f81373b053b58b0755934e5ec75b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67fb31550c22320459d70d1d8834238f"><td class="memItemLeft" align="right" valign="top"><a id="a67fb31550c22320459d70d1d8834238f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_map</b> [MAX_WIDTH][MAX_HEIGHT]</td></tr>
+<tr class="separator:a67fb31550c22320459d70d1d8834238f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017084aa4aa83cfd18195025a6b5a703"><td class="memItemLeft" align="right" valign="top"><a id="a017084aa4aa83cfd18195025a6b5a703"></a>
+<a class="el" href="classCharacterFactory.html">CharacterFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>main_level_character_factory</b></td></tr>
+<tr class="separator:a017084aa4aa83cfd18195025a6b5a703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p class="">Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece. </p>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="a0d8c61bddf5781cea1ba8496bd0a3d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8c61bddf5781cea1ba8496bd0a3d80">&#9670;&nbsp;</a></span>MainLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainLevel::MainLevel </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>next</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>players_characters</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método construtor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">next</td><td>const string&amp; Parametro para o proximo level. Valor constante igual " ", final do jogo. </td></tr>
+    <tr><td class="paramname">players_characters</td><td>vector&lt; int &gt; Lista de character presentes no jogo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ae101ab154173ca819a5eb701508ad635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae101ab154173ca819a5eb701508ad635">&#9670;&nbsp;</a></span>audio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MainLevel::audio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. </p>
+<dl class="section return"><dt>Retorna</dt><dd>string string constante "." </dd></dl>
+
+</div>
+</div>
+<a id="ae4d34d88753d7ebe90320e3cdd3e9e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d34d88753d7ebe90320e3cdd3e9e17">&#9670;&nbsp;</a></span>done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainLevel::done </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. </p>
+<dl class="section return"><dt>Retorna</dt><dd>bool retorna 'true' se o level acabou </dd></dl>
+
+</div>
+</div>
+<a id="aabad926cf0366de353d716065ab792ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabad926cf0366de353d716065ab792ad">&#9670;&nbsp;</a></span>draw_self()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainLevel::draw_self </td>
+          <td>(</td>
+          <td class="paramtype">Canvas *&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>now</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo. </td></tr>
+    <tr><td class="paramname">now</td><td>unsigned Tempo atual do jogo </td></tr>
+    <tr><td class="paramname">last</td><td>unsigned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ac5631405cb489d6ca9d90eb385c91293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5631405cb489d6ca9d90eb385c91293">&#9670;&nbsp;</a></span>next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MainLevel::next </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. </p>
+<dl class="section return"><dt>Retorna</dt><dd>string retorna qual sera o proximo level </dd></dl>
+
+</div>
+</div>
+<a id="a4978a0e152f6a7b55bed0bad74dc7d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4978a0e152f6a7b55bed0bad74dc7d5a">&#9670;&nbsp;</a></span>update_self()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainLevel::update_self </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>now</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função para atualizar o tempo de inicio do level, e setar atributo #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">now</td><td>unsigned Tempo atual do jogo </td></tr>
+    <tr><td class="paramname">last</td><td>unsigned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li>include/<a class="el" href="main__level_8h_source.html">main_level.h</a></li>
+<li>src/main_level.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

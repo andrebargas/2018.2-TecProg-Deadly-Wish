@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Modulo02</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="body-blue">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                  <h1 class="logo">
+                      <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                      <span class="text-highlight">Tecnicas de Programação - Deadly Wish </span>
+                  </h1>
+                </div><!--//branding-->
+
+
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre_o_projeto.html">Sobre o projeto</a></li>
+                    <li class="active">módulo-02</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-search"></i> Modulo - 02</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Última alteração: 11/09/2018</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="objective-section" class="doc-section">
+                                <h2 class="section-title">Objetivo</h2>
+                                <div  class="section-block">
+                                  <p>&emsp;&emsp; O objetivo deste módulo é a aplicação das primeiras técnicas de refatoração de código
+                                     dando enfase nas técnicas de estilo e desing, como identação nome de variáveis e funções. Também foi definido
+                                     quais ferramentas serão utilizadas no decorrer do projeto.
+                                   </p>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="estilo-desing" class="doc-section">
+                                <h2 class="section-title">Estilo e Desing</h2>
+                                <div  class="section-block">
+                                  <h3 class="block-title">Identação</h3>
+                                  <p>&emsp;&emsp; A identação deve ser padronizada para todo o documento. Deve também facilitar a leitura do código.</p>
+                                  <p>&emsp;&emsp; Exemplo de código mal identado:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de código bem identado:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+
+                                </div>
+                                <div  class="section-block">
+                                  <h3 class="block-title">Nome de Significativos</h3>
+                                  <p>&emsp;&emsp; Deve-se dar nomes auto explicativos para todos os arquivos, classes, variáveis e funções.
+                                     Esta prática reduz a necessidade de comentarios e torna o código mais auto explicativo.
+                                  </p>
+                                  <p>&emsp;&emsp; Exemplo de nome ruins:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de bons nomes:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                </div>
+
+                            </section><!--//doc-section-->
+
+                            <section id="iniciar-variaveis" class="doc-section">
+                              <h2 class="section-title">Iniciação de Variaveis</h2>
+                              <div  class="section-block">
+                                <p>
+                                  &emsp;&emsp;É recomendado que todas a variáveis devem ser inicializadas no momento que são declaradas.
+                                  Isso garante que não haja valores indejados nas variáveis, código como C e C++ geram valores diferentes
+                                  para as variáveis cada vez que o código é rodado.
+                                </p>
+                                <p>&emsp;&emsp; Exemplo de má iniciação de variável:</p>
+                                <h2>EXEMPLO AQUI</h2>
+                                <p>&emsp;&emsp; Exemplo de boa iniciação de variável</p>
+                                <h2>EXEMPLO AQUI</h2>
+
+                              </div>
+                            </section><!--//doc-section-->
+
+                            <section id="analise-estatica" class="doc-section">
+                                <h2 class="section-title">Ferramenta de análise estática</h2>
+                                <div  class="section-block">
+                                  <p>&emsp;&emsp; O uso de ferramentas de análise estatica ajuda a
+                                      indentificar erros que o compilar não consegue reconhecer.
+                                  </p>
+
+                                </div>
+                                <div  class="section-block">
+                                  <h3 class="block-title">CppCheck</h3>
+                                  <p>
+                                    &emsp;&emsp; A ferramenta cppcheck fora escolhida para o auxilo nesta tarefa.
+                                  </p>
+                                </div>
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+    </div><!--//page-wrapper-->
+
+</div><!--//page-wrapper-->
+
+<footer class="footer text-center">
+    <div class="container">
+        <img src="assets/images/logo-unb.svg" alt="Logo Unb" height="50" width="50">
+        <small class><b><font color="white">Universidade de Brasília,  Tecnicas de Programação, Deadly Wish - 2018.2</b></small>
+
+    </div><!--//container-->
+</footer><!--//footer-->
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
