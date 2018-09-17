@@ -9,6 +9,13 @@
 
 using namespace std;
 
+//! Inicializando o método construtor
+/*! 
+\param sprite_path guarda o caminho do sprite do personagem
+\param base_x guarda a posição da base no eixo x
+\param base_y guarda a posição da base no eixo y
+\param player_id guarda o id do jogador
+*/
 CharacterSelection::CharacterSelection(const string sprite_path, int base_x, int base_y, int player_id)
     : m_base_x(base_x), m_base_y(base_y), m_player_id(player_id), m_frame(player_id), m_start(-1), m_current_selection(KNIGHT)
 {
@@ -22,10 +29,12 @@ CharacterSelection::CharacterSelection(const string sprite_path, int base_x, int
     update_position();
 }
 
+//! Método destrutor
 CharacterSelection::~CharacterSelection() {
     event::unregister_listener(this);
 }
 
+//! Método que atualiza a tela
 void
 CharacterSelection::update_self(unsigned now, unsigned last)
 {
@@ -38,11 +47,16 @@ CharacterSelection::update_self(unsigned now, unsigned last)
     }
 }
 
+//! A diferença entre bases no eixo x
 const int DIFF_X = 43;
+
+//! A diferença entre bases no eixo y
 const int DIFF_Y = 42;
 
 // BASE X = 135
 // BASE Y = 73
+
+//! Método que seta a posição do personagem
 void
 CharacterSelection::update_position()
 {
@@ -73,6 +87,7 @@ CharacterSelection::update_position()
     }
 }
 
+//! Método virtual de gameobject
 void
 CharacterSelection::draw_self(Canvas *canvas, unsigned, unsigned)
 {
@@ -80,10 +95,11 @@ CharacterSelection::draw_self(Canvas *canvas, unsigned, unsigned)
     canvas->draw(m_texture.get(), rect, x(), y());
 }
 
+//! Esse método processa todas as entradas do jogador pelo controle
 bool
 CharacterSelection::on_event(const GameEvent &event)
 {
-
+    //! Movimenta pelos personagens disponíveis usando os botões direcionais
     if(((event.id() == game_event::MOVEMENT_P1 && m_player_id == 0) ||
        (event.id() == game_event::MOVEMENT_P2 && m_player_id == 1) ||
        (event.id() == game_event::MOVEMENT_P3 && m_player_id == 2) ||
@@ -115,12 +131,14 @@ CharacterSelection::on_event(const GameEvent &event)
         update_position();
         return true;
     }
+    //! Escolhe o personagem com o botão 'LIGHT_ATTACK'
     else if((event.id() == game_event::LIGHT_ATTACK_P1 && m_player_id == 0) ||
             (event.id() == game_event::LIGHT_ATTACK_P2 && m_player_id == 1) ||
             (event.id() == game_event::LIGHT_ATTACK_P3 && m_player_id == 2) ||
             (event.id() == game_event::LIGHT_ATTACK_P4 && m_player_id == 3)) {
         m_chosen = true;
     }
+    //! Anula a escolha do personagem com o botão 'DEFENSE'
     else if((event.id() == game_event::DEFENSE_P1 && m_player_id == 0) ||
             (event.id() == game_event::DEFENSE_P2 && m_player_id == 1) ||
             (event.id() == game_event::DEFENSE_P3 && m_player_id == 2) ||
