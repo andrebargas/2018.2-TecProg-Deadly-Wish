@@ -74,7 +74,7 @@ WinnerLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     auto font = resources::get_font("Forelle.ttf", 45);
     canvas->set_font(font);
-
+    //Limpa a tela e depois desenha o o level com a mensagem
     canvas->clear();
     canvas->draw(winner_level_congratulations, 60, 85);
 }

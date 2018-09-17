@@ -22,7 +22,9 @@ using std::shared_ptr;
 
 using namespace ijengine;
 
+//NSC
 //UC
+//Constantes não estão sendo usadas
 #define MAX_WIDTH 16
 #define MAX_HEIGHT 12
 
@@ -47,13 +49,16 @@ public:
       */
     ~WinnerLevel();
 
+    //PBS
     /** \fn done()
       * \public
       * \brief Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado
       * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
       * \return bool retorna 'true' se o level acabou
       */
+
     bool done() const;
+    //PBS
     /** \fn next()
       * \public
       * \brief Retorna qual sera o proximo level. Nome não pode ser mudado
@@ -62,6 +67,7 @@ public:
       */
     string next() const;
 
+    //PBS
     /** \fn audio()
       * \public
       * \brief Retorna qual é o audio do level. Nome não pode ser mudado

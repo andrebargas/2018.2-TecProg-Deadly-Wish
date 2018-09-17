@@ -169,17 +169,21 @@
                               <div id="estilo-comentario"  class="section-block">
                                 <h3 class="block-title">Estilo do comentário</h3>
                                 <p align="justify">&emsp;&emsp;Usar a sintaxe padrão do Javadoc para comentários de 3 linhas ou mais. Exemplo:</p>
-                                <img src="" alt="Estilo comentario">
+                                <img src="assets/images/identacao_coments.png" alt="Estilo comentario">
                               </div><!--//section-block-->
                               <div id="estilo-comentario"  class="section-block">
                                 <h3 class="block-title">Comentários devem ser identados como código</h3>
-                                <p align="justify">&emsp;&emsp;Os comentários devem seguir o alinhamento do código. Exemplo:</p>
-                                <img src="" alt="Identação comentario">
+                                <p align="justify">&emsp;&emsp;Os comentários devem seguir o alinhamento do código.</p>
                               </div><!--//section-block-->
                               <div id="cabecario-comentario"  class="section-block">
                                 <h3 class="block-title">Deve-se comentar o cabeçario de cada arquivo</h3>
                                 <p align="justify">&emsp;&emsp;Os comentários de cebeçario de arquivo devem ser no padrão presvisto pelo doxygen. O nome do arquivo de ve ser seguido da diretiva "\file", na linha seguinte deve vim uma breve descrição da função do arquivo seguido da diretiva "\brief". Exemplo:</p>
-                                <img src="" alt="Comentario cabeçario">
+                                <img src="assets/images/header_comment.png" alt="Comentario cabeçario">
+                              </div><!--//section-block-->
+                              <div id="class-comentario"  class="section-block">
+                                <h3 class="block-title">Deve-se comentar o cabeçario de cada classe</h3>
+                                <p align="justify">&emsp;&emsp;Os comentários de cebeçario de classe devem ser no padrão presvisto pelo doxygen. O nome do arquivo de ve ser seguido da diretiva "\class", na linha seguinte deve vim uma breve descrição da função do arquivo seguido da diretiva "\brief". Exemplo:</p>
+                                <img src="assets/images/class_coments.png" alt="Comentario cabeçario">
                               </div><!--//section-block-->
                               <div id="funcao-comentario"  class="section-block">
                                 <h3 class="block-title">Deve-se comentar o cabeçario de cada função</h3>
@@ -187,13 +191,13 @@
                                    na linha seguinte deve vim uma breve descrição da função  da diretiva "\brief". Após a descrição deve-se explicitar se a função é publica, privada ou protegida pelas diretivas "\public", "\protected", "\private".
                                    Os parametros para a função devem ser descritos após a diretiva "\param" seguido do nome do parametro o tipo dele e uma breve descrição. Deve-se explicitar também o retorno da função pela diretiva "\return" seguindo
                                    do tipo de retorno e uma breve descrição do mesmo.Exemplo:</p>
-                                <img src="" alt="Comentario função">
+                                <img src="assets/images/func_coments.png" alt="Comentario função">
                               </div><!--//section-block-->
                               <div id="variaveis-comentario"  class="section-block">
                                 <h3 class="block-title">Deve-se comentar as variveis</h3>
                                 <p align="justify">&emsp;&emsp;Os comentários de variáveis devem ser no padrão presvisto pelo doxygen. O comentário das variáveis devem vim uma linha acima da variável com o nome da variável na sequencia da diretiva "\var".
                                    Em uma nova linha deve-se explicitar uma breve descrição da função da variavel após a diretiva "\brief".Exemplo:</p>
-                                <img src="" alt="Variavel função">
+                                <img src="assets/images/variavel_coments.png" alt="Variavel função">
                               </div><!--//section-block-->
                               <div id="marcadores-comentario"  class="section-block">
                                 <h3 class="block-title">Deve-se usar marcadores para algumas situações</h3>
@@ -206,7 +210,7 @@
                                  <li>UC (unnecessary code) - Trecho de código inútil ou desnecessário</li>
                                </ul>
                                 <p align="justify">&emsp;&emsp; Exemplo:</p>
-                                <img src="" alt="Marcadores função">
+                                <img src="assets/images/mark_comments.png" alt="Marcadores função">
                               </div><!--//section-block-->
 
                             </section><!--//doc-section-->
@@ -230,34 +234,12 @@
                                 <li><a class="scrollto" href="#introduction-section">Introdução</a></li>
                                 <li>
                                     <a class="scrollto" href="#nomes-section">Nomes</a>
-                                    <ul class="nav doc-sub-menu">
-                                        <li><a class="scrollto" href="#consideracoes-gerais">Considerações Gerais</a></li>
-                                        <li><a class="scrollto" href="#nomes-significativos">Nomes Significativos</a></li>
-                                        <li><a class="scrollto" href="#nomes-variaveis">Nomes de variáveis</a></li>
-                                        <li><a class="scrollto" href="#nomes-constantes">Nome de constantes</a></li>
-                                        <li><a class="scrollto" href="#nomes-metodos">Nome de metodos</a></li>
-                                        <li><a class="scrollto" href="#nomes-classes">Nome de classes</a></li>
-                                        <li><a class="scrollto" href="#nome-arquivos">Nome dos arquivos</a></li>
-                                    </ul><!--//nav-->
                                 </li>
                                 <li>
                                     <a class="scrollto" href="#indentacao-section">Identação</a>
-                                    <ul class="nav doc-sub-menu">
-                                      <li><a class="scrollto" href="#espaco-indetacao">Espaço identação</a></li>
-                                      <li><a class="scrollto" href="#virgula-indetacao">Espaço após vírgula</a></li>
-                                      <li><a class="scrollto" href="#maximo-indetacao">Máximo de caracteres</a></li>
-                                      <li><a class="scrollto" href="#fecha-chave-indetacao">Espaçamento e fechamento de chaves para métodos e funções</a></li>
-                                      <li><a class="scrollto" href="#espaco-metodo-indetacao">Definição dos métodos</a></li>
-                                    </ul>
                                 </li>
                                 <li>
-                                    <a class="scrollto" href="#comentarios-section">Identação</a>
-                                    <ul class="nav doc-sub-menu">
-                                      <li><a class="scrollto" href="#geral-comentario">Geral</a></li>
-                                      <li><a class="scrollto" href="#estilo-comentario">Estilo de comentario</a></li>
-                                      <li><a class="scrollto" href="#funcao-comentario">Comentários de Função</a></li>
-                                      <li><a class="scrollto" href="#marcadores-comentario">Marcadores de código</a></li>
-                                    </ul>
+                                    <a class="scrollto" href="#comentarios-section">Comentários</a>
                                 </li>
 
                                 <li>
