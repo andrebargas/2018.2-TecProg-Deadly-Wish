@@ -1,3 +1,7 @@
+/** \file infiltrator.cpp
+  * \brief Este é o arquivo da classe Infiltrator que é filha da classe Character.
+  */
+
 #include "infiltrator.h"
 #include "ije02_game.h"
 #include "light_attack.h"
@@ -13,14 +17,15 @@
 //! Poder de defesa do infiltrador
 #define INFILTRATOR_DEFENSE_COOLDOWN 300
 
-//! Inicializando Método Construtor
-/*!
-\param sprite_paths - desenha personagem
-\param id - identificador do personagem
-\param x - posição no eixo x
-\param y - posição no eixo y
-\param character_code - codigo do personagem
-*/
+/** \fn Infiltrator(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
+  * \public
+  * \brief Método Construtor
+  * \param sprite_paths - desenha personagem
+  * \param id - identificador do personagem
+  * \param x - posição no eixo x
+  * \param y - posição no eixo y
+  * \param character_code - codigo do personagem
+  */
 Infiltrator::Infiltrator(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
     : Character(sprite_paths, id, x, y, MAX_LIFE, character_code)
 {
@@ -44,7 +49,10 @@ Infiltrator::Infiltrator(vector<string> sprite_paths, unsigned id, double x, dou
     character_active = true;
 }
 
-//! Método void que retorna ataque pesado, poder do ataque: 2000
+/** \fn do_heavy_attack()
+  * \protected
+  * \brief Método que executa um ataque pesado
+  */
 void
 Infiltrator::do_heavy_attack()
 {
@@ -57,8 +65,10 @@ Infiltrator::do_heavy_attack()
     change_character_state(HEAVY_ATTACK_STATE);
 }
 
-
-//! Método void que retorna ataque leve, poder do ataque: 300
+/** \fn do_light_attack()
+  * \protected
+  * \brief Método que executa um ataque leve
+  */
 void
 Infiltrator::do_light_attack() {
     //! Som do poder light_atack
@@ -84,7 +94,10 @@ Infiltrator::do_light_attack() {
     change_character_state(LIGHT_ATTACK_STATE);
 }
 
-//! Método void que retorna a defesa, poder da defesa: 300
+/** \fn do_defense()
+  * \protected
+  * \brief Método que executa uma defesa
+  */
 void
 Infiltrator::do_defense() {
     //! Som da defesa
@@ -93,7 +106,10 @@ Infiltrator::do_defense() {
     change_character_state(DEFENSE_STATE);
 }
 
-// Método void que retorna ataque especial, poder do ataque: 5000
+/** \fn do_special()
+  * \protected
+  * \brief Método que executa um ataque especial
+  */
 void
 Infiltrator::do_special() {
     //! Som do ataque especial
@@ -102,7 +118,11 @@ Infiltrator::do_special() {
     change_character_state(SPECIAL_STATE);
 }
 
-//! Método bool que retorna o personagem ativo
+/** \fn active()
+  * \public
+  * \brief Retorna verdadeiro se o personagem está ativo.
+  * \return bool
+  */
 bool
 Infiltrator::active() const {
     return Character::character_active;

@@ -1,3 +1,7 @@
+/** \file infiltrator.h
+  * \brief Este é o arquivo header da classe Infiltrator que é filha da classe Character.
+  */
+
 #ifndef INFILTRATOR_H
 #define INFILTRATOR_H
 
@@ -5,36 +9,61 @@
 
 using namespace ijengine;
 
-//! Classe para o personagem Infiltrador
-/*! Permite que o infiltrador tenha poderes de defesa e ataque,
-personagem ativo ou não e suas posições nos eixos x e y
-*/
+/** \class Infiltrator infiltrator.h "include/infiltrator.h"
+  * \brief Permite que o assassino tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y.
+  */
 class Infiltrator : public Character {
 
-//! Método Construtor - público
-/*!
-\param sprite_paths - desenha personagem
-\param id - identificador do personagem
-\param x - posição no eixo x
-\param y - posição no eixo y
-\param character_code - codigo do personagem
-*/
 public:
+    /** \fn Knight(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
+      * \public
+      * \brief Método Construtor
+      * \param sprite_paths - desenha personagem
+      * \param id - identificador do personagem
+      * \param x - posição no eixo x
+      * \param y - posição no eixo y
+      * \param character_code - codigo do personagem
+      */
     Infiltrator(vector<string> sprite_paths, unsigned id, double x, double y, int character_code);
-    //! Método que retorna personagem ativo
+
+    /** \fn active()
+      * \public
+      * \brief Retorna verdadeiro se o personagem está ativo.
+      * \return bool
+      */
     bool active() const;
 
 //! Métodos Protegidos
 protected:
-	//! Método booleano que retorna se o personagem esta ativo
+
+    /** \var bool m_active
+      * \protected
+      * \brief Guarda o estado do personagem, se ele está ativo ou não.
+      */
     bool m_active;
-	//! Método void que retorna ataque pesado, poder do ataque: 2000
+    
+    /** \fn do_heavy_attack()
+      * \protected
+      * \brief Método que executa um ataque pesado
+      */
     void do_heavy_attack();
-	//! Método void que retorna ataque leve, poder do ataque: 300
+ 
+    /** \fn do_light_attack()
+      * \protected
+      * \brief Método que executa um ataque leve
+      */
     void do_light_attack();
-	//! Método void que retorna a defesa, poder da defesa: 300
+    
+    /** \fn do_defense()
+      * \protected
+      * \brief Método que executa uma defesa
+      */
     void do_defense();
-	// Método void que retorna ataque especial, poder do ataque: 5000
+
+    /** \fn do_special()
+      * \protected
+      * \brief Método que executa um ataque especial
+      */
     void do_special();
 };
 
