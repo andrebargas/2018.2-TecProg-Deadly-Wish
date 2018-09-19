@@ -1,6 +1,6 @@
 /** \file knight.cpp
   * \brief Este é o arquivo da classe Knight que é filha da classe Character.
-*/
+  */
 
 #include "knight.h"
 #include "light_attack.h"
@@ -24,8 +24,8 @@
   * \param id - identificador do personagem
   * \param x - posição no eixo x
   * \param y - posição no eixo y
-  *\param character_code - codigo do personagem
-*/
+  * \param character_code - codigo do personagem
+  */
 Knight::Knight(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
     : Character(sprite_paths, id, x, y, MAX_LIFE, character_code)
 {
@@ -51,7 +51,7 @@ Knight::Knight(vector<string> sprite_paths, unsigned id, double x, double y, int
 /** \fn do_heavy_attack()
   * \protected
   * \brief Método que executa um ataque pesado
-*/
+  */
 void
 Knight::do_heavy_attack()
 {
@@ -62,7 +62,7 @@ Knight::do_heavy_attack()
 /** \fn do_light_attack()
   * \protected
   * \brief Método que executa um ataque leve
-*/
+  */
 void
 Knight::do_light_attack() {
     audio::play_sound_effect("res/sound/fx/pesadao_light.ogg", EFFECTS_VOLUME, 0);
@@ -86,7 +86,7 @@ Knight::do_light_attack() {
 /** \fn do_defense()
   * \protected
   * \brief Método que executa uma defesa
-*/
+  */
 void
 Knight::do_defense() {
     audio::play_sound_effect("res/sound/fx/pesadao_block.ogg", EFFECTS_VOLUME, 0);
@@ -96,7 +96,7 @@ Knight::do_defense() {
 /** \fn do_special()
   * \protected
   * \brief Método que executa um ataque especial
-*/
+  */
 void
 Knight::do_special() {
     change_character_state(SPECIAL_STATE);

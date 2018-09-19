@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['character',['Character',['../classCharacter.html',1,'']]],
-  ['characterchooselevel',['CharacterChooseLevel',['../classCharacterChooseLevel.html',1,'']]],
-  ['characterfactory',['CharacterFactory',['../classCharacterFactory.html',1,'']]],
-  ['characterselection',['CharacterSelection',['../classCharacterSelection.html',1,'']]],
-  ['characterstate',['CharacterState',['../classCharacterState.html',1,'']]],
-  ['characterstatefactory',['CharacterStateFactory',['../classCharacterStateFactory.html',1,'']]],
-  ['creditslevel',['CreditsLevel',['../classCreditsLevel.html',1,'']]]
+  ['base',['Base',['../classBase.html',1,'']]],
+  ['bounding_5fbox',['bounding_box',['../classCharacter.html#a73c09996272b771f375a9514d0c465f1',1,'Character']]]
 ];

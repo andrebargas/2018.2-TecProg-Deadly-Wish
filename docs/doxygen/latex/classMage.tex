@@ -1,5 +1,14 @@
 \hypertarget{classMage}{}\section{Referência à classe Mage}
 \label{classMage}\index{Mage@{Mage}}
+
+
+Permite que o mago tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/mage.\+h\char`\"{}}
+
 Diagrama de heranças da classe Mage\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,28 +18,72 @@ Diagrama de heranças da classe Mage\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMage_a691d8def05ca8cbda1a2b9229c52748b}\label{classMage_a691d8def05ca8cbda1a2b9229c52748b}} 
-{\bfseries Mage} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int character\+\_\+code)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMage_a691d8def05ca8cbda1a2b9229c52748b}{Mage}} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int \mbox{\hyperlink{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}{character\+\_\+code}})
+\begin{DoxyCompactList}\small\item\em Método Construtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classMage_a83840130ab4e67e41f3a1fd435e55f9c}\label{classMage_a83840130ab4e67e41f3a1fd435e55f9c}} 
-void {\bfseries do\+\_\+heavy\+\_\+attack} ()
-\item 
+void \mbox{\hyperlink{classMage_a83840130ab4e67e41f3a1fd435e55f9c}{do\+\_\+heavy\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque pesado. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMage_abf137f2de54b6ba08fb12805ff00ec6d}\label{classMage_abf137f2de54b6ba08fb12805ff00ec6d}} 
-void {\bfseries do\+\_\+light\+\_\+attack} ()
-\item 
+void \mbox{\hyperlink{classMage_abf137f2de54b6ba08fb12805ff00ec6d}{do\+\_\+light\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque leve. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMage_a0ce2899b0e49e1bbe47c04149f307218}\label{classMage_a0ce2899b0e49e1bbe47c04149f307218}} 
-void {\bfseries do\+\_\+defense} ()
-\item 
+void \mbox{\hyperlink{classMage_a0ce2899b0e49e1bbe47c04149f307218}{do\+\_\+defense}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa uma defesa. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMage_aae5afc391b9d8105cfa98ca2f3a1646b}\label{classMage_aae5afc391b9d8105cfa98ca2f3a1646b}} 
-void {\bfseries do\+\_\+special} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMage_aae5afc391b9d8105cfa98ca2f3a1646b}{do\+\_\+special}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque especial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
 
+\subsection{Descrição detalhada}
+Permite que o mago tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classMage_a691d8def05ca8cbda1a2b9229c52748b}\label{classMage_a691d8def05ca8cbda1a2b9229c52748b}} 
+\index{Mage@{Mage}!Mage@{Mage}}
+\index{Mage@{Mage}!Mage@{Mage}}
+\subsubsection{\texorpdfstring{Mage()}{Mage()}}
+{\footnotesize\ttfamily Mage\+::\+Mage (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{sprite\+\_\+paths,  }\item[{unsigned}]{id,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{character\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Método Construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sprite\+\_\+paths} & -\/ desenha personagem \\
+\hline
+{\em id} & -\/ identificador do personagem \\
+\hline
+{\em x} & -\/ posição no eixo x \\
+\hline
+{\em y} & -\/ posição no eixo y \\
+\hline
+{\em character\+\_\+code} & -\/ codigo do personagem \\
+\hline
+\end{DoxyParams}
+Poder de ataque especial -\/ 5000
+
+Poder de ataque heavy\+\_\+atack -\/ 2000
+
+Poder de ataque light\+\_\+atack -\/ 300
+
+Poder de defesa -\/ 300
+
+Último uso do poder special
+
+Último uso do poder heavy\+\_\+atack
+
+Último uso do poder ligth\+\_\+atack
+
+Último uso da defesa
+
+Personagem ativo 
+
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/mage.\+h\item 
-src/mage.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{mage_8h}{mage.\+h}}\item 
+src/\mbox{\hyperlink{mage_8cpp}{mage.\+cpp}}\end{DoxyCompactItemize}

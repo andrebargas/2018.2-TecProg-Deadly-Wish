@@ -1,5 +1,14 @@
 \hypertarget{classCharacterSelection}{}\section{Referência à classe Character\+Selection}
 \label{classCharacterSelection}\index{Character\+Selection@{Character\+Selection}}
+
+
+Classe que indica qual vai ser o personagem escolhido.  
+
+
+
+
+{\ttfamily \#include $<$character\+\_\+selection.\+h$>$}
+
 Diagrama de heranças da classe Character\+Selection\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,44 +18,128 @@ Diagrama de heranças da classe Character\+Selection\begin{figure}[H]
 \subsection*{Tipos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55ca}\label{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55ca}} 
-enum \{ {\bfseries K\+N\+I\+G\+HT}, 
-{\bfseries S\+O\+L\+D\+I\+ER}, 
-{\bfseries M\+A\+GE}, 
-{\bfseries I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}
+enum \{ \mbox{\hyperlink{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caab23bc7eef25d502109e741d294b9939d}{K\+N\+I\+G\+HT}}, 
+\mbox{\hyperlink{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caaab3e0766cab7dde8d3bf4b586eab764a}{S\+O\+L\+D\+I\+ER}}, 
+\mbox{\hyperlink{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caa749e92b1c7efda5e21f6e3859f682093}{M\+A\+GE}}, 
+\mbox{\hyperlink{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caa150d58b68f15c7b83527b4aa8d0cc449}{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Define enumerado dos tipos de personagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacterSelection_ac3cb2219a5eda202ecc9a17218326073}\label{classCharacterSelection_ac3cb2219a5eda202ecc9a17218326073}} 
-{\bfseries Character\+Selection} (const string sprite\+\_\+path, int base\+\_\+x, int base\+\_\+y, int player\+\_\+id)
-\item 
+\mbox{\hyperlink{classCharacterSelection_ac3cb2219a5eda202ecc9a17218326073}{Character\+Selection}} (const string sprite\+\_\+path, int base\+\_\+x, int base\+\_\+y, int \mbox{\hyperlink{classCharacterSelection_add606b028ba88000e1920d4f10992934}{player\+\_\+id}})
+\begin{DoxyCompactList}\small\item\em Método construtor que permite a escolha do personagem. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCharacterSelection_ace651140d3df740be6c26fb984ce5f7f}\label{classCharacterSelection_ace651140d3df740be6c26fb984ce5f7f}} 
+\mbox{\hyperlink{classCharacterSelection_ace651140d3df740be6c26fb984ce5f7f}{$\sim$\+Character\+Selection}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacterSelection_a900358acbdbd8ee33da089014f3ab8bb}\label{classCharacterSelection_a900358acbdbd8ee33da089014f3ab8bb}} 
-int {\bfseries current\+\_\+selection} () const
-\item 
+int \mbox{\hyperlink{classCharacterSelection_a900358acbdbd8ee33da089014f3ab8bb}{current\+\_\+selection}} () const
+\begin{DoxyCompactList}\small\item\em variável que indica o jogador que vai escolher \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacterSelection_add606b028ba88000e1920d4f10992934}\label{classCharacterSelection_add606b028ba88000e1920d4f10992934}} 
-int {\bfseries player\+\_\+id} () const
-\item 
+int \mbox{\hyperlink{classCharacterSelection_add606b028ba88000e1920d4f10992934}{player\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em variável que indica o identificador do player \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacterSelection_ab6f27f44a433da27c786b25b9c4945ca}\label{classCharacterSelection_ab6f27f44a433da27c786b25b9c4945ca}} 
-bool {\bfseries chosen} () const
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classCharacterSelection_ab6f27f44a433da27c786b25b9c4945ca}{chosen}} () const
+\begin{DoxyCompactList}\small\item\em variável que retorna se ja escolheu ou não um jogador \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacterSelection_ae398845f5f793f40ddf8314a0ad16f7e}\label{classCharacterSelection_ae398845f5f793f40ddf8314a0ad16f7e}} 
-void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
-\item 
+void \mbox{\hyperlink{classCharacterSelection_ae398845f5f793f40ddf8314a0ad16f7e}{update\+\_\+self}} (unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Métodos protegidos. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacterSelection_a474bb5f07bc3c530b4988a463ff83bb5}\label{classCharacterSelection_a474bb5f07bc3c530b4988a463ff83bb5}} 
-void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classCharacterSelection_af7d87f81c8bc895a89d9f13c09ed6b35}\label{classCharacterSelection_af7d87f81c8bc895a89d9f13c09ed6b35}} 
-bool {\bfseries on\+\_\+event} (const Game\+Event \&event)
-\item 
+void \mbox{\hyperlink{classCharacterSelection_a474bb5f07bc3c530b4988a463ff83bb5}{draw\+\_\+self}} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método virtual de gameobject. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCharacterSelection_af7d87f81c8bc895a89d9f13c09ed6b35}{on\+\_\+event}} (const Game\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Esse método processa todas as entradas do jogador pelo controle. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacterSelection_aa0a17d7b1a2092b9346c626d8c097253}\label{classCharacterSelection_aa0a17d7b1a2092b9346c626d8c097253}} 
-void {\bfseries update\+\_\+position} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classCharacterSelection_aa0a17d7b1a2092b9346c626d8c097253}{update\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Método que seta a posição do personagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Descrição detalhada}
+Classe que indica qual vai ser o personagem escolhido. 
+
+\subsection{Documentação das enumerações}
+\mbox{\Hypertarget{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55ca}\label{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55ca}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+Define enumerado dos tipos de personagem. 
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+N\+I\+G\+HT@{K\+N\+I\+G\+HT}!Character\+Selection@{Character\+Selection}}\index{Character\+Selection@{Character\+Selection}!K\+N\+I\+G\+HT@{K\+N\+I\+G\+HT}}}\mbox{\Hypertarget{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caab23bc7eef25d502109e741d294b9939d}\label{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caab23bc7eef25d502109e741d294b9939d}} 
+K\+N\+I\+G\+HT&Escolha do cavaleiro. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+L\+D\+I\+ER@{S\+O\+L\+D\+I\+ER}!Character\+Selection@{Character\+Selection}}\index{Character\+Selection@{Character\+Selection}!S\+O\+L\+D\+I\+ER@{S\+O\+L\+D\+I\+ER}}}\mbox{\Hypertarget{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caaab3e0766cab7dde8d3bf4b586eab764a}\label{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caaab3e0766cab7dde8d3bf4b586eab764a}} 
+S\+O\+L\+D\+I\+ER&Escolha do soldado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+GE@{M\+A\+GE}!Character\+Selection@{Character\+Selection}}\index{Character\+Selection@{Character\+Selection}!M\+A\+GE@{M\+A\+GE}}}\mbox{\Hypertarget{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caa749e92b1c7efda5e21f6e3859f682093}\label{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caa749e92b1c7efda5e21f6e3859f682093}} 
+M\+A\+GE&Escolha do mago. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR@{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}!Character\+Selection@{Character\+Selection}}\index{Character\+Selection@{Character\+Selection}!I\+N\+F\+I\+L\+T\+R\+A\+T\+OR@{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}}}\mbox{\Hypertarget{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caa150d58b68f15c7b83527b4aa8d0cc449}\label{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55caa150d58b68f15c7b83527b4aa8d0cc449}} 
+I\+N\+F\+I\+L\+T\+R\+A\+T\+OR&Escolha do infiltrador. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classCharacterSelection_ac3cb2219a5eda202ecc9a17218326073}\label{classCharacterSelection_ac3cb2219a5eda202ecc9a17218326073}} 
+\index{Character\+Selection@{Character\+Selection}!Character\+Selection@{Character\+Selection}}
+\index{Character\+Selection@{Character\+Selection}!Character\+Selection@{Character\+Selection}}
+\subsubsection{\texorpdfstring{Character\+Selection()}{CharacterSelection()}}
+{\footnotesize\ttfamily Character\+Selection\+::\+Character\+Selection (\begin{DoxyParamCaption}\item[{const string}]{sprite\+\_\+path,  }\item[{int}]{base\+\_\+x,  }\item[{int}]{base\+\_\+y,  }\item[{int}]{player\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Método construtor que permite a escolha do personagem. 
+
+Inicializando o método construtor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sprite\+\_\+path} & guarda o caminho do sprite do personagem \\
+\hline
+{\em base\+\_\+x} & guarda a posição da base no eixo x \\
+\hline
+{\em base\+\_\+y} & guarda a posição da base no eixo y \\
+\hline
+{\em player\+\_\+id} & guarda o id do jogador \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classCharacterSelection_af7d87f81c8bc895a89d9f13c09ed6b35}\label{classCharacterSelection_af7d87f81c8bc895a89d9f13c09ed6b35}} 
+\index{Character\+Selection@{Character\+Selection}!on\+\_\+event@{on\+\_\+event}}
+\index{on\+\_\+event@{on\+\_\+event}!Character\+Selection@{Character\+Selection}}
+\subsubsection{\texorpdfstring{on\+\_\+event()}{on\_event()}}
+{\footnotesize\ttfamily bool Character\+Selection\+::on\+\_\+event (\begin{DoxyParamCaption}\item[{const Game\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Esse método processa todas as entradas do jogador pelo controle. 
+
+Movimenta pelos personagens disponíveis usando os botões direcionais
+
+Escolhe o personagem com o botão \textquotesingle{}L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK\textquotesingle{}
+
+Anula a escolha do personagem com o botão \textquotesingle{}D\+E\+F\+E\+N\+SE\textquotesingle{} \mbox{\Hypertarget{classCharacterSelection_ae398845f5f793f40ddf8314a0ad16f7e}\label{classCharacterSelection_ae398845f5f793f40ddf8314a0ad16f7e}} 
+\index{Character\+Selection@{Character\+Selection}!update\+\_\+self@{update\+\_\+self}}
+\index{update\+\_\+self@{update\+\_\+self}!Character\+Selection@{Character\+Selection}}
+\subsubsection{\texorpdfstring{update\+\_\+self()}{update\_self()}}
+{\footnotesize\ttfamily void Character\+Selection\+::update\+\_\+self (\begin{DoxyParamCaption}\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Métodos protegidos. 
+
+Método que atualiza a tela. 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 

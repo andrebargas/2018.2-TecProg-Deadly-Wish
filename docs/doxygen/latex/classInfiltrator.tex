@@ -1,5 +1,14 @@
 \hypertarget{classInfiltrator}{}\section{Referência à classe Infiltrator}
 \label{classInfiltrator}\index{Infiltrator@{Infiltrator}}
+
+
+Permite que o assassino tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/infiltrator.\+h\char`\"{}}
+
 Diagrama de heranças da classe Infiltrator\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,37 +18,163 @@ Diagrama de heranças da classe Infiltrator\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classInfiltrator_a1eb1e0a0acf4451da046fa0e8381a1a3}\label{classInfiltrator_a1eb1e0a0acf4451da046fa0e8381a1a3}} 
-{\bfseries Infiltrator} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int character\+\_\+code)
+\mbox{\hyperlink{classInfiltrator_a1eb1e0a0acf4451da046fa0e8381a1a3}{Infiltrator}} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int \mbox{\hyperlink{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}{character\+\_\+code}})
 \item 
-\mbox{\Hypertarget{classInfiltrator_ae423f60190c1df91dcccb7e313845171}\label{classInfiltrator_ae423f60190c1df91dcccb7e313845171}} 
-bool {\bfseries active} () const
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classInfiltrator_ae423f60190c1df91dcccb7e313845171}{active}} () const
+\begin{DoxyCompactList}\small\item\em Retorna verdadeiro se o personagem está ativo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classInfiltrator_a371e7c14076375ea21304220e826e5e0}\label{classInfiltrator_a371e7c14076375ea21304220e826e5e0}} 
-void {\bfseries do\+\_\+heavy\+\_\+attack} ()
-\item 
-\mbox{\Hypertarget{classInfiltrator_a70b8134dac23d716f86139da77cd8927}\label{classInfiltrator_a70b8134dac23d716f86139da77cd8927}} 
-void {\bfseries do\+\_\+light\+\_\+attack} ()
-\item 
-\mbox{\Hypertarget{classInfiltrator_afc1de0dd263b72b5be1da33f6cd9bbe7}\label{classInfiltrator_afc1de0dd263b72b5be1da33f6cd9bbe7}} 
-void {\bfseries do\+\_\+defense} ()
-\item 
-\mbox{\Hypertarget{classInfiltrator_ad8cbafc64c00e7e5617baccdbda80746}\label{classInfiltrator_ad8cbafc64c00e7e5617baccdbda80746}} 
-void {\bfseries do\+\_\+special} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classInfiltrator_a371e7c14076375ea21304220e826e5e0}{do\+\_\+heavy\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque pesado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInfiltrator_a70b8134dac23d716f86139da77cd8927}{do\+\_\+light\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque leve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInfiltrator_afc1de0dd263b72b5be1da33f6cd9bbe7}{do\+\_\+defense}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa uma defesa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInfiltrator_ad8cbafc64c00e7e5617baccdbda80746}{do\+\_\+special}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque especial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classInfiltrator_a57568f6f782efc405e959e5bfffc8163}\label{classInfiltrator_a57568f6f782efc405e959e5bfffc8163}} 
-bool {\bfseries m\+\_\+active}
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classInfiltrator_a57568f6f782efc405e959e5bfffc8163}{m\+\_\+active}}
+\begin{DoxyCompactList}\small\item\em Métodos Protegidos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
 
+\subsection{Descrição detalhada}
+Permite que o assassino tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classInfiltrator_a1eb1e0a0acf4451da046fa0e8381a1a3}\label{classInfiltrator_a1eb1e0a0acf4451da046fa0e8381a1a3}} 
+\index{Infiltrator@{Infiltrator}!Infiltrator@{Infiltrator}}
+\index{Infiltrator@{Infiltrator}!Infiltrator@{Infiltrator}}
+\subsubsection{\texorpdfstring{Infiltrator()}{Infiltrator()}}
+{\footnotesize\ttfamily Infiltrator\+::\+Infiltrator (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{sprite\+\_\+paths,  }\item[{unsigned}]{id,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{character\+\_\+code }\end{DoxyParamCaption})}
+
+Poder de ataque especial -\/ 5000
+
+Poder de ataque heavy\+\_\+atack -\/ 2000
+
+Poder de ataque light\+\_\+atack -\/ 300
+
+Poder de defesa -\/ 300
+
+Último uso do poder especial
+
+Último uso do poder heavy\+\_\+atack
+
+Último uso do poder ligth\+\_\+atack
+
+Último uso da defesa
+
+Personagem ativo 
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classInfiltrator_ae423f60190c1df91dcccb7e313845171}\label{classInfiltrator_ae423f60190c1df91dcccb7e313845171}} 
+\index{Infiltrator@{Infiltrator}!active@{active}}
+\index{active@{active}!Infiltrator@{Infiltrator}}
+\subsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily bool Infiltrator\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retorna verdadeiro se o personagem está ativo. 
+
+\begin{DoxyReturn}{Retorna}
+bool 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}{Character}}.
+
+\mbox{\Hypertarget{classInfiltrator_afc1de0dd263b72b5be1da33f6cd9bbe7}\label{classInfiltrator_afc1de0dd263b72b5be1da33f6cd9bbe7}} 
+\index{Infiltrator@{Infiltrator}!do\+\_\+defense@{do\+\_\+defense}}
+\index{do\+\_\+defense@{do\+\_\+defense}!Infiltrator@{Infiltrator}}
+\subsubsection{\texorpdfstring{do\+\_\+defense()}{do\_defense()}}
+{\footnotesize\ttfamily void Infiltrator\+::do\+\_\+defense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método que executa uma defesa. 
+
+Som da defesa
+
+Muda o estado do personagem 
+
+Implementa \mbox{\hyperlink{classCharacter_ad8a87c4397e38fd4bd88c93a3d3cb70a}{Character}}.
+
+\mbox{\Hypertarget{classInfiltrator_a371e7c14076375ea21304220e826e5e0}\label{classInfiltrator_a371e7c14076375ea21304220e826e5e0}} 
+\index{Infiltrator@{Infiltrator}!do\+\_\+heavy\+\_\+attack@{do\+\_\+heavy\+\_\+attack}}
+\index{do\+\_\+heavy\+\_\+attack@{do\+\_\+heavy\+\_\+attack}!Infiltrator@{Infiltrator}}
+\subsubsection{\texorpdfstring{do\+\_\+heavy\+\_\+attack()}{do\_heavy\_attack()}}
+{\footnotesize\ttfamily void Infiltrator\+::do\+\_\+heavy\+\_\+attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método que executa um ataque pesado. 
+
+Som do poder heavy\+\_\+atack
+
+Personagem deixa de ficar ativo
+
+Muda o estado do personagem 
+
+Implementa \mbox{\hyperlink{classCharacter_aa9b20c9c53393c7aaf3a45e5c966c2ef}{Character}}.
+
+\mbox{\Hypertarget{classInfiltrator_a70b8134dac23d716f86139da77cd8927}\label{classInfiltrator_a70b8134dac23d716f86139da77cd8927}} 
+\index{Infiltrator@{Infiltrator}!do\+\_\+light\+\_\+attack@{do\+\_\+light\+\_\+attack}}
+\index{do\+\_\+light\+\_\+attack@{do\+\_\+light\+\_\+attack}!Infiltrator@{Infiltrator}}
+\subsubsection{\texorpdfstring{do\+\_\+light\+\_\+attack()}{do\_light\_attack()}}
+{\footnotesize\ttfamily void Infiltrator\+::do\+\_\+light\+\_\+attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método que executa um ataque leve. 
+
+Som do poder light\+\_\+atack
+
+Posição do ataque no eixo X -\/ tipo Double
+
+Personagem se movimentando para direita
+
+Personagem se movimentando para esquerda ou outros
+
+Muda o estado do personagem 
+
+Implementa \mbox{\hyperlink{classCharacter_ae45be8b8b1a7d2f54a2349a65e2e6c42}{Character}}.
+
+\mbox{\Hypertarget{classInfiltrator_ad8cbafc64c00e7e5617baccdbda80746}\label{classInfiltrator_ad8cbafc64c00e7e5617baccdbda80746}} 
+\index{Infiltrator@{Infiltrator}!do\+\_\+special@{do\+\_\+special}}
+\index{do\+\_\+special@{do\+\_\+special}!Infiltrator@{Infiltrator}}
+\subsubsection{\texorpdfstring{do\+\_\+special()}{do\_special()}}
+{\footnotesize\ttfamily void Infiltrator\+::do\+\_\+special (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método que executa um ataque especial. 
+
+Som do ataque especial
+
+Muda o estado do personagem 
+
+Implementa \mbox{\hyperlink{classCharacter_a447eb9fa4afa57619d6387e0ea178f93}{Character}}.
+
+
+
+\subsection{Documentação dos dados membro}
+\mbox{\Hypertarget{classInfiltrator_a57568f6f782efc405e959e5bfffc8163}\label{classInfiltrator_a57568f6f782efc405e959e5bfffc8163}} 
+\index{Infiltrator@{Infiltrator}!m\+\_\+active@{m\+\_\+active}}
+\index{m\+\_\+active@{m\+\_\+active}!Infiltrator@{Infiltrator}}
+\subsubsection{\texorpdfstring{m\+\_\+active}{m\_active}}
+{\footnotesize\ttfamily bool Infiltrator\+::m\+\_\+active\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Métodos Protegidos. 
+
+Guarda o estado do personagem, se ele está ativo ou não. 
+
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/infiltrator.\+h\item 
-src/infiltrator.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{infiltrator_8h}{infiltrator.\+h}}\item 
+src/\mbox{\hyperlink{infiltrator_8cpp}{infiltrator.\+cpp}}\end{DoxyCompactItemize}
