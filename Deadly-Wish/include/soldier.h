@@ -1,27 +1,22 @@
-/** \soldier.h
-  * \brief Esta é o arquivo da classe que cria os o personagem soldado.
+/** \file soldier.h
+  * \brief Este é o arquivo header da classe Soldier que é filha da classe Character.
   */
+
 #ifndef SOLDIER_H
 #define SOLDIER_H
 
-// Inclui arquivos das classes do personagem
 #include "character.h"
 
 using namespace ijengine; 
 
 
-/*! Permite que o soldado tenha poderes de defesa e ataque,
-personagem ativo ou não e suas posições nos eixos x e y
-*/
-
 /** \class Soldier soldier.h "include/soldier.h"
- *  \brief Classe usada para instanciar objeto do personagem
- * soldado
- */
+  * \brief Permite que o soldado tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y.
+  */
 class Soldier : public Character {
 
 public:
-	
+
 /** \fn Soldier(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
   * \public
   * \brief Método Construtor

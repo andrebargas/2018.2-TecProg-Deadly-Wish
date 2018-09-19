@@ -1,3 +1,7 @@
+/** \file soldier.cpp
+  * \brief Este é o arquivo da classe Soldier que é filha da classe Character.
+  */
+
 #include "soldier.h"
 #include "spear.h"
 #include "light_attack.h"
