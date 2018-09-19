@@ -1,7 +1,10 @@
+/** \file knight.cpp
+  * \brief Este é o arquivo da classe Knight que é filha da classe Character.
+*/
+
 #include "knight.h"
 #include "light_attack.h"
 #include "ije02_game.h"
-
 
 //! Vida total do personagem
 #define MAX_LIFE 300
@@ -14,15 +17,15 @@
 //! Poder de defesa do cavaleiro
 #define KNIGHT_DEFENSE_COOLDOWN 300
 
-//! Método Construtor - público
-/*!
-\param sprite_paths - desenha personagem
-\param id - identificador do personagem
-\param x - posição no eixo x
-\param y - posição no eixo y
-\param character_code - codigo do personagem
+/** \fn Knight(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
+  * \public
+  * \brief Método Construtor
+  * \param sprite_paths - desenha personagem
+  * \param id - identificador do personagem
+  * \param x - posição no eixo x
+  * \param y - posição no eixo y
+  *\param character_code - codigo do personagem
 */
-
 Knight::Knight(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
     : Character(sprite_paths, id, x, y, MAX_LIFE, character_code)
 {
@@ -45,7 +48,10 @@ Knight::Knight(vector<string> sprite_paths, unsigned id, double x, double y, int
     character_active = true;
 }
 
-//! Método void que retorna ataque pesado, poder do ataque: 2000
+/** \fn do_heavy_attack()
+  * \protected
+  * \brief Método que executa um ataque pesado
+*/
 void
 Knight::do_heavy_attack()
 {
@@ -53,8 +59,10 @@ Knight::do_heavy_attack()
     change_character_state(HEAVY_ATTACK_STATE);
 }
 
-
-//! Método void que retorna ataque leve, poder do ataque: 300
+/** \fn do_light_attack()
+  * \protected
+  * \brief Método que executa um ataque leve
+*/
 void
 Knight::do_light_attack() {
     audio::play_sound_effect("res/sound/fx/pesadao_light.ogg", EFFECTS_VOLUME, 0);
@@ -75,15 +83,20 @@ Knight::do_light_attack() {
     change_character_state(LIGHT_ATTACK_STATE);
 }
 
-//! Método void que retorna a defesa, poder da defesa: 300
+/** \fn do_defense()
+  * \protected
+  * \brief Método que executa uma defesa
+*/
 void
 Knight::do_defense() {
     audio::play_sound_effect("res/sound/fx/pesadao_block.ogg", EFFECTS_VOLUME, 0);
     change_character_state(DEFENSE_STATE);
 }
 
-
-// Método void que retorna ataque especial, poder do ataque: 5000
+/** \fn do_special()
+  * \protected
+  * \brief Método que executa um ataque especial
+*/
 void
 Knight::do_special() {
     change_character_state(SPECIAL_STATE);
