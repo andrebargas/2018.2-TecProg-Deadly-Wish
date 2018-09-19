@@ -1,0 +1,98 @@
+\hypertarget{classBase}{}\section{Referência à classe Base}
+\label{classBase}\index{Base@{Base}}
+Diagrama de heranças da classe Base\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBase}
+\end{center}
+\end{figure}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBase_af39d4ba491dea383a8250c6d58919f21}\label{classBase_af39d4ba491dea383a8250c6d58919f21}} 
+{\bfseries Base} (int player\+\_\+id)
+\item 
+\mbox{\Hypertarget{classBase_abee4a445acdcde63608940348feedd0d}\label{classBase_abee4a445acdcde63608940348feedd0d}} 
+unsigned {\bfseries get\+\_\+base\+\_\+player\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classBase_a58a549391a91d1b0062a9d8955d26172}\label{classBase_a58a549391a91d1b0062a9d8955d26172}} 
+int {\bfseries get\+\_\+base\+\_\+life} () const
+\item 
+\mbox{\Hypertarget{classBase_a580dc7cdb6ff87350d04d494616839ea}\label{classBase_a580dc7cdb6ff87350d04d494616839ea}} 
+void {\bfseries set\+\_\+base\+\_\+status} (int base\+\_\+status)
+\item 
+\mbox{\Hypertarget{classBase_abc6031bf03072e10f4d8635dd226b01c}\label{classBase_abc6031bf03072e10f4d8635dd226b01c}} 
+bool {\bfseries active} () const
+\item 
+\mbox{\Hypertarget{classBase_a28fbf5f8b4e7e774f47298b76268159f}\label{classBase_a28fbf5f8b4e7e774f47298b76268159f}} 
+const Rectangle \& {\bfseries bounding\+\_\+box} () const
+\item 
+\mbox{\Hypertarget{classBase_a378997fa37a9d46f5c8fb02b090da00d}\label{classBase_a378997fa37a9d46f5c8fb02b090da00d}} 
+const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
+\item 
+\mbox{\Hypertarget{classBase_aacfcf7a911c60d8718219d45f8422449}\label{classBase_aacfcf7a911c60d8718219d45f8422449}} 
+void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classBase_a77dceab1d1d47769ab4072c18d8fe473}\label{classBase_a77dceab1d1d47769ab4072c18d8fe473}} 
+pair$<$ double, double $>$ {\bfseries direction} () const
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBase_a3345e924d2f7897f0818d476a990f2a2}\label{classBase_a3345e924d2f7897f0818d476a990f2a2}} 
+void {\bfseries set\+\_\+base\+\_\+position} (unsigned player\+\_\+id, double \&x\+\_\+pos, double \&y\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classBase_af95cdc748f2f72e35ff9e42a8a44eefe}\label{classBase_af95cdc748f2f72e35ff9e42a8a44eefe}} 
+void {\bfseries change\+\_\+base\+\_\+status} ()
+\item 
+\mbox{\Hypertarget{classBase_a04c92d862951b17a9f96ff43c738c2f9}\label{classBase_a04c92d862951b17a9f96ff43c738c2f9}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classBase_a63a037721de1f96a8197857f7451aba7}\label{classBase_a63a037721de1f96a8197857f7451aba7}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBase_abfe4b56e9035242ac9a5ceb774ead189}\label{classBase_abfe4b56e9035242ac9a5ceb774ead189}} 
+unsigned {\bfseries base\+\_\+player\+\_\+id}
+\item 
+\mbox{\Hypertarget{classBase_a3a5ef7ba44286d75ac91b314e8f9bba5}\label{classBase_a3a5ef7ba44286d75ac91b314e8f9bba5}} 
+int {\bfseries base\+\_\+life}
+\item 
+\mbox{\Hypertarget{classBase_a25115b97013a8f9c19485992943b7bee}\label{classBase_a25115b97013a8f9c19485992943b7bee}} 
+int {\bfseries base\+\_\+frame}
+\item 
+\mbox{\Hypertarget{classBase_ae6825b079b31eb5e2295fe74000331b6}\label{classBase_ae6825b079b31eb5e2295fe74000331b6}} 
+int {\bfseries base\+\_\+start}
+\item 
+\mbox{\Hypertarget{classBase_af14e8b3b3f8e64b94a4a3a5053ffc100}\label{classBase_af14e8b3b3f8e64b94a4a3a5053ffc100}} 
+int {\bfseries base\+\_\+width}
+\item 
+\mbox{\Hypertarget{classBase_a8af1088a92883b0fec24293143071aab}\label{classBase_a8af1088a92883b0fec24293143071aab}} 
+int {\bfseries base\+\_\+height}
+\item 
+\mbox{\Hypertarget{classBase_a0db4876e47d72f19c0959b12c7b8128f}\label{classBase_a0db4876e47d72f19c0959b12c7b8128f}} 
+int {\bfseries base\+\_\+status}
+\item 
+\mbox{\Hypertarget{classBase_a8010ab166f9a8468d6b1006a6f8efa83}\label{classBase_a8010ab166f9a8468d6b1006a6f8efa83}} 
+vector$<$ string $>$ {\bfseries base\+\_\+sprite\+\_\+paths}
+\item 
+\mbox{\Hypertarget{classBase_a1b641692d4aa3de6b0eb3c9f9ca5d164}\label{classBase_a1b641692d4aa3de6b0eb3c9f9ca5d164}} 
+shared\+\_\+ptr$<$ Texture $>$ {\bfseries base\+\_\+texture}
+\item 
+\mbox{\Hypertarget{classBase_a6a62f99edec994a277fbb2d2b2221966}\label{classBase_a6a62f99edec994a277fbb2d2b2221966}} 
+Rectangle {\bfseries base\+\_\+bounding\+\_\+box}
+\item 
+\mbox{\Hypertarget{classBase_af8b1625c4851d929cdd3a10650c6d0f5}\label{classBase_af8b1625c4851d929cdd3a10650c6d0f5}} 
+double {\bfseries base\+\_\+axis\+\_\+x\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classBase_ac472e9bbf37bf28ab3794d51ffb32db3}\label{classBase_ac472e9bbf37bf28ab3794d51ffb32db3}} 
+double {\bfseries base\+\_\+axis\+\_\+y\+\_\+speed}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/base.\+h\item 
+src/base.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{classLightAttack}{}\section{Referência à classe Light\+Attack}
+\label{classLightAttack}\index{Light\+Attack@{Light\+Attack}}
+Diagrama de heranças da classe Light\+Attack\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classLightAttack}
+\end{center}
+\end{figure}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLightAttack_a85172d92441b302e99c4209df40792e6}\label{classLightAttack_a85172d92441b302e99c4209df40792e6}} 
+{\bfseries Light\+Attack} (Game\+Object $\ast$parent, unsigned mage\+\_\+id, double xp, double yp)
+\item 
+\mbox{\Hypertarget{classLightAttack_a69d89dd9e2374379fcdf6f464e87707c}\label{classLightAttack_a69d89dd9e2374379fcdf6f464e87707c}} 
+bool {\bfseries active} () const
+\item 
+\mbox{\Hypertarget{classLightAttack_a9fa4f72585e6666f40ea55d539e40fe4}\label{classLightAttack_a9fa4f72585e6666f40ea55d539e40fe4}} 
+const Rectangle \& {\bfseries bounding\+\_\+box} () const
+\item 
+\mbox{\Hypertarget{classLightAttack_aa547d66653570e9a989aed007f42919b}\label{classLightAttack_aa547d66653570e9a989aed007f42919b}} 
+const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
+\item 
+\mbox{\Hypertarget{classLightAttack_a45cd647fcbb73023ea7f7d7fde647688}\label{classLightAttack_a45cd647fcbb73023ea7f7d7fde647688}} 
+pair$<$ double, double $>$ {\bfseries direction} () const
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLightAttack_abbd40d40cfc1c4d9ca5f8187b10848c8}\label{classLightAttack_abbd40d40cfc1c4d9ca5f8187b10848c8}} 
+enum {\bfseries State} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
+{\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}
+ \}
+\item 
+\mbox{\Hypertarget{classLightAttack_aa960f560c78a82323220598abcaff05b}\label{classLightAttack_aa960f560c78a82323220598abcaff05b}} 
+enum {\bfseries Sprite\+State} \{ {\bfseries C\+A\+S\+T\+I\+NG}, 
+{\bfseries M\+O\+V\+I\+NG}, 
+{\bfseries H\+I\+T\+T\+I\+NG}
+ \}
+\item 
+\mbox{\Hypertarget{classLightAttack_a8613f6cda38038fb3a460da67cd339d8}\label{classLightAttack_a8613f6cda38038fb3a460da67cd339d8}} 
+enum {\bfseries Players} \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLightAttack_a3574ab1f98d5001cfa46bdde3b34a4d6}\label{classLightAttack_a3574ab1f98d5001cfa46bdde3b34a4d6}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classLightAttack_ab91f0b6fe09b6e3c89173b1942caadf1}\label{classLightAttack_ab91f0b6fe09b6e3c89173b1942caadf1}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned, unsigned)
+\item 
+\mbox{\Hypertarget{classLightAttack_a209139a002383f89fcb94408451a7575}\label{classLightAttack_a209139a002383f89fcb94408451a7575}} 
+void {\bfseries update\+\_\+sprite\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{classLightAttack_acbbca38c7adf864763e680ece5e890f9}\label{classLightAttack_acbbca38c7adf864763e680ece5e890f9}} 
+void {\bfseries update\+\_\+time} (unsigned now)
+\item 
+\mbox{\Hypertarget{classLightAttack_ab04457a8d15b61197f90dca426fa1f55}\label{classLightAttack_ab04457a8d15b61197f90dca426fa1f55}} 
+string {\bfseries choose\+\_\+sprite\+\_\+path} (unsigned player\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLightAttack_ad046f76650219d857e58f301b3c93e70}\label{classLightAttack_ad046f76650219d857e58f301b3c93e70}} 
+unsigned {\bfseries light\+\_\+attack\+\_\+character\+\_\+id}
+\item 
+\mbox{\Hypertarget{classLightAttack_ad98d1f8f6cd1578461fc200f53758e1a}\label{classLightAttack_ad98d1f8f6cd1578461fc200f53758e1a}} 
+State {\bfseries m\+\_\+state}
+\item 
+\mbox{\Hypertarget{classLightAttack_a35e5a2ed495b159eb73d27e04cc6f489}\label{classLightAttack_a35e5a2ed495b159eb73d27e04cc6f489}} 
+Sprite\+State {\bfseries m\+\_\+sprite\+\_\+state}
+\item 
+\mbox{\Hypertarget{classLightAttack_a6a0c4b116ccc6e440bb4a7751903b386}\label{classLightAttack_a6a0c4b116ccc6e440bb4a7751903b386}} 
+double {\bfseries light\+\_\+attack\+\_\+axis\+\_\+x\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classLightAttack_a152fe7cc652d6f2965aa4b598f1b5b4f}\label{classLightAttack_a152fe7cc652d6f2965aa4b598f1b5b4f}} 
+double {\bfseries light\+\_\+attack\+\_\+axis\+\_\+y\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classLightAttack_a33ff61300d69a5227cdc7a41c4de9a61}\label{classLightAttack_a33ff61300d69a5227cdc7a41c4de9a61}} 
+int {\bfseries light\+\_\+attack\+\_\+damage}
+\item 
+\mbox{\Hypertarget{classLightAttack_a2020d5cc3d91c3f4c597e50bfb249d19}\label{classLightAttack_a2020d5cc3d91c3f4c597e50bfb249d19}} 
+double {\bfseries light\+\_\+attack\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classLightAttack_a28c2ddb59b87f80ab69c6b4676395bf8}\label{classLightAttack_a28c2ddb59b87f80ab69c6b4676395bf8}} 
+int {\bfseries light\+\_\+attack\+\_\+frame}
+\item 
+\mbox{\Hypertarget{classLightAttack_a252572bfbcf4d80aca70f11e3dc3a4bd}\label{classLightAttack_a252572bfbcf4d80aca70f11e3dc3a4bd}} 
+string {\bfseries light\+\_\+attack\+\_\+sprite\+\_\+path}
+\item 
+\mbox{\Hypertarget{classLightAttack_af67aff57a2acdac82b0d0a090af783d7}\label{classLightAttack_af67aff57a2acdac82b0d0a090af783d7}} 
+unsigned {\bfseries light\+\_\+attack\+\_\+start}
+\item 
+\mbox{\Hypertarget{classLightAttack_aee4f749c8ca775a69cd4131c19161f02}\label{classLightAttack_aee4f749c8ca775a69cd4131c19161f02}} 
+unsigned {\bfseries light\+\_\+attack\+\_\+current\+\_\+time}
+\item 
+\mbox{\Hypertarget{classLightAttack_a065d9f14c32d8ff696a1d7cc3cff7827}\label{classLightAttack_a065d9f14c32d8ff696a1d7cc3cff7827}} 
+shared\+\_\+ptr$<$ Texture $>$ {\bfseries light\+\_\+attack\+\_\+texture}
+\item 
+\mbox{\Hypertarget{classLightAttack_af975ca361098b021dff4668dc3b3da68}\label{classLightAttack_af975ca361098b021dff4668dc3b3da68}} 
+Rectangle {\bfseries light\+\_\+attack\+\_\+bounding\+\_\+box}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/light\+\_\+attack.\+h\item 
+src/light\+\_\+attack.\+cpp\end{DoxyCompactItemize}

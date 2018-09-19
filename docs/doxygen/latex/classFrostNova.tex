@@ -1,0 +1,116 @@
+\hypertarget{classFrostNova}{}\section{Referência à classe Frost\+Nova}
+\label{classFrostNova}\index{Frost\+Nova@{Frost\+Nova}}
+Diagrama de heranças da classe Frost\+Nova\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classFrostNova}
+\end{center}
+\end{figure}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFrostNova_aae4bca356b3b1439c74fc259e5fb601d}\label{classFrostNova_aae4bca356b3b1439c74fc259e5fb601d}} 
+{\bfseries Frost\+Nova} (Game\+Object $\ast$parent, unsigned mage\+\_\+id, double xp, double yp, double dx, double dy)
+\item 
+\mbox{\Hypertarget{classFrostNova_ad294037668fc3609c127c1e69031865b}\label{classFrostNova_ad294037668fc3609c127c1e69031865b}} 
+bool {\bfseries active} () const
+\item 
+\mbox{\Hypertarget{classFrostNova_a4d70c5ea288631e425dadcf5e479a1b6}\label{classFrostNova_a4d70c5ea288631e425dadcf5e479a1b6}} 
+const Rectangle \& {\bfseries bounding\+\_\+box} () const
+\item 
+\mbox{\Hypertarget{classFrostNova_aa0dd4571d7eb64ee7270f2afb972b410}\label{classFrostNova_aa0dd4571d7eb64ee7270f2afb972b410}} 
+const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
+\item 
+\mbox{\Hypertarget{classFrostNova_a9ec9aeb096b42670bf640ea47f27fd84}\label{classFrostNova_a9ec9aeb096b42670bf640ea47f27fd84}} 
+pair$<$ double, double $>$ {\bfseries direction} () const
+\item 
+\mbox{\Hypertarget{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}\label{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}} 
+void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFrostNova_a849f88fb08f1a9d3818200ebb8ba7618}\label{classFrostNova_a849f88fb08f1a9d3818200ebb8ba7618}} 
+enum {\bfseries State} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
+{\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}
+ \}
+\item 
+\mbox{\Hypertarget{classFrostNova_a217d48933042a86cda21d019e09abd9c}\label{classFrostNova_a217d48933042a86cda21d019e09abd9c}} 
+enum {\bfseries Sprite\+State} \{ {\bfseries C\+A\+S\+T\+I\+NG}, 
+{\bfseries M\+O\+V\+I\+NG}, 
+{\bfseries H\+I\+T\+T\+I\+NG}
+ \}
+\item 
+\mbox{\Hypertarget{classFrostNova_a2c04b9868751e17aeb351c684cc7e725}\label{classFrostNova_a2c04b9868751e17aeb351c684cc7e725}} 
+enum {\bfseries Players} \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFrostNova_a67b11608de8a77e5db5820f422f66e79}\label{classFrostNova_a67b11608de8a77e5db5820f422f66e79}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classFrostNova_a0300555461a04885ec1596d60a5a82b7}\label{classFrostNova_a0300555461a04885ec1596d60a5a82b7}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned, unsigned)
+\item 
+\mbox{\Hypertarget{classFrostNova_a90f2c154189b0bf90591181dd0493ab0}\label{classFrostNova_a90f2c154189b0bf90591181dd0493ab0}} 
+void {\bfseries update\+\_\+sprite\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{classFrostNova_ab70b5520c6db428c77aef44fe8e85570}\label{classFrostNova_ab70b5520c6db428c77aef44fe8e85570}} 
+void {\bfseries update\+\_\+time} (unsigned now)
+\item 
+\mbox{\Hypertarget{classFrostNova_afc420630fdfd93b865ea086b0e0c55ba}\label{classFrostNova_afc420630fdfd93b865ea086b0e0c55ba}} 
+string {\bfseries choose\+\_\+sprite\+\_\+path} (unsigned player\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFrostNova_ab400bee3d7b37b396b43e99498bca6ee}\label{classFrostNova_ab400bee3d7b37b396b43e99498bca6ee}} 
+unsigned {\bfseries frost\+\_\+character\+\_\+id}
+\item 
+\mbox{\Hypertarget{classFrostNova_a1e4a13428ec6018ec32826352f5b3303}\label{classFrostNova_a1e4a13428ec6018ec32826352f5b3303}} 
+State {\bfseries frost\+\_\+state}
+\item 
+\mbox{\Hypertarget{classFrostNova_a8f4c3ad74186879c1364212c4a3316db}\label{classFrostNova_a8f4c3ad74186879c1364212c4a3316db}} 
+Sprite\+State {\bfseries frost\+\_\+sprite\+\_\+state}
+\item 
+\mbox{\Hypertarget{classFrostNova_a6629b7e6dca4a9cc39b475a7e1308b35}\label{classFrostNova_a6629b7e6dca4a9cc39b475a7e1308b35}} 
+double {\bfseries frost\+\_\+axis\+\_\+x\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classFrostNova_a256719b17a21ec85291b5970a4209f65}\label{classFrostNova_a256719b17a21ec85291b5970a4209f65}} 
+double {\bfseries frost\+\_\+axis\+\_\+y\+\_\+direction}
+\item 
+\mbox{\Hypertarget{classFrostNova_aa804b9ee177657db6a8651c825b2ea01}\label{classFrostNova_aa804b9ee177657db6a8651c825b2ea01}} 
+int {\bfseries frost\+\_\+damage}
+\item 
+\mbox{\Hypertarget{classFrostNova_a6d73e795f2a7379f9db5f04ca96c5b30}\label{classFrostNova_a6d73e795f2a7379f9db5f04ca96c5b30}} 
+double {\bfseries frost\+\_\+speed}
+\item 
+\mbox{\Hypertarget{classFrostNova_ac86bc4b1a3fa29a5d756ec8272168bca}\label{classFrostNova_ac86bc4b1a3fa29a5d756ec8272168bca}} 
+int {\bfseries frost\+\_\+frame}
+\item 
+\mbox{\Hypertarget{classFrostNova_a06f3570a18cfbd5dc174892c6afe5b87}\label{classFrostNova_a06f3570a18cfbd5dc174892c6afe5b87}} 
+string {\bfseries frost\+\_\+sprite\+\_\+path}
+\item 
+\mbox{\Hypertarget{classFrostNova_a6d4b037d224fbb3a24e440f0a65ea91f}\label{classFrostNova_a6d4b037d224fbb3a24e440f0a65ea91f}} 
+unsigned {\bfseries frost\+\_\+start}
+\item 
+\mbox{\Hypertarget{classFrostNova_a0c361e55db3b455ef7f9853827c499e9}\label{classFrostNova_a0c361e55db3b455ef7f9853827c499e9}} 
+unsigned {\bfseries frost\+\_\+current\+\_\+time}
+\item 
+\mbox{\Hypertarget{classFrostNova_af786aadc5bfb732dbede1d0b9739a13e}\label{classFrostNova_af786aadc5bfb732dbede1d0b9739a13e}} 
+shared\+\_\+ptr$<$ Texture $>$ {\bfseries frost\+\_\+texture}
+\item 
+\mbox{\Hypertarget{classFrostNova_afaaeffacf92544fe075ae03eb044b261}\label{classFrostNova_afaaeffacf92544fe075ae03eb044b261}} 
+Rectangle {\bfseries frost\+\_\+bounding\+\_\+box}
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/frost\+\_\+nova.\+h\item 
+src/frost\+\_\+nova.\+cpp\end{DoxyCompactItemize}

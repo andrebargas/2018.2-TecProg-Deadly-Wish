@@ -1,0 +1,54 @@
+\hypertarget{classCharacterSelection}{}\section{Referência à classe Character\+Selection}
+\label{classCharacterSelection}\index{Character\+Selection@{Character\+Selection}}
+Diagrama de heranças da classe Character\+Selection\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCharacterSelection}
+\end{center}
+\end{figure}
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55ca}\label{classCharacterSelection_a14b33a13e3498992faa7261e6f5e55ca}} 
+enum \{ {\bfseries K\+N\+I\+G\+HT}, 
+{\bfseries S\+O\+L\+D\+I\+ER}, 
+{\bfseries M\+A\+GE}, 
+{\bfseries I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacterSelection_ac3cb2219a5eda202ecc9a17218326073}\label{classCharacterSelection_ac3cb2219a5eda202ecc9a17218326073}} 
+{\bfseries Character\+Selection} (const string sprite\+\_\+path, int base\+\_\+x, int base\+\_\+y, int player\+\_\+id)
+\item 
+\mbox{\Hypertarget{classCharacterSelection_a900358acbdbd8ee33da089014f3ab8bb}\label{classCharacterSelection_a900358acbdbd8ee33da089014f3ab8bb}} 
+int {\bfseries current\+\_\+selection} () const
+\item 
+\mbox{\Hypertarget{classCharacterSelection_add606b028ba88000e1920d4f10992934}\label{classCharacterSelection_add606b028ba88000e1920d4f10992934}} 
+int {\bfseries player\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classCharacterSelection_ab6f27f44a433da27c786b25b9c4945ca}\label{classCharacterSelection_ab6f27f44a433da27c786b25b9c4945ca}} 
+bool {\bfseries chosen} () const
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCharacterSelection_ae398845f5f793f40ddf8314a0ad16f7e}\label{classCharacterSelection_ae398845f5f793f40ddf8314a0ad16f7e}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classCharacterSelection_a474bb5f07bc3c530b4988a463ff83bb5}\label{classCharacterSelection_a474bb5f07bc3c530b4988a463ff83bb5}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classCharacterSelection_af7d87f81c8bc895a89d9f13c09ed6b35}\label{classCharacterSelection_af7d87f81c8bc895a89d9f13c09ed6b35}} 
+bool {\bfseries on\+\_\+event} (const Game\+Event \&event)
+\item 
+\mbox{\Hypertarget{classCharacterSelection_aa0a17d7b1a2092b9346c626d8c097253}\label{classCharacterSelection_aa0a17d7b1a2092b9346c626d8c097253}} 
+void {\bfseries update\+\_\+position} ()
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/character\+\_\+selection.\+h\item 
+src/character\+\_\+selection.\+cpp\end{DoxyCompactItemize}

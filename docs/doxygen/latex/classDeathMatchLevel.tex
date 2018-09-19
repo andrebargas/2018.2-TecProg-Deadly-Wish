@@ -1,0 +1,61 @@
+\hypertarget{classDeathMatchLevel}{}\section{Referência à classe Death\+Match\+Level}
+\label{classDeathMatchLevel}\index{Death\+Match\+Level@{Death\+Match\+Level}}
+Diagrama de heranças da classe Death\+Match\+Level\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDeathMatchLevel}
+\end{center}
+\end{figure}
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a83b463b0db852f3ec9ef87bf89c1fdd2}\label{classDeathMatchLevel_a83b463b0db852f3ec9ef87bf89c1fdd2}} 
+enum \{ {\bfseries I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}, 
+{\bfseries M\+A\+GE}, 
+{\bfseries S\+O\+L\+D\+I\+ER}, 
+{\bfseries K\+N\+I\+G\+HT}
+ \}
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a3940c33316209aaba9d88e24fec09bfc}\label{classDeathMatchLevel_a3940c33316209aaba9d88e24fec09bfc}} 
+enum \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
+{\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a3a0a88f354b3de9651f1a7d0dc0915ce}\label{classDeathMatchLevel_a3a0a88f354b3de9651f1a7d0dc0915ce}} 
+{\bfseries Death\+Match\+Level} (const string \&next=\char`\"{}\char`\"{}, vector$<$ int $>$ players\+\_\+characters=\{\})
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_afb51c6bc79031214f50b3cbbe401be9f}\label{classDeathMatchLevel_afb51c6bc79031214f50b3cbbe401be9f}} 
+bool {\bfseries done} () const
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a650f2b1aee68613f4b127393a7e33b08}\label{classDeathMatchLevel_a650f2b1aee68613f4b127393a7e33b08}} 
+string {\bfseries next} () const
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a7114eedff2c865c69efcad08ce97c252}\label{classDeathMatchLevel_a7114eedff2c865c69efcad08ce97c252}} 
+string {\bfseries audio} () const
+\end{DoxyCompactItemize}
+\subsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a104d4fac94d1ce45bb2548ea5467d53e}\label{classDeathMatchLevel_a104d4fac94d1ce45bb2548ea5467d53e}} 
+void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a38a915a954f5c8e8ba54c46057bc99d0}\label{classDeathMatchLevel_a38a915a954f5c8e8ba54c46057bc99d0}} 
+void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_ab158f20b6f8d51254215553aa713b4cc}\label{classDeathMatchLevel_ab158f20b6f8d51254215553aa713b4cc}} 
+void {\bfseries set\+\_\+players\+\_\+characters\+\_\+position} (unsigned player\+\_\+id, double \&x\+\_\+pos, double \&y\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classDeathMatchLevel_a5aa8c8eaaba63e222c692581c1f59c1a}\label{classDeathMatchLevel_a5aa8c8eaaba63e222c692581c1f59c1a}} 
+void {\bfseries verify\+\_\+characters} ()
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/death\+\_\+match\+\_\+level.\+h\item 
+src/death\+\_\+match\+\_\+level.\+cpp\end{DoxyCompactItemize}
