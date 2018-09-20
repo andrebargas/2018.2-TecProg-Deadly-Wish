@@ -1,5 +1,6 @@
 /** \file menu_level.cpp
-  * \brief Esta é o arquivo da classe do level MenuLevel que mostra o menu para a seleão do modo de jogo
+  * \brief Esta é o arquivo da classe do level MenuLevel
+  * \que mostra o menu para a seleão do modo de jogo
   */
 
 #include "menu_level.h"
@@ -169,8 +170,8 @@ MenuLevel::on_event(const GameEvent& event) {
     //Move a caixa de seleção do menu
     if(event.id() == game_event::MOVEMENT_P1) {
 
-        //salva o eixo de direção do movimento em uma varivavel
         string axis = event.get_property<string>("axis");
+
         //salva o direção no eixo do movimento em uma varivavel
         int value = event.get_property<int>("value");
 
@@ -206,8 +207,10 @@ MenuLevel::on_event(const GameEvent& event) {
             }
         }
 
-        //caso a seleção tente ir depois do ultimo elemento, a caixa de seleção volta para
-        // o topo da lista de opções
+        /* Caso a seleção tente ir depois do ultimo elemento, a caixa de seleção volta para
+         * o topo da lista de opções
+         */
+
         if(menu_level_current_option < 0) {
             menu_level_current_option += 3;
         }
