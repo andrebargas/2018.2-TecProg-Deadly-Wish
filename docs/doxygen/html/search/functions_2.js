@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['done',['done',['../classMainLevel.html#ae4d34d88753d7ebe90320e3cdd3e9e17',1,'MainLevel::done()'],['../classWinnerLevel.html#afc61ffd9b0457d81a2ed7400dc3490df',1,'WinnerLevel::done()']]],
-  ['draw_5fself',['draw_self',['../classMainLevel.html#aabad926cf0366de353d716065ab792ad',1,'MainLevel::draw_self()'],['../classWinnerLevel.html#a0b58acd2f2c85ce28df09260684f3180',1,'WinnerLevel::draw_self()']]]
+  ['deathmatchlevel',['DeathMatchLevel',['../classDeathMatchLevel.html#a3a0a88f354b3de9651f1a7d0dc0915ce',1,'DeathMatchLevel']]],
+  ['done',['done',['../classCharacterChooseLevel.html#a61050bcd8df73c5a1c941e2d3af6d384',1,'CharacterChooseLevel::done()'],['../classCreditsLevel.html#a80b93759949ba662627b52d0a51325ce',1,'CreditsLevel::done()'],['../classDeathMatchLevel.html#afb51c6bc79031214f50b3cbbe401be9f',1,'DeathMatchLevel::done()'],['../classMainLevel.html#ae4d34d88753d7ebe90320e3cdd3e9e17',1,'MainLevel::done()'],['../classMenuLevel.html#a2d5ce9ee9de62719ca8225509f0e53b3',1,'MenuLevel::done()'],['../classWinnerLevel.html#afc61ffd9b0457d81a2ed7400dc3490df',1,'WinnerLevel::done()']]],
+  ['draw_5fself',['draw_self',['../classCharacterChooseLevel.html#ac124d3fb4690e5b369a95f49758592ca',1,'CharacterChooseLevel::draw_self()'],['../classCreditsLevel.html#af980e138ebbad6f73b3835f38ee4dfe6',1,'CreditsLevel::draw_self()'],['../classDeathMatchLevel.html#a38a915a954f5c8e8ba54c46057bc99d0',1,'DeathMatchLevel::draw_self()'],['../classMainLevel.html#aabad926cf0366de353d716065ab792ad',1,'MainLevel::draw_self()'],['../classMenuLevel.html#a62ac78a0d9ddbe89ef41b9c13f8db99f',1,'MenuLevel::draw_self()'],['../classWinnerLevel.html#a0b58acd2f2c85ce28df09260684f3180',1,'WinnerLevel::draw_self()']]]
 ];

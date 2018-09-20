@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['next',['next',['../classMainLevel.html#ac5631405cb489d6ca9d90eb385c91293',1,'MainLevel::next()'],['../classWinnerLevel.html#a927da981a2a9c97d0ff41d3a33b3457a',1,'WinnerLevel::next()']]]
+  ['mainlevel',['MainLevel',['../classMainLevel.html#a0d8c61bddf5781cea1ba8496bd0a3d80',1,'MainLevel']]],
+  ['make_5fcharacter',['make_character',['../classCharacterFactory.html#a6ebcf8e9408d89dc4c40ef12e9d09c15',1,'CharacterFactory']]],
+  ['make_5flevel',['make_level',['../classTestLevelFactory.html#ab661866cd93b21b0fa16cfd72ace461e',1,'TestLevelFactory']]],
+  ['menulevel',['MenuLevel',['../classMenuLevel.html#a207c59fd8fdbb6252bdbbe0d8f73fcf6',1,'MenuLevel']]]
 ];

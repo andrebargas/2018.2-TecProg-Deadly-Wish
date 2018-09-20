@@ -1,5 +1,14 @@
 \hypertarget{classCreditsLevel}{}\section{Referência à classe Credits\+Level}
 \label{classCreditsLevel}\index{Credits\+Level@{Credits\+Level}}
+
+
+Classe usada para definir level de creditos do jogo, com o nome de seus criadores.  
+
+
+
+
+{\ttfamily \#include $<$credits\+\_\+level.\+h$>$}
+
 Diagrama de heranças da classe Credits\+Level\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,57 +18,202 @@ Diagrama de heranças da classe Credits\+Level\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCreditsLevel_a2516ba82d10b2eb959d03eea3df0a32c}\label{classCreditsLevel_a2516ba82d10b2eb959d03eea3df0a32c}} 
-{\bfseries Credits\+Level} (const string \&next=\char`\"{}\char`\"{})
-\item 
-\mbox{\Hypertarget{classCreditsLevel_a80b93759949ba662627b52d0a51325ce}\label{classCreditsLevel_a80b93759949ba662627b52d0a51325ce}} 
-bool {\bfseries done} () const
-\item 
-\mbox{\Hypertarget{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}\label{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}} 
-string {\bfseries next} () const
-\item 
-\mbox{\Hypertarget{classCreditsLevel_a6bf8924562bb2ce7f8b85c35a9b8a52e}\label{classCreditsLevel_a6bf8924562bb2ce7f8b85c35a9b8a52e}} 
-string {\bfseries audio} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classCreditsLevel_a2516ba82d10b2eb959d03eea3df0a32c}{Credits\+Level}} (const string \&\mbox{\hyperlink{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}{next}}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreditsLevel_a0d977ddb97700fef21dfcaa79c9ccb91}\label{classCreditsLevel_a0d977ddb97700fef21dfcaa79c9ccb91}} 
+\mbox{\hyperlink{classCreditsLevel_a0d977ddb97700fef21dfcaa79c9ccb91}{$\sim$\+Credits\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCreditsLevel_a80b93759949ba662627b52d0a51325ce}{done}} () const
+\begin{DoxyCompactList}\small\item\em Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}{next}} () const
+\begin{DoxyCompactList}\small\item\em Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCreditsLevel_a6bf8924562bb2ce7f8b85c35a9b8a52e}{audio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCreditsLevel_a2df0795f16916cab12337010ee18f46c}\label{classCreditsLevel_a2df0795f16916cab12337010ee18f46c}} 
-void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classCreditsLevel_af980e138ebbad6f73b3835f38ee4dfe6}\label{classCreditsLevel_af980e138ebbad6f73b3835f38ee4dfe6}} 
-void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classCreditsLevel_a627849460d0ed66cfdc491fbdd313388}\label{classCreditsLevel_a627849460d0ed66cfdc491fbdd313388}} 
-void {\bfseries set\+\_\+credits\+\_\+strings} ()
-\item 
-\mbox{\Hypertarget{classCreditsLevel_afa4ec08490398e3532fce7815c77aa46}\label{classCreditsLevel_afa4ec08490398e3532fce7815c77aa46}} 
-bool {\bfseries on\+\_\+event} (const Game\+Event \&event)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classCreditsLevel_a2df0795f16916cab12337010ee18f46c}{update\+\_\+self}} (unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Função para atualizar o tempo de inicio do level, e setar atributo \mbox{\hyperlink{classCreditsLevel_ab7ac1647d977be5650daee20614bdede}{credits\+\_\+level\+\_\+start}}. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCreditsLevel_af980e138ebbad6f73b3835f38ee4dfe6}{draw\+\_\+self}} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCreditsLevel_a627849460d0ed66cfdc491fbdd313388}{set\+\_\+credits\+\_\+strings}} ()
+\begin{DoxyCompactList}\small\item\em seta a qual sera o texto que ira aparecer nos creditos \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCreditsLevel_afa4ec08490398e3532fce7815c77aa46}{on\+\_\+event}} (const Game\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Encerra o level quando a o jogador precisiona o botão equivalente ao do light attack (x no joystick) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classCreditsLevel_a2b7dd48d2e3def60499d4f6143b61923}\label{classCreditsLevel_a2b7dd48d2e3def60499d4f6143b61923}} 
-bool {\bfseries credits\+\_\+level\+\_\+done}
-\item 
+bool \mbox{\hyperlink{classCreditsLevel_a2b7dd48d2e3def60499d4f6143b61923}{credits\+\_\+level\+\_\+done}}
+\begin{DoxyCompactList}\small\item\em Variavel que é setada com True quando o level chega ao final. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCreditsLevel_a4203423c76e8ba68f943f39d2f0d05c7}\label{classCreditsLevel_a4203423c76e8ba68f943f39d2f0d05c7}} 
-string {\bfseries credits\+\_\+level\+\_\+next}
-\item 
-\mbox{\Hypertarget{classCreditsLevel_a90e3043e37443cb6f2c7841ac4ae5525}\label{classCreditsLevel_a90e3043e37443cb6f2c7841ac4ae5525}} 
-vector$<$ string $>$ {\bfseries credits\+\_\+level\+\_\+strings}
-\item 
+string \mbox{\hyperlink{classCreditsLevel_a4203423c76e8ba68f943f39d2f0d05c7}{credits\+\_\+level\+\_\+next}}
+\begin{DoxyCompactList}\small\item\em Variavel com o nome do proximo level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreditsLevel_aff556bd002a49a803299152ad2f76262}\label{classCreditsLevel_aff556bd002a49a803299152ad2f76262}} 
+vector$<$ string $>$ \mbox{\hyperlink{classCreditsLevel_aff556bd002a49a803299152ad2f76262}{credits\+\_\+level\+\_\+strings}}
+\begin{DoxyCompactList}\small\item\em Variavel com os textos que irão aparecer nos creditos. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCreditsLevel_ab7ac1647d977be5650daee20614bdede}\label{classCreditsLevel_ab7ac1647d977be5650daee20614bdede}} 
-int {\bfseries credits\+\_\+level\+\_\+start}
-\item 
-\mbox{\Hypertarget{classCreditsLevel_a7bbf616f51bff1fedbbc06d2b068b974}\label{classCreditsLevel_a7bbf616f51bff1fedbbc06d2b068b974}} 
-int {\bfseries credits\+\_\+level\+\_\+winner\+\_\+player}
-\item 
+int \mbox{\hyperlink{classCreditsLevel_ab7ac1647d977be5650daee20614bdede}{credits\+\_\+level\+\_\+start}}
+\begin{DoxyCompactList}\small\item\em Variavel para persistir o tempo de inicio de jogo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCreditsLevel_af25e3be232ccdb229faa00e7114d54e1}{credits\+\_\+level\+\_\+winner\+\_\+player}}
+\begin{DoxyCompactList}\small\item\em Variavel id do player vencedor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCreditsLevel_a27faf20ac97534bd328a2c8a017ca5ea}\label{classCreditsLevel_a27faf20ac97534bd328a2c8a017ca5ea}} 
 shared\+\_\+ptr$<$ Texture $>$ {\bfseries m\+\_\+texture}
 \end{DoxyCompactItemize}
 
 
+\subsection{Descrição detalhada}
+Classe usada para definir level de creditos do jogo, com o nome de seus criadores. 
+
+class \mbox{\hyperlink{classCreditsLevel}{Credits\+Level}} \+: public Level, public Game\+Events\+Listener 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classCreditsLevel_a2516ba82d10b2eb959d03eea3df0a32c}\label{classCreditsLevel_a2516ba82d10b2eb959d03eea3df0a32c}} 
+\index{Credits\+Level@{Credits\+Level}!Credits\+Level@{Credits\+Level}}
+\index{Credits\+Level@{Credits\+Level}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{Credits\+Level()}{CreditsLevel()}}
+{\footnotesize\ttfamily Credits\+Level\+::\+Credits\+Level (\begin{DoxyParamCaption}\item[{const string \&}]{next = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Método construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em next} & const string\& Parametro para o proximo level. Valor constante igual \char`\"{} \char`\"{}, final do jogo. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classCreditsLevel_a6bf8924562bb2ce7f8b85c35a9b8a52e}\label{classCreditsLevel_a6bf8924562bb2ce7f8b85c35a9b8a52e}} 
+\index{Credits\+Level@{Credits\+Level}!audio@{audio}}
+\index{audio@{audio}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{audio()}{audio()}}
+{\footnotesize\ttfamily string Credits\+Level\+::audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+string string constante \char`\"{}.\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCreditsLevel_a80b93759949ba662627b52d0a51325ce}\label{classCreditsLevel_a80b93759949ba662627b52d0a51325ce}} 
+\index{Credits\+Level@{Credits\+Level}!done@{done}}
+\index{done@{done}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily bool Credits\+Level\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+bool retorna \textquotesingle{}true\textquotesingle{} se o level acabou 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCreditsLevel_af980e138ebbad6f73b3835f38ee4dfe6}\label{classCreditsLevel_af980e138ebbad6f73b3835f38ee4dfe6}} 
+\index{Credits\+Level@{Credits\+Level}!draw\+\_\+self@{draw\+\_\+self}}
+\index{draw\+\_\+self@{draw\+\_\+self}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{draw\+\_\+self()}{draw\_self()}}
+{\footnotesize\ttfamily void Credits\+Level\+::draw\+\_\+self (\begin{DoxyParamCaption}\item[{Canvas $\ast$}]{canvas,  }\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canvas} & Canvas$\ast$ Ponteiro para objeto da classe responsavel pela renderização do jogo. \\
+\hline
+{\em now} & unsigned Tempo atual do jogo \\
+\hline
+{\em last} & unsigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+variavel para a fonte do texto nos creditos\mbox{\Hypertarget{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}\label{classCreditsLevel_ad8c392e8e0175052a4451481bddaddfe}} 
+\index{Credits\+Level@{Credits\+Level}!next@{next}}
+\index{next@{next}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily string Credits\+Level\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+string retorna qual sera o proximo level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCreditsLevel_afa4ec08490398e3532fce7815c77aa46}\label{classCreditsLevel_afa4ec08490398e3532fce7815c77aa46}} 
+\index{Credits\+Level@{Credits\+Level}!on\+\_\+event@{on\+\_\+event}}
+\index{on\+\_\+event@{on\+\_\+event}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{on\+\_\+event()}{on\_event()}}
+{\footnotesize\ttfamily bool Credits\+Level\+::on\+\_\+event (\begin{DoxyParamCaption}\item[{const Game\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Encerra o level quando a o jogador precisiona o botão equivalente ao do light attack (x no joystick) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Game\+Event\& Entrada do usuário \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+bool retorna true quando ocorre o evento 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCreditsLevel_a627849460d0ed66cfdc491fbdd313388}\label{classCreditsLevel_a627849460d0ed66cfdc491fbdd313388}} 
+\index{Credits\+Level@{Credits\+Level}!set\+\_\+credits\+\_\+strings@{set\+\_\+credits\+\_\+strings}}
+\index{set\+\_\+credits\+\_\+strings@{set\+\_\+credits\+\_\+strings}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{set\+\_\+credits\+\_\+strings()}{set\_credits\_strings()}}
+{\footnotesize\ttfamily void Credits\+Level\+::set\+\_\+credits\+\_\+strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+seta a qual sera o texto que ira aparecer nos creditos 
+
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCreditsLevel_a2df0795f16916cab12337010ee18f46c}\label{classCreditsLevel_a2df0795f16916cab12337010ee18f46c}} 
+\index{Credits\+Level@{Credits\+Level}!update\+\_\+self@{update\+\_\+self}}
+\index{update\+\_\+self@{update\+\_\+self}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{update\+\_\+self()}{update\_self()}}
+{\footnotesize\ttfamily void Credits\+Level\+::update\+\_\+self (\begin{DoxyParamCaption}\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Função para atualizar o tempo de inicio do level, e setar atributo \mbox{\hyperlink{classCreditsLevel_ab7ac1647d977be5650daee20614bdede}{credits\+\_\+level\+\_\+start}}. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em now} & unsigned Tempo atual do jogo \\
+\hline
+{\em last} & unsigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+\subsection{Documentação dos dados membro}
+\mbox{\Hypertarget{classCreditsLevel_af25e3be232ccdb229faa00e7114d54e1}\label{classCreditsLevel_af25e3be232ccdb229faa00e7114d54e1}} 
+\index{Credits\+Level@{Credits\+Level}!credits\+\_\+level\+\_\+winner\+\_\+player@{credits\+\_\+level\+\_\+winner\+\_\+player}}
+\index{credits\+\_\+level\+\_\+winner\+\_\+player@{credits\+\_\+level\+\_\+winner\+\_\+player}!Credits\+Level@{Credits\+Level}}
+\subsubsection{\texorpdfstring{credits\+\_\+level\+\_\+winner\+\_\+player}{credits\_level\_winner\_player}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ Texture $>$ Credits\+Level\+::credits\+\_\+level\+\_\+winner\+\_\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variavel id do player vencedor. 
+
+Vetor com as texturas utilizadas para renderizar o level. 
+
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/credits\+\_\+level.\+h\item 
-src/credits\+\_\+level.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{credits__level_8h}{credits\+\_\+level.\+h}}\item 
+src/\mbox{\hyperlink{credits__level_8cpp}{credits\+\_\+level.\+cpp}}\end{DoxyCompactItemize}
