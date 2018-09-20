@@ -65,30 +65,99 @@
                     <div class="doc-content">
                         <div class="content-inner">
                             <section id="objective-section" class="doc-section">
-                                <h2 class="section-title">Objetivo</h2>
+                                <h2 class="section-title">Introdução</h2>
                                 <div  class="section-block">
-                                  <p>&emsp;&emsp; O objetivo deste módulo é a aplicação das primeiras técnicas de refatoração de código
-                                     dando enfase nas técnicas de estilo e desing, como identação nome de variáveis e funções. Também foi definido
-                                     quais ferramentas serão utilizadas no decorrer do projeto.
+                                  <p>&emsp;&emsp; O objetivo deste módulo é a aplicação das técnicas
+                                     de refatoração de código com foco na geração de comentários para o
+                                     melhor entendimento do sistema. Existem algumas situações onde é considerado
+                                    boa pratica fazer comentarios especiais, como declarações de classes e variáveis. Além
+                                    disso neste modulo foi aplicado o uso de ferramentas para a automatização na geração de documentação
+                                    através de comentário em código.
                                    </p>
                                 </div>
-                            </section><!--//doc-section-->
-                            <section id="estilo-desing" class="doc-section">
-                                <h2 class="section-title">Estilo e Desing</h2>
                                 <div  class="section-block">
-                                  <h3 class="block-title">Identação</h3>
-                                  <p>&emsp;&emsp; A identação deve ser padronizada para todo o documento. Deve também facilitar a leitura do código.</p>
+                                  <h3 class="block-title">Doxygen</h3>
+                                  <p>
+                                    &emsp;&emsp;É a ferramenta padrão pelo De Facto Standard para geração de documentação
+                                    atravéz de comentários em códigos em C++. Suporta também outra linguagens como Python, PHP e outras.
+                                    Pode ser usado para: <br>
+                                    - Gerar documentação navegavel em html <br>
+                                    - Ver a estrura de um projeto ainda não documentado <br>
+                                    - Gerar uma documentação tradicional
+                                  </p>
+                                  <h3 class="block-title">Elementos do Doxygen Incorporados</h3>
+                                  <p>
+                                    &emsp;&emsp;A aplicação do padrão previsto pela ferramenta está documento na folha de estilo, disponivel
+                                    <a href="folha_de_estilo.html#comentarios-section">aqui</a>.
+                                  </p>
+                                  <h5>Cabeçario de Arquivo</h5>
+                                  <img src="assets/images/doxygen_cabecario.png"alt="cabecario" style="width:100%">
+                                  <h5>Cabeçario de Classe</h5>
+                                  <img src="assets/images/doxygen_classe.png"alt="cabecario" style="width:100%">
+                                  <h5>Cabeçario de Função</h5>
+                                  <img src="assets/images/doxygen_funcao.png"alt="cabecario" style="width:100%">
+                                  <h5>Cabeçario de Variavel</h5>
+                                  <img src="assets/images/doxygen_variavel.png"alt="cabecario" style="width:100%">
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="content-section" class="doc-section">
+                                <div  class="section-block">
+                                  <h3 class="block-title">Comentar parágrafos de código</h3>
+                                  <p>&emsp;&emsp; </p>
                                   <p>&emsp;&emsp; Exemplo de código mal identado:</p>
                                   <h2>EXEMPLO AQUI</h2>
                                   <p>&emsp;&emsp; Exemplo de código bem identado:</p>
                                   <h2>EXEMPLO AQUI</h2>
-
                                 </div>
+
                                 <div  class="section-block">
-                                  <h3 class="block-title">Nome de Significativos</h3>
-                                  <p>&emsp;&emsp; Deve-se dar nomes auto explicativos para todos os arquivos, classes, variáveis e funções.
-                                     Esta prática reduz a necessidade de comentarios e torna o código mais auto explicativo.
-                                  </p>
+                                  <h3 class="block-title">Comentar declaração de variáveis</h3>
+                                  <p>&emsp;&emsp; </p>
+                                  <p>&emsp;&emsp; Exemplo de nome ruins:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de bons nomes:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                </div>
+
+                                <div  class="section-block">
+                                  <h3 class="block-title">Comentar estruturas de controle</h3>
+                                  <p>&emsp;&emsp; </p>
+                                  <p>&emsp;&emsp; Exemplo de nome ruins:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de bons nomes:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                </div>
+
+                                <div  class="section-block">
+                                  <h3 class="block-title">Comentar Rotinas</h3>
+                                  <p>&emsp;&emsp; </p>
+                                  <p>&emsp;&emsp; Exemplo de nome ruins:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de bons nomes:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                </div>
+
+                                <div  class="section-block">
+                                  <h3 class="block-title">Comentar arquivos, classes e programas</h3>
+                                  <p>&emsp;&emsp; </p>
+                                  <p>&emsp;&emsp; Exemplo de nome ruins:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de bons nomes:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                </div>
+
+                                <div  class="section-block">
+                                  <h3 class="block-title">Utilização de cabeçalho de arquivo</h3>
+                                  <p>&emsp;&emsp; </p>
+                                  <p>&emsp;&emsp; Exemplo de nome ruins:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                  <p>&emsp;&emsp; Exemplo de bons nomes:</p>
+                                  <h2>EXEMPLO AQUI</h2>
+                                </div>
+
+                                <div  class="section-block">
+                                  <h3 class="block-title">Uso de Marcadores</h3>
+                                  <p>&emsp;&emsp; </p>
                                   <p>&emsp;&emsp; Exemplo de nome ruins:</p>
                                   <h2>EXEMPLO AQUI</h2>
                                   <p>&emsp;&emsp; Exemplo de bons nomes:</p>
@@ -97,35 +166,13 @@
 
                             </section><!--//doc-section-->
 
-                            <section id="iniciar-variaveis" class="doc-section">
-                              <h2 class="section-title">Iniciação de Variaveis</h2>
-                              <div  class="section-block">
-                                <p>
-                                  &emsp;&emsp;É recomendado que todas a variáveis devem ser inicializadas no momento que são declaradas.
-                                  Isso garante que não haja valores indejados nas variáveis, código como C e C++ geram valores diferentes
-                                  para as variáveis cada vez que o código é rodado.
-                                </p>
-                                <p>&emsp;&emsp; Exemplo de má iniciação de variável:</p>
-                                <h2>EXEMPLO AQUI</h2>
-                                <p>&emsp;&emsp; Exemplo de boa iniciação de variável</p>
-                                <h2>EXEMPLO AQUI</h2>
-
-                              </div>
-                            </section><!--//doc-section-->
-
                             <section id="analise-estatica" class="doc-section">
-                                <h2 class="section-title">Ferramenta de análise estática</h2>
+                                <h2 class="section-title">Referencias</h2>
                                 <div  class="section-block">
-                                  <p>&emsp;&emsp; O uso de ferramentas de análise estatica ajuda a
-                                      indentificar erros que o compilar não consegue reconhecer.
+                                  <p>
+                                    &emsp;&emsp; Doxygen - http://www.stack.nl/~dimitri/doxygen/index.html
                                   </p>
 
-                                </div>
-                                <div  class="section-block">
-                                  <h3 class="block-title">CppCheck</h3>
-                                  <p>
-                                    &emsp;&emsp; A ferramenta cppcheck fora escolhida para o auxilo nesta tarefa.
-                                  </p>
                                 </div>
                             </section><!--//doc-section-->
                         </div><!--//content-inner-->

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['set_5fcongratulations_5fstring',['set_congratulations_string',['../classWinnerLevel.html#a22e2395a8b72405050c2a321aa1fb644',1,'WinnerLevel']]],
-  ['set_5fmovement_5fproperties',['set_movement_properties',['../classTranslator.html#ab61b9cc9e645f81a7b73629524c2e69e',1,'Translator']]]
+  ['on_5fevent',['on_event',['../classCharacterChooseLevel.html#a2fb500ba943a4f22ed01be915b59452a',1,'CharacterChooseLevel::on_event()'],['../classCreditsLevel.html#afa4ec08490398e3532fce7815c77aa46',1,'CreditsLevel::on_event()'],['../classMenuLevel.html#a8d450674d7c3678c7ff1f146b3e63be1',1,'MenuLevel::on_event()']]]
 ];

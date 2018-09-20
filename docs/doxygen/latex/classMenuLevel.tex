@@ -1,5 +1,14 @@
 \hypertarget{classMenuLevel}{}\section{Referência à classe Menu\+Level}
 \label{classMenuLevel}\index{Menu\+Level@{Menu\+Level}}
+
+
+Classe usada para definir level do menu de seleção do modo de jogo. É a primeira tela do jogo.  
+
+
+
+
+{\ttfamily \#include $<$menu\+\_\+level.\+h$>$}
+
 Diagrama de heranças da classe Menu\+Level\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,33 +18,28 @@ Diagrama de heranças da classe Menu\+Level\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMenuLevel_a207c59fd8fdbb6252bdbbe0d8f73fcf6}\label{classMenuLevel_a207c59fd8fdbb6252bdbbe0d8f73fcf6}} 
-{\bfseries Menu\+Level} (const string \&next=\char`\"{}\char`\"{})
-\item 
-\mbox{\Hypertarget{classMenuLevel_a2d5ce9ee9de62719ca8225509f0e53b3}\label{classMenuLevel_a2d5ce9ee9de62719ca8225509f0e53b3}} 
-bool {\bfseries done} () const
-\item 
-\mbox{\Hypertarget{classMenuLevel_ae646a2eb4d55628aef9bd9a2e0ca66d6}\label{classMenuLevel_ae646a2eb4d55628aef9bd9a2e0ca66d6}} 
-string {\bfseries next} () const
-\item 
-\mbox{\Hypertarget{classMenuLevel_a3293e74cafcf37c8d2b7cf79ded54d37}\label{classMenuLevel_a3293e74cafcf37c8d2b7cf79ded54d37}} 
-string {\bfseries audio} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMenuLevel_a207c59fd8fdbb6252bdbbe0d8f73fcf6}{Menu\+Level}} (const string \&\mbox{\hyperlink{classMenuLevel_ae646a2eb4d55628aef9bd9a2e0ca66d6}{next}}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMenuLevel_a6d5b3c8f7e8b45a597ca523ee37ac74a}\label{classMenuLevel_a6d5b3c8f7e8b45a597ca523ee37ac74a}} 
+\mbox{\hyperlink{classMenuLevel_a6d5b3c8f7e8b45a597ca523ee37ac74a}{$\sim$\+Menu\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMenuLevel_a2d5ce9ee9de62719ca8225509f0e53b3}{done}} () const
+\begin{DoxyCompactList}\small\item\em Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMenuLevel_ae646a2eb4d55628aef9bd9a2e0ca66d6}{next}} () const
+\begin{DoxyCompactList}\small\item\em Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMenuLevel_a3293e74cafcf37c8d2b7cf79ded54d37}{audio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMenuLevel_ab84aecb253d1d83b827be0eaf08a3e22}\label{classMenuLevel_ab84aecb253d1d83b827be0eaf08a3e22}} 
-void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classMenuLevel_a62ac78a0d9ddbe89ef41b9c13f8db99f}\label{classMenuLevel_a62ac78a0d9ddbe89ef41b9c13f8db99f}} 
-void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classMenuLevel_abdc07d5fc61e4767f81c56b1198e848e}\label{classMenuLevel_abdc07d5fc61e4767f81c56b1198e848e}} 
-void {\bfseries update\+\_\+position} ()
-\item 
-\mbox{\Hypertarget{classMenuLevel_a8d450674d7c3678c7ff1f146b3e63be1}\label{classMenuLevel_a8d450674d7c3678c7ff1f146b3e63be1}} 
-bool {\bfseries on\+\_\+event} (const Game\+Event \&event)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMenuLevel_ab84aecb253d1d83b827be0eaf08a3e22}{update\+\_\+self}} (unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Função para atualizar o tempo de inicio do level, e setar atributo winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenuLevel_a62ac78a0d9ddbe89ef41b9c13f8db99f}{draw\+\_\+self}} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenuLevel_abdc07d5fc61e4767f81c56b1198e848e}{update\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em atualiza a posição do seletor do menu \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMenuLevel_a8d450674d7c3678c7ff1f146b3e63be1}{on\+\_\+event}} (const Game\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Encerra o level quando a o jogador precisiona o botão equivalente ao do light attack (x no joystick) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Tipos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,29 +58,167 @@ enum \{ {\bfseries B\+A\+C\+K\+G\+R\+O\+U\+ND},
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classMenuLevel_a0736601eec1f2f2f9d11a863bcaf7fbb}\label{classMenuLevel_a0736601eec1f2f2f9d11a863bcaf7fbb}} 
-bool {\bfseries menu\+\_\+level\+\_\+done}
-\item 
+bool \mbox{\hyperlink{classMenuLevel_a0736601eec1f2f2f9d11a863bcaf7fbb}{menu\+\_\+level\+\_\+done}}
+\begin{DoxyCompactList}\small\item\em Variavel que é setada com True quando o level chega ao final. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMenuLevel_a2e458acb753206af5fd7e4669eee427c}\label{classMenuLevel_a2e458acb753206af5fd7e4669eee427c}} 
-string {\bfseries menu\+\_\+level\+\_\+next}
-\item 
+string \mbox{\hyperlink{classMenuLevel_a2e458acb753206af5fd7e4669eee427c}{menu\+\_\+level\+\_\+next}}
+\begin{DoxyCompactList}\small\item\em Variavel com o nome do proximo level. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMenuLevel_a29481a284b638c832504527c2318cf5a}\label{classMenuLevel_a29481a284b638c832504527c2318cf5a}} 
-int {\bfseries menu\+\_\+level\+\_\+start}
-\item 
+int \mbox{\hyperlink{classMenuLevel_a29481a284b638c832504527c2318cf5a}{menu\+\_\+level\+\_\+start}}
+\begin{DoxyCompactList}\small\item\em Variavel para persistir o tempo de inicio de jogo. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMenuLevel_ae850b59099dcb3e69c8366b46a211dd7}\label{classMenuLevel_ae850b59099dcb3e69c8366b46a211dd7}} 
-int {\bfseries menu\+\_\+level\+\_\+option\+\_\+y\+\_\+position}
-\item 
+int \mbox{\hyperlink{classMenuLevel_ae850b59099dcb3e69c8366b46a211dd7}{menu\+\_\+level\+\_\+option\+\_\+y\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em Posição da opção de jogo no eixo y. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMenuLevel_a99536811d95ed1b23e29270f299c9d48}\label{classMenuLevel_a99536811d95ed1b23e29270f299c9d48}} 
-int {\bfseries menu\+\_\+level\+\_\+current\+\_\+option}
-\item 
-\mbox{\Hypertarget{classMenuLevel_a3baea3828c53a17417ec08e584d9e4f5}\label{classMenuLevel_a3baea3828c53a17417ec08e584d9e4f5}} 
-vector$<$ shared\+\_\+ptr$<$ Texture $>$ $>$ {\bfseries menu\+\_\+level\+\_\+textures}
-\item 
-\mbox{\Hypertarget{classMenuLevel_a8d4696e9a825ce70775b0f0642a9fb26}\label{classMenuLevel_a8d4696e9a825ce70775b0f0642a9fb26}} 
-vector$<$ string $>$ {\bfseries menu\+\_\+level\+\_\+options}
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{classMenuLevel_a99536811d95ed1b23e29270f299c9d48}{menu\+\_\+level\+\_\+current\+\_\+option}}
+\begin{DoxyCompactList}\small\item\em Posição do foco de seleção do jogador na escolha do modo de jogo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMenuLevel_a86bfd7ddf73258b6b322cbe9731b52d2}\label{classMenuLevel_a86bfd7ddf73258b6b322cbe9731b52d2}} 
+vector$<$ shared\+\_\+ptr$<$ Texture $>$ $>$ \mbox{\hyperlink{classMenuLevel_a86bfd7ddf73258b6b322cbe9731b52d2}{menu\+\_\+level\+\_\+textures}}
+\begin{DoxyCompactList}\small\item\em Vetor com as texturas utilizadas para renderizar o level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMenuLevel_a2f6e3ee1e2fa7436f788d4b771f4dd36}\label{classMenuLevel_a2f6e3ee1e2fa7436f788d4b771f4dd36}} 
+vector$<$ string $>$ \mbox{\hyperlink{classMenuLevel_a2f6e3ee1e2fa7436f788d4b771f4dd36}{menu\+\_\+level\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em Vetor com o texto das opções de jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe usada para definir level do menu de seleção do modo de jogo. É a primeira tela do jogo. 
+
+class \mbox{\hyperlink{classMenuLevel}{Menu\+Level}} \+: public Level, public Game\+Events\+Listener 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classMenuLevel_a207c59fd8fdbb6252bdbbe0d8f73fcf6}\label{classMenuLevel_a207c59fd8fdbb6252bdbbe0d8f73fcf6}} 
+\index{Menu\+Level@{Menu\+Level}!Menu\+Level@{Menu\+Level}}
+\index{Menu\+Level@{Menu\+Level}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{Menu\+Level()}{MenuLevel()}}
+{\footnotesize\ttfamily Menu\+Level\+::\+Menu\+Level (\begin{DoxyParamCaption}\item[{const string \&}]{next = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Método construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em next} & const string\& Parametro para o proximo level. Valor constante igual \char`\"{} \char`\"{}, \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classMenuLevel_a3293e74cafcf37c8d2b7cf79ded54d37}\label{classMenuLevel_a3293e74cafcf37c8d2b7cf79ded54d37}} 
+\index{Menu\+Level@{Menu\+Level}!audio@{audio}}
+\index{audio@{audio}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{audio()}{audio()}}
+{\footnotesize\ttfamily string Menu\+Level\+::audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+string string constante \char`\"{}.\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMenuLevel_a2d5ce9ee9de62719ca8225509f0e53b3}\label{classMenuLevel_a2d5ce9ee9de62719ca8225509f0e53b3}} 
+\index{Menu\+Level@{Menu\+Level}!done@{done}}
+\index{done@{done}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily bool Menu\+Level\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+bool retorna \textquotesingle{}true\textquotesingle{} se o level acabou 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMenuLevel_a62ac78a0d9ddbe89ef41b9c13f8db99f}\label{classMenuLevel_a62ac78a0d9ddbe89ef41b9c13f8db99f}} 
+\index{Menu\+Level@{Menu\+Level}!draw\+\_\+self@{draw\+\_\+self}}
+\index{draw\+\_\+self@{draw\+\_\+self}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{draw\+\_\+self()}{draw\_self()}}
+{\footnotesize\ttfamily void Menu\+Level\+::draw\+\_\+self (\begin{DoxyParamCaption}\item[{Canvas $\ast$}]{canvas,  }\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canvas} & Canvas$\ast$ Ponteiro para objeto da classe responsavel pela renderização do jogo. \\
+\hline
+{\em now} & unsigned Tempo atual do jogo \\
+\hline
+{\em last} & unsigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMenuLevel_ae646a2eb4d55628aef9bd9a2e0ca66d6}\label{classMenuLevel_ae646a2eb4d55628aef9bd9a2e0ca66d6}} 
+\index{Menu\+Level@{Menu\+Level}!next@{next}}
+\index{next@{next}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily string Menu\+Level\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+string retorna qual sera o proximo level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMenuLevel_a8d450674d7c3678c7ff1f146b3e63be1}\label{classMenuLevel_a8d450674d7c3678c7ff1f146b3e63be1}} 
+\index{Menu\+Level@{Menu\+Level}!on\+\_\+event@{on\+\_\+event}}
+\index{on\+\_\+event@{on\+\_\+event}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{on\+\_\+event()}{on\_event()}}
+{\footnotesize\ttfamily bool Menu\+Level\+::on\+\_\+event (\begin{DoxyParamCaption}\item[{const Game\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Encerra o level quando a o jogador precisiona o botão equivalente ao do light attack (x no joystick) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em event} & const Game\+Event\& Entrada do usuário \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+bool retorna true quando ocorre o evento 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMenuLevel_abdc07d5fc61e4767f81c56b1198e848e}\label{classMenuLevel_abdc07d5fc61e4767f81c56b1198e848e}} 
+\index{Menu\+Level@{Menu\+Level}!update\+\_\+position@{update\+\_\+position}}
+\index{update\+\_\+position@{update\+\_\+position}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{update\+\_\+position()}{update\_position()}}
+{\footnotesize\ttfamily void Menu\+Level\+::update\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+atualiza a posição do seletor do menu 
+
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMenuLevel_ab84aecb253d1d83b827be0eaf08a3e22}\label{classMenuLevel_ab84aecb253d1d83b827be0eaf08a3e22}} 
+\index{Menu\+Level@{Menu\+Level}!update\+\_\+self@{update\+\_\+self}}
+\index{update\+\_\+self@{update\+\_\+self}!Menu\+Level@{Menu\+Level}}
+\subsubsection{\texorpdfstring{update\+\_\+self()}{update\_self()}}
+{\footnotesize\ttfamily void Menu\+Level\+::update\+\_\+self (\begin{DoxyParamCaption}\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Função para atualizar o tempo de inicio do level, e setar atributo winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em now} & unsigned Tempo atual do jogo \\
+\hline
+{\em last} & unsigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/menu\+\_\+level.\+h\item 
-src/menu\+\_\+level.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{menu__level_8h}{menu\+\_\+level.\+h}}\item 
+src/\mbox{\hyperlink{menu__level_8cpp}{menu\+\_\+level.\+cpp}}\end{DoxyCompactItemize}

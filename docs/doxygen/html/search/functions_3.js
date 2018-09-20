@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ije02game',['Ije02Game',['../classIje02Game.html#af24dc5ec68acaeeb66f74866a832133b',1,'Ije02Game']]]
+  ['get_5fplayers_5fcharacters',['get_players_characters',['../classCharacterChooseLevel.html#a5746558bdd1785dd88ae2bf99a1ebc7d',1,'CharacterChooseLevel']]]
 ];

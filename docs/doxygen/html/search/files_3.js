@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['winner_5flevel_2ecpp',['winner_level.cpp',['../winner__level_8cpp.html',1,'']]],
-  ['winner_5flevel_2eh',['winner_level.h',['../winner__level_8h.html',1,'']]]
+  ['translator_2ecpp',['translator.cpp',['../translator_8cpp.html',1,'']]],
+  ['translator_2eh',['translator.h',['../translator_8h.html',1,'']]]
 ];
