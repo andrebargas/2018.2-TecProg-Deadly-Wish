@@ -1,5 +1,14 @@
 \hypertarget{classSoldier}{}\section{Referência à classe Soldier}
 \label{classSoldier}\index{Soldier@{Soldier}}
+
+
+Permite que o soldado tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/soldier.\+h\char`\"{}}
+
 Diagrama de heranças da classe Soldier\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,28 +18,149 @@ Diagrama de heranças da classe Soldier\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSoldier_ac0fd0515763f51a11b2785e5cac088e6}\label{classSoldier_ac0fd0515763f51a11b2785e5cac088e6}} 
-{\bfseries Soldier} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int character\+\_\+code)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classSoldier_ac0fd0515763f51a11b2785e5cac088e6}{Soldier}} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int \mbox{\hyperlink{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}{character\+\_\+code}})
+\begin{DoxyCompactList}\small\item\em Método Construtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSoldier_af06682afbd0dd5f560e31228688b21fe}\label{classSoldier_af06682afbd0dd5f560e31228688b21fe}} 
-void {\bfseries do\+\_\+heavy\+\_\+attack} ()
-\item 
-\mbox{\Hypertarget{classSoldier_ab0941d83546b933924b17b9aaa92818c}\label{classSoldier_ab0941d83546b933924b17b9aaa92818c}} 
-void {\bfseries do\+\_\+light\+\_\+attack} ()
-\item 
-\mbox{\Hypertarget{classSoldier_a4c6ff38e85e61c7112526d29059480fb}\label{classSoldier_a4c6ff38e85e61c7112526d29059480fb}} 
-void {\bfseries do\+\_\+defense} ()
-\item 
-\mbox{\Hypertarget{classSoldier_a3e5574a74b969d5b26cf3ad0f3f7f085}\label{classSoldier_a3e5574a74b969d5b26cf3ad0f3f7f085}} 
-void {\bfseries do\+\_\+special} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classSoldier_af06682afbd0dd5f560e31228688b21fe}{do\+\_\+heavy\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Métodos Protegidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSoldier_a4c6ff38e85e61c7112526d29059480fb}{do\+\_\+defense}} ()
+\begin{DoxyCompactList}\small\item\em Método poder de defesa\+: 300. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSoldier_ab0941d83546b933924b17b9aaa92818c}{do\+\_\+light\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Método virtual do ataque ligth\+\_\+atack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSoldier_a3e5574a74b969d5b26cf3ad0f3f7f085}{do\+\_\+special}} ()
+\begin{DoxyCompactList}\small\item\em Método poder do ataque\+: 5000. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
+
+
+\subsection{Descrição detalhada}
+Permite que o soldado tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classSoldier_ac0fd0515763f51a11b2785e5cac088e6}\label{classSoldier_ac0fd0515763f51a11b2785e5cac088e6}} 
+\index{Soldier@{Soldier}!Soldier@{Soldier}}
+\index{Soldier@{Soldier}!Soldier@{Soldier}}
+\subsubsection{\texorpdfstring{Soldier()}{Soldier()}}
+{\footnotesize\ttfamily Soldier\+::\+Soldier (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{sprite\+\_\+paths,  }\item[{unsigned}]{id,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{character\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Método Construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sprite\+\_\+paths} & -\/ desenha personagem \\
+\hline
+{\em id} & -\/ identificador do personagem \\
+\hline
+{\em x} & -\/ posição no eixo x \\
+\hline
+{\em y} & -\/ posição no eixo y \\
+\hline
+{\em character\+\_\+code} & -\/ codigo do personagem \\
+\hline
+\end{DoxyParams}
+tempo de uso de ataque -\/ 5000
+
+tempo de uso de ataque -\/ 2000
+
+tempo de uso de ataque -\/ 300
+
+tempo de uso de defesa -\/ 300
+
+tempo de uso do poder especial
+
+reseta ultimo uso do poder pesado
+
+reseta ultimo uso do poder leve
+
+reseta ultimo uso da defesa
+
+reseta personagem ativo 
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classSoldier_a4c6ff38e85e61c7112526d29059480fb}\label{classSoldier_a4c6ff38e85e61c7112526d29059480fb}} 
+\index{Soldier@{Soldier}!do\+\_\+defense@{do\+\_\+defense}}
+\index{do\+\_\+defense@{do\+\_\+defense}!Soldier@{Soldier}}
+\subsubsection{\texorpdfstring{do\+\_\+defense()}{do\_defense()}}
+{\footnotesize\ttfamily void Soldier\+::do\+\_\+defense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método poder de defesa\+: 300. 
+
+som da defesa
+
+muda o estado para defesa 
+
+Implementa \mbox{\hyperlink{classCharacter_ad8a87c4397e38fd4bd88c93a3d3cb70a}{Character}}.
+
+\mbox{\Hypertarget{classSoldier_af06682afbd0dd5f560e31228688b21fe}\label{classSoldier_af06682afbd0dd5f560e31228688b21fe}} 
+\index{Soldier@{Soldier}!do\+\_\+heavy\+\_\+attack@{do\+\_\+heavy\+\_\+attack}}
+\index{do\+\_\+heavy\+\_\+attack@{do\+\_\+heavy\+\_\+attack}!Soldier@{Soldier}}
+\subsubsection{\texorpdfstring{do\+\_\+heavy\+\_\+attack()}{do\_heavy\_attack()}}
+{\footnotesize\ttfamily void Soldier\+::do\+\_\+heavy\+\_\+attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Métodos Protegidos. 
+
+Método poder do ataque\+: 2000 som do poder heavy\+\_\+atack
+
+lança na direçâo x
+
+lança na posição x
+
+soldado virado para direita
+
+soldado virado para esquerda
+
+muda o estado do personagem para o ataque 
+
+Implementa \mbox{\hyperlink{classCharacter_aa9b20c9c53393c7aaf3a45e5c966c2ef}{Character}}.
+
+\mbox{\Hypertarget{classSoldier_ab0941d83546b933924b17b9aaa92818c}\label{classSoldier_ab0941d83546b933924b17b9aaa92818c}} 
+\index{Soldier@{Soldier}!do\+\_\+light\+\_\+attack@{do\+\_\+light\+\_\+attack}}
+\index{do\+\_\+light\+\_\+attack@{do\+\_\+light\+\_\+attack}!Soldier@{Soldier}}
+\subsubsection{\texorpdfstring{do\+\_\+light\+\_\+attack()}{do\_light\_attack()}}
+{\footnotesize\ttfamily void Soldier\+::do\+\_\+light\+\_\+attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método virtual do ataque ligth\+\_\+atack. 
+
+som do poder
+
+posicao do ataque
+
+personagem virado para direita
+
+personagem em outras direções
+
+muda o estado do personagem para o ataque 
+
+Implementa \mbox{\hyperlink{classCharacter_ae45be8b8b1a7d2f54a2349a65e2e6c42}{Character}}.
+
+\mbox{\Hypertarget{classSoldier_a3e5574a74b969d5b26cf3ad0f3f7f085}\label{classSoldier_a3e5574a74b969d5b26cf3ad0f3f7f085}} 
+\index{Soldier@{Soldier}!do\+\_\+special@{do\+\_\+special}}
+\index{do\+\_\+special@{do\+\_\+special}!Soldier@{Soldier}}
+\subsubsection{\texorpdfstring{do\+\_\+special()}{do\_special()}}
+{\footnotesize\ttfamily void Soldier\+::do\+\_\+special (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método poder do ataque\+: 5000. 
+
+som do ataque especial
+
+muda o estado do personagem para o ataque especial 
+
+Implementa \mbox{\hyperlink{classCharacter_a447eb9fa4afa57619d6387e0ea178f93}{Character}}.
+
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/soldier.\+h\item 
-src/soldier.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{soldier_8h}{soldier.\+h}}\item 
+src/\mbox{\hyperlink{soldier_8cpp}{soldier.\+cpp}}\end{DoxyCompactItemize}

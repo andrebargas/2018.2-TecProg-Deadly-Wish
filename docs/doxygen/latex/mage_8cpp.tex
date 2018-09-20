@@ -1,0 +1,38 @@
+\hypertarget{mage_8cpp}{}\section{Referência ao ficheiro src/mage.cpp}
+\label{mage_8cpp}\index{src/mage.\+cpp@{src/mage.\+cpp}}
+
+
+Este é o arquivo da classe \mbox{\hyperlink{classMage}{Mage}} que é filha da classe \mbox{\hyperlink{classCharacter}{Character}}.  
+
+
+{\ttfamily \#include \char`\"{}mage.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fireball.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frost\+\_\+nova.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ije02\+\_\+game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}skill.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}light\+\_\+attack.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mage_8cpp_a9c363d06a988867421cf992508a715f9}\label{mage_8cpp_a9c363d06a988867421cf992508a715f9}} 
+\#define \mbox{\hyperlink{mage_8cpp_a9c363d06a988867421cf992508a715f9}{M\+A\+X\+\_\+\+L\+I\+FE}}~100
+\begin{DoxyCompactList}\small\item\em Vida total do personagem. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mage_8cpp_a79c3cf4c5963fab5eba81a781ea50814}\label{mage_8cpp_a79c3cf4c5963fab5eba81a781ea50814}} 
+\#define \mbox{\hyperlink{mage_8cpp_a79c3cf4c5963fab5eba81a781ea50814}{M\+A\+G\+E\+\_\+\+S\+P\+E\+C\+I\+A\+L\+\_\+\+C\+O\+O\+L\+D\+O\+WN}}~5000
+\begin{DoxyCompactList}\small\item\em Poder de ataque (special) do mago. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mage_8cpp_a123d30f19b3e1f3c96d965e23830b893}\label{mage_8cpp_a123d30f19b3e1f3c96d965e23830b893}} 
+\#define \mbox{\hyperlink{mage_8cpp_a123d30f19b3e1f3c96d965e23830b893}{M\+A\+G\+E\+\_\+\+H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+C\+K\+\_\+\+C\+O\+O\+L\+D\+O\+WN}}~2000
+\begin{DoxyCompactList}\small\item\em Poder de ataque (heavy\+\_\+atack) do mago. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mage_8cpp_adef49768b9b4b7559f502aaa906c656c}\label{mage_8cpp_adef49768b9b4b7559f502aaa906c656c}} 
+\#define \mbox{\hyperlink{mage_8cpp_adef49768b9b4b7559f502aaa906c656c}{M\+A\+G\+E\+\_\+\+L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+C\+K\+\_\+\+C\+O\+O\+L\+D\+O\+WN}}~300
+\begin{DoxyCompactList}\small\item\em Poder de ataque (light\+\_\+atack) do mago. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mage_8cpp_a9f48344bfaefe7944ca581969aaf2a43}\label{mage_8cpp_a9f48344bfaefe7944ca581969aaf2a43}} 
+\#define \mbox{\hyperlink{mage_8cpp_a9f48344bfaefe7944ca581969aaf2a43}{M\+A\+G\+E\+\_\+\+D\+E\+F\+E\+N\+S\+E\+\_\+\+C\+O\+O\+L\+D\+O\+WN}}~300
+\begin{DoxyCompactList}\small\item\em Poder de defesa do mago. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Este é o arquivo da classe \mbox{\hyperlink{classMage}{Mage}} que é filha da classe \mbox{\hyperlink{classCharacter}{Character}}. 
+
