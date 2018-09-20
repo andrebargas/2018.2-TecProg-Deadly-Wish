@@ -1,27 +1,57 @@
+/** \file knight.cpp
+  * \brief Este é o arquivo da classe Knight que é filha da classe Character.
+  */
+
 #include "knight.h"
 #include "light_attack.h"
 #include "ije02_game.h"
 
+//! Vida total do personagem
 #define MAX_LIFE 300
+//! Poder de ataque (special) do cavaleiro
 #define KNIGHT_SPECIAL_COOLDOWN 5000
+//! Poder de ataque (heavy_atack) do cavaleiro
 #define KNIGHT_HEAVY_ATTACK_COOLDOWN 2000
+//! Poder de ataque (light_atack) do cavaleiro
 #define KNIGHT_LIGHT_ATTACK_COOLDOWN 300
+//! Poder de defesa do cavaleiro
 #define KNIGHT_DEFENSE_COOLDOWN 300
 
+/** \fn Knight(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
+  * \public
+  * \brief Método Construtor
+  * \param sprite_paths - desenha personagem
+  * \param id - identificador do personagem
+  * \param x - posição no eixo x
+  * \param y - posição no eixo y
+  * \param character_code - codigo do personagem
+  */
 Knight::Knight(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
     : Character(sprite_paths, id, x, y, MAX_LIFE, character_code)
 {
+    //! Poder de ataque especial - 5000
     character_special_cooldown = KNIGHT_SPECIAL_COOLDOWN;
+    //! Poder de ataque heavy_atack - 2000
     character_heavy_attack_cooldown = KNIGHT_HEAVY_ATTACK_COOLDOWN;
+    //! Poder de ataque ligth_atack - 300
     character_light_attack_cooldown = KNIGHT_LIGHT_ATTACK_COOLDOWN;
+    //! Poder de defesa - 300
     character_defense_cooldown = KNIGHT_DEFENSE_COOLDOWN;
     character_last_used_special = -character_special_cooldown;
+    //! Último uso do heavy_atack
     character_last_used_heavy_attack = -character_heavy_attack_cooldown;
+    //! Último uso do light_atack 
     character_last_used_light_attack = -character_light_attack_cooldown;
+    //! ÚLtimo uso da defesa
     character_last_used_defense = -character_defense_cooldown;
+    //! Indica que o peronsagem esta ativo
     character_active = true;
 }
 
+/** \fn do_heavy_attack()
+  * \protected
+  * \brief Método que executa um ataque pesado
+  */
 void
 Knight::do_heavy_attack()
 {
@@ -29,6 +59,10 @@ Knight::do_heavy_attack()
     change_character_state(HEAVY_ATTACK_STATE);
 }
 
+/** \fn do_light_attack()
+  * \protected
+  * \brief Método que executa um ataque leve
+  */
 void
 Knight::do_light_attack() {
     audio::play_sound_effect("res/sound/fx/pesadao_light.ogg", EFFECTS_VOLUME, 0);
@@ -49,12 +83,20 @@ Knight::do_light_attack() {
     change_character_state(LIGHT_ATTACK_STATE);
 }
 
+/** \fn do_defense()
+  * \protected
+  * \brief Método que executa uma defesa
+  */
 void
 Knight::do_defense() {
     audio::play_sound_effect("res/sound/fx/pesadao_block.ogg", EFFECTS_VOLUME, 0);
     change_character_state(DEFENSE_STATE);
 }
 
+/** \fn do_special()
+  * \protected
+  * \brief Método que executa um ataque especial
+  */
 void
 Knight::do_special() {
     change_character_state(SPECIAL_STATE);

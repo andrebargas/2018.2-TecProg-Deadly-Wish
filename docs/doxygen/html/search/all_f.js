@@ -1,11 +1,24 @@
 var searchData=
 [
+  ['set_5fbase',['set_base',['../classCharacter.html#a4cb413b53515a09d025fa0b3fe5a4e9f',1,'Character']]],
   ['set_5fcongratulations_5fstring',['set_congratulations_string',['../classWinnerLevel.html#a22e2395a8b72405050c2a321aa1fb644',1,'WinnerLevel']]],
   ['set_5fcredits_5fstrings',['set_credits_strings',['../classCreditsLevel.html#a627849460d0ed66cfdc491fbdd313388',1,'CreditsLevel']]],
   ['set_5fmovement_5fproperties',['set_movement_properties',['../classTranslator.html#ab61b9cc9e645f81a7b73629524c2e69e',1,'Translator']]],
   ['set_5fplayers_5fcharacters_5fposition',['set_players_characters_position',['../classDeathMatchLevel.html#ab158f20b6f8d51254215553aa713b4cc',1,'DeathMatchLevel::set_players_characters_position()'],['../classMainLevel.html#a2e4098c0cac4f42f94b7fa6ecb14c7c7',1,'MainLevel::set_players_characters_position()']]],
+  ['set_5fspawn_5fposition',['set_spawn_position',['../classCharacter.html#a75f825ad6509fa1601d2e2bc2ac04b3c',1,'Character']]],
   ['skill',['Skill',['../classSkill.html',1,'']]],
-  ['soldier',['Soldier',['../classSoldier.html',1,'']]],
+  ['soldier',['Soldier',['../classSoldier.html',1,'Soldier'],['../classCharacter.html#abf5e238c65ecb4480e6e5389e011a4d6a557690dabe1c727cd460f566392bcd52',1,'Character::SOLDIER()'],['../classCharacterSelection.html#a14b33a13e3498992faa7261e6f5e55caaab3e0766cab7dde8d3bf4b586eab764a',1,'CharacterSelection::SOLDIER()'],['../classSoldier.html#ac0fd0515763f51a11b2785e5cac088e6',1,'Soldier::Soldier()']]],
+  ['soldier_2ecpp',['soldier.cpp',['../soldier_8cpp.html',1,'']]],
+  ['soldier_2eh',['soldier.h',['../soldier_8h.html',1,'']]],
   ['spear',['Spear',['../classSpear.html',1,'']]],
-  ['specialstate',['SpecialState',['../classSpecialState.html',1,'']]]
+  ['special',['SPECIAL',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075aaf0d6f63e463f5fd69bb6d389e6aec05',1,'Character']]],
+  ['specialstate',['SpecialState',['../classSpecialState.html',1,'']]],
+  ['start_5fmoving_5fdown',['START_MOVING_DOWN',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075a8b229b001ae48d9b1b1101fdfca55315',1,'Character']]],
+  ['start_5fmoving_5fleft',['START_MOVING_LEFT',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075a0fe87e8fac0a383a115b6def47886060',1,'Character']]],
+  ['start_5fmoving_5fright',['START_MOVING_RIGHT',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075a680d0f3faacc9809d26814095fdc16a5',1,'Character']]],
+  ['start_5fmoving_5fup',['START_MOVING_UP',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075a8c28f2fe5437653a152fcf7d05e8408e',1,'Character']]],
+  ['stop_5fmoving_5fdown',['STOP_MOVING_DOWN',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075ada78cf5fafffc4b9b4d52b407d05d5ec',1,'Character']]],
+  ['stop_5fmoving_5fleft',['STOP_MOVING_LEFT',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075a1bee0af8ff8537623a9bcdfcc053100d',1,'Character']]],
+  ['stop_5fmoving_5fright',['STOP_MOVING_RIGHT',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075a1b90f2cce994a938c0f08b9e5b28f016',1,'Character']]],
+  ['stop_5fmoving_5fup',['STOP_MOVING_UP',['../classCharacter.html#ad3319cdd6aad27544714551aba4d4075aed71f164071945f1fdd84d6c7dc6a275',1,'Character']]]
 ];

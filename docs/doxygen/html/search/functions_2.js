@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['deathmatchlevel',['DeathMatchLevel',['../classDeathMatchLevel.html#a3a0a88f354b3de9651f1a7d0dc0915ce',1,'DeathMatchLevel']]],
-  ['done',['done',['../classCharacterChooseLevel.html#a61050bcd8df73c5a1c941e2d3af6d384',1,'CharacterChooseLevel::done()'],['../classCreditsLevel.html#a80b93759949ba662627b52d0a51325ce',1,'CreditsLevel::done()'],['../classDeathMatchLevel.html#afb51c6bc79031214f50b3cbbe401be9f',1,'DeathMatchLevel::done()'],['../classMainLevel.html#ae4d34d88753d7ebe90320e3cdd3e9e17',1,'MainLevel::done()'],['../classMenuLevel.html#a2d5ce9ee9de62719ca8225509f0e53b3',1,'MenuLevel::done()'],['../classWinnerLevel.html#afc61ffd9b0457d81a2ed7400dc3490df',1,'WinnerLevel::done()']]],
-  ['draw_5fself',['draw_self',['../classCharacterChooseLevel.html#ac124d3fb4690e5b369a95f49758592ca',1,'CharacterChooseLevel::draw_self()'],['../classCreditsLevel.html#af980e138ebbad6f73b3835f38ee4dfe6',1,'CreditsLevel::draw_self()'],['../classDeathMatchLevel.html#a38a915a954f5c8e8ba54c46057bc99d0',1,'DeathMatchLevel::draw_self()'],['../classMainLevel.html#aabad926cf0366de353d716065ab792ad',1,'MainLevel::draw_self()'],['../classMenuLevel.html#a62ac78a0d9ddbe89ef41b9c13f8db99f',1,'MenuLevel::draw_self()'],['../classWinnerLevel.html#a0b58acd2f2c85ce28df09260684f3180',1,'WinnerLevel::draw_self()']]]
+  ['change_5fcharacter_5fstate',['change_character_state',['../classCharacter.html#a067f09af5430da58cc9698421fb84814',1,'Character']]],
+  ['character',['Character',['../classCharacter.html#a442a1c3c8e82823ef340f078c8f4bb50',1,'Character']]],
+  ['characterchooselevel',['CharacterChooseLevel',['../classCharacterChooseLevel.html#aa72c1238bc930fd230d13b89f75f5bb3',1,'CharacterChooseLevel']]],
+  ['characterfactory',['CharacterFactory',['../classCharacterFactory.html#a0014a7de42b681ce872c728ea91bcfc1',1,'CharacterFactory']]],
+  ['characterselection',['CharacterSelection',['../classCharacterSelection.html#ac3cb2219a5eda202ecc9a17218326073',1,'CharacterSelection']]],
+  ['choose_5fsprite_5fpath',['choose_sprite_path',['../classCharacter.html#a5277e58a7a52a99a42bdb23c6295c7f1',1,'Character::choose_sprite_path()'],['../classCharacterFactory.html#ae34183113755bfceb1a2906686e999af',1,'CharacterFactory::choose_sprite_path()']]],
+  ['chosen',['chosen',['../classCharacterSelection.html#ab6f27f44a433da27c786b25b9c4945ca',1,'CharacterSelection']]],
+  ['creditslevel',['CreditsLevel',['../classCreditsLevel.html#a2516ba82d10b2eb959d03eea3df0a32c',1,'CreditsLevel']]],
+  ['current_5fselection',['current_selection',['../classCharacterSelection.html#a900358acbdbd8ee33da089014f3ab8bb',1,'CharacterSelection']]]
 ];

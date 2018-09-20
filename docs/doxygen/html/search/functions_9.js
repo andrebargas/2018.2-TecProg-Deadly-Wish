@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['set_5fcongratulations_5fstring',['set_congratulations_string',['../classWinnerLevel.html#a22e2395a8b72405050c2a321aa1fb644',1,'WinnerLevel']]],
-  ['set_5fcredits_5fstrings',['set_credits_strings',['../classCreditsLevel.html#a627849460d0ed66cfdc491fbdd313388',1,'CreditsLevel']]],
-  ['set_5fmovement_5fproperties',['set_movement_properties',['../classTranslator.html#ab61b9cc9e645f81a7b73629524c2e69e',1,'Translator']]],
-  ['set_5fplayers_5fcharacters_5fposition',['set_players_characters_position',['../classDeathMatchLevel.html#ab158f20b6f8d51254215553aa713b4cc',1,'DeathMatchLevel::set_players_characters_position()'],['../classMainLevel.html#a2e4098c0cac4f42f94b7fa6ecb14c7c7',1,'MainLevel::set_players_characters_position()']]]
+  ['next',['next',['../classCharacterChooseLevel.html#a5ec053a025429ee6c11ef2aa5ec26218',1,'CharacterChooseLevel::next()'],['../classCreditsLevel.html#ad8c392e8e0175052a4451481bddaddfe',1,'CreditsLevel::next()'],['../classDeathMatchLevel.html#a650f2b1aee68613f4b127393a7e33b08',1,'DeathMatchLevel::next()'],['../classMainLevel.html#ac5631405cb489d6ca9d90eb385c91293',1,'MainLevel::next()'],['../classMenuLevel.html#ae646a2eb4d55628aef9bd9a2e0ca66d6',1,'MenuLevel::next()'],['../classWinnerLevel.html#a927da981a2a9c97d0ff41d3a33b3457a',1,'WinnerLevel::next()']]]
 ];

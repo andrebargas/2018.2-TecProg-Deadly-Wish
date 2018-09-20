@@ -69,91 +69,111 @@ $(function() {
 <div class="title">Referência à classe Knight</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Permite que o cavaleiro tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y.  
+ <a href="classKnight.html#details">Mais...</a></p>
+
+<p><code>#include &quot;<a class="el" href="knight_8h_source.html">include/knight.h</a>&quot;</code></p>
 <div class="dynheader">
 Diagrama de heranças da classe Knight</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classKnight.png" usemap="#Knight_map" alt=""/>
   <map id="Knight_map" name="Knight_map">
-<area href="classCharacter.html" alt="Character" shape="rect" coords="137,56,264,80"/>
+<area href="classCharacter.html" title="Classe que descreve o personagem de forma geral." alt="Character" shape="rect" coords="137,56,264,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:af091272d130fbfee62b308e1059e9c5e"><td class="memItemLeft" align="right" valign="top"><a id="af091272d130fbfee62b308e1059e9c5e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Knight</b> (vector&lt; string &gt; sprite_paths, unsigned id, double x, double y, int character_code)</td></tr>
+<tr class="memitem:af091272d130fbfee62b308e1059e9c5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKnight.html#af091272d130fbfee62b308e1059e9c5e">Knight</a> (vector&lt; string &gt; sprite_paths, unsigned id, double x, double y, int <a class="el" href="classCharacter.html#a3e16e9cb23edc78d774cf30925242a8e">character_code</a>)</td></tr>
+<tr class="memdesc:af091272d130fbfee62b308e1059e9c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método Construtor.  <a href="#af091272d130fbfee62b308e1059e9c5e">Mais...</a><br /></td></tr>
 <tr class="separator:af091272d130fbfee62b308e1059e9c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classCharacter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classCharacter')"><img src="closed.png" alt="-"/>&#160;Membros públicos herdados de <a class="el" href="classCharacter.html">Character</a></td></tr>
-<tr class="memitem:a442a1c3c8e82823ef340f078c8f4bb50 inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a442a1c3c8e82823ef340f078c8f4bb50"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Character</b> (const vector&lt; string &gt; sprite_paths, unsigned id, double x, double y, int max_life, int character_code)</td></tr>
+<tr class="memitem:a442a1c3c8e82823ef340f078c8f4bb50 inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a442a1c3c8e82823ef340f078c8f4bb50">Character</a> (const vector&lt; string &gt; sprite_paths, unsigned id, double x, double y, int max_life, int <a class="el" href="classCharacter.html#a3e16e9cb23edc78d774cf30925242a8e">character_code</a>)</td></tr>
+<tr class="memdesc:a442a1c3c8e82823ef340f078c8f4bb50 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que descreve o personagem de forma geral.  <a href="classCharacter.html#a442a1c3c8e82823ef340f078c8f4bb50">Mais...</a><br /></td></tr>
 <tr class="separator:a442a1c3c8e82823ef340f078c8f4bb50 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbe9684ed82ce4b053881c1a31f2aa97 inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="adbe9684ed82ce4b053881c1a31f2aa97"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> () const</td></tr>
+<tr class="memitem:a9e9be564d05ded80962b2045aa70b3fc inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a9e9be564d05ded80962b2045aa70b3fc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a9e9be564d05ded80962b2045aa70b3fc">~Character</a> ()</td></tr>
+<tr class="memdesc:a9e9be564d05ded80962b2045aa70b3fc inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe caracter. <br /></td></tr>
+<tr class="separator:a9e9be564d05ded80962b2045aa70b3fc inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe9684ed82ce4b053881c1a31f2aa97 inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#adbe9684ed82ce4b053881c1a31f2aa97">active</a> () const</td></tr>
+<tr class="memdesc:adbe9684ed82ce4b053881c1a31f2aa97 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Métodos virtuais de colisão.  <a href="classCharacter.html#adbe9684ed82ce4b053881c1a31f2aa97">Mais...</a><br /></td></tr>
 <tr class="separator:adbe9684ed82ce4b053881c1a31f2aa97 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c09996272b771f375a9514d0c465f1 inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a73c09996272b771f375a9514d0c465f1"></a>
-const Rectangle &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>bounding_box</b> () const</td></tr>
+const Rectangle &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a73c09996272b771f375a9514d0c465f1">bounding_box</a> () const</td></tr>
+<tr class="memdesc:a73c09996272b771f375a9514d0c465f1 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delimitação do personagem. <br /></td></tr>
 <tr class="separator:a73c09996272b771f375a9514d0c465f1 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb89adb702cac9caca3178066f642443 inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="acb89adb702cac9caca3178066f642443"></a>
 const list&lt; Rectangle &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>hit_boxes</b> () const</td></tr>
 <tr class="separator:acb89adb702cac9caca3178066f642443 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9559ad61239800e744931814826ae39b inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a9559ad61239800e744931814826ae39b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>on_collision</b> (const Collidable *who, const Rectangle &amp;where, unsigned now, unsigned last)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a9559ad61239800e744931814826ae39b">on_collision</a> (const Collidable *who, const Rectangle &amp;where, unsigned now, unsigned last)</td></tr>
+<tr class="memdesc:a9559ad61239800e744931814826ae39b inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que indica que o personagem sofreu dano. <br /></td></tr>
 <tr class="separator:a9559ad61239800e744931814826ae39b inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41e5ac6f8f3b9a15d78dd92de89768af inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a41e5ac6f8f3b9a15d78dd92de89768af"></a>
-pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>direction</b> () const</td></tr>
+pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a41e5ac6f8f3b9a15d78dd92de89768af">direction</a> () const</td></tr>
+<tr class="memdesc:a41e5ac6f8f3b9a15d78dd92de89768af inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direção do personagem. <br /></td></tr>
 <tr class="separator:a41e5ac6f8f3b9a15d78dd92de89768af inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a0058d7cc922c1045f304b480a211c inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="af5a0058d7cc922c1045f304b480a211c"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>get_id</b> () const</td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#af5a0058d7cc922c1045f304b480a211c">get_id</a> () const</td></tr>
+<tr class="memdesc:af5a0058d7cc922c1045f304b480a211c inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna o identificador do personagem. <br /></td></tr>
 <tr class="separator:af5a0058d7cc922c1045f304b480a211c inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3fc9bf9dc3667f9d01b05f5e1940ae6 inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="ad3fc9bf9dc3667f9d01b05f5e1940ae6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>get_number_of_lives</b> () const</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ad3fc9bf9dc3667f9d01b05f5e1940ae6">get_number_of_lives</a> () const</td></tr>
+<tr class="memdesc:ad3fc9bf9dc3667f9d01b05f5e1940ae6 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna o número de vidas do personagem. <br /></td></tr>
 <tr class="separator:ad3fc9bf9dc3667f9d01b05f5e1940ae6 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cb413b53515a09d025fa0b3fe5a4e9f inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a4cb413b53515a09d025fa0b3fe5a4e9f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_base</b> (<a class="el" href="classBase.html">Base</a> *base)</td></tr>
+<tr class="memitem:a4cb413b53515a09d025fa0b3fe5a4e9f inherit pub_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a4cb413b53515a09d025fa0b3fe5a4e9f">set_base</a> (<a class="el" href="classBase.html">Base</a> *base)</td></tr>
+<tr class="memdesc:a4cb413b53515a09d025fa0b3fe5a4e9f inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que coloca as bases com os seus devidos personagens.  <a href="classCharacter.html#a4cb413b53515a09d025fa0b3fe5a4e9f">Mais...</a><br /></td></tr>
 <tr class="separator:a4cb413b53515a09d025fa0b3fe5a4e9f inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Membros protegidos</h2></td></tr>
 <tr class="memitem:a2bd72d822d94d0af391b66f4dce1af19"><td class="memItemLeft" align="right" valign="top"><a id="a2bd72d822d94d0af391b66f4dce1af19"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>do_heavy_attack</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKnight.html#a2bd72d822d94d0af391b66f4dce1af19">do_heavy_attack</a> ()</td></tr>
+<tr class="memdesc:a2bd72d822d94d0af391b66f4dce1af19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que executa um ataque pesado. <br /></td></tr>
 <tr class="separator:a2bd72d822d94d0af391b66f4dce1af19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e9d92f7bd099ab26854cf247915fd0f"><td class="memItemLeft" align="right" valign="top"><a id="a2e9d92f7bd099ab26854cf247915fd0f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>do_defense</b> ()</td></tr>
-<tr class="separator:a2e9d92f7bd099ab26854cf247915fd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb516eb9c6d5544a9781ff726d0f1035"><td class="memItemLeft" align="right" valign="top"><a id="abb516eb9c6d5544a9781ff726d0f1035"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>do_light_attack</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKnight.html#abb516eb9c6d5544a9781ff726d0f1035">do_light_attack</a> ()</td></tr>
+<tr class="memdesc:abb516eb9c6d5544a9781ff726d0f1035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que executa um ataque leve. <br /></td></tr>
 <tr class="separator:abb516eb9c6d5544a9781ff726d0f1035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9d92f7bd099ab26854cf247915fd0f"><td class="memItemLeft" align="right" valign="top"><a id="a2e9d92f7bd099ab26854cf247915fd0f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKnight.html#a2e9d92f7bd099ab26854cf247915fd0f">do_defense</a> ()</td></tr>
+<tr class="memdesc:a2e9d92f7bd099ab26854cf247915fd0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que executa uma defesa. <br /></td></tr>
+<tr class="separator:a2e9d92f7bd099ab26854cf247915fd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e598393444b27ffe69d0438189279a9"><td class="memItemLeft" align="right" valign="top"><a id="a0e598393444b27ffe69d0438189279a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>do_special</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKnight.html#a0e598393444b27ffe69d0438189279a9">do_special</a> ()</td></tr>
+<tr class="memdesc:a0e598393444b27ffe69d0438189279a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que executa um ataque especial. <br /></td></tr>
 <tr class="separator:a0e598393444b27ffe69d0438189279a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classCharacter"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classCharacter')"><img src="closed.png" alt="-"/>&#160;Membros protegidos herdados de <a class="el" href="classCharacter.html">Character</a></td></tr>
-<tr class="memitem:a067f09af5430da58cc9698421fb84814 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a067f09af5430da58cc9698421fb84814"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>change_character_state</b> (State next_state, bool respawning=false)</td></tr>
+<tr class="memitem:a067f09af5430da58cc9698421fb84814 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a067f09af5430da58cc9698421fb84814">change_character_state</a> (State next_state, bool respawning=false)</td></tr>
+<tr class="memdesc:a067f09af5430da58cc9698421fb84814 inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Métodos protegidos.  <a href="classCharacter.html#a067f09af5430da58cc9698421fb84814">Mais...</a><br /></td></tr>
 <tr class="separator:a067f09af5430da58cc9698421fb84814 inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2edbbba1c9e07eece34c25f651e364d9 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a2edbbba1c9e07eece34c25f651e364d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>handle_state</b> ()</td></tr>
+<tr class="memitem:a2edbbba1c9e07eece34c25f651e364d9 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a2edbbba1c9e07eece34c25f651e364d9">handle_state</a> ()</td></tr>
+<tr class="memdesc:a2edbbba1c9e07eece34c25f651e364d9 inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que trata o estado.  <a href="classCharacter.html#a2edbbba1c9e07eece34c25f651e364d9">Mais...</a><br /></td></tr>
 <tr class="separator:a2edbbba1c9e07eece34c25f651e364d9 inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75f825ad6509fa1601d2e2bc2ac04b3c inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a75f825ad6509fa1601d2e2bc2ac04b3c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_spawn_position</b> ()</td></tr>
+<tr class="memitem:a75f825ad6509fa1601d2e2bc2ac04b3c inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a75f825ad6509fa1601d2e2bc2ac04b3c">set_spawn_position</a> ()</td></tr>
+<tr class="memdesc:a75f825ad6509fa1601d2e2bc2ac04b3c inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que define onde o personagem irá ser "desovado".  <a href="classCharacter.html#a75f825ad6509fa1601d2e2bc2ac04b3c">Mais...</a><br /></td></tr>
 <tr class="separator:a75f825ad6509fa1601d2e2bc2ac04b3c inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc90256ef2253670aee9def34f700247 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="afc90256ef2253670aee9def34f700247"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>respawn_character</b> ()</td></tr>
+<tr class="memitem:afc90256ef2253670aee9def34f700247 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#afc90256ef2253670aee9def34f700247">respawn_character</a> ()</td></tr>
+<tr class="memdesc:afc90256ef2253670aee9def34f700247 inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que permite o reaparecimento do personagem.  <a href="classCharacter.html#afc90256ef2253670aee9def34f700247">Mais...</a><br /></td></tr>
 <tr class="separator:afc90256ef2253670aee9def34f700247 inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb0d4f9c0ebbc0f9b19cb0a1f4b20df7 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="adb0d4f9c0ebbc0f9b19cb0a1f4b20df7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>kill_character</b> ()</td></tr>
+<tr class="memitem:adb0d4f9c0ebbc0f9b19cb0a1f4b20df7 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#adb0d4f9c0ebbc0f9b19cb0a1f4b20df7">kill_character</a> ()</td></tr>
+<tr class="memdesc:adb0d4f9c0ebbc0f9b19cb0a1f4b20df7 inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que define se o personagem foi morto.  <a href="classCharacter.html#adb0d4f9c0ebbc0f9b19cb0a1f4b20df7">Mais...</a><br /></td></tr>
 <tr class="separator:adb0d4f9c0ebbc0f9b19cb0a1f4b20df7 inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5277e58a7a52a99a42bdb23c6295c7f1 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a5277e58a7a52a99a42bdb23c6295c7f1"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>choose_sprite_path</b> (unsigned player_id)</td></tr>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a5277e58a7a52a99a42bdb23c6295c7f1">choose_sprite_path</a> (unsigned player_id)</td></tr>
+<tr class="memdesc:a5277e58a7a52a99a42bdb23c6295c7f1 inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pacote que desenha o personagem. <br /></td></tr>
 <tr class="separator:a5277e58a7a52a99a42bdb23c6295c7f1 inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d3a1ad2ceba203bf72584c4c4029d7 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a92d3a1ad2ceba203bf72584c4c4029d7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>on_event</b> (const GameEvent &amp;event)</td></tr>
+<tr class="memitem:a92d3a1ad2ceba203bf72584c4c4029d7 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a92d3a1ad2ceba203bf72584c4c4029d7">on_event</a> (const GameEvent &amp;event)</td></tr>
+<tr class="memdesc:a92d3a1ad2ceba203bf72584c4c4029d7 inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna os eventos em geral.  <a href="classCharacter.html#a92d3a1ad2ceba203bf72584c4c4029d7">Mais...</a><br /></td></tr>
 <tr class="separator:a92d3a1ad2ceba203bf72584c4c4029d7 inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94242f85f3afb3f12dd92e02797345bd inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a94242f85f3afb3f12dd92e02797345bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update_self</b> (unsigned now, unsigned last)</td></tr>
+<tr class="memitem:a94242f85f3afb3f12dd92e02797345bd inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a94242f85f3afb3f12dd92e02797345bd">update_self</a> (unsigned now, unsigned last)</td></tr>
+<tr class="memdesc:a94242f85f3afb3f12dd92e02797345bd inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Métodos virtual de gameobject.  <a href="classCharacter.html#a94242f85f3afb3f12dd92e02797345bd">Mais...</a><br /></td></tr>
 <tr class="separator:a94242f85f3afb3f12dd92e02797345bd inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80d2f8164974c6a5b8a3c144508ec4a1 inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a80d2f8164974c6a5b8a3c144508ec4a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_self</b> (Canvas *canvas, unsigned now, unsigned last)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a80d2f8164974c6a5b8a3c144508ec4a1">draw_self</a> (Canvas *canvas, unsigned now, unsigned last)</td></tr>
+<tr class="memdesc:a80d2f8164974c6a5b8a3c144508ec4a1 inherit pro_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Métodos virtual de gameobject. <br /></td></tr>
 <tr class="separator:a80d2f8164974c6a5b8a3c144508ec4a1 inherit pro_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a990779ce4c7baf305b9f04ba831a1f0f inherit pro_methods_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a990779ce4c7baf305b9f04ba831a1f0f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update_position</b> (const unsigned &amp;now, const unsigned &amp;last, bool backwards=false)</td></tr>
@@ -162,88 +182,108 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update_position</b> (
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Outros membros herdados</h2></td></tr>
 <tr class="inherit_header pub_types_classCharacter"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classCharacter')"><img src="closed.png" alt="-"/>&#160;Tipos Públicos herdados de <a class="el" href="classCharacter.html">Character</a></td></tr>
-<tr class="memitem:abf5e238c65ecb4480e6e5389e011a4d6 inherit pub_types_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="abf5e238c65ecb4480e6e5389e011a4d6"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>KNIGHT</b>, 
-<b>SOLDIER</b>, 
-<b>MAGE</b>, 
-<b>INFILTRATOR</b>
+<tr class="memitem:abf5e238c65ecb4480e6e5389e011a4d6 inherit pub_types_classCharacter"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classCharacter.html#abf5e238c65ecb4480e6e5389e011a4d6a4c05690850d83fdb1d057ad29d42f35f">KNIGHT</a>, 
+<a class="el" href="classCharacter.html#abf5e238c65ecb4480e6e5389e011a4d6a557690dabe1c727cd460f566392bcd52">SOLDIER</a>, 
+<a class="el" href="classCharacter.html#abf5e238c65ecb4480e6e5389e011a4d6a798a2f1139be446bf9ac3b564bbb66b2">MAGE</a>, 
+<a class="el" href="classCharacter.html#abf5e238c65ecb4480e6e5389e011a4d6a5ac869d197700fcb054039e61bd018a7">INFILTRATOR</a>
  }</td></tr>
+<tr class="memdesc:abf5e238c65ecb4480e6e5389e011a4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerado com os possiveis personagens.  <a href="classCharacter.html#abf5e238c65ecb4480e6e5389e011a4d6">Mais...</a><br /></td></tr>
 <tr class="separator:abf5e238c65ecb4480e6e5389e011a4d6 inherit pub_types_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3319cdd6aad27544714551aba4d4075 inherit pub_types_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="ad3319cdd6aad27544714551aba4d4075"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<b>START_MOVING_DOWN</b>, 
-<b>START_MOVING_LEFT</b>, 
-<b>START_MOVING_RIGHT</b>, 
-<b>START_MOVING_UP</b>, 
+<tr class="memitem:ad3319cdd6aad27544714551aba4d4075 inherit pub_types_classCharacter"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a8b229b001ae48d9b1b1101fdfca55315">START_MOVING_DOWN</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a0fe87e8fac0a383a115b6def47886060">START_MOVING_LEFT</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a680d0f3faacc9809d26814095fdc16a5">START_MOVING_RIGHT</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a8c28f2fe5437653a152fcf7d05e8408e">START_MOVING_UP</a>, 
 <br />
-&#160;&#160;<b>STOP_MOVING_DOWN</b>, 
-<b>STOP_MOVING_LEFT</b>, 
-<b>STOP_MOVING_RIGHT</b>, 
-<b>STOP_MOVING_UP</b>, 
+&#160;&#160;<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075ada78cf5fafffc4b9b4d52b407d05d5ec">STOP_MOVING_DOWN</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a1bee0af8ff8537623a9bcdfcc053100d">STOP_MOVING_LEFT</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a1b90f2cce994a938c0f08b9e5b28f016">STOP_MOVING_RIGHT</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075aed71f164071945f1fdd84d6c7dc6a275">STOP_MOVING_UP</a>, 
 <br />
-&#160;&#160;<b>LIGHT_ATTACK</b>, 
-<b>HEAVY_ATTACK</b>, 
-<b>DEFENSE</b>, 
-<b>SPECIAL</b>, 
+&#160;&#160;<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a94d3ddfe3e59580c03c53d23d85e4b87">LIGHT_ATTACK</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a22bda09ef67ff4216d903dc299825338">HEAVY_ATTACK</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a256cf6241374b6dcbe2ce2e36f56697c">DEFENSE</a>, 
+<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075aaf0d6f63e463f5fd69bb6d389e6aec05">SPECIAL</a>, 
 <br />
-&#160;&#160;<b>NUMBER_OF_CHARACTER_EVENTS</b>
+&#160;&#160;<a class="el" href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075a3f8d7b0e4966a38cfb691824bf4d4b2e">NUMBER_OF_CHARACTER_EVENTS</a>
 <br />
  }</td></tr>
+<tr class="memdesc:ad3319cdd6aad27544714551aba4d4075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerado com os possiveis eventos.  <a href="classCharacter.html#ad3319cdd6aad27544714551aba4d4075">Mais...</a><br /></td></tr>
 <tr class="separator:ad3319cdd6aad27544714551aba4d4075 inherit pub_types_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_classCharacter"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classCharacter')"><img src="closed.png" alt="-"/>&#160;Tipos Protegidos herdados de <a class="el" href="classCharacter.html">Character</a></td></tr>
-<tr class="memitem:afbe3b1ceb8e8463b3b66964080149c30 inherit pro_types_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="afbe3b1ceb8e8463b3b66964080149c30"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MovingState</b> { <b>MOVING_RIGHT</b>, 
-<b>MOVING_LEFT</b>
+<tr class="memitem:afbe3b1ceb8e8463b3b66964080149c30 inherit pro_types_classCharacter"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#afbe3b1ceb8e8463b3b66964080149c30">MovingState</a> { <b>MOVING_RIGHT</b>, 
+<a class="el" href="classCharacter.html#afbe3b1ceb8e8463b3b66964080149c30a69693b1dd7704b911fcc556b58e7562d">MOVING_LEFT</a>
  }</td></tr>
+<tr class="memdesc:afbe3b1ceb8e8463b3b66964080149c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enuemrado que define o tipo de movimento.  <a href="classCharacter.html#afbe3b1ceb8e8463b3b66964080149c30">Mais...</a><br /></td></tr>
 <tr class="separator:afbe3b1ceb8e8463b3b66964080149c30 inherit pro_types_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classCharacter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classCharacter')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos herdados de <a class="el" href="classCharacter.html">Character</a></td></tr>
 <tr class="memitem:afebf14960658d88bd70df4f55de3d334 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="afebf14960658d88bd70df4f55de3d334"></a>
-<a class="el" href="classMovingState.html">MovingState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>character_moving_state</b></td></tr>
+<a class="el" href="classCharacter.html#afbe3b1ceb8e8463b3b66964080149c30">MovingState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#afebf14960658d88bd70df4f55de3d334">character_moving_state</a></td></tr>
+<tr class="memdesc:afebf14960658d88bd70df4f55de3d334 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estado do movimento do personagem. <br /></td></tr>
 <tr class="separator:afebf14960658d88bd70df4f55de3d334 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35427d8eb8464ae90149e31262f4dc57 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a35427d8eb8464ae90149e31262f4dc57"></a>
-<a class="el" href="classCharacterState.html">CharacterState</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>character_state</b></td></tr>
+<a class="el" href="classCharacterState.html">CharacterState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a35427d8eb8464ae90149e31262f4dc57">character_state</a></td></tr>
+<tr class="memdesc:a35427d8eb8464ae90149e31262f4dc57 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estado do personagem. <br /></td></tr>
 <tr class="separator:a35427d8eb8464ae90149e31262f4dc57 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa98c4b7a857fdb408cb790fdc1dd33b7 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="aa98c4b7a857fdb408cb790fdc1dd33b7"></a>
-<a class="el" href="classCharacterStateFactory.html">CharacterStateFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>new_character_state_factory</b></td></tr>
+<a class="el" href="classCharacterStateFactory.html">CharacterStateFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#aa98c4b7a857fdb408cb790fdc1dd33b7">new_character_state_factory</a></td></tr>
+<tr class="memdesc:aa98c4b7a857fdb408cb790fdc1dd33b7 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construindo o personagem. <br /></td></tr>
 <tr class="separator:aa98c4b7a857fdb408cb790fdc1dd33b7 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb93cf49560055ead552c5094a54184c inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="acb93cf49560055ead552c5094a54184c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>character_active</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#acb93cf49560055ead552c5094a54184c">character_active</a></td></tr>
+<tr class="memdesc:acb93cf49560055ead552c5094a54184c inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica se o personagem esta ativo <br /></td></tr>
 <tr class="separator:acb93cf49560055ead552c5094a54184c inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac967fe6670f51494ed141c54e20b1572 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="ac967fe6670f51494ed141c54e20b1572"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>character_id</b></td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ac967fe6670f51494ed141c54e20b1572">character_id</a></td></tr>
+<tr class="memdesc:ac967fe6670f51494ed141c54e20b1572 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que serve para identificador do personagem <br /></td></tr>
 <tr class="separator:ac967fe6670f51494ed141c54e20b1572 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f4be8102c8557a93b67b8fac9679dd8 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a2f4be8102c8557a93b67b8fac9679dd8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_max_life</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a2f4be8102c8557a93b67b8fac9679dd8">character_max_life</a></td></tr>
+<tr class="memdesc:a2f4be8102c8557a93b67b8fac9679dd8 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica vida maxima de cada personagem <br /></td></tr>
 <tr class="separator:a2f4be8102c8557a93b67b8fac9679dd8 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e29776ad32bfcf2ca55838f00d29933 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a0e29776ad32bfcf2ca55838f00d29933"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_current_life</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a0e29776ad32bfcf2ca55838f00d29933">character_current_life</a></td></tr>
+<tr class="memdesc:a0e29776ad32bfcf2ca55838f00d29933 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica a vida atual de cada personagem <br /></td></tr>
 <tr class="separator:a0e29776ad32bfcf2ca55838f00d29933 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b1ccac564ac16935cb22a82e62bc27 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a46b1ccac564ac16935cb22a82e62bc27"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_number_of_lives</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a46b1ccac564ac16935cb22a82e62bc27">character_number_of_lives</a></td></tr>
+<tr class="memdesc:a46b1ccac564ac16935cb22a82e62bc27 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica o número de vidas <br /></td></tr>
 <tr class="separator:a46b1ccac564ac16935cb22a82e62bc27 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf140a8993f2a10b77ebf3415460f48b inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="adf140a8993f2a10b77ebf3415460f48b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_frame</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#adf140a8993f2a10b77ebf3415460f48b">character_frame</a></td></tr>
+<tr class="memdesc:adf140a8993f2a10b77ebf3415460f48b inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica frame do personagem <br /></td></tr>
 <tr class="separator:adf140a8993f2a10b77ebf3415460f48b inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52bd80f30b5a19bae445d2566819704b inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a52bd80f30b5a19bae445d2566819704b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_start</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a52bd80f30b5a19bae445d2566819704b">character_start</a></td></tr>
+<tr class="memdesc:a52bd80f30b5a19bae445d2566819704b inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica que o Personagem foi iniciado <br /></td></tr>
 <tr class="separator:a52bd80f30b5a19bae445d2566819704b inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ede7c049b28ca40d1b35c0e14cc1c66 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a8ede7c049b28ca40d1b35c0e14cc1c66"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_width</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a8ede7c049b28ca40d1b35c0e14cc1c66">character_width</a></td></tr>
+<tr class="memdesc:a8ede7c049b28ca40d1b35c0e14cc1c66 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica a largura do personagem <br /></td></tr>
 <tr class="separator:a8ede7c049b28ca40d1b35c0e14cc1c66 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41926aae9cdfda3730ee7c1a334b0572 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a41926aae9cdfda3730ee7c1a334b0572"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_height</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a41926aae9cdfda3730ee7c1a334b0572">character_height</a></td></tr>
+<tr class="memdesc:a41926aae9cdfda3730ee7c1a334b0572 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica a altura do personagem <br /></td></tr>
 <tr class="separator:a41926aae9cdfda3730ee7c1a334b0572 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf1d7cdaa318adeb9cee6edfe919cb8c inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="abf1d7cdaa318adeb9cee6edfe919cb8c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_heavy_attack_cooldown</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#abf1d7cdaa318adeb9cee6edfe919cb8c">character_heavy_attack_cooldown</a></td></tr>
+<tr class="memdesc:abf1d7cdaa318adeb9cee6edfe919cb8c inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica o ataque pesado do personagem <br /></td></tr>
 <tr class="separator:abf1d7cdaa318adeb9cee6edfe919cb8c inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8e1c9ff525068d6f479b690af1ab09 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a7b8e1c9ff525068d6f479b690af1ab09"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_light_attack_cooldown</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a7b8e1c9ff525068d6f479b690af1ab09">character_light_attack_cooldown</a></td></tr>
+<tr class="memdesc:a7b8e1c9ff525068d6f479b690af1ab09 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica ataque leve do personagem <br /></td></tr>
 <tr class="separator:a7b8e1c9ff525068d6f479b690af1ab09 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abab76567fdafbc8c185ff5d83d516e76 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="abab76567fdafbc8c185ff5d83d516e76"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_defense_cooldown</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#abab76567fdafbc8c185ff5d83d516e76">character_defense_cooldown</a></td></tr>
+<tr class="memdesc:abab76567fdafbc8c185ff5d83d516e76 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica defesa do personagem <br /></td></tr>
 <tr class="separator:abab76567fdafbc8c185ff5d83d516e76 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9746df15f2ed60b63577055d0c77b534 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a9746df15f2ed60b63577055d0c77b534"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_special_cooldown</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a9746df15f2ed60b63577055d0c77b534">character_special_cooldown</a></td></tr>
+<tr class="memdesc:a9746df15f2ed60b63577055d0c77b534 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica ataque especial do personangem <br /></td></tr>
 <tr class="separator:a9746df15f2ed60b63577055d0c77b534 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44cde6bc401f387f821d574a31d3bd23 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a44cde6bc401f387f821d574a31d3bd23"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_last_used_heavy_attack</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a44cde6bc401f387f821d574a31d3bd23">character_last_used_heavy_attack</a></td></tr>
+<tr class="memdesc:a44cde6bc401f387f821d574a31d3bd23 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica o ultimo uso dos ataques e defesas <br /></td></tr>
 <tr class="separator:a44cde6bc401f387f821d574a31d3bd23 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279b7d863c09ae1c6df3aac72db2ca24 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a279b7d863c09ae1c6df3aac72db2ca24"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>character_last_used_light_attack</b></td></tr>
@@ -255,31 +295,40 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>character_last_used_de
 int&#160;</td><td class="memItemRight" valign="bottom"><b>character_last_used_special</b></td></tr>
 <tr class="separator:a860b333991b5e12062cfafd164588719 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87615038725b126168eaf4f47fd60836 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a87615038725b126168eaf4f47fd60836"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_respawn_time</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a87615038725b126168eaf4f47fd60836">character_respawn_time</a></td></tr>
+<tr class="memdesc:a87615038725b126168eaf4f47fd60836 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica o tempo de reaparecimento <br /></td></tr>
 <tr class="separator:a87615038725b126168eaf4f47fd60836 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e16e9cb23edc78d774cf30925242a8e inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a3e16e9cb23edc78d774cf30925242a8e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_code</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a3e16e9cb23edc78d774cf30925242a8e">character_code</a></td></tr>
+<tr class="memdesc:a3e16e9cb23edc78d774cf30925242a8e inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica codigo do personagem <br /></td></tr>
 <tr class="separator:a3e16e9cb23edc78d774cf30925242a8e inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fdf09c04765a29d63a1e92620c312bb inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a8fdf09c04765a29d63a1e92620c312bb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>character_last_sound_played</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a8fdf09c04765a29d63a1e92620c312bb">character_last_sound_played</a></td></tr>
+<tr class="memdesc:a8fdf09c04765a29d63a1e92620c312bb inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica o último som que foi tocado <br /></td></tr>
 <tr class="separator:a8fdf09c04765a29d63a1e92620c312bb inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2a4dbff5a815b1149d827d56c87a3ca inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="ad2a4dbff5a815b1149d827d56c87a3ca"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>character_freeze</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ad2a4dbff5a815b1149d827d56c87a3ca">character_freeze</a></td></tr>
+<tr class="memdesc:ad2a4dbff5a815b1149d827d56c87a3ca inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica o congelamento do personagem <br /></td></tr>
 <tr class="separator:ad2a4dbff5a815b1149d827d56c87a3ca inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36146a3072561cf6774cf7585c23a686 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a36146a3072561cf6774cf7585c23a686"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>character_dead</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a36146a3072561cf6774cf7585c23a686">character_dead</a></td></tr>
+<tr class="memdesc:a36146a3072561cf6774cf7585c23a686 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">personagem vivo ou morto <br /></td></tr>
 <tr class="separator:a36146a3072561cf6774cf7585c23a686 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5007dcc89bd0ada538659d13c6db8aae inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a5007dcc89bd0ada538659d13c6db8aae"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>character_axis_x_speed</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a5007dcc89bd0ada538659d13c6db8aae">character_axis_x_speed</a></td></tr>
+<tr class="memdesc:a5007dcc89bd0ada538659d13c6db8aae inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">velocidade no eixo x <br /></td></tr>
 <tr class="separator:a5007dcc89bd0ada538659d13c6db8aae inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2166b91a2e1de6360857187e8573823a inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a2166b91a2e1de6360857187e8573823a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>character_axis_y_speed</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a2166b91a2e1de6360857187e8573823a">character_axis_y_speed</a></td></tr>
+<tr class="memdesc:a2166b91a2e1de6360857187e8573823a inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">velocidade no eixo y <br /></td></tr>
 <tr class="separator:a2166b91a2e1de6360857187e8573823a inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad18353901814799f84c2f593cb5d672b inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="ad18353901814799f84c2f593cb5d672b"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>character_speed</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ad18353901814799f84c2f593cb5d672b">character_speed</a></td></tr>
+<tr class="memdesc:ad18353901814799f84c2f593cb5d672b inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica a velocidade do personagem <br /></td></tr>
 <tr class="separator:ad18353901814799f84c2f593cb5d672b inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a4394e283406c8fe024adc9b30e2471 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a6a4394e283406c8fe024adc9b30e2471"></a>
-<a class="el" href="classBase.html">Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>character_base</b></td></tr>
+<a class="el" href="classBase.html">Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a6a4394e283406c8fe024adc9b30e2471">character_base</a></td></tr>
+<tr class="memdesc:a6a4394e283406c8fe024adc9b30e2471 inherit pro_attribs_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">variável que indica base do personagem <br /></td></tr>
 <tr class="separator:a6a4394e283406c8fe024adc9b30e2471 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a142cb14d15395eeb4d70c8a23ad49424 inherit pro_attribs_classCharacter"><td class="memItemLeft" align="right" valign="top"><a id="a142cb14d15395eeb4d70c8a23ad49424"></a>
 vector&lt; shared_ptr&lt; Texture &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>character_textures</b></td></tr>
@@ -294,9 +343,78 @@ Rectangle&#160;</td><td class="memItemRight" valign="bottom"><b>character_boundi
 vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>character_sprite_paths</b></td></tr>
 <tr class="separator:a0f9aee064038c86932ebb44ef8f98d7d inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p class="">Permite que o cavaleiro tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y. </p>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="af091272d130fbfee62b308e1059e9c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af091272d130fbfee62b308e1059e9c5e">&#9670;&nbsp;</a></span>Knight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Knight::Knight </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>sprite_paths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>character_code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método Construtor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite_paths</td><td>- desenha personagem </td></tr>
+    <tr><td class="paramname">id</td><td>- identificador do personagem </td></tr>
+    <tr><td class="paramname">x</td><td>- posição no eixo x </td></tr>
+    <tr><td class="paramname">y</td><td>- posição no eixo y </td></tr>
+    <tr><td class="paramname">character_code</td><td>- codigo do personagem </td></tr>
+  </table>
+  </dd>
+</dl>
+<p class="">Poder de ataque especial - 5000</p>
+<p class="">Poder de ataque heavy_atack - 2000</p>
+<p class="">Poder de ataque ligth_atack - 300</p>
+<p class="">Poder de defesa - 300</p>
+<p class="">Último uso do heavy_atack</p>
+<p class="">Último uso do light_atack</p>
+<p class="">ÚLtimo uso da defesa</p>
+<p class="">Indica que o peronsagem esta ativo </p>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/<a class="el" href="knight_8h_source.html">knight.h</a></li>
-<li>src/knight.cpp</li>
+<li>src/<a class="el" href="knight_8cpp.html">knight.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

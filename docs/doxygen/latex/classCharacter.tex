@@ -1,5 +1,14 @@
 \hypertarget{classCharacter}{}\section{Referência à classe Character}
 \label{classCharacter}\index{Character@{Character}}
+
+
+Classe que descreve o personagem de forma geral.  
+
+
+
+
+{\ttfamily \#include $<$character.\+h$>$}
+
 Diagrama de heranças da classe Character\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,113 +18,103 @@ Diagrama de heranças da classe Character\begin{figure}[H]
 \subsection*{Tipos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6}\label{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6}} 
-enum \{ {\bfseries K\+N\+I\+G\+HT}, 
-{\bfseries S\+O\+L\+D\+I\+ER}, 
-{\bfseries M\+A\+GE}, 
-{\bfseries I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}
+enum \{ \mbox{\hyperlink{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a4c05690850d83fdb1d057ad29d42f35f}{K\+N\+I\+G\+HT}}, 
+\mbox{\hyperlink{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a557690dabe1c727cd460f566392bcd52}{S\+O\+L\+D\+I\+ER}}, 
+\mbox{\hyperlink{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a798a2f1139be446bf9ac3b564bbb66b2}{M\+A\+GE}}, 
+\mbox{\hyperlink{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a5ac869d197700fcb054039e61bd018a7}{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}}
  \}
-\item 
-\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075}} 
+\begin{DoxyCompactList}\small\item\em Enumerado com os possiveis personagens. \end{DoxyCompactList}\item 
 enum \{ \newline
-{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}, 
-{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
-{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}, 
-{\bfseries S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a8b229b001ae48d9b1b1101fdfca55315}{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a0fe87e8fac0a383a115b6def47886060}{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a680d0f3faacc9809d26814095fdc16a5}{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a8c28f2fe5437653a152fcf7d05e8408e}{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}}, 
 \newline
-{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}, 
-{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
-{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}, 
-{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075ada78cf5fafffc4b9b4d52b407d05d5ec}{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a1bee0af8ff8537623a9bcdfcc053100d}{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a1b90f2cce994a938c0f08b9e5b28f016}{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075aed71f164071945f1fdd84d6c7dc6a275}{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}}, 
 \newline
-{\bfseries L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK}, 
-{\bfseries H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK}, 
-{\bfseries D\+E\+F\+E\+N\+SE}, 
-{\bfseries S\+P\+E\+C\+I\+AL}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a94d3ddfe3e59580c03c53d23d85e4b87}{L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a22bda09ef67ff4216d903dc299825338}{H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a256cf6241374b6dcbe2ce2e36f56697c}{D\+E\+F\+E\+N\+SE}}, 
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075aaf0d6f63e463f5fd69bb6d389e6aec05}{S\+P\+E\+C\+I\+AL}}, 
 \newline
-{\bfseries N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS}
+\mbox{\hyperlink{classCharacter_ad3319cdd6aad27544714551aba4d4075a3f8d7b0e4966a38cfb691824bf4d4b2e}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enumerado com os possiveis eventos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacter_a442a1c3c8e82823ef340f078c8f4bb50}\label{classCharacter_a442a1c3c8e82823ef340f078c8f4bb50}} 
-{\bfseries Character} (const vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int max\+\_\+life, int character\+\_\+code)
-\item 
-\mbox{\Hypertarget{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}\label{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}} 
-virtual bool {\bfseries active} () const
-\item 
+\mbox{\hyperlink{classCharacter_a442a1c3c8e82823ef340f078c8f4bb50}{Character}} (const vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int max\+\_\+life, int \mbox{\hyperlink{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}{character\+\_\+code}})
+\begin{DoxyCompactList}\small\item\em Classe que descreve o personagem de forma geral. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCharacter_a9e9be564d05ded80962b2045aa70b3fc}\label{classCharacter_a9e9be564d05ded80962b2045aa70b3fc}} 
+\mbox{\hyperlink{classCharacter_a9e9be564d05ded80962b2045aa70b3fc}{$\sim$\+Character}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe caracter. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}{active}} () const
+\begin{DoxyCompactList}\small\item\em Métodos virtuais de colisão. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a73c09996272b771f375a9514d0c465f1}\label{classCharacter_a73c09996272b771f375a9514d0c465f1}} 
-const Rectangle \& {\bfseries bounding\+\_\+box} () const
-\item 
+const Rectangle \& \mbox{\hyperlink{classCharacter_a73c09996272b771f375a9514d0c465f1}{bounding\+\_\+box}} () const
+\begin{DoxyCompactList}\small\item\em Delimitação do personagem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_acb89adb702cac9caca3178066f642443}\label{classCharacter_acb89adb702cac9caca3178066f642443}} 
 const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
 \item 
 \mbox{\Hypertarget{classCharacter_a9559ad61239800e744931814826ae39b}\label{classCharacter_a9559ad61239800e744931814826ae39b}} 
-void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
-\item 
+void \mbox{\hyperlink{classCharacter_a9559ad61239800e744931814826ae39b}{on\+\_\+collision}} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método que indica que o personagem sofreu dano. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a41e5ac6f8f3b9a15d78dd92de89768af}\label{classCharacter_a41e5ac6f8f3b9a15d78dd92de89768af}} 
-pair$<$ double, double $>$ {\bfseries direction} () const
-\item 
+pair$<$ double, double $>$ \mbox{\hyperlink{classCharacter_a41e5ac6f8f3b9a15d78dd92de89768af}{direction}} () const
+\begin{DoxyCompactList}\small\item\em Direção do personagem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_af5a0058d7cc922c1045f304b480a211c}\label{classCharacter_af5a0058d7cc922c1045f304b480a211c}} 
-unsigned {\bfseries get\+\_\+id} () const
-\item 
+unsigned \mbox{\hyperlink{classCharacter_af5a0058d7cc922c1045f304b480a211c}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna o identificador do personagem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_ad3fc9bf9dc3667f9d01b05f5e1940ae6}\label{classCharacter_ad3fc9bf9dc3667f9d01b05f5e1940ae6}} 
-int {\bfseries get\+\_\+number\+\_\+of\+\_\+lives} () const
-\item 
-\mbox{\Hypertarget{classCharacter_a4cb413b53515a09d025fa0b3fe5a4e9f}\label{classCharacter_a4cb413b53515a09d025fa0b3fe5a4e9f}} 
-void {\bfseries set\+\_\+base} (\mbox{\hyperlink{classBase}{Base}} $\ast$base)
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{classCharacter_ad3fc9bf9dc3667f9d01b05f5e1940ae6}{get\+\_\+number\+\_\+of\+\_\+lives}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna o número de vidas do personagem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a4cb413b53515a09d025fa0b3fe5a4e9f}{set\+\_\+base}} (\mbox{\hyperlink{classBase}{Base}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Método que coloca as bases com os seus devidos personagens. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Tipos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}\label{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}} 
-enum {\bfseries Moving\+State} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}, 
-{\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}
+enum \mbox{\hyperlink{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}{Moving\+State}} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}, 
+\mbox{\hyperlink{classCharacter_afbe3b1ceb8e8463b3b66964080149c30a69693b1dd7704b911fcc556b58e7562d}{M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enuemrado que define o tipo de movimento. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacter_a067f09af5430da58cc9698421fb84814}\label{classCharacter_a067f09af5430da58cc9698421fb84814}} 
-void {\bfseries change\+\_\+character\+\_\+state} (State next\+\_\+state, bool respawning=false)
-\item 
-\mbox{\Hypertarget{classCharacter_a2edbbba1c9e07eece34c25f651e364d9}\label{classCharacter_a2edbbba1c9e07eece34c25f651e364d9}} 
-void {\bfseries handle\+\_\+state} ()
-\item 
-\mbox{\Hypertarget{classCharacter_a75f825ad6509fa1601d2e2bc2ac04b3c}\label{classCharacter_a75f825ad6509fa1601d2e2bc2ac04b3c}} 
-void {\bfseries set\+\_\+spawn\+\_\+position} ()
-\item 
-\mbox{\Hypertarget{classCharacter_afc90256ef2253670aee9def34f700247}\label{classCharacter_afc90256ef2253670aee9def34f700247}} 
-void {\bfseries respawn\+\_\+character} ()
-\item 
-\mbox{\Hypertarget{classCharacter_adb0d4f9c0ebbc0f9b19cb0a1f4b20df7}\label{classCharacter_adb0d4f9c0ebbc0f9b19cb0a1f4b20df7}} 
-void {\bfseries kill\+\_\+character} ()
-\item 
+void \mbox{\hyperlink{classCharacter_a067f09af5430da58cc9698421fb84814}{change\+\_\+character\+\_\+state}} (State next\+\_\+state, bool respawning=false)
+\begin{DoxyCompactList}\small\item\em Métodos protegidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a2edbbba1c9e07eece34c25f651e364d9}{handle\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Método que trata o estado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a75f825ad6509fa1601d2e2bc2ac04b3c}{set\+\_\+spawn\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Método que define onde o personagem irá ser \char`\"{}desovado\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_afc90256ef2253670aee9def34f700247}{respawn\+\_\+character}} ()
+\begin{DoxyCompactList}\small\item\em Método que permite o reaparecimento do personagem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_adb0d4f9c0ebbc0f9b19cb0a1f4b20df7}{kill\+\_\+character}} ()
+\begin{DoxyCompactList}\small\item\em Método que define se o personagem foi morto. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a5277e58a7a52a99a42bdb23c6295c7f1}\label{classCharacter_a5277e58a7a52a99a42bdb23c6295c7f1}} 
-string {\bfseries choose\+\_\+sprite\+\_\+path} (unsigned player\+\_\+id)
-\item 
-\mbox{\Hypertarget{classCharacter_a92d3a1ad2ceba203bf72584c4c4029d7}\label{classCharacter_a92d3a1ad2ceba203bf72584c4c4029d7}} 
-bool {\bfseries on\+\_\+event} (const Game\+Event \&event)
-\item 
+string \mbox{\hyperlink{classCharacter_a5277e58a7a52a99a42bdb23c6295c7f1}{choose\+\_\+sprite\+\_\+path}} (unsigned player\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Pacote que desenha o personagem. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCharacter_a92d3a1ad2ceba203bf72584c4c4029d7}{on\+\_\+event}} (const Game\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Método que retorna os eventos em geral. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_aa9b20c9c53393c7aaf3a45e5c966c2ef}\label{classCharacter_aa9b20c9c53393c7aaf3a45e5c966c2ef}} 
-virtual void {\bfseries do\+\_\+heavy\+\_\+attack} ()=0
-\item 
+virtual void \mbox{\hyperlink{classCharacter_aa9b20c9c53393c7aaf3a45e5c966c2ef}{do\+\_\+heavy\+\_\+attack}} ()=0
+\begin{DoxyCompactList}\small\item\em Método virtual do ataque especial. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_ae45be8b8b1a7d2f54a2349a65e2e6c42}\label{classCharacter_ae45be8b8b1a7d2f54a2349a65e2e6c42}} 
-virtual void {\bfseries do\+\_\+light\+\_\+attack} ()=0
-\item 
+virtual void \mbox{\hyperlink{classCharacter_ae45be8b8b1a7d2f54a2349a65e2e6c42}{do\+\_\+light\+\_\+attack}} ()=0
+\begin{DoxyCompactList}\small\item\em Método virtual do ataque ligth\+\_\+atack. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_ad8a87c4397e38fd4bd88c93a3d3cb70a}\label{classCharacter_ad8a87c4397e38fd4bd88c93a3d3cb70a}} 
-virtual void {\bfseries do\+\_\+defense} ()=0
-\item 
+virtual void \mbox{\hyperlink{classCharacter_ad8a87c4397e38fd4bd88c93a3d3cb70a}{do\+\_\+defense}} ()=0
+\begin{DoxyCompactList}\small\item\em Método virtual da defesa. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a447eb9fa4afa57619d6387e0ea178f93}\label{classCharacter_a447eb9fa4afa57619d6387e0ea178f93}} 
-virtual void {\bfseries do\+\_\+special} ()=0
-\item 
-\mbox{\Hypertarget{classCharacter_a94242f85f3afb3f12dd92e02797345bd}\label{classCharacter_a94242f85f3afb3f12dd92e02797345bd}} 
-void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
-\item 
+virtual void \mbox{\hyperlink{classCharacter_a447eb9fa4afa57619d6387e0ea178f93}{do\+\_\+special}} ()=0
+\begin{DoxyCompactList}\small\item\em Método virtual do ataque especial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a94242f85f3afb3f12dd92e02797345bd}{update\+\_\+self}} (unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Métodos virtual de gameobject. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a80d2f8164974c6a5b8a3c144508ec4a1}\label{classCharacter_a80d2f8164974c6a5b8a3c144508ec4a1}} 
-void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
-\item 
+void \mbox{\hyperlink{classCharacter_a80d2f8164974c6a5b8a3c144508ec4a1}{draw\+\_\+self}} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Métodos virtual de gameobject. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a990779ce4c7baf305b9f04ba831a1f0f}\label{classCharacter_a990779ce4c7baf305b9f04ba831a1f0f}} 
 void {\bfseries update\+\_\+position} (const unsigned \&now, const unsigned \&last, bool backwards=false)
 \end{DoxyCompactItemize}
@@ -123,56 +122,56 @@ void {\bfseries update\+\_\+position} (const unsigned \&now, const unsigned \&la
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classCharacter_afebf14960658d88bd70df4f55de3d334}\label{classCharacter_afebf14960658d88bd70df4f55de3d334}} 
-\mbox{\hyperlink{classMovingState}{Moving\+State}} {\bfseries character\+\_\+moving\+\_\+state}
-\item 
+\mbox{\hyperlink{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}{Moving\+State}} \mbox{\hyperlink{classCharacter_afebf14960658d88bd70df4f55de3d334}{character\+\_\+moving\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Estado do movimento do personagem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a35427d8eb8464ae90149e31262f4dc57}\label{classCharacter_a35427d8eb8464ae90149e31262f4dc57}} 
-\mbox{\hyperlink{classCharacterState}{Character\+State}} $\ast$ {\bfseries character\+\_\+state}
-\item 
+\mbox{\hyperlink{classCharacterState}{Character\+State}} $\ast$ \mbox{\hyperlink{classCharacter_a35427d8eb8464ae90149e31262f4dc57}{character\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Estado do personagem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_aa98c4b7a857fdb408cb790fdc1dd33b7}\label{classCharacter_aa98c4b7a857fdb408cb790fdc1dd33b7}} 
-\mbox{\hyperlink{classCharacterStateFactory}{Character\+State\+Factory}} {\bfseries new\+\_\+character\+\_\+state\+\_\+factory}
-\item 
+\mbox{\hyperlink{classCharacterStateFactory}{Character\+State\+Factory}} \mbox{\hyperlink{classCharacter_aa98c4b7a857fdb408cb790fdc1dd33b7}{new\+\_\+character\+\_\+state\+\_\+factory}}
+\begin{DoxyCompactList}\small\item\em Construindo o personagem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_acb93cf49560055ead552c5094a54184c}\label{classCharacter_acb93cf49560055ead552c5094a54184c}} 
-bool {\bfseries character\+\_\+active}
-\item 
+bool \mbox{\hyperlink{classCharacter_acb93cf49560055ead552c5094a54184c}{character\+\_\+active}}
+\begin{DoxyCompactList}\small\item\em variável que indica se o personagem esta ativo \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_ac967fe6670f51494ed141c54e20b1572}\label{classCharacter_ac967fe6670f51494ed141c54e20b1572}} 
-unsigned {\bfseries character\+\_\+id}
-\item 
+unsigned \mbox{\hyperlink{classCharacter_ac967fe6670f51494ed141c54e20b1572}{character\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em variável que serve para identificador do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a2f4be8102c8557a93b67b8fac9679dd8}\label{classCharacter_a2f4be8102c8557a93b67b8fac9679dd8}} 
-int {\bfseries character\+\_\+max\+\_\+life}
-\item 
+int \mbox{\hyperlink{classCharacter_a2f4be8102c8557a93b67b8fac9679dd8}{character\+\_\+max\+\_\+life}}
+\begin{DoxyCompactList}\small\item\em variável que indica vida maxima de cada personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a0e29776ad32bfcf2ca55838f00d29933}\label{classCharacter_a0e29776ad32bfcf2ca55838f00d29933}} 
-int {\bfseries character\+\_\+current\+\_\+life}
-\item 
+int \mbox{\hyperlink{classCharacter_a0e29776ad32bfcf2ca55838f00d29933}{character\+\_\+current\+\_\+life}}
+\begin{DoxyCompactList}\small\item\em variável que indica a vida atual de cada personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a46b1ccac564ac16935cb22a82e62bc27}\label{classCharacter_a46b1ccac564ac16935cb22a82e62bc27}} 
-int {\bfseries character\+\_\+number\+\_\+of\+\_\+lives}
-\item 
+int \mbox{\hyperlink{classCharacter_a46b1ccac564ac16935cb22a82e62bc27}{character\+\_\+number\+\_\+of\+\_\+lives}}
+\begin{DoxyCompactList}\small\item\em variável que indica o número de vidas \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_adf140a8993f2a10b77ebf3415460f48b}\label{classCharacter_adf140a8993f2a10b77ebf3415460f48b}} 
-int {\bfseries character\+\_\+frame}
-\item 
+int \mbox{\hyperlink{classCharacter_adf140a8993f2a10b77ebf3415460f48b}{character\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em variável que indica frame do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a52bd80f30b5a19bae445d2566819704b}\label{classCharacter_a52bd80f30b5a19bae445d2566819704b}} 
-int {\bfseries character\+\_\+start}
-\item 
+int \mbox{\hyperlink{classCharacter_a52bd80f30b5a19bae445d2566819704b}{character\+\_\+start}}
+\begin{DoxyCompactList}\small\item\em variável que indica que o Personagem foi iniciado \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a8ede7c049b28ca40d1b35c0e14cc1c66}\label{classCharacter_a8ede7c049b28ca40d1b35c0e14cc1c66}} 
-int {\bfseries character\+\_\+width}
-\item 
+int \mbox{\hyperlink{classCharacter_a8ede7c049b28ca40d1b35c0e14cc1c66}{character\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em variável que indica a largura do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a41926aae9cdfda3730ee7c1a334b0572}\label{classCharacter_a41926aae9cdfda3730ee7c1a334b0572}} 
-int {\bfseries character\+\_\+height}
-\item 
+int \mbox{\hyperlink{classCharacter_a41926aae9cdfda3730ee7c1a334b0572}{character\+\_\+height}}
+\begin{DoxyCompactList}\small\item\em variável que indica a altura do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_abf1d7cdaa318adeb9cee6edfe919cb8c}\label{classCharacter_abf1d7cdaa318adeb9cee6edfe919cb8c}} 
-int {\bfseries character\+\_\+heavy\+\_\+attack\+\_\+cooldown}
-\item 
+int \mbox{\hyperlink{classCharacter_abf1d7cdaa318adeb9cee6edfe919cb8c}{character\+\_\+heavy\+\_\+attack\+\_\+cooldown}}
+\begin{DoxyCompactList}\small\item\em variável que indica o ataque pesado do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a7b8e1c9ff525068d6f479b690af1ab09}\label{classCharacter_a7b8e1c9ff525068d6f479b690af1ab09}} 
-int {\bfseries character\+\_\+light\+\_\+attack\+\_\+cooldown}
-\item 
+int \mbox{\hyperlink{classCharacter_a7b8e1c9ff525068d6f479b690af1ab09}{character\+\_\+light\+\_\+attack\+\_\+cooldown}}
+\begin{DoxyCompactList}\small\item\em variável que indica ataque leve do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_abab76567fdafbc8c185ff5d83d516e76}\label{classCharacter_abab76567fdafbc8c185ff5d83d516e76}} 
-int {\bfseries character\+\_\+defense\+\_\+cooldown}
-\item 
+int \mbox{\hyperlink{classCharacter_abab76567fdafbc8c185ff5d83d516e76}{character\+\_\+defense\+\_\+cooldown}}
+\begin{DoxyCompactList}\small\item\em variável que indica defesa do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a9746df15f2ed60b63577055d0c77b534}\label{classCharacter_a9746df15f2ed60b63577055d0c77b534}} 
-int {\bfseries character\+\_\+special\+\_\+cooldown}
-\item 
+int \mbox{\hyperlink{classCharacter_a9746df15f2ed60b63577055d0c77b534}{character\+\_\+special\+\_\+cooldown}}
+\begin{DoxyCompactList}\small\item\em variável que indica ataque especial do personangem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a44cde6bc401f387f821d574a31d3bd23}\label{classCharacter_a44cde6bc401f387f821d574a31d3bd23}} 
-int {\bfseries character\+\_\+last\+\_\+used\+\_\+heavy\+\_\+attack}
-\item 
+int \mbox{\hyperlink{classCharacter_a44cde6bc401f387f821d574a31d3bd23}{character\+\_\+last\+\_\+used\+\_\+heavy\+\_\+attack}}
+\begin{DoxyCompactList}\small\item\em variável que indica o ultimo uso dos ataques e defesas \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a279b7d863c09ae1c6df3aac72db2ca24}\label{classCharacter_a279b7d863c09ae1c6df3aac72db2ca24}} 
 int {\bfseries character\+\_\+last\+\_\+used\+\_\+light\+\_\+attack}
 \item 
@@ -183,32 +182,32 @@ int {\bfseries character\+\_\+last\+\_\+used\+\_\+defense}
 int {\bfseries character\+\_\+last\+\_\+used\+\_\+special}
 \item 
 \mbox{\Hypertarget{classCharacter_a87615038725b126168eaf4f47fd60836}\label{classCharacter_a87615038725b126168eaf4f47fd60836}} 
-int {\bfseries character\+\_\+respawn\+\_\+time}
-\item 
+int \mbox{\hyperlink{classCharacter_a87615038725b126168eaf4f47fd60836}{character\+\_\+respawn\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em variável que indica o tempo de reaparecimento \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}\label{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}} 
-int {\bfseries character\+\_\+code}
-\item 
+int \mbox{\hyperlink{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}{character\+\_\+code}}
+\begin{DoxyCompactList}\small\item\em variável que indica codigo do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a8fdf09c04765a29d63a1e92620c312bb}\label{classCharacter_a8fdf09c04765a29d63a1e92620c312bb}} 
-int {\bfseries character\+\_\+last\+\_\+sound\+\_\+played}
-\item 
+int \mbox{\hyperlink{classCharacter_a8fdf09c04765a29d63a1e92620c312bb}{character\+\_\+last\+\_\+sound\+\_\+played}}
+\begin{DoxyCompactList}\small\item\em variável que indica o último som que foi tocado \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_ad2a4dbff5a815b1149d827d56c87a3ca}\label{classCharacter_ad2a4dbff5a815b1149d827d56c87a3ca}} 
-bool {\bfseries character\+\_\+freeze}
-\item 
+bool \mbox{\hyperlink{classCharacter_ad2a4dbff5a815b1149d827d56c87a3ca}{character\+\_\+freeze}}
+\begin{DoxyCompactList}\small\item\em variável que indica o congelamento do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a36146a3072561cf6774cf7585c23a686}\label{classCharacter_a36146a3072561cf6774cf7585c23a686}} 
-bool {\bfseries character\+\_\+dead}
-\item 
+bool \mbox{\hyperlink{classCharacter_a36146a3072561cf6774cf7585c23a686}{character\+\_\+dead}}
+\begin{DoxyCompactList}\small\item\em personagem vivo ou morto \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a5007dcc89bd0ada538659d13c6db8aae}\label{classCharacter_a5007dcc89bd0ada538659d13c6db8aae}} 
-double {\bfseries character\+\_\+axis\+\_\+x\+\_\+speed}
-\item 
+double \mbox{\hyperlink{classCharacter_a5007dcc89bd0ada538659d13c6db8aae}{character\+\_\+axis\+\_\+x\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em velocidade no eixo x \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a2166b91a2e1de6360857187e8573823a}\label{classCharacter_a2166b91a2e1de6360857187e8573823a}} 
-double {\bfseries character\+\_\+axis\+\_\+y\+\_\+speed}
-\item 
+double \mbox{\hyperlink{classCharacter_a2166b91a2e1de6360857187e8573823a}{character\+\_\+axis\+\_\+y\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em velocidade no eixo y \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_ad18353901814799f84c2f593cb5d672b}\label{classCharacter_ad18353901814799f84c2f593cb5d672b}} 
-double {\bfseries character\+\_\+speed}
-\item 
+double \mbox{\hyperlink{classCharacter_ad18353901814799f84c2f593cb5d672b}{character\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em variável que indica a velocidade do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a6a4394e283406c8fe024adc9b30e2471}\label{classCharacter_a6a4394e283406c8fe024adc9b30e2471}} 
-\mbox{\hyperlink{classBase}{Base}} $\ast$ {\bfseries character\+\_\+base}
-\item 
+\mbox{\hyperlink{classBase}{Base}} $\ast$ \mbox{\hyperlink{classCharacter_a6a4394e283406c8fe024adc9b30e2471}{character\+\_\+base}}
+\begin{DoxyCompactList}\small\item\em variável que indica base do personagem \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCharacter_a142cb14d15395eeb4d70c8a23ad49424}\label{classCharacter_a142cb14d15395eeb4d70c8a23ad49424}} 
 vector$<$ shared\+\_\+ptr$<$ Texture $>$ $>$ {\bfseries character\+\_\+textures}
 \item 
@@ -222,6 +221,293 @@ Rectangle {\bfseries character\+\_\+bounding\+\_\+box}
 vector$<$ string $>$ {\bfseries character\+\_\+sprite\+\_\+paths}
 \end{DoxyCompactItemize}
 
+
+\subsection{Descrição detalhada}
+Classe que descreve o personagem de forma geral. 
+
+Permite que o personagem tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y 
+\begin{DoxyParams}{Parâmetros}
+{\em sprite} & paths indica o vetor que desena o personagem \\
+\hline
+{\em id} & indica o identificado do personagem \\
+\hline
+{\em x} & indica a posição x do personagem \\
+\hline
+{\em y} & indica a posição y do personagem \\
+\hline
+{\em max\+\_\+life} & indica a vida maxima do personagem \\
+\hline
+{\em character\+\_\+\+Code} & indica o codigo do personagem \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação das enumerações}
+\mbox{\Hypertarget{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6}\label{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+Enumerado com os possiveis personagens. 
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K\+N\+I\+G\+HT@{K\+N\+I\+G\+HT}!Character@{Character}}\index{Character@{Character}!K\+N\+I\+G\+HT@{K\+N\+I\+G\+HT}}}\mbox{\Hypertarget{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a4c05690850d83fdb1d057ad29d42f35f}\label{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a4c05690850d83fdb1d057ad29d42f35f}} 
+K\+N\+I\+G\+HT&variavel Enum que representa o cavaleiro \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+L\+D\+I\+ER@{S\+O\+L\+D\+I\+ER}!Character@{Character}}\index{Character@{Character}!S\+O\+L\+D\+I\+ER@{S\+O\+L\+D\+I\+ER}}}\mbox{\Hypertarget{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a557690dabe1c727cd460f566392bcd52}\label{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a557690dabe1c727cd460f566392bcd52}} 
+S\+O\+L\+D\+I\+ER&variável Enum que representa o soldado \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+GE@{M\+A\+GE}!Character@{Character}}\index{Character@{Character}!M\+A\+GE@{M\+A\+GE}}}\mbox{\Hypertarget{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a798a2f1139be446bf9ac3b564bbb66b2}\label{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a798a2f1139be446bf9ac3b564bbb66b2}} 
+M\+A\+GE&variável Enum que representa o mago \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR@{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}!Character@{Character}}\index{Character@{Character}!I\+N\+F\+I\+L\+T\+R\+A\+T\+OR@{I\+N\+F\+I\+L\+T\+R\+A\+T\+OR}}}\mbox{\Hypertarget{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a5ac869d197700fcb054039e61bd018a7}\label{classCharacter_abf5e238c65ecb4480e6e5389e011a4d6a5ac869d197700fcb054039e61bd018a7}} 
+I\+N\+F\+I\+L\+T\+R\+A\+T\+OR&variável Enum que representa o infiltrador \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+Enumerado com os possiveis eventos. 
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}!Character@{Character}}\index{Character@{Character}!S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a8b229b001ae48d9b1b1101fdfca55315}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a8b229b001ae48d9b1b1101fdfca55315}} 
+S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN&variável que indica inicio de movimento para baixo \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}!Character@{Character}}\index{Character@{Character}!S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a0fe87e8fac0a383a115b6def47886060}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a0fe87e8fac0a383a115b6def47886060}} 
+S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT&variável que indica inicio de movimento para esquerda \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}!Character@{Character}}\index{Character@{Character}!S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a680d0f3faacc9809d26814095fdc16a5}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a680d0f3faacc9809d26814095fdc16a5}} 
+S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT&variável que indica inicio de movimento para direita \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}!Character@{Character}}\index{Character@{Character}!S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP@{S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a8c28f2fe5437653a152fcf7d05e8408e}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a8c28f2fe5437653a152fcf7d05e8408e}} 
+S\+T\+A\+R\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP&variável que indica inicio de movimento para cima \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}!Character@{Character}}\index{Character@{Character}!S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075ada78cf5fafffc4b9b4d52b407d05d5ec}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075ada78cf5fafffc4b9b4d52b407d05d5ec}} 
+S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+D\+O\+WN&variável que indica fim de movimento para baixo \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}!Character@{Character}}\index{Character@{Character}!S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a1bee0af8ff8537623a9bcdfcc053100d}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a1bee0af8ff8537623a9bcdfcc053100d}} 
+S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT&variável que indica fim de movimento para esquerda \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}!Character@{Character}}\index{Character@{Character}!S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a1b90f2cce994a938c0f08b9e5b28f016}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a1b90f2cce994a938c0f08b9e5b28f016}} 
+S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT&variável que indica fim de movimento para direita \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}!Character@{Character}}\index{Character@{Character}!S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP@{S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075aed71f164071945f1fdd84d6c7dc6a275}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075aed71f164071945f1fdd84d6c7dc6a275}} 
+S\+T\+O\+P\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+UP&variável que indica fim de movimento para cima \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK@{L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK}!Character@{Character}}\index{Character@{Character}!L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK@{L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a94d3ddfe3e59580c03c53d23d85e4b87}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a94d3ddfe3e59580c03c53d23d85e4b87}} 
+L\+I\+G\+H\+T\+\_\+\+A\+T\+T\+A\+CK&variável que indica light\+\_\+atack \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK@{H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK}!Character@{Character}}\index{Character@{Character}!H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK@{H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a22bda09ef67ff4216d903dc299825338}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a22bda09ef67ff4216d903dc299825338}} 
+H\+E\+A\+V\+Y\+\_\+\+A\+T\+T\+A\+CK&variável que indica heavy\+\_\+atack \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+E\+F\+E\+N\+SE@{D\+E\+F\+E\+N\+SE}!Character@{Character}}\index{Character@{Character}!D\+E\+F\+E\+N\+SE@{D\+E\+F\+E\+N\+SE}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a256cf6241374b6dcbe2ce2e36f56697c}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a256cf6241374b6dcbe2ce2e36f56697c}} 
+D\+E\+F\+E\+N\+SE&variável que indica defesa \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+E\+C\+I\+AL@{S\+P\+E\+C\+I\+AL}!Character@{Character}}\index{Character@{Character}!S\+P\+E\+C\+I\+AL@{S\+P\+E\+C\+I\+AL}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075aaf0d6f63e463f5fd69bb6d389e6aec05}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075aaf0d6f63e463f5fd69bb6d389e6aec05}} 
+S\+P\+E\+C\+I\+AL&variável que indica ataque especial \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS@{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS}!Character@{Character}}\index{Character@{Character}!N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS@{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS}}}\mbox{\Hypertarget{classCharacter_ad3319cdd6aad27544714551aba4d4075a3f8d7b0e4966a38cfb691824bf4d4b2e}\label{classCharacter_ad3319cdd6aad27544714551aba4d4075a3f8d7b0e4966a38cfb691824bf4d4b2e}} 
+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+E\+V\+E\+N\+TS&variável que indica número de eventos dos personagens \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}\label{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}} 
+\index{Character@{Character}!Moving\+State@{Moving\+State}}
+\index{Moving\+State@{Moving\+State}!Character@{Character}}
+\subsubsection{\texorpdfstring{Moving\+State}{MovingState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCharacter_afbe3b1ceb8e8463b3b66964080149c30}{Character\+::\+Moving\+State}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Enuemrado que define o tipo de movimento. 
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT@{M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}!Character@{Character}}\index{Character@{Character}!M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT@{M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{classCharacter_afbe3b1ceb8e8463b3b66964080149c30a69693b1dd7704b911fcc556b58e7562d}\label{classCharacter_afbe3b1ceb8e8463b3b66964080149c30a69693b1dd7704b911fcc556b58e7562d}} 
+M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT&Movimento para direita. Movimento para esquerda \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classCharacter_a442a1c3c8e82823ef340f078c8f4bb50}\label{classCharacter_a442a1c3c8e82823ef340f078c8f4bb50}} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\subsubsection{\texorpdfstring{Character()}{Character()}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}\item[{const vector$<$ string $>$}]{sprite\+\_\+paths,  }\item[{unsigned}]{id,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{max\+\_\+life,  }\item[{int}]{character\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Classe que descreve o personagem de forma geral. 
+
+Permite que o personagem tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y 
+\begin{DoxyParams}{Parâmetros}
+{\em sprite} & paths indica o vetor que desena o personagem \\
+\hline
+{\em id} & indica o identificado do personagem \\
+\hline
+{\em x} & indica a posição x do personagem \\
+\hline
+{\em y} & indica a posição y do personagem \\
+\hline
+{\em max\+\_\+life} & indica a vida maxima do personagem \\
+\hline
+{\em character\+\_\+\+Code} & indica o codigo do personagem \\
+\hline
+\end{DoxyParams}
+variável que indica estado atual do personagem
+
+variável que indica o tempo de reaparecimento do personagem
+
+variável que indica o último som tocado
+
+variável que indica que o personagem está ativo
+
+variável que indica caixa delimitadora do personagem (x,y, height, width)
+
+variável que indica a largura do personagem
+
+variável que indica a altura do personagem
+
+Modo de jogo -\/ deathmatch (cada jogador tem 5 vidas)
+
+Tempo de reaparecimento -\/ 5 segundos 
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}\label{classCharacter_adbe9684ed82ce4b053881c1a31f2aa97}} 
+\index{Character@{Character}!active@{active}}
+\index{active@{active}!Character@{Character}}
+\subsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily bool Character\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Métodos virtuais de colisão. 
+
+Personagem ativo. 
+
+Reimplementado em \mbox{\hyperlink{classInfiltrator_ae423f60190c1df91dcccb7e313845171}{Infiltrator}}.
+
+\mbox{\Hypertarget{classCharacter_a067f09af5430da58cc9698421fb84814}\label{classCharacter_a067f09af5430da58cc9698421fb84814}} 
+\index{Character@{Character}!change\+\_\+character\+\_\+state@{change\+\_\+character\+\_\+state}}
+\index{change\+\_\+character\+\_\+state@{change\+\_\+character\+\_\+state}!Character@{Character}}
+\subsubsection{\texorpdfstring{change\+\_\+character\+\_\+state()}{change\_character\_state()}}
+{\footnotesize\ttfamily void Character\+::change\+\_\+character\+\_\+state (\begin{DoxyParamCaption}\item[{State}]{next\+\_\+state,  }\item[{bool}]{respawning = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Métodos protegidos. 
+
+Método que muda o estado do personagem.
+
+Método que muda o estado do personagem \mbox{\Hypertarget{classCharacter_a2edbbba1c9e07eece34c25f651e364d9}\label{classCharacter_a2edbbba1c9e07eece34c25f651e364d9}} 
+\index{Character@{Character}!handle\+\_\+state@{handle\+\_\+state}}
+\index{handle\+\_\+state@{handle\+\_\+state}!Character@{Character}}
+\subsubsection{\texorpdfstring{handle\+\_\+state()}{handle\_state()}}
+{\footnotesize\ttfamily void Character\+::handle\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que trata o estado. 
+
+Verifica o estado do personagem. \mbox{\Hypertarget{classCharacter_adb0d4f9c0ebbc0f9b19cb0a1f4b20df7}\label{classCharacter_adb0d4f9c0ebbc0f9b19cb0a1f4b20df7}} 
+\index{Character@{Character}!kill\+\_\+character@{kill\+\_\+character}}
+\index{kill\+\_\+character@{kill\+\_\+character}!Character@{Character}}
+\subsubsection{\texorpdfstring{kill\+\_\+character()}{kill\_character()}}
+{\footnotesize\ttfamily void Character\+::kill\+\_\+character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que define se o personagem foi morto. 
+
+Indica a morte do personagem. \mbox{\Hypertarget{classCharacter_a92d3a1ad2ceba203bf72584c4c4029d7}\label{classCharacter_a92d3a1ad2ceba203bf72584c4c4029d7}} 
+\index{Character@{Character}!on\+\_\+event@{on\+\_\+event}}
+\index{on\+\_\+event@{on\+\_\+event}!Character@{Character}}
+\subsubsection{\texorpdfstring{on\+\_\+event()}{on\_event()}}
+{\footnotesize\ttfamily bool Character\+::on\+\_\+event (\begin{DoxyParamCaption}\item[{const Game\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que retorna os eventos em geral. 
+
+Método que retorna os eventos em geral dos personagens. \mbox{\Hypertarget{classCharacter_afc90256ef2253670aee9def34f700247}\label{classCharacter_afc90256ef2253670aee9def34f700247}} 
+\index{Character@{Character}!respawn\+\_\+character@{respawn\+\_\+character}}
+\index{respawn\+\_\+character@{respawn\+\_\+character}!Character@{Character}}
+\subsubsection{\texorpdfstring{respawn\+\_\+character()}{respawn\_character()}}
+{\footnotesize\ttfamily void Character\+::respawn\+\_\+character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que permite o reaparecimento do personagem. 
+
+Reaparecimento do personagem. \mbox{\Hypertarget{classCharacter_a4cb413b53515a09d025fa0b3fe5a4e9f}\label{classCharacter_a4cb413b53515a09d025fa0b3fe5a4e9f}} 
+\index{Character@{Character}!set\+\_\+base@{set\+\_\+base}}
+\index{set\+\_\+base@{set\+\_\+base}!Character@{Character}}
+\subsubsection{\texorpdfstring{set\+\_\+base()}{set\_base()}}
+{\footnotesize\ttfamily void Character\+::set\+\_\+base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBase}{Base}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Método que coloca as bases com os seus devidos personagens. 
+
+Indica a base de cada personagem. \mbox{\Hypertarget{classCharacter_a75f825ad6509fa1601d2e2bc2ac04b3c}\label{classCharacter_a75f825ad6509fa1601d2e2bc2ac04b3c}} 
+\index{Character@{Character}!set\+\_\+spawn\+\_\+position@{set\+\_\+spawn\+\_\+position}}
+\index{set\+\_\+spawn\+\_\+position@{set\+\_\+spawn\+\_\+position}!Character@{Character}}
+\subsubsection{\texorpdfstring{set\+\_\+spawn\+\_\+position()}{set\_spawn\_position()}}
+{\footnotesize\ttfamily void Character\+::set\+\_\+spawn\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que define onde o personagem irá ser \char`\"{}desovado\char`\"{}. 
+
+Define posição de desova do personagem. \mbox{\Hypertarget{classCharacter_a94242f85f3afb3f12dd92e02797345bd}\label{classCharacter_a94242f85f3afb3f12dd92e02797345bd}} 
+\index{Character@{Character}!update\+\_\+self@{update\+\_\+self}}
+\index{update\+\_\+self@{update\+\_\+self}!Character@{Character}}
+\subsubsection{\texorpdfstring{update\+\_\+self()}{update\_self()}}
+{\footnotesize\ttfamily void Character\+::update\+\_\+self (\begin{DoxyParamCaption}\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Métodos virtual de gameobject. 
+
+Método que indica atualizar o personagem.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em now} & indica atualização agora \\
+\hline
+{\em las} & indica a última atualizção \\
+\hline
+\end{DoxyParams}
+Método que manipula o controle do estado
+
+base-\/mode (vida das bases menor que 0) ou death-\/match-\/mode(numero de vidas menor que 0) invalida o jogo -\/ alguem ganhou
+
+atualiza o jogador
+
+se o personagem morreu, reaparece depois do tempo de 5 segundos
+
+Atualiza o som de acordo com o personagem 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 

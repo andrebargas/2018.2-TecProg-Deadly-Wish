@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['on_5fevent',['on_event',['../classCharacterChooseLevel.html#a2fb500ba943a4f22ed01be915b59452a',1,'CharacterChooseLevel::on_event()'],['../classCreditsLevel.html#afa4ec08490398e3532fce7815c77aa46',1,'CreditsLevel::on_event()'],['../classMenuLevel.html#a8d450674d7c3678c7ff1f146b3e63be1',1,'MenuLevel::on_event()']]]
+  ['kill_5fcharacter',['kill_character',['../classCharacter.html#adb0d4f9c0ebbc0f9b19cb0a1f4b20df7',1,'Character']]],
+  ['knight',['Knight',['../classKnight.html#af091272d130fbfee62b308e1059e9c5e',1,'Knight']]]
 ];

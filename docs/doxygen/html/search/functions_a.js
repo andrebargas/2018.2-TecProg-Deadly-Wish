@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['translate',['translate',['../classTranslator.html#a223b870ca69e0b75b721b266a5aecd2a',1,'Translator::translate(GameEvent &amp;to, const MouseEvent &amp;from)'],['../classTranslator.html#ad1910814cca5d0f3d9dbffa4721071ea',1,'Translator::translate(GameEvent &amp;to, const SystemEvent &amp;from)'],['../classTranslator.html#a23fe703107ba6e3b26e5da8e9f28777a',1,'Translator::translate(GameEvent &amp;to, const KeyboardEvent &amp;from)'],['../classTranslator.html#ad75df11a67688dba45a23cecc9930970',1,'Translator::translate(GameEvent &amp;to, const JoystickEvent &amp;from)']]]
+  ['on_5fcollision',['on_collision',['../classCharacter.html#a9559ad61239800e744931814826ae39b',1,'Character']]],
+  ['on_5fevent',['on_event',['../classCharacter.html#a92d3a1ad2ceba203bf72584c4c4029d7',1,'Character::on_event()'],['../classCharacterChooseLevel.html#a2fb500ba943a4f22ed01be915b59452a',1,'CharacterChooseLevel::on_event()'],['../classCharacterSelection.html#af7d87f81c8bc895a89d9f13c09ed6b35',1,'CharacterSelection::on_event()'],['../classCreditsLevel.html#afa4ec08490398e3532fce7815c77aa46',1,'CreditsLevel::on_event()'],['../classMenuLevel.html#a8d450674d7c3678c7ff1f146b3e63be1',1,'MenuLevel::on_event()']]]
 ];

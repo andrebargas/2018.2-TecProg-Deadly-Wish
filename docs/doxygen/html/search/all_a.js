@@ -1,7 +1,23 @@
 var searchData=
 [
+  ['m_5factive',['m_active',['../classInfiltrator.html#a57568f6f782efc405e959e5bfffc8163',1,'Infiltrator']]],
+  ['m_5fbase_5fx',['m_base_x',['../classCharacterSelection.html#aeb7a11351418002b57587f6abed12a00',1,'CharacterSelection']]],
+  ['m_5fbase_5fy',['m_base_y',['../classCharacterSelection.html#a09610c3c8cca5a24ba210131aaa4b1c8',1,'CharacterSelection']]],
+  ['m_5fchosen',['m_chosen',['../classCharacterSelection.html#aadc3d49c3cee49de9b3c886cac52897e',1,'CharacterSelection']]],
+  ['m_5fcurrent_5fselection',['m_current_selection',['../classCharacterSelection.html#a85f71f1b73dc6b86bcbc29eadd3a9ad7',1,'CharacterSelection']]],
+  ['m_5fframe',['m_frame',['../classCharacterSelection.html#aa55f4689637450838d51090e921e036f',1,'CharacterSelection']]],
+  ['m_5fheight',['m_height',['../classCharacterSelection.html#a70832b1668915aa4a91d4ac5eea5fed1',1,'CharacterSelection']]],
+  ['m_5fplayer_5fid',['m_player_id',['../classCharacterSelection.html#a952c2ea6bcda9f86e5af153180c4e1ff',1,'CharacterSelection']]],
+  ['m_5fstart',['m_start',['../classCharacterSelection.html#a99178a5ff9afda03b0c19ca72ed9aa41',1,'CharacterSelection']]],
   ['m_5ftexture',['m_texture',['../classWinnerLevel.html#a1ca683921327202b36bd4e77a3330101',1,'WinnerLevel']]],
-  ['mage',['Mage',['../classMage.html',1,'']]],
+  ['m_5fwidth',['m_width',['../classCharacterSelection.html#a7a360b0a1d33063f37ff160cefbf75c8',1,'CharacterSelection']]],
+  ['mage',['Mage',['../classMage.html',1,'Mage'],['../classMage.html#a691d8def05ca8cbda1a2b9229c52748b',1,'Mage::Mage()'],['../classCharacter.html#abf5e238c65ecb4480e6e5389e011a4d6a798a2f1139be446bf9ac3b564bbb66b2',1,'Character::MAGE()'],['../classCharacterSelection.html#a14b33a13e3498992faa7261e6f5e55caa749e92b1c7efda5e21f6e3859f682093',1,'CharacterSelection::MAGE()']]],
+  ['mage_2ecpp',['mage.cpp',['../mage_8cpp.html',1,'']]],
+  ['mage_2eh',['mage.h',['../mage_8h.html',1,'']]],
+  ['mage_5fdefense_5fcooldown',['MAGE_DEFENSE_COOLDOWN',['../mage_8cpp.html#a9f48344bfaefe7944ca581969aaf2a43',1,'mage.cpp']]],
+  ['mage_5fheavy_5fattack_5fcooldown',['MAGE_HEAVY_ATTACK_COOLDOWN',['../mage_8cpp.html#a123d30f19b3e1f3c96d965e23830b893',1,'mage.cpp']]],
+  ['mage_5flight_5fattack_5fcooldown',['MAGE_LIGHT_ATTACK_COOLDOWN',['../mage_8cpp.html#adef49768b9b4b7559f502aaa906c656c',1,'mage.cpp']]],
+  ['mage_5fspecial_5fcooldown',['MAGE_SPECIAL_COOLDOWN',['../mage_8cpp.html#a79c3cf4c5963fab5eba81a781ea50814',1,'mage.cpp']]],
   ['main_5flevel_2ecpp',['main_level.cpp',['../main__level_8cpp.html',1,'']]],
   ['main_5flevel_2eh',['main_level.h',['../main__level_8h.html',1,'']]],
   ['main_5flevel_5fbases',['main_level_bases',['../classMainLevel.html#a12e4db8964ee51a21bf0b3f3c04dafef',1,'MainLevel']]],
@@ -16,6 +32,7 @@ var searchData=
   ['mainlevel',['MainLevel',['../classMainLevel.html',1,'MainLevel'],['../classMainLevel.html#a0d8c61bddf5781cea1ba8496bd0a3d80',1,'MainLevel::MainLevel()']]],
   ['make_5fcharacter',['make_character',['../classCharacterFactory.html#a6ebcf8e9408d89dc4c40ef12e9d09c15',1,'CharacterFactory']]],
   ['make_5flevel',['make_level',['../classTestLevelFactory.html#ab661866cd93b21b0fa16cfd72ace461e',1,'TestLevelFactory']]],
+  ['max_5flife',['MAX_LIFE',['../infiltrator_8cpp.html#a9c363d06a988867421cf992508a715f9',1,'MAX_LIFE():&#160;infiltrator.cpp'],['../knight_8cpp.html#a9c363d06a988867421cf992508a715f9',1,'MAX_LIFE():&#160;knight.cpp'],['../mage_8cpp.html#a9c363d06a988867421cf992508a715f9',1,'MAX_LIFE():&#160;mage.cpp'],['../soldier_8cpp.html#a9c363d06a988867421cf992508a715f9',1,'MAX_LIFE():&#160;soldier.cpp']]],
   ['menu_5flevel_2ecpp',['menu_level.cpp',['../menu__level_8cpp.html',1,'']]],
   ['menu_5flevel_2eh',['menu_level.h',['../menu__level_8h.html',1,'']]],
   ['menu_5flevel_5fcurrent_5foption',['menu_level_current_option',['../classMenuLevel.html#a99536811d95ed1b23e29270f299c9d48',1,'MenuLevel']]],
@@ -26,5 +43,6 @@ var searchData=
   ['menu_5flevel_5fstart',['menu_level_start',['../classMenuLevel.html#a29481a284b638c832504527c2318cf5a',1,'MenuLevel']]],
   ['menu_5flevel_5ftextures',['menu_level_textures',['../classMenuLevel.html#a86bfd7ddf73258b6b322cbe9731b52d2',1,'MenuLevel']]],
   ['menulevel',['MenuLevel',['../classMenuLevel.html',1,'MenuLevel'],['../classMenuLevel.html#a207c59fd8fdbb6252bdbbe0d8f73fcf6',1,'MenuLevel::MenuLevel()']]],
-  ['movingstate',['MovingState',['../classMovingState.html',1,'']]]
+  ['moving_5fleft',['MOVING_LEFT',['../classCharacter.html#afbe3b1ceb8e8463b3b66964080149c30a69693b1dd7704b911fcc556b58e7562d',1,'Character']]],
+  ['movingstate',['MovingState',['../classMovingState.html',1,'MovingState'],['../classCharacter.html#afbe3b1ceb8e8463b3b66964080149c30',1,'Character::MovingState()']]]
 ];

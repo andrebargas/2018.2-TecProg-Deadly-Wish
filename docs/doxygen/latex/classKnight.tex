@@ -1,5 +1,14 @@
 \hypertarget{classKnight}{}\section{Referência à classe Knight}
 \label{classKnight}\index{Knight@{Knight}}
+
+
+Permite que o cavaleiro tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/knight.\+h\char`\"{}}
+
 Diagrama de heranças da classe Knight\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,28 +18,70 @@ Diagrama de heranças da classe Knight\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classKnight_af091272d130fbfee62b308e1059e9c5e}\label{classKnight_af091272d130fbfee62b308e1059e9c5e}} 
-{\bfseries Knight} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int character\+\_\+code)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classKnight_af091272d130fbfee62b308e1059e9c5e}{Knight}} (vector$<$ string $>$ sprite\+\_\+paths, unsigned id, double x, double y, int \mbox{\hyperlink{classCharacter_a3e16e9cb23edc78d774cf30925242a8e}{character\+\_\+code}})
+\begin{DoxyCompactList}\small\item\em Método Construtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classKnight_a2bd72d822d94d0af391b66f4dce1af19}\label{classKnight_a2bd72d822d94d0af391b66f4dce1af19}} 
-void {\bfseries do\+\_\+heavy\+\_\+attack} ()
-\item 
-\mbox{\Hypertarget{classKnight_a2e9d92f7bd099ab26854cf247915fd0f}\label{classKnight_a2e9d92f7bd099ab26854cf247915fd0f}} 
-void {\bfseries do\+\_\+defense} ()
-\item 
+void \mbox{\hyperlink{classKnight_a2bd72d822d94d0af391b66f4dce1af19}{do\+\_\+heavy\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque pesado. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classKnight_abb516eb9c6d5544a9781ff726d0f1035}\label{classKnight_abb516eb9c6d5544a9781ff726d0f1035}} 
-void {\bfseries do\+\_\+light\+\_\+attack} ()
-\item 
+void \mbox{\hyperlink{classKnight_abb516eb9c6d5544a9781ff726d0f1035}{do\+\_\+light\+\_\+attack}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque leve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKnight_a2e9d92f7bd099ab26854cf247915fd0f}\label{classKnight_a2e9d92f7bd099ab26854cf247915fd0f}} 
+void \mbox{\hyperlink{classKnight_a2e9d92f7bd099ab26854cf247915fd0f}{do\+\_\+defense}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa uma defesa. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classKnight_a0e598393444b27ffe69d0438189279a9}\label{classKnight_a0e598393444b27ffe69d0438189279a9}} 
-void {\bfseries do\+\_\+special} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classKnight_a0e598393444b27ffe69d0438189279a9}{do\+\_\+special}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa um ataque especial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
 
+\subsection{Descrição detalhada}
+Permite que o cavaleiro tenha poderes de defesa e ataque, personagem ativo ou não e suas posições nos eixos x e y. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classKnight_af091272d130fbfee62b308e1059e9c5e}\label{classKnight_af091272d130fbfee62b308e1059e9c5e}} 
+\index{Knight@{Knight}!Knight@{Knight}}
+\index{Knight@{Knight}!Knight@{Knight}}
+\subsubsection{\texorpdfstring{Knight()}{Knight()}}
+{\footnotesize\ttfamily Knight\+::\+Knight (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{sprite\+\_\+paths,  }\item[{unsigned}]{id,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{character\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Método Construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sprite\+\_\+paths} & -\/ desenha personagem \\
+\hline
+{\em id} & -\/ identificador do personagem \\
+\hline
+{\em x} & -\/ posição no eixo x \\
+\hline
+{\em y} & -\/ posição no eixo y \\
+\hline
+{\em character\+\_\+code} & -\/ codigo do personagem \\
+\hline
+\end{DoxyParams}
+Poder de ataque especial -\/ 5000
+
+Poder de ataque heavy\+\_\+atack -\/ 2000
+
+Poder de ataque ligth\+\_\+atack -\/ 300
+
+Poder de defesa -\/ 300
+
+Último uso do heavy\+\_\+atack
+
+Último uso do light\+\_\+atack
+
+Ú\+Ltimo uso da defesa
+
+Indica que o peronsagem esta ativo 
+
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/knight.\+h\item 
-src/knight.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{knight_8h}{knight.\+h}}\item 
+src/\mbox{\hyperlink{knight_8cpp}{knight.\+cpp}}\end{DoxyCompactItemize}
