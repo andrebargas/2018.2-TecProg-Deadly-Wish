@@ -136,7 +136,7 @@ protected:
     string choose_sprite_path(unsigned player_id);
 
     /** \var unsigned frost_character_id
-      *  \brief Variavel que indica o frost_character_id
+      *  \brief Variável que indica o frost_character_id
       */
     unsigned frost_character_id;
     /** \enum State
@@ -152,50 +152,50 @@ protected:
       */
     typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
     /** \var State frost_state
-      * \brief Variavel que indica o estado do FrostNova
+      * \brief Variável que indica o estado do FrostNova
       */
     State frost_state;
     /** \var SpriteState frost_sprite_state
-      * \brief Variavel que indica o estado do sprite do FrostNova
+      * \brief Variável que indica o estado do sprite do FrostNova
       */
     SpriteState frost_sprite_state;
     /** \var double frost_axis_x_direction
-      * \brief Variavel que indica a direção no eixo x
+      * \brief Variável que indica a direção no eixo x
       */
     /** \var double frost_axis_y_direction
-      * \brief Variavel que indica a direção no eixo y
+      * \brief Variável que indica a direção no eixo y
       */
     double frost_axis_x_direction, frost_axis_y_direction;
     /** \var int frost_damage
-      * \brief Variavel que indica o dano do FrostNova
+      * \brief Variável que indica o dano do FrostNova
       */
     int frost_damage;
     /** \var double frost_speed
-      * \brief Variavel que indica a velocidade do FrostNova
+      * \brief Variável que indica a velocidade do FrostNova
       */
     double frost_speed;
     /** \var int frost_frame
-      * \brief Variavel que indica o frame do FrostNova
+      * \brief Variável que indica o frame do FrostNova
       */
     int frost_frame;
     /** \var string frost_sprite_path
-      * \brief Variavel que indica o caminho da pasta da sprite do FrostNova
+      * \brief Variável que indica o caminho da pasta da sprite do FrostNova
       */
     string frost_sprite_path;
     /** \var unsigned frost_start
-      * \brief Variavel que indica o tempo inicial do FrostNova
+      * \brief Variável que indica o tempo inicial do FrostNova
       */
     unsigned frost_start;
     /** \var unsigned frost_current_time
-      * \brief Variavel que indica o tempo atual do FrostNova
+      * \brief Variável que indica o tempo atual do FrostNova
       */
     unsigned frost_current_time;
     /** \var shared_ptr<Texture> frost_texture
-      * \brief Variavel que indica a textura do FrostNova
+      * \brief Variável que indica a textura do FrostNova
       */
     shared_ptr<Texture> frost_texture;
     /** \var Rectangle frost_bounding_box
-      * \brief Variavel que indica a caixa delimitadora do FrostNova
+      * \brief Variável que indica a caixa delimitadora do FrostNova
       */
     Rectangle frost_bounding_box;
 
