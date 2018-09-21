@@ -24,6 +24,10 @@ using std::vector;
 using namespace std;
 using namespace ijengine;
 
+
+/** \class Fireball fireball.h "include/fireball.h"
+  * \brief Cria o GameObject Fireball, controla sua posição e colisão, atualiza o sprite e o tempo
+  */
 class Fireball : public Skill {
 public:
 	Fireball(GameObject *parent, unsigned mage_id, double xp, double yp,

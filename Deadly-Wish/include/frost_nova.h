@@ -24,6 +24,9 @@ using std::vector;
 using namespace std;
 using namespace ijengine;
 
+/** \class FrostNova frost_nova.h "include/frost_nova.h"
+  * \brief Cria o GameObject FrostNova, controla sua posição e colisão, atualiza o sprite e o tempo
+  */
 class FrostNova : public Skill {
 public:
     FrostNova(GameObject *parent, unsigned mage_id, double xp, double yp,
