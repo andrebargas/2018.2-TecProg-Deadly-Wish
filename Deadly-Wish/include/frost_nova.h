@@ -29,26 +29,110 @@ using namespace ijengine;
   */
 class FrostNova : public Skill {
 public:
+    /** \fn FrostNova(GameObject *parent, unsigned mage_id, double xp, double yp, double dx, double dy)
+      * \public
+      * \brief Método construtor
+      * \param *parent Ponteiro para o GameObject
+      * \param mage_id
+      * \param xp posição em x
+      * \param yp posição em y
+      * \param dx
+      * \param dy
+      */
     FrostNova(GameObject *parent, unsigned mage_id, double xp, double yp,
         double dx, double dy);
+    /** \fn ~FrostNova
+      * \public
+      * \brief Método destrutor
+      */
     ~FrostNova();
 
-    // Metodos virtual de Collidable
+    /** \fn active()
+		  * \public
+		  * \brief Estado do objeto usado pela Engine
+		  * \return bool fixo em true
+		  */
     bool active() const;
+
+    /** \fn bounding_box()
+		  * \public
+		  * \brief Função que retorna a caixa delimitadora do objeto criada pela Engine
+		  * \return Rectangle& para habilidade FrostNova
+		  */
     const Rectangle& bounding_box() const;
+
+    /** \fn hit_boxes()
+      * \public
+      * \brief Função que retorna uma lista com a caixa delimitadora do objeto criada pela Engine
+      * \return list<Rectangle>& para habilidade FrostNova
+      */
     const list<Rectangle>& hit_boxes() const;
+
+    /** \fn direction()
+      * \publicon_collision
+      * \brief Função que retorna uma dupla com a direção no eixo x e no y do objeto
+      * \return pair<double, double> direção da habilidade FrostNova
+      */
     pair<double, double> direction() const;
+
+    /** \fn on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last)
+      * \public
+      * \brief Método construtor
+      * \param *parent Ponteiro para o GameObject
+      * \param mage_id
+      * \param xp posição em x
+      * \param yp posição em y
+      * \param dx
+      * \param dy
+      * \return void
+      */
     void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);
 
 protected:
 
-    // Metodos virtual de GameObject
+    /** \fn update_self(unsigned now, unsigned last)
+      * \protected
+      * \brief Função para atualizar o tempo. Nome não pode ser mudado por ser um
+      * metodo herdado da classe pai, protegida pelo escopo do projeto
+      * \param now unsigned Tempo atual do jogo
+      * \param last unsigned
+      * \return void
+      */
     void update_self(unsigned now, unsigned last);
+
+    /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
+      * \protected
+      * \brief Método que faz o desenho gráfico do jogo. Nome não pode ser mudado por ser um
+      *  metodo herdado da classe pai, protegida pelo escopo do projeto
+      * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
+      * \param unsigned
+      * \param unsigned
+      * \return void
+      */
     void draw_self(Canvas *canvas, unsigned, unsigned);
 
-    // Metodos de FrostNova
+    //UC
+    /** \fn update_sprite_state()
+      * \protected
+      * \brief Função não implementada
+      * \return void
+      */
     void update_sprite_state();
+
+    /** \fn update_time(unsigned now)
+      * \protected
+      * \brief Método que atualiza os tempos da FrostNova e seu frame considerando sua textura e largura
+      * \param now Tempo do jogo
+      * \return void
+      */
     void update_time(unsigned now);
+
+    /** \fn choose_sprite_path(unsigned player_id)
+      * \protected
+      * \brief Método que retorna o caminho do sprite de acordo com o id do jogador
+      * \param player_id Identificador do jogador
+      * \return void
+      */
     string choose_sprite_path(unsigned player_id);
 
     unsigned frost_character_id;

@@ -12,11 +12,19 @@
 #define FIREBALL_BASE_DAMAGE 20
 #define FIREBALL_WIDTH 32
 
-
 using namespace std;
 using namespace ijengine;
 
-
+/** \fn Fireball(GameObject *parent, unsigned mage_id, double xp, double yp, double dx, double dy)
+  * \public
+  * \brief Método construtor
+  * \param *parent Ponteiro para o GameObject
+  * \param mage_id
+  * \param xp direção no eixo x
+  * \param yp direção no eixo y
+  * \param dx
+  * \param dy
+  */
 Fireball::Fireball(GameObject *parent, unsigned mage_id, double xp, double yp, double dx,
     double dy)
     : Skill(parent, xp, yp, FIREBALL_BASE_DAMAGE, mage_id), fireball_character_id(mage_id),
@@ -41,11 +49,24 @@ Fireball::Fireball(GameObject *parent, unsigned mage_id, double xp, double yp, d
     }
 }
 
+/** \fn ~Fireball
+  * \public
+  * \brief Método destrutor
+  */
 Fireball::~Fireball()
 {
 
 }
 
+/** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
+  * \protected
+  * \brief Método que faz o desenho gráfico do jogo. Nome não pode ser mudado por ser um
+  *  metodo herdado da classe pai, protegida pelo escopo do projeto
+  * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
+  * \param unsigned
+  * \param unsigned
+  * \return void
+  */
 void
 Fireball::draw_self(Canvas *canvas, unsigned, unsigned)
 {
@@ -56,6 +77,14 @@ Fireball::draw_self(Canvas *canvas, unsigned, unsigned)
     canvas->draw(fireball_texture.get(),rect, x(), y());
 }
 
+/** \fn update_self(unsigned now, unsigned last)
+  * \protected
+  * \brief Função para atualizar o tempo. Nome não pode ser mudado por ser um
+  * metodo herdado da classe pai, protegida pelo escopo do projeto
+  * \param now unsigned Tempo atual do jogo
+  * \param last unsigned
+  * \return void
+  */
 void
 Fireball::update_self(unsigned now, unsigned last)
 {
@@ -70,30 +99,55 @@ Fireball::update_self(unsigned now, unsigned last)
     }
 }
 
+/** \fn active()
+  * \public
+  * \brief Estado do objeto usado pela Engine
+  * \return bool fixo em true
+  */
 bool
 Fireball::active() const
 {
     return true;
 }
 
+/** \fn bounding_box()
+  * \public
+  * \brief Função da Engine que cria a caixa delimitadora do objeto
+  * \return Rectangle& para habilidade FrostNova
+  */
 const Rectangle&
 Fireball::bounding_box() const
 {
     return fireball_bounding_box;
 }
 
+/** \fn hit_boxes()
+  * \public
+  * \brief Função que retorna uma lista com a caixa delimitadora do objeto criada pela Engine
+  * \return list<Rectangle>& para habilidade Fireball
+  */
 const list<Rectangle>&
 Fireball::hit_boxes() const {
     static list<Rectangle> boxes {fireball_bounding_box};
     return boxes;
 }
 
+/** \fn direction()
+  * \public
+  * \brief Função que retorna uma dupla com a direção no eixo x e no y do objeto
+  * \return pair<double, double> direção da habilidade Fireball
+  */
 pair<double, double>
 Fireball::direction() const
 {
     return pair<double, double>(fireball_axis_x_direction, fireball_axis_y_direction);
 }
 
+/** \fn update_sprite_state()
+  * \protected
+  * \brief Função que atualiza o estado do sprite considerando os tempos, a largura e a textura da Fireball
+  * \return void
+  */
 void
 Fireball::update_sprite_state()
 {
@@ -114,6 +168,12 @@ Fireball::update_sprite_state()
   //  }
 }
 
+/** \fn update_time(unsigned now)
+  * \protected
+  * \brief Método que atualiza os tempos da Fireball e o estado do seu sprite
+  * \param now Tempo do jogo
+  * \return void
+  */
 void
 Fireball::update_time(unsigned now)
 {
@@ -135,6 +195,12 @@ Fireball::update_time(unsigned now)
 
 }
 
+/** \fn choose_sprite_path(unsigned player_id)
+  * \protected
+  * \brief Método que retorna o caminho do sprite de acordo com o id do jogador
+  * \param player_id Identificador do jogador
+  * \return void
+  */
 string
 Fireball::choose_sprite_path(unsigned player_id)
 {
