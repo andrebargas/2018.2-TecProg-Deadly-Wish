@@ -77,6 +77,8 @@ public:
     pair<double, double> direction() const;
 
 protected:
+
+		// PBS
 		/** \fn update_self(unsigned now, unsigned last)
 			* \protected
 			* \brief Função para atualizar o tempo. Nome não pode ser mudado por ser um
@@ -87,6 +89,7 @@ protected:
 			*/
     void update_self(unsigned now, unsigned last);
 
+		// PBS
 		/** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
       * \protected
       * \brief Método que faz o desenho gráfico do jogo. Nome não pode ser mudado por ser um

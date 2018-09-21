@@ -58,6 +58,7 @@ Fireball::~Fireball()
 
 }
 
+// PBS
 /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
   * \protected
   * \brief Método que faz o desenho gráfico do jogo. Nome não pode ser mudado por ser um
@@ -77,6 +78,7 @@ Fireball::draw_self(Canvas *canvas, unsigned, unsigned)
     canvas->draw(fireball_texture.get(),rect, x(), y());
 }
 
+// PBS
 /** \fn update_self(unsigned now, unsigned last)
   * \protected
   * \brief Função para atualizar o tempo. Nome não pode ser mudado por ser um
