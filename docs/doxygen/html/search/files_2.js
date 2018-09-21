@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['infiltrator_2ecpp',['infiltrator.cpp',['../infiltrator_8cpp.html',1,'']]],
-  ['infiltrator_2eh',['infiltrator.h',['../infiltrator_8h.html',1,'']]]
+  ['fireball_2ecpp',['fireball.cpp',['../fireball_8cpp.html',1,'']]],
+  ['fireball_2eh',['fireball.h',['../fireball_8h.html',1,'']]],
+  ['frost_5fnova_2ecpp',['frost_nova.cpp',['../frost__nova_8cpp.html',1,'']]],
+  ['frost_5fnova_2eh',['frost_nova.h',['../frost__nova_8h.html',1,'']]]
 ];

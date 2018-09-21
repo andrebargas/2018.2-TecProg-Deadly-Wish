@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['translate',['translate',['../classTranslator.html#a223b870ca69e0b75b721b266a5aecd2a',1,'Translator::translate(GameEvent &amp;to, const MouseEvent &amp;from)'],['../classTranslator.html#ad1910814cca5d0f3d9dbffa4721071ea',1,'Translator::translate(GameEvent &amp;to, const SystemEvent &amp;from)'],['../classTranslator.html#a23fe703107ba6e3b26e5da8e9f28777a',1,'Translator::translate(GameEvent &amp;to, const KeyboardEvent &amp;from)'],['../classTranslator.html#ad75df11a67688dba45a23cecc9930970',1,'Translator::translate(GameEvent &amp;to, const JoystickEvent &amp;from)']]]
+  ['release',['release',['../classTestLevelFactory.html#a7771c01184257df25680ba0c8f3b5188',1,'TestLevelFactory']]],
+  ['respawn_5fcharacter',['respawn_character',['../classCharacter.html#afc90256ef2253670aee9def34f700247',1,'Character']]],
+  ['run',['run',['../classIje02Game.html#ac93c42997b7e79698960057d7c395990',1,'Ije02Game']]]
 ];

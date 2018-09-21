@@ -1,5 +1,14 @@
 \hypertarget{classSkill}{}\section{Referência à classe Skill}
 \label{classSkill}\index{Skill@{Skill}}
+
+
+Classe que herda de Game\+Object e Collidable que calcula o dano recebido pelos personagens.  Método Construtor \mbox{\hyperlink{classSkill}{Skill}}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/skill.\+h\char`\"{}}
+
 Diagrama de heranças da classe Skill\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,21 +18,23 @@ Diagrama de heranças da classe Skill\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSkill_a179f277e58924d53051eae66896b3a74}\label{classSkill_a179f277e58924d53051eae66896b3a74}} 
-{\bfseries Skill} (Game\+Object $\ast$parent, double x\+\_\+posiotion, double y\+\_\+posiotion, int damage, int character\+\_\+id)
-\item 
+\mbox{\hyperlink{classSkill_a179f277e58924d53051eae66896b3a74}{Skill}} (Game\+Object $\ast$parent, double x\+\_\+posiotion, double y\+\_\+posiotion, int damage, int character\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSkill_a6525c1f0b7299ff447ee14f36b55967a}\label{classSkill_a6525c1f0b7299ff447ee14f36b55967a}} 
+\mbox{\hyperlink{classSkill_a6525c1f0b7299ff447ee14f36b55967a}{$\sim$\+Skill}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_a69293c2a9324f011147d444aee01e319}\label{classSkill_a69293c2a9324f011147d444aee01e319}} 
-unsigned {\bfseries get\+\_\+character\+\_\+id} () const
-\item 
+unsigned \mbox{\hyperlink{classSkill_a69293c2a9324f011147d444aee01e319}{get\+\_\+character\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna a habilidade de um personagem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_ae24133703ea9307d93ea305115dc0175}\label{classSkill_ae24133703ea9307d93ea305115dc0175}} 
-int {\bfseries get\+\_\+damage} () const
-\item 
+int \mbox{\hyperlink{classSkill_ae24133703ea9307d93ea305115dc0175}{get\+\_\+damage}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna a skill\+\_\+damage. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_a43a9dd5e3862f3698fe1b92724a6ab72}\label{classSkill_a43a9dd5e3862f3698fe1b92724a6ab72}} 
-int {\bfseries get\+\_\+collided} () const
-\item 
+int \mbox{\hyperlink{classSkill_a43a9dd5e3862f3698fe1b92724a6ab72}{get\+\_\+collided}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna a colisão. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_a1744c0c7f03304b1a0444a1bd95661c0}\label{classSkill_a1744c0c7f03304b1a0444a1bd95661c0}} 
-virtual bool {\bfseries active} () const =0
-\item 
+virtual bool \mbox{\hyperlink{classSkill_a1744c0c7f03304b1a0444a1bd95661c0}{active}} () const =0
+\begin{DoxyCompactList}\small\item\em Métodos virtuais de colisão. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_aa8b6a26b2f3586ca28b354f2da132e09}\label{classSkill_aa8b6a26b2f3586ca28b354f2da132e09}} 
 virtual const Rectangle \& {\bfseries bounding\+\_\+box} () const =0
 \item 
@@ -33,27 +44,102 @@ virtual const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const =0
 \mbox{\Hypertarget{classSkill_a503e88f6eb131a401c7a7a49d87b1ab0}\label{classSkill_a503e88f6eb131a401c7a7a49d87b1ab0}} 
 virtual pair$<$ double, double $>$ {\bfseries direction} () const =0
 \item 
-\mbox{\Hypertarget{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}\label{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}} 
-virtual void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}{on\+\_\+collision}} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Construtor on\+\_\+collision. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classSkill_a6b836b689172c632c34ebf2010c7f94e}\label{classSkill_a6b836b689172c632c34ebf2010c7f94e}} 
-unsigned {\bfseries skill\+\_\+character\+\_\+id}
-\item 
+unsigned \mbox{\hyperlink{classSkill_a6b836b689172c632c34ebf2010c7f94e}{skill\+\_\+character\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o character\+\_\+id skill. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_a68fa3060a454b635aada6662d9fb2322}\label{classSkill_a68fa3060a454b635aada6662d9fb2322}} 
-int {\bfseries skill\+\_\+damage}
-\item 
+int \mbox{\hyperlink{classSkill_a68fa3060a454b635aada6662d9fb2322}{skill\+\_\+damage}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o dano do skill. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_a5616db66c8db4011c77a9850ade84940}\label{classSkill_a5616db66c8db4011c77a9850ade84940}} 
-double {\bfseries skill\+\_\+speed}
-\item 
+double \mbox{\hyperlink{classSkill_a5616db66c8db4011c77a9850ade84940}{skill\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em Variável que indica a velocidade do skill. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSkill_acde70fa4d6b0b5f31310de514f3a9f4e}\label{classSkill_acde70fa4d6b0b5f31310de514f3a9f4e}} 
-int {\bfseries skill\+\_\+collided}
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{classSkill_acde70fa4d6b0b5f31310de514f3a9f4e}{skill\+\_\+collided}}
+\begin{DoxyCompactList}\small\item\em Variável que indica a colisão do skill. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe que herda de Game\+Object e Collidable que calcula o dano recebido pelos personagens.  Método Construtor \mbox{\hyperlink{classSkill}{Skill}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$parent} & Ponteiro para o Game\+Object \\
+\hline
+{\em x\+\_\+posiotion} & double posição no eixo X \\
+\hline
+{\em y\+\_\+posiotion} & double posição no eixo y \\
+\hline
+{\em damage} & int dano da habilidade \\
+\hline
+{\em character\+\_\+id} & int identificador do personagem \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classSkill_a179f277e58924d53051eae66896b3a74}\label{classSkill_a179f277e58924d53051eae66896b3a74}} 
+\index{Skill@{Skill}!Skill@{Skill}}
+\index{Skill@{Skill}!Skill@{Skill}}
+\subsubsection{\texorpdfstring{Skill()}{Skill()}}
+{\footnotesize\ttfamily Skill\+::\+Skill (\begin{DoxyParamCaption}\item[{Game\+Object $\ast$}]{parent,  }\item[{double}]{x\+\_\+posiotion,  }\item[{double}]{y\+\_\+posiotion,  }\item[{int}]{damage,  }\item[{int}]{character\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Método construtor. 
+
+fn \mbox{\hyperlink{classSkill_a179f277e58924d53051eae66896b3a74}{Skill(\+Game\+Object $\ast$parent, double x\+\_\+posiotion, double y\+\_\+posiotion, int damage, int character\+\_\+id)}}
+
+Método Construtor \mbox{\hyperlink{classSkill}{Skill}} 
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$parent} & Ponteiro para o Game\+Object \\
+\hline
+{\em x\+\_\+posiotion} & double posição no eixo X \\
+\hline
+{\em y\+\_\+posiotion} & double posição no eixo y \\
+\hline
+{\em damage} & int dano da habilidade \\
+\hline
+{\em character\+\_\+id} & int identificador do personagem \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}\label{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}} 
+\index{Skill@{Skill}!on\+\_\+collision@{on\+\_\+collision}}
+\index{on\+\_\+collision@{on\+\_\+collision}!Skill@{Skill}}
+\subsubsection{\texorpdfstring{on\+\_\+collision()}{on\_collision()}}
+{\footnotesize\ttfamily void Skill\+::on\+\_\+collision (\begin{DoxyParamCaption}\item[{const Collidable $\ast$}]{who,  }\item[{const Rectangle \&}]{where,  }\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Construtor on\+\_\+collision. 
+
+fn \mbox{\hyperlink{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}{on\+\_\+collision(const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)}}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$who} & qual personagem está usando \\
+\hline
+{\em \&where} & endereço onde a habilidade será usada \\
+\hline
+{\em now} & momento atual \\
+\hline
+{\em last} & ultimo momento que a habilidade foi usada \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado em \mbox{\hyperlink{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}{Frost\+Nova}}.
+
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/skill.\+h\item 
-src/skill.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{skill_8h}{skill.\+h}}\item 
+src/\mbox{\hyperlink{skill_8cpp}{skill.\+cpp}}\end{DoxyCompactItemize}

@@ -69,35 +69,48 @@ $(function() {
 <div class="title">Referência à classe Skill<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe que herda de GameObject e Collidable que calcula o dano recebido pelos personagens.  Método Construtor <a class="el" href="classSkill.html" title="Classe que herda de GameObject e Collidable que calcula o dano recebido pelos personagens....">Skill</a>.  
+ <a href="classSkill.html#details">Mais...</a></p>
+
+<p><code>#include &quot;<a class="el" href="skill_8h_source.html">include/skill.h</a>&quot;</code></p>
 <div class="dynheader">
 Diagrama de heranças da classe Skill</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classSkill.png" usemap="#Skill_map" alt=""/>
   <map id="Skill_map" name="Skill_map">
-<area href="classFireball.html" alt="Fireball" shape="rect" coords="0,112,81,136"/>
-<area href="classFrostNova.html" alt="FrostNova" shape="rect" coords="91,112,172,136"/>
-<area href="classLightAttack.html" alt="LightAttack" shape="rect" coords="182,112,263,136"/>
-<area href="classSpear.html" alt="Spear" shape="rect" coords="273,112,354,136"/>
+<area href="classFireball.html" title="Cria o GameObject Fireball, controla sua posição e colisão, atualiza o sprite e o tempo." alt="Fireball" shape="rect" coords="0,112,81,136"/>
+<area href="classFrostNova.html" title="Cria o GameObject FrostNova, controla sua posição e colisão, atualiza o sprite e o tempo." alt="FrostNova" shape="rect" coords="91,112,172,136"/>
+<area href="classLightAttack.html" title="Classe que controla o LightAttack indica direção, velocidade, player, com herança da classe Skill." alt="LightAttack" shape="rect" coords="182,112,263,136"/>
+<area href="classSpear.html" title="Classe que herda de GameObject e Collidable que calcula o dano recebido pelos personagens...." alt="Spear" shape="rect" coords="273,112,354,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:a179f277e58924d53051eae66896b3a74"><td class="memItemLeft" align="right" valign="top"><a id="a179f277e58924d53051eae66896b3a74"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Skill</b> (GameObject *parent, double x_posiotion, double y_posiotion, int damage, int character_id)</td></tr>
+<tr class="memitem:a179f277e58924d53051eae66896b3a74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a179f277e58924d53051eae66896b3a74">Skill</a> (GameObject *parent, double x_posiotion, double y_posiotion, int damage, int character_id)</td></tr>
+<tr class="memdesc:a179f277e58924d53051eae66896b3a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método construtor.  <a href="#a179f277e58924d53051eae66896b3a74">Mais...</a><br /></td></tr>
 <tr class="separator:a179f277e58924d53051eae66896b3a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6525c1f0b7299ff447ee14f36b55967a"><td class="memItemLeft" align="right" valign="top"><a id="a6525c1f0b7299ff447ee14f36b55967a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a6525c1f0b7299ff447ee14f36b55967a">~Skill</a> ()</td></tr>
+<tr class="memdesc:a6525c1f0b7299ff447ee14f36b55967a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método destrutor. <br /></td></tr>
+<tr class="separator:a6525c1f0b7299ff447ee14f36b55967a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69293c2a9324f011147d444aee01e319"><td class="memItemLeft" align="right" valign="top"><a id="a69293c2a9324f011147d444aee01e319"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>get_character_id</b> () const</td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a69293c2a9324f011147d444aee01e319">get_character_id</a> () const</td></tr>
+<tr class="memdesc:a69293c2a9324f011147d444aee01e319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna a habilidade de um personagem. <br /></td></tr>
 <tr class="separator:a69293c2a9324f011147d444aee01e319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae24133703ea9307d93ea305115dc0175"><td class="memItemLeft" align="right" valign="top"><a id="ae24133703ea9307d93ea305115dc0175"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>get_damage</b> () const</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#ae24133703ea9307d93ea305115dc0175">get_damage</a> () const</td></tr>
+<tr class="memdesc:ae24133703ea9307d93ea305115dc0175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna a skill_damage. <br /></td></tr>
 <tr class="separator:ae24133703ea9307d93ea305115dc0175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43a9dd5e3862f3698fe1b92724a6ab72"><td class="memItemLeft" align="right" valign="top"><a id="a43a9dd5e3862f3698fe1b92724a6ab72"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>get_collided</b> () const</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a43a9dd5e3862f3698fe1b92724a6ab72">get_collided</a> () const</td></tr>
+<tr class="memdesc:a43a9dd5e3862f3698fe1b92724a6ab72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna a colisão. <br /></td></tr>
 <tr class="separator:a43a9dd5e3862f3698fe1b92724a6ab72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1744c0c7f03304b1a0444a1bd95661c0"><td class="memItemLeft" align="right" valign="top"><a id="a1744c0c7f03304b1a0444a1bd95661c0"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> () const =0</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a1744c0c7f03304b1a0444a1bd95661c0">active</a> () const =0</td></tr>
+<tr class="memdesc:a1744c0c7f03304b1a0444a1bd95661c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Métodos virtuais de colisão. <br /></td></tr>
 <tr class="separator:a1744c0c7f03304b1a0444a1bd95661c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8b6a26b2f3586ca28b354f2da132e09"><td class="memItemLeft" align="right" valign="top"><a id="aa8b6a26b2f3586ca28b354f2da132e09"></a>
 virtual const Rectangle &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>bounding_box</b> () const =0</td></tr>
@@ -108,28 +121,167 @@ virtual const list&lt; Rectangle &gt; &amp;&#160;</td><td class="memItemRight" v
 <tr class="memitem:a503e88f6eb131a401c7a7a49d87b1ab0"><td class="memItemLeft" align="right" valign="top"><a id="a503e88f6eb131a401c7a7a49d87b1ab0"></a>
 virtual pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>direction</b> () const =0</td></tr>
 <tr class="separator:a503e88f6eb131a401c7a7a49d87b1ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae236be2ad572352fdf5f1e69eabe3dd3"><td class="memItemLeft" align="right" valign="top"><a id="ae236be2ad572352fdf5f1e69eabe3dd3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>on_collision</b> (const Collidable *who, const Rectangle &amp;where, unsigned now, unsigned last)</td></tr>
+<tr class="memitem:ae236be2ad572352fdf5f1e69eabe3dd3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#ae236be2ad572352fdf5f1e69eabe3dd3">on_collision</a> (const Collidable *who, const Rectangle &amp;where, unsigned now, unsigned last)</td></tr>
+<tr class="memdesc:ae236be2ad572352fdf5f1e69eabe3dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor on_collision.  <a href="#ae236be2ad572352fdf5f1e69eabe3dd3">Mais...</a><br /></td></tr>
 <tr class="separator:ae236be2ad572352fdf5f1e69eabe3dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
 <tr class="memitem:a6b836b689172c632c34ebf2010c7f94e"><td class="memItemLeft" align="right" valign="top"><a id="a6b836b689172c632c34ebf2010c7f94e"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>skill_character_id</b></td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a6b836b689172c632c34ebf2010c7f94e">skill_character_id</a></td></tr>
+<tr class="memdesc:a6b836b689172c632c34ebf2010c7f94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variável que indica o character_id skill. <br /></td></tr>
 <tr class="separator:a6b836b689172c632c34ebf2010c7f94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68fa3060a454b635aada6662d9fb2322"><td class="memItemLeft" align="right" valign="top"><a id="a68fa3060a454b635aada6662d9fb2322"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>skill_damage</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a68fa3060a454b635aada6662d9fb2322">skill_damage</a></td></tr>
+<tr class="memdesc:a68fa3060a454b635aada6662d9fb2322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variável que indica o dano do skill. <br /></td></tr>
 <tr class="separator:a68fa3060a454b635aada6662d9fb2322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5616db66c8db4011c77a9850ade84940"><td class="memItemLeft" align="right" valign="top"><a id="a5616db66c8db4011c77a9850ade84940"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>skill_speed</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#a5616db66c8db4011c77a9850ade84940">skill_speed</a></td></tr>
+<tr class="memdesc:a5616db66c8db4011c77a9850ade84940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variável que indica a velocidade do skill. <br /></td></tr>
 <tr class="separator:a5616db66c8db4011c77a9850ade84940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde70fa4d6b0b5f31310de514f3a9f4e"><td class="memItemLeft" align="right" valign="top"><a id="acde70fa4d6b0b5f31310de514f3a9f4e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>skill_collided</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkill.html#acde70fa4d6b0b5f31310de514f3a9f4e">skill_collided</a></td></tr>
+<tr class="memdesc:acde70fa4d6b0b5f31310de514f3a9f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variável que indica a colisão do skill. <br /></td></tr>
 <tr class="separator:acde70fa4d6b0b5f31310de514f3a9f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p class="">Classe que herda de GameObject e Collidable que calcula o dano recebido pelos personagens.  Método Construtor <a class="el" href="classSkill.html" title="Classe que herda de GameObject e Collidable que calcula o dano recebido pelos personagens....">Skill</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*parent</td><td>Ponteiro para o GameObject </td></tr>
+    <tr><td class="paramname">x_posiotion</td><td>double posição no eixo X </td></tr>
+    <tr><td class="paramname">y_posiotion</td><td>double posição no eixo y </td></tr>
+    <tr><td class="paramname">damage</td><td>int dano da habilidade </td></tr>
+    <tr><td class="paramname">character_id</td><td>int identificador do personagem </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="a179f277e58924d53051eae66896b3a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a179f277e58924d53051eae66896b3a74">&#9670;&nbsp;</a></span>Skill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Skill::Skill </td>
+          <td>(</td>
+          <td class="paramtype">GameObject *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x_posiotion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y_posiotion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>damage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>character_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método construtor. </p>
+<p class="">fn <a class="el" href="classSkill.html#a179f277e58924d53051eae66896b3a74" title="Método construtor.">Skill(GameObject *parent, double x_posiotion, double y_posiotion, int damage, int character_id)</a></p>
+<p class="">Método Construtor <a class="el" href="classSkill.html" title="Classe que herda de GameObject e Collidable que calcula o dano recebido pelos personagens....">Skill</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*parent</td><td>Ponteiro para o GameObject </td></tr>
+    <tr><td class="paramname">x_posiotion</td><td>double posição no eixo X </td></tr>
+    <tr><td class="paramname">y_posiotion</td><td>double posição no eixo y </td></tr>
+    <tr><td class="paramname">damage</td><td>int dano da habilidade </td></tr>
+    <tr><td class="paramname">character_id</td><td>int identificador do personagem </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ae236be2ad572352fdf5f1e69eabe3dd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae236be2ad572352fdf5f1e69eabe3dd3">&#9670;&nbsp;</a></span>on_collision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skill::on_collision </td>
+          <td>(</td>
+          <td class="paramtype">const Collidable *&#160;</td>
+          <td class="paramname"><em>who</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Rectangle &amp;&#160;</td>
+          <td class="paramname"><em>where</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>now</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor on_collision. </p>
+<p class="">fn <a class="el" href="classSkill.html#ae236be2ad572352fdf5f1e69eabe3dd3" title="Construtor on_collision.">on_collision(const Collidable *who, const Rectangle &amp;where, unsigned now, unsigned last)</a></p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*who</td><td>qual personagem está usando </td></tr>
+    <tr><td class="paramname">&amp;where</td><td>endereço onde a habilidade será usada </td></tr>
+    <tr><td class="paramname">now</td><td>momento atual </td></tr>
+    <tr><td class="paramname">last</td><td>ultimo momento que a habilidade foi usada </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementado em <a class="el" href="classFrostNova.html#aeda0ee508c08250e8e36a9a0f2c24d96">FrostNova</a>.</p>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/<a class="el" href="skill_8h_source.html">skill.h</a></li>
-<li>src/skill.cpp</li>
+<li>src/<a class="el" href="skill_8cpp.html">skill.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

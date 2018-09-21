@@ -47,7 +47,7 @@ var searchData=
   ['characterselection',['CharacterSelection',['../classCharacterSelection.html',1,'CharacterSelection'],['../classCharacterSelection.html#ac3cb2219a5eda202ecc9a17218326073',1,'CharacterSelection::CharacterSelection()']]],
   ['characterstate',['CharacterState',['../classCharacterState.html',1,'']]],
   ['characterstatefactory',['CharacterStateFactory',['../classCharacterStateFactory.html',1,'']]],
-  ['choose_5fsprite_5fpath',['choose_sprite_path',['../classCharacter.html#a5277e58a7a52a99a42bdb23c6295c7f1',1,'Character::choose_sprite_path()'],['../classCharacterFactory.html#ae34183113755bfceb1a2906686e999af',1,'CharacterFactory::choose_sprite_path()']]],
+  ['choose_5fsprite_5fpath',['choose_sprite_path',['../classCharacter.html#a5277e58a7a52a99a42bdb23c6295c7f1',1,'Character::choose_sprite_path()'],['../classCharacterFactory.html#ae34183113755bfceb1a2906686e999af',1,'CharacterFactory::choose_sprite_path()'],['../classFireball.html#a4a5554e5ffa7f3b7811815515dfcf6a4',1,'Fireball::choose_sprite_path()'],['../classFrostNova.html#afc420630fdfd93b865ea086b0e0c55ba',1,'FrostNova::choose_sprite_path()']]],
   ['chosen',['chosen',['../classCharacterSelection.html#ab6f27f44a433da27c786b25b9c4945ca',1,'CharacterSelection']]],
   ['credits_5flevel_2ecpp',['credits_level.cpp',['../credits__level_8cpp.html',1,'']]],
   ['credits_5flevel_2eh',['credits_level.h',['../credits__level_8h.html',1,'']]],
