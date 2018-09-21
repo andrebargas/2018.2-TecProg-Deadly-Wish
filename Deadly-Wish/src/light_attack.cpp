@@ -20,7 +20,7 @@ using namespace ijengine;
  * \public
  * \breif Método Construtor LightAttack
  * \param *parent Ponteiro para o GameObject
- * \param mage_id
+ * \param mage_id identificador do personagem mage
  * \param xp double posição no eixo X
  * \param yp double posição no eixo y
  */

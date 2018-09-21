@@ -35,27 +35,27 @@ using namespace ijengine;
  */
 class LightAttack : public Skill
 {
-  public:
-    /** \fn LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp);
+public:
+  /** \fn LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp);
       * \public
       * \brief Método construtor
       */
-    LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp);
+  LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp);
 
-    /** \fn ~LightAttack()
+  /** \fn ~LightAttack()
       * \public
       * \brief Método destrutor
       */
-    ~LightAttack();
+  ~LightAttack();
 
-    //! Métodos virtuais de colisão
-    bool active() const;
-    const Rectangle &bounding_box() const;
-    const list<Rectangle> &hit_boxes() const;
-    pair<double, double> direction() const;
+  //! Métodos virtuais de colisão
+  bool active() const;
+  const Rectangle &bounding_box() const;
+  const list<Rectangle> &hit_boxes() const;
+  pair<double, double> direction() const;
 
-  protected:
-    /** \fn update_self(unsigned now, unsigned last)
+protected:
+  /** \fn update_self(unsigned now, unsigned last)
       * \protected
       * \brief Função para atualizar o tempo de inicio do level, e setar atributo
       *  #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
@@ -64,9 +64,9 @@ class LightAttack : public Skill
       * \param last unsigned
       * \return void
       */
-    void update_self(unsigned now, unsigned last);
+  void update_self(unsigned now, unsigned last);
 
-    /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
+  /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
       * \protected
       * \brief Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um
       *  metodo herdado da classe pai, protegida pelo escopo do projeto
@@ -75,62 +75,62 @@ class LightAttack : public Skill
       * \param last unsigned
       * \return void
       */
-    void draw_self(Canvas *canvas, unsigned, unsigned);
+  void draw_self(Canvas *canvas, unsigned, unsigned);
 
-    void update_sprite_state();
-    void update_time(unsigned now);
-    string choose_sprite_path(unsigned player_id);
+  void update_sprite_state();
+  void update_time(unsigned now);
+  string choose_sprite_path(unsigned player_id);
 
-    unsigned light_attack_character_id;
+  unsigned light_attack_character_id;
 
-    //! enum para lado do LightAttack
-    typedef enum
-    {
-        MOVING_LEFT,
-        MOVING_RIGHT
-    } State;
+  //! enum para escolher a direção do LightAttack
+  typedef enum
+  {
+    MOVING_LEFT,
+    MOVING_RIGHT
+  } State;
 
-    //! struct com enum para SpriteState do LightAttack
-    typedef enum
-    {
-        CASTING,
-        MOVING,
-        HITTING
-    } SpriteState;
+  //! struct com enum para SpriteState do LightAttack
+  typedef enum
+  {
+    CASTING,
+    MOVING,
+    HITTING
+  } SpriteState;
 
-    //! struct com enum para Players
-    typedef enum
-    {
-        PLAYER_1,
-        PLAYER_2,
-        PLAYER_3,
-        PLAYER_4
-    } Players;
+  //! struct com enum para Players
+  typedef enum
+  {
+    PLAYER_1,
+    PLAYER_2,
+    PLAYER_3,
+    PLAYER_4
+  } Players;
 
-    //! Variável que indica o state usada na engine
-    State m_state;
-    //! Variável que indica o SpriteState usada na engine
-    SpriteState m_sprite_state;
-    //! Variáveis que indicam a direção em x e y do light_attack
-    double light_attack_axis_x_direction, light_attack_axis_y_direction;
-    //! Variável que indica o dano do light_attack
-    int light_attack_damage;
-    //! Variável que indica a velocidade do light_attack
-    double light_attack_speed;
-    //! Variável que indica frame do light_attack
-    int light_attack_frame;
-    //! Variável que indica frame do light_attack
-    string light_attack_sprite_path;
-    //! Variável que indica o inicio do light_attack
-    unsigned light_attack_start;
-    //! Variável que indica o tempo do light_attack
-    unsigned light_attack_current_time;
+  //! Variável que indica o state usada na engine
+  State m_state;
+  //! Variável que indica o SpriteState usada na engine
+  SpriteState m_sprite_state;
+  //! Variáveis que indicam a direção em x e y do light_attack
+  double light_attack_axis_x_direction, light_attack_axis_y_direction;
+  //! Variável que indica o dano do light_attack
+  int light_attack_damage;
+  //! Variável que indica a velocidade do light_attack
+  double light_attack_speed;
+  //! Variável que indica frame do light_attack
+  int light_attack_frame;
+  //! Variável do light_attack_sprite_path
+  string light_attack_sprite_path;
+  //! Variável que indica o inicio do light_attack
+  unsigned light_attack_start;
+  //! Variável que indica o tempo do light_attack
+  unsigned light_attack_current_time;
 
-    shared_ptr<Texture> light_attack_texture;
+  shared_ptr<Texture> light_attack_texture;
 
-    Rectangle light_attack_bounding_box;
+  Rectangle light_attack_bounding_box;
 
-    //    bool on_event(const GameEvent& event);
+  //    bool on_event(const GameEvent& event);
 };
 
 #endif
