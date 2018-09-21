@@ -1,6 +1,14 @@
+/** \file base.cpp
+  * \brief Este é o arquivo dos metodos da classe do Base que é a base 'fortaleza' do player no game.
+  */
+
+ //Incluindo arquivo da classe Base
 #include "base.h"
+//Incluindo arquivo da classe GameObject
 #include "ije02_game.h"
+//Incluindo arquivo da classe Skill
 #include "skill.h"
+//Incluindo arquivo da classe TestLevelFactory
 #include "test_level_factory.h"
 
 #include <ijengine/canvas.h>
