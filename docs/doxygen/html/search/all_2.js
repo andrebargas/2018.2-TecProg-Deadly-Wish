@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['change_5fbase_5fstatus',['change_base_status',['../classBase.html#af95cdc748f2f72e35ff9e42a8a44eefe',1,'Base']]],
   ['change_5fcharacter_5fstate',['change_character_state',['../classCharacter.html#a067f09af5430da58cc9698421fb84814',1,'Character']]],
   ['character',['Character',['../classCharacter.html',1,'Character'],['../classCharacter.html#a442a1c3c8e82823ef340f078c8f4bb50',1,'Character::Character()']]],
   ['character_5factive',['character_active',['../classCharacter.html#acb93cf49560055ead552c5094a54184c',1,'Character']]],
@@ -45,7 +46,7 @@ var searchData=
   ['characterchooselevel',['CharacterChooseLevel',['../classCharacterChooseLevel.html',1,'CharacterChooseLevel'],['../classCharacterChooseLevel.html#aa72c1238bc930fd230d13b89f75f5bb3',1,'CharacterChooseLevel::CharacterChooseLevel()']]],
   ['characterfactory',['CharacterFactory',['../classCharacterFactory.html',1,'CharacterFactory'],['../classCharacterFactory.html#a0014a7de42b681ce872c728ea91bcfc1',1,'CharacterFactory::CharacterFactory()']]],
   ['characterselection',['CharacterSelection',['../classCharacterSelection.html',1,'CharacterSelection'],['../classCharacterSelection.html#ac3cb2219a5eda202ecc9a17218326073',1,'CharacterSelection::CharacterSelection()']]],
-  ['characterstate',['CharacterState',['../classCharacterState.html',1,'']]],
+  ['characterstate',['CharacterState',['../classCharacterState.html',1,'CharacterState'],['../classCharacterState.html#abe9bcd871b173ad3312d71e3165b1bfb',1,'CharacterState::CharacterState()']]],
   ['characterstatefactory',['CharacterStateFactory',['../classCharacterStateFactory.html',1,'']]],
   ['choose_5fsprite_5fpath',['choose_sprite_path',['../classCharacter.html#a5277e58a7a52a99a42bdb23c6295c7f1',1,'Character::choose_sprite_path()'],['../classCharacterFactory.html#ae34183113755bfceb1a2906686e999af',1,'CharacterFactory::choose_sprite_path()'],['../classFireball.html#a4a5554e5ffa7f3b7811815515dfcf6a4',1,'Fireball::choose_sprite_path()'],['../classFrostNova.html#afc420630fdfd93b865ea086b0e0c55ba',1,'FrostNova::choose_sprite_path()']]],
   ['chosen',['chosen',['../classCharacterSelection.html#ab6f27f44a433da27c786b25b9c4945ca',1,'CharacterSelection']]],

@@ -65,7 +65,8 @@ $(function() {
 
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>active()
-: <a class="el" href="classCharacter.html#adbe9684ed82ce4b053881c1a31f2aa97">Character</a>
+: <a class="el" href="classBase.html#abc6031bf03072e10f4d8635dd226b01c">Base</a>
+, <a class="el" href="classCharacter.html#adbe9684ed82ce4b053881c1a31f2aa97">Character</a>
 , <a class="el" href="classFireball.html#a4c669319c3cfa500f352c758f1156801">Fireball</a>
 , <a class="el" href="classFrostNova.html#ad294037668fc3609c127c1e69031865b">FrostNova</a>
 , <a class="el" href="classInfiltrator.html#ae423f60190c1df91dcccb7e313845171">Infiltrator</a>
@@ -86,7 +87,8 @@ $(function() {
 
 <h3><a id="index_b"></a>- b -</h3><ul>
 <li>bounding_box()
-: <a class="el" href="classCharacter.html#a73c09996272b771f375a9514d0c465f1">Character</a>
+: <a class="el" href="classBase.html#a28fbf5f8b4e7e774f47298b76268159f">Base</a>
+, <a class="el" href="classCharacter.html#a73c09996272b771f375a9514d0c465f1">Character</a>
 , <a class="el" href="classFireball.html#a3c91f2eceddb1d7f317cc6961976ac68">Fireball</a>
 , <a class="el" href="classFrostNova.html#a4d70c5ea288631e425dadcf5e479a1b6">FrostNova</a>
 , <a class="el" href="classLightAttack.html#a9fa4f72585e6666f40ea55d539e40fe4">LightAttack</a>
@@ -96,6 +98,9 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>change_base_status()
+: <a class="el" href="classBase.html#af95cdc748f2f72e35ff9e42a8a44eefe">Base</a>
+</li>
 <li>change_character_state()
 : <a class="el" href="classCharacter.html#a067f09af5430da58cc9698421fb84814">Character</a>
 </li>
@@ -110,6 +115,9 @@ $(function() {
 </li>
 <li>CharacterSelection()
 : <a class="el" href="classCharacterSelection.html#ac3cb2219a5eda202ecc9a17218326073">CharacterSelection</a>
+</li>
+<li>CharacterState()
+: <a class="el" href="classCharacterState.html#abe9bcd871b173ad3312d71e3165b1bfb">CharacterState</a>
 </li>
 <li>choose_sprite_path()
 : <a class="el" href="classCharacter.html#a5277e58a7a52a99a42bdb23c6295c7f1">Character</a>
@@ -133,8 +141,15 @@ $(function() {
 <li>DeathMatchLevel()
 : <a class="el" href="classDeathMatchLevel.html#a3a0a88f354b3de9651f1a7d0dc0915ce">DeathMatchLevel</a>
 </li>
+<li>DeathState()
+: <a class="el" href="classDeathState.html#a7aca912131fc319ab8fa9177a022d329">DeathState</a>
+</li>
+<li>DefenseState()
+: <a class="el" href="classDefenseState.html#a196dcd342837ff786e97c7ac431b5131">DefenseState</a>
+</li>
 <li>direction()
-: <a class="el" href="classCharacter.html#a41e5ac6f8f3b9a15d78dd92de89768af">Character</a>
+: <a class="el" href="classBase.html#a77dceab1d1d47769ab4072c18d8fe473">Base</a>
+, <a class="el" href="classCharacter.html#a41e5ac6f8f3b9a15d78dd92de89768af">Character</a>
 , <a class="el" href="classFireball.html#a312843f3db953d32b52d337bdc07cc1d">Fireball</a>
 , <a class="el" href="classFrostNova.html#a9ec9aeb096b42670bf640ea47f27fd84">FrostNova</a>
 , <a class="el" href="classLightAttack.html#a45cd647fcbb73023ea7f7d7fde647688">LightAttack</a>
@@ -204,11 +219,20 @@ $(function() {
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>get_base_life()
+: <a class="el" href="classBase.html#a0bbcf57387f5860d74f6d2c4b9aecfba">Base</a>
+</li>
+<li>get_base_player_id()
+: <a class="el" href="classBase.html#ace6b801fb729303a97c6edf0c5e38f70">Base</a>
+</li>
 <li>get_character_id()
 : <a class="el" href="classSkill.html#a69293c2a9324f011147d444aee01e319">Skill</a>
 </li>
 <li>get_collided()
 : <a class="el" href="classSkill.html#a43a9dd5e3862f3698fe1b92724a6ab72">Skill</a>
+</li>
+<li>get_current_state()
+: <a class="el" href="classCharacterState.html#a8abbdb5d82447c225dc54f205c782e8e">CharacterState</a>
 </li>
 <li>get_damage()
 : <a class="el" href="classSkill.html#ae24133703ea9307d93ea305115dc0175">Skill</a>
@@ -222,12 +246,18 @@ $(function() {
 <li>get_players_characters()
 : <a class="el" href="classCharacterChooseLevel.html#a5746558bdd1785dd88ae2bf99a1ebc7d">CharacterChooseLevel</a>
 </li>
+<li>get_refresh_rate()
+: <a class="el" href="classCharacterState.html#a26ad231cccb89de9c1ed224cf126ca38">CharacterState</a>
+</li>
 </ul>
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>handle_state()
 : <a class="el" href="classCharacter.html#a2edbbba1c9e07eece34c25f651e364d9">Character</a>
+</li>
+<li>HeavyAttackState()
+: <a class="el" href="classHeavyAttackState.html#a8e27901035d039a1cadf91842bc76d88">HeavyAttackState</a>
 </li>
 <li>hit_boxes()
 : <a class="el" href="classFireball.html#af65513f81a16dc83b3afb6b672ffacdc">Fireball</a>
@@ -237,6 +267,9 @@ $(function() {
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>IdleState()
+: <a class="el" href="classIdleState.html#a2e97a195d3168ac0659cf0e432e5a3f3">IdleState</a>
+</li>
 <li>Ije02Game()
 : <a class="el" href="classIje02Game.html#af24dc5ec68acaeeb66f74866a832133b">Ije02Game</a>
 </li>
@@ -260,6 +293,9 @@ $(function() {
 <li>LightAttack()
 : <a class="el" href="classLightAttack.html#a85172d92441b302e99c4209df40792e6">LightAttack</a>
 </li>
+<li>LightAttackState()
+: <a class="el" href="classLightAttackState.html#a26e02205fd7bd5558a568a5e2c8d4de7">LightAttackState</a>
+</li>
 </ul>
 
 
@@ -279,6 +315,9 @@ $(function() {
 <li>MenuLevel()
 : <a class="el" href="classMenuLevel.html#a207c59fd8fdbb6252bdbbe0d8f73fcf6">MenuLevel</a>
 </li>
+<li>MovingState()
+: <a class="el" href="classMovingState.html#ad81c8034bc50f454d96e06689c1c4714">MovingState</a>
+</li>
 </ul>
 
 
@@ -296,7 +335,8 @@ $(function() {
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>on_collision()
-: <a class="el" href="classCharacter.html#a9559ad61239800e744931814826ae39b">Character</a>
+: <a class="el" href="classBase.html#aacfcf7a911c60d8718219d45f8422449">Base</a>
+, <a class="el" href="classCharacter.html#a9559ad61239800e744931814826ae39b">Character</a>
 , <a class="el" href="classFrostNova.html#aeda0ee508c08250e8e36a9a0f2c24d96">FrostNova</a>
 , <a class="el" href="classSkill.html#ae236be2ad572352fdf5f1e69eabe3dd3">Skill</a>
 </li>
@@ -334,6 +374,12 @@ $(function() {
 <li>set_base()
 : <a class="el" href="classCharacter.html#a4cb413b53515a09d025fa0b3fe5a4e9f">Character</a>
 </li>
+<li>set_base_position()
+: <a class="el" href="classBase.html#a3345e924d2f7897f0818d476a990f2a2">Base</a>
+</li>
+<li>set_base_status()
+: <a class="el" href="classBase.html#a580dc7cdb6ff87350d04d494616839ea">Base</a>
+</li>
 <li>set_congratulations_string()
 : <a class="el" href="classWinnerLevel.html#a22e2395a8b72405050c2a321aa1fb644">WinnerLevel</a>
 </li>
@@ -359,6 +405,9 @@ $(function() {
 <li>Spear()
 : <a class="el" href="classSpear.html#a4c5d78dcf2ede1706e020394ef72a2c4">Spear</a>
 </li>
+<li>SpecialState()
+: <a class="el" href="classSpecialState.html#a3e58b79a851109f03f647b32fc94aa10">SpecialState</a>
+</li>
 </ul>
 
 
@@ -375,7 +424,8 @@ $(function() {
 , <a class="el" href="classMenuLevel.html#abdc07d5fc61e4767f81c56b1198e848e">MenuLevel</a>
 </li>
 <li>update_self()
-: <a class="el" href="classCharacter.html#a94242f85f3afb3f12dd92e02797345bd">Character</a>
+: <a class="el" href="classBase.html#a04c92d862951b17a9f96ff43c738c2f9">Base</a>
+, <a class="el" href="classCharacter.html#a94242f85f3afb3f12dd92e02797345bd">Character</a>
 , <a class="el" href="classCharacterChooseLevel.html#a28a65c50ef528b2fb2d12ebef93e7426">CharacterChooseLevel</a>
 , <a class="el" href="classCharacterSelection.html#ae398845f5f793f40ddf8314a0ad16f7e">CharacterSelection</a>
 , <a class="el" href="classCreditsLevel.html#a2df0795f16916cab12337010ee18f46c">CreditsLevel</a>
@@ -418,6 +468,9 @@ $(function() {
 
 
 <h3><a id="index_~"></a>- ~ -</h3><ul>
+<li>~Base()
+: <a class="el" href="classBase.html#a722da881b6c70cfcbde9243abcfbf334">Base</a>
+</li>
 <li>~Character()
 : <a class="el" href="classCharacter.html#a9e9be564d05ded80962b2045aa70b3fc">Character</a>
 </li>
@@ -430,11 +483,20 @@ $(function() {
 <li>~CharacterSelection()
 : <a class="el" href="classCharacterSelection.html#ace651140d3df740be6c26fb984ce5f7f">CharacterSelection</a>
 </li>
+<li>~CharacterState()
+: <a class="el" href="classCharacterState.html#a690e946cdc5647403c79fbcc543aafc9">CharacterState</a>
+</li>
 <li>~CreditsLevel()
 : <a class="el" href="classCreditsLevel.html#a0d977ddb97700fef21dfcaa79c9ccb91">CreditsLevel</a>
 </li>
 <li>~DeathMatchLevel()
 : <a class="el" href="classDeathMatchLevel.html#a304fb1254fe6b0d7f7d6e9e062281c99">DeathMatchLevel</a>
+</li>
+<li>~DeathState()
+: <a class="el" href="classDeathState.html#a6121eebafce7f33371eb73986b6e6250">DeathState</a>
+</li>
+<li>~DefenseState()
+: <a class="el" href="classDefenseState.html#a4ffd80270f04b3d45c0fd72144b56b49">DefenseState</a>
 </li>
 <li>~Fireball()
 : <a class="el" href="classFireball.html#a60938554b4140792132d3cd993d78eef">Fireball</a>
@@ -442,11 +504,20 @@ $(function() {
 <li>~FrostNova()
 : <a class="el" href="classFrostNova.html#aabe26c8431c96cbdaec1c2b1a5f2fc24">FrostNova</a>
 </li>
+<li>~HeavyAttackState()
+: <a class="el" href="classHeavyAttackState.html#aa19aad84df0bf94a9db9d28068c39f0b">HeavyAttackState</a>
+</li>
+<li>~IdleState()
+: <a class="el" href="classIdleState.html#ab2a535f0b86b5797c769f1d5eb28b048">IdleState</a>
+</li>
 <li>~Ije02Game()
 : <a class="el" href="classIje02Game.html#aeeebc6b2bdfc7dd9ccabffcf96a8299f">Ije02Game</a>
 </li>
 <li>~LightAttack()
 : <a class="el" href="classLightAttack.html#acd73b8d61fd269e6077555a50e674cfb">LightAttack</a>
+</li>
+<li>~LightAttackState()
+: <a class="el" href="classLightAttackState.html#a2946887dea388dd5e609b2e79d5204c7">LightAttackState</a>
 </li>
 <li>~MainLevel()
 : <a class="el" href="classMainLevel.html#ad8795dada6fdf0c1c0fb19695ae236d2">MainLevel</a>
@@ -454,11 +525,17 @@ $(function() {
 <li>~MenuLevel()
 : <a class="el" href="classMenuLevel.html#a6d5b3c8f7e8b45a597ca523ee37ac74a">MenuLevel</a>
 </li>
+<li>~MovingState()
+: <a class="el" href="classMovingState.html#a5a615fe66d4becc9389471fbf8310fd1">MovingState</a>
+</li>
 <li>~Skill()
 : <a class="el" href="classSkill.html#a6525c1f0b7299ff447ee14f36b55967a">Skill</a>
 </li>
 <li>~Spear()
 : <a class="el" href="classSpear.html#a22de46c86af13969a9a1a3f4db5bbde7">Spear</a>
+</li>
+<li>~SpecialState()
+: <a class="el" href="classSpecialState.html#abc792db1d54f946ae170fa6c0d14e8e3">SpecialState</a>
 </li>
 <li>~WinnerLevel()
 : <a class="el" href="classWinnerLevel.html#aa410b28c353e7dcb6feb9c2d9e897957">WinnerLevel</a>

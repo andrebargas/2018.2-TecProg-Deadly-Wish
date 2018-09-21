@@ -1,5 +1,14 @@
 \hypertarget{classBase}{}\section{Referência à classe Base}
 \label{classBase}\index{Base@{Base}}
+
+
+Classe usada para definir a base\textquotesingle{}fortaleza\textquotesingle{} de um player no jogo.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/base.\+h\char`\"{}}
+
 Diagrama de heranças da classe Base\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,42 +21,34 @@ Diagrama de heranças da classe Base\begin{figure}[H]
 \mbox{\Hypertarget{classBase_af39d4ba491dea383a8250c6d58919f21}\label{classBase_af39d4ba491dea383a8250c6d58919f21}} 
 {\bfseries Base} (int player\+\_\+id)
 \item 
-\mbox{\Hypertarget{classBase_abee4a445acdcde63608940348feedd0d}\label{classBase_abee4a445acdcde63608940348feedd0d}} 
-unsigned {\bfseries get\+\_\+base\+\_\+player\+\_\+id} () const
-\item 
-\mbox{\Hypertarget{classBase_a58a549391a91d1b0062a9d8955d26172}\label{classBase_a58a549391a91d1b0062a9d8955d26172}} 
-int {\bfseries get\+\_\+base\+\_\+life} () const
-\item 
-\mbox{\Hypertarget{classBase_a580dc7cdb6ff87350d04d494616839ea}\label{classBase_a580dc7cdb6ff87350d04d494616839ea}} 
-void {\bfseries set\+\_\+base\+\_\+status} (int base\+\_\+status)
-\item 
-\mbox{\Hypertarget{classBase_abc6031bf03072e10f4d8635dd226b01c}\label{classBase_abc6031bf03072e10f4d8635dd226b01c}} 
-bool {\bfseries active} () const
-\item 
-\mbox{\Hypertarget{classBase_a28fbf5f8b4e7e774f47298b76268159f}\label{classBase_a28fbf5f8b4e7e774f47298b76268159f}} 
-const Rectangle \& {\bfseries bounding\+\_\+box} () const
-\item 
+\mbox{\hyperlink{classBase_a722da881b6c70cfcbde9243abcfbf334}{$\sim$\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classBase_ace6b801fb729303a97c6edf0c5e38f70}{get\+\_\+base\+\_\+player\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Método get. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBase_a0bbcf57387f5860d74f6d2c4b9aecfba}{get\+\_\+base\+\_\+life}} () const
+\begin{DoxyCompactList}\small\item\em Método get. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBase_a580dc7cdb6ff87350d04d494616839ea}{set\+\_\+base\+\_\+status}} (int base\+\_\+status)
+\begin{DoxyCompactList}\small\item\em Método set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBase_abc6031bf03072e10f4d8635dd226b01c}{active}} () const
+\begin{DoxyCompactList}\small\item\em Método virtual de Collidable que retorna True se a base esta ativa. \end{DoxyCompactList}\item 
+const Rectangle \& \mbox{\hyperlink{classBase_a28fbf5f8b4e7e774f47298b76268159f}{bounding\+\_\+box}} () const
+\begin{DoxyCompactList}\small\item\em Método que delimita os limites da base. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBase_a378997fa37a9d46f5c8fb02b090da00d}\label{classBase_a378997fa37a9d46f5c8fb02b090da00d}} 
 const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
 \item 
-\mbox{\Hypertarget{classBase_aacfcf7a911c60d8718219d45f8422449}\label{classBase_aacfcf7a911c60d8718219d45f8422449}} 
-void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classBase_a77dceab1d1d47769ab4072c18d8fe473}\label{classBase_a77dceab1d1d47769ab4072c18d8fe473}} 
-pair$<$ double, double $>$ {\bfseries direction} () const
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classBase_aacfcf7a911c60d8718219d45f8422449}{on\+\_\+collision}} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método que age quando hà colisão. \end{DoxyCompactList}\item 
+pair$<$ double, double $>$ \mbox{\hyperlink{classBase_a77dceab1d1d47769ab4072c18d8fe473}{direction}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna velocidade da base em determinada direção. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBase_a3345e924d2f7897f0818d476a990f2a2}\label{classBase_a3345e924d2f7897f0818d476a990f2a2}} 
-void {\bfseries set\+\_\+base\+\_\+position} (unsigned player\+\_\+id, double \&x\+\_\+pos, double \&y\+\_\+pos)
-\item 
-\mbox{\Hypertarget{classBase_af95cdc748f2f72e35ff9e42a8a44eefe}\label{classBase_af95cdc748f2f72e35ff9e42a8a44eefe}} 
-void {\bfseries change\+\_\+base\+\_\+status} ()
-\item 
-\mbox{\Hypertarget{classBase_a04c92d862951b17a9f96ff43c738c2f9}\label{classBase_a04c92d862951b17a9f96ff43c738c2f9}} 
-void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
-\item 
+void \mbox{\hyperlink{classBase_a3345e924d2f7897f0818d476a990f2a2}{set\+\_\+base\+\_\+position}} (unsigned player\+\_\+id, double \&x\+\_\+pos, double \&y\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Método set para a posição da base em determinada direção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBase_af95cdc748f2f72e35ff9e42a8a44eefe}{change\+\_\+base\+\_\+status}} ()
+\begin{DoxyCompactList}\small\item\em Método que muda o status da base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBase_a04c92d862951b17a9f96ff43c738c2f9}{update\+\_\+self}} (unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método virtual de Game\+Object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBase_a63a037721de1f96a8197857f7451aba7}\label{classBase_a63a037721de1f96a8197857f7451aba7}} 
 void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
 \end{DoxyCompactItemize}
@@ -92,7 +93,178 @@ double {\bfseries base\+\_\+axis\+\_\+y\+\_\+speed}
 \end{DoxyCompactItemize}
 
 
+\subsection{Descrição detalhada}
+Classe usada para definir a base\textquotesingle{}fortaleza\textquotesingle{} de um player no jogo. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classBase_a722da881b6c70cfcbde9243abcfbf334}\label{classBase_a722da881b6c70cfcbde9243abcfbf334}} 
+\index{Base@{Base}!````~Base@{$\sim$\+Base}}
+\index{````~Base@{$\sim$\+Base}!Base@{Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Base()}{~Base()}}
+{\footnotesize\ttfamily Base\+::$\sim$\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método destrutor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em player\+\_\+id} & int id de um personagem \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classBase_abc6031bf03072e10f4d8635dd226b01c}\label{classBase_abc6031bf03072e10f4d8635dd226b01c}} 
+\index{Base@{Base}!active@{active}}
+\index{active@{active}!Base@{Base}}
+\subsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily bool Base\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método virtual de Collidable que retorna True se a base esta ativa. 
+
+\begin{DoxyReturn}{Retorna}
+bool retorna o status da base se ativa = True 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a28fbf5f8b4e7e774f47298b76268159f}\label{classBase_a28fbf5f8b4e7e774f47298b76268159f}} 
+\index{Base@{Base}!bounding\+\_\+box@{bounding\+\_\+box}}
+\index{bounding\+\_\+box@{bounding\+\_\+box}!Base@{Base}}
+\subsubsection{\texorpdfstring{bounding\+\_\+box()}{bounding\_box()}}
+{\footnotesize\ttfamily const Rectangle \& Base\+::bounding\+\_\+box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método que delimita os limites da base. 
+
+\begin{DoxyReturn}{Retorna}
+const 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_af95cdc748f2f72e35ff9e42a8a44eefe}\label{classBase_af95cdc748f2f72e35ff9e42a8a44eefe}} 
+\index{Base@{Base}!change\+\_\+base\+\_\+status@{change\+\_\+base\+\_\+status}}
+\index{change\+\_\+base\+\_\+status@{change\+\_\+base\+\_\+status}!Base@{Base}}
+\subsubsection{\texorpdfstring{change\+\_\+base\+\_\+status()}{change\_base\_status()}}
+{\footnotesize\ttfamily void Base\+::change\+\_\+base\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que muda o status da base. 
+
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a77dceab1d1d47769ab4072c18d8fe473}\label{classBase_a77dceab1d1d47769ab4072c18d8fe473}} 
+\index{Base@{Base}!direction@{direction}}
+\index{direction@{direction}!Base@{Base}}
+\subsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily pair$<$ double, double $>$ Base\+::direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método que retorna velocidade da base em determinada direção. 
+
+\begin{DoxyReturn}{Retorna}
+pair$<$double,double$>$ retorna a velocidade da base na posiçao x e y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a0bbcf57387f5860d74f6d2c4b9aecfba}\label{classBase_a0bbcf57387f5860d74f6d2c4b9aecfba}} 
+\index{Base@{Base}!get\+\_\+base\+\_\+life@{get\+\_\+base\+\_\+life}}
+\index{get\+\_\+base\+\_\+life@{get\+\_\+base\+\_\+life}!Base@{Base}}
+\subsubsection{\texorpdfstring{get\+\_\+base\+\_\+life()}{get\_base\_life()}}
+{\footnotesize\ttfamily Base\+::get\+\_\+base\+\_\+life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método get. 
+
+\begin{DoxyReturn}{Retorna}
+int retorna os pontos de vida da base 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_ace6b801fb729303a97c6edf0c5e38f70}\label{classBase_ace6b801fb729303a97c6edf0c5e38f70}} 
+\index{Base@{Base}!get\+\_\+base\+\_\+player\+\_\+id@{get\+\_\+base\+\_\+player\+\_\+id}}
+\index{get\+\_\+base\+\_\+player\+\_\+id@{get\+\_\+base\+\_\+player\+\_\+id}!Base@{Base}}
+\subsubsection{\texorpdfstring{get\+\_\+base\+\_\+player\+\_\+id()}{get\_base\_player\_id()}}
+{\footnotesize\ttfamily Base\+::get\+\_\+base\+\_\+player\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método get. 
+
+\begin{DoxyReturn}{Retorna}
+unsigned int retorna a base do player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_aacfcf7a911c60d8718219d45f8422449}\label{classBase_aacfcf7a911c60d8718219d45f8422449}} 
+\index{Base@{Base}!on\+\_\+collision@{on\+\_\+collision}}
+\index{on\+\_\+collision@{on\+\_\+collision}!Base@{Base}}
+\subsubsection{\texorpdfstring{on\+\_\+collision()}{on\_collision()}}
+{\footnotesize\ttfamily void Base\+::on\+\_\+collision (\begin{DoxyParamCaption}\item[{const Collidable $\ast$}]{who,  }\item[{const Rectangle \&}]{where,  }\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})}
+
+
+
+Método que age quando hà colisão. 
+
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a3345e924d2f7897f0818d476a990f2a2}\label{classBase_a3345e924d2f7897f0818d476a990f2a2}} 
+\index{Base@{Base}!set\+\_\+base\+\_\+position@{set\+\_\+base\+\_\+position}}
+\index{set\+\_\+base\+\_\+position@{set\+\_\+base\+\_\+position}!Base@{Base}}
+\subsubsection{\texorpdfstring{set\+\_\+base\+\_\+position()}{set\_base\_position()}}
+{\footnotesize\ttfamily void Base\+::set\+\_\+base\+\_\+position (\begin{DoxyParamCaption}\item[{unsigned}]{player\+\_\+id,  }\item[{double \&}]{x\+\_\+pos,  }\item[{double \&}]{y\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método set para a posição da base em determinada direção. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em player\+\_\+id} & x\+\_\+pos y\+\_\+pos unsigned double double id do personagem, posição do x no eixo, posição do y no eixo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a580dc7cdb6ff87350d04d494616839ea}\label{classBase_a580dc7cdb6ff87350d04d494616839ea}} 
+\index{Base@{Base}!set\+\_\+base\+\_\+status@{set\+\_\+base\+\_\+status}}
+\index{set\+\_\+base\+\_\+status@{set\+\_\+base\+\_\+status}!Base@{Base}}
+\subsubsection{\texorpdfstring{set\+\_\+base\+\_\+status()}{set\_base\_status()}}
+{\footnotesize\ttfamily void Base\+::set\+\_\+base\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{base\+\_\+status }\end{DoxyParamCaption})}
+
+
+
+Método set. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em base\+\_\+status} & int estados de uma basa no game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int retorna o status da base 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a04c92d862951b17a9f96ff43c738c2f9}\label{classBase_a04c92d862951b17a9f96ff43c738c2f9}} 
+\index{Base@{Base}!update\+\_\+self@{update\+\_\+self}}
+\index{update\+\_\+self@{update\+\_\+self}!Base@{Base}}
+\subsubsection{\texorpdfstring{update\+\_\+self()}{update\_self()}}
+{\footnotesize\ttfamily void Base\+::update\+\_\+self (\begin{DoxyParamCaption}\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método virtual de Game\+Object. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em now} & last int int 
+
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/base.\+h\item 
-src/base.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{base_8h}{base.\+h}}\item 
+src/\mbox{\hyperlink{base_8cpp}{base.\+cpp}}\end{DoxyCompactItemize}

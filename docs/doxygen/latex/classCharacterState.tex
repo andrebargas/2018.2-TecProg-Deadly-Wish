@@ -1,5 +1,14 @@
 \hypertarget{classCharacterState}{}\section{Referência à classe Character\+State}
 \label{classCharacterState}\index{Character\+State@{Character\+State}}
+
+
+Classe usada para definir o estado de um player no jogo.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/character\+\_\+state.\+h\char`\"{}}
+
 Diagrama de heranças da classe Character\+State\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,12 +18,18 @@ Diagrama de heranças da classe Character\+State\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCharacterState_ac10645ca9c8c395e8affcbf9ed2b8555}\label{classCharacterState_ac10645ca9c8c395e8affcbf9ed2b8555}} 
-State {\bfseries get\+\_\+current\+\_\+state} () const
-\item 
-\mbox{\Hypertarget{classCharacterState_a54f2a5295b59778437cd7097fd78b065}\label{classCharacterState_a54f2a5295b59778437cd7097fd78b065}} 
-unsigned {\bfseries get\+\_\+refresh\+\_\+rate} () const
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classCharacterState_abe9bcd871b173ad3312d71e3165b1bfb}\label{classCharacterState_abe9bcd871b173ad3312d71e3165b1bfb}} 
+\mbox{\hyperlink{classCharacterState_abe9bcd871b173ad3312d71e3165b1bfb}{Character\+State}} ()
+\begin{DoxyCompactList}\small\item\em Método construtor ~\newline
+ão recebe parâmetros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCharacterState_a690e946cdc5647403c79fbcc543aafc9}\label{classCharacterState_a690e946cdc5647403c79fbcc543aafc9}} 
+\mbox{\hyperlink{classCharacterState_a690e946cdc5647403c79fbcc543aafc9}{$\sim$\+Character\+State}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor ~\newline
+ão recebe parâmetros. \end{DoxyCompactList}\item 
+State \mbox{\hyperlink{classCharacterState_a8abbdb5d82447c225dc54f205c782e8e}{get\+\_\+current\+\_\+state}} () const
+\begin{DoxyCompactList}\small\item\em Método get. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classCharacterState_a26ad231cccb89de9c1ed224cf126ca38}{get\+\_\+refresh\+\_\+rate}} () const
+\begin{DoxyCompactList}\small\item\em Método get. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +39,38 @@ State {\bfseries current\+\_\+state}
 \mbox{\Hypertarget{classCharacterState_ac9da3ddf82281b73f8e9471f9cfc9438}\label{classCharacterState_ac9da3ddf82281b73f8e9471f9cfc9438}} 
 unsigned {\bfseries state\+\_\+refresh\+\_\+rate}
 \end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe usada para definir o estado de um player no jogo. 
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classCharacterState_a8abbdb5d82447c225dc54f205c782e8e}\label{classCharacterState_a8abbdb5d82447c225dc54f205c782e8e}} 
+\index{Character\+State@{Character\+State}!get\+\_\+current\+\_\+state@{get\+\_\+current\+\_\+state}}
+\index{get\+\_\+current\+\_\+state@{get\+\_\+current\+\_\+state}!Character\+State@{Character\+State}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+state()}{get\_current\_state()}}
+{\footnotesize\ttfamily Character\+State\+::get\+\_\+current\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método get. 
+
+\begin{DoxyReturn}{Retorna}
+State retorna o estado do player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCharacterState_a26ad231cccb89de9c1ed224cf126ca38}\label{classCharacterState_a26ad231cccb89de9c1ed224cf126ca38}} 
+\index{Character\+State@{Character\+State}!get\+\_\+refresh\+\_\+rate@{get\+\_\+refresh\+\_\+rate}}
+\index{get\+\_\+refresh\+\_\+rate@{get\+\_\+refresh\+\_\+rate}!Character\+State@{Character\+State}}
+\subsubsection{\texorpdfstring{get\+\_\+refresh\+\_\+rate()}{get\_refresh\_rate()}}
+{\footnotesize\ttfamily Character\+State\+::get\+\_\+refresh\+\_\+rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método get. 
+
+\begin{DoxyReturn}{Retorna}
+unsigned retorna a duração de um estado do player 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
