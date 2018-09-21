@@ -72,10 +72,15 @@ $(function() {
 <div class="title">Referência à classe CharacterFactory</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe usada para instanciar objetos de personagens do jogo. Sendo relativos a escolha dos jogadores em cada partida.  
+ <a href="classCharacterFactory.html#details">Mais...</a></p>
+
+<p><code>#include &quot;<a class="el" href="character__factory_8h_source.html">include/character_factory.h</a>&quot;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Tipos Públicos</h2></td></tr>
-<tr class="memitem:a9c158e1e9a98eb86795a1b19367a9ded"><td class="memItemLeft" align="right" valign="top"><a id="a9c158e1e9a98eb86795a1b19367a9ded"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>KNIGHT</b>, 
+<tr class="memitem:a9c158e1e9a98eb86795a1b19367a9ded"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>KNIGHT</b>, 
 <b>SOLDIER</b>, 
 <b>MAGE</b>, 
 <b>INFILTRATOR</b>
@@ -84,13 +89,21 @@ Tipos Públicos</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:ad28bc656d818229560fd1757a702a3ac"><td class="memItemLeft" align="right" valign="top"><a id="ad28bc656d818229560fd1757a702a3ac"></a>
-<a class="el" href="classCharacter.html">Character</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>make_character</b> (int character_code, unsigned player_id, double x_pos, double y_pos)</td></tr>
-<tr class="separator:ad28bc656d818229560fd1757a702a3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0014a7de42b681ce872c728ea91bcfc1"><td class="memItemLeft" align="right" valign="top"><a id="a0014a7de42b681ce872c728ea91bcfc1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacterFactory.html#a0014a7de42b681ce872c728ea91bcfc1">CharacterFactory</a> ()</td></tr>
+<tr class="memdesc:a0014a7de42b681ce872c728ea91bcfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método construtor. <br /></td></tr>
+<tr class="separator:a0014a7de42b681ce872c728ea91bcfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27508feea862d22571bb6b9344f34f44"><td class="memItemLeft" align="right" valign="top"><a id="a27508feea862d22571bb6b9344f34f44"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacterFactory.html#a27508feea862d22571bb6b9344f34f44">~CharacterFactory</a> ()</td></tr>
+<tr class="memdesc:a27508feea862d22571bb6b9344f34f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método destrutor. <br /></td></tr>
+<tr class="separator:a27508feea862d22571bb6b9344f34f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ebcf8e9408d89dc4c40ef12e9d09c15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCharacter.html">Character</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacterFactory.html#a6ebcf8e9408d89dc4c40ef12e9d09c15">make_character</a> (int character_code, unsigned player_id, double x_position, double y_position)</td></tr>
+<tr class="memdesc:a6ebcf8e9408d89dc4c40ef12e9d09c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fução que instacia um pesornagem.  <a href="#a6ebcf8e9408d89dc4c40ef12e9d09c15">Mais...</a><br /></td></tr>
+<tr class="separator:a6ebcf8e9408d89dc4c40ef12e9d09c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Tipos Protegidos</h2></td></tr>
-<tr class="memitem:ab974578549c551e10056540617a269df"><td class="memItemLeft" align="right" valign="top"><a id="ab974578549c551e10056540617a269df"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Players</b> { <b>PLAYER_1</b>, 
+<tr class="memitem:ab974578549c551e10056540617a269df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacterFactory.html#ab974578549c551e10056540617a269df">Players</a> { <b>PLAYER_1</b>, 
 <b>PLAYER_2</b>, 
 <b>PLAYER_3</b>, 
 <b>PLAYER_4</b>
@@ -99,19 +112,161 @@ Tipos Protegidos</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Membros protegidos</h2></td></tr>
-<tr class="memitem:ae34183113755bfceb1a2906686e999af"><td class="memItemLeft" align="right" valign="top"><a id="ae34183113755bfceb1a2906686e999af"></a>
-vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>choose_sprite_path</b> (int character_code, unsigned player_id)</td></tr>
+<tr class="memitem:ae34183113755bfceb1a2906686e999af"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacterFactory.html#ae34183113755bfceb1a2906686e999af">choose_sprite_path</a> (int character_code, unsigned player_id)</td></tr>
+<tr class="memdesc:ae34183113755bfceb1a2906686e999af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que escolhe qual sera o caminho para o sprite de cada um dos jogadores e personagem, ja as cores e densenhos de cada um são diferentes.  <a href="#ae34183113755bfceb1a2906686e999af">Mais...</a><br /></td></tr>
 <tr class="separator:ae34183113755bfceb1a2906686e999af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
-<tr class="memitem:a21ae7bb6f5514e39489e05ec0c806d16"><td class="memItemLeft" align="right" valign="top"><a id="a21ae7bb6f5514e39489e05ec0c806d16"></a>
-vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>character_sprites_paths</b></td></tr>
-<tr class="separator:a21ae7bb6f5514e39489e05ec0c806d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc71232fb6551d9f1dd80941dee7c7f9"><td class="memItemLeft" align="right" valign="top"><a id="adc71232fb6551d9f1dd80941dee7c7f9"></a>
+vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacterFactory.html#adc71232fb6551d9f1dd80941dee7c7f9">character_sprites_paths</a></td></tr>
+<tr class="memdesc:adc71232fb6551d9f1dd80941dee7c7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variavel para armazenar os caminhos para os sprites do personagem. <br /></td></tr>
+<tr class="separator:adc71232fb6551d9f1dd80941dee7c7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p class="">Classe usada para instanciar objetos de personagens do jogo. Sendo relativos a escolha dos jogadores em cada partida. </p>
+</div><h2 class="groupheader">Documentação das enumerações</h2>
+<a id="a9c158e1e9a98eb86795a1b19367a9ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c158e1e9a98eb86795a1b19367a9ded">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">enum para os tipos de persongens possiveis </p>
+
+</div>
+</div>
+<a id="ab974578549c551e10056540617a269df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab974578549c551e10056540617a269df">&#9670;&nbsp;</a></span>Players</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classCharacterFactory.html#ab974578549c551e10056540617a269df">CharacterFactory::Players</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="">enum paras cada um dos playes </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ae34183113755bfceb1a2906686e999af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34183113755bfceb1a2906686e999af">&#9670;&nbsp;</a></span>choose_sprite_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; CharacterFactory::choose_sprite_path </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>character_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>player_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função que escolhe qual sera o caminho para o sprite de cada um dos jogadores e personagem, ja as cores e densenhos de cada um são diferentes. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">character_code</td><td>int Código de para o personagem </td></tr>
+    <tr><td class="paramname">player</td><td>unsigned Código de para o player </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>o vetor com paths paras as sprites no formato de String. </dd></dl>
+<p class="">Varaivel para salver nome do tipo de personagem a partir de seu código</p>
+
+</div>
+</div>
+<a id="a6ebcf8e9408d89dc4c40ef12e9d09c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebcf8e9408d89dc4c40ef12e9d09c15">&#9670;&nbsp;</a></span>make_character()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCharacter.html">Character</a> * CharacterFactory::make_character </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>character_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>player_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fução que instacia um pesornagem. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">character_code</td><td>int codigo relacionado ao personagem do enum. Valor entre 0 e 3. </td></tr>
+    <tr><td class="paramname">player_id</td><td>unsigned id do players. Valor entre 1 e 4. </td></tr>
+    <tr><td class="paramname">x_position</td><td>double posição inicial do personagem a ser criado no eixo x </td></tr>
+    <tr><td class="paramname">y_position</td><td>double posição inicial do personagem a ser criado no eixo y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>um ponteiro para um <a class="el" href="classCharacter.html" title="Classe que descreve o personagem de forma geral.">Character</a>. </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/<a class="el" href="character__factory_8h_source.html">character_factory.h</a></li>
-<li>src/character_factory.cpp</li>
+<li>src/<a class="el" href="character__factory_8cpp.html">character_factory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

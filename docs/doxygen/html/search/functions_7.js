@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['kill_5fcharacter',['kill_character',['../classCharacter.html#adb0d4f9c0ebbc0f9b19cb0a1f4b20df7',1,'Character']]],
-  ['knight',['Knight',['../classKnight.html#af091272d130fbfee62b308e1059e9c5e',1,'Knight']]]
+  ['ije02game',['Ije02Game',['../classIje02Game.html#af24dc5ec68acaeeb66f74866a832133b',1,'Ije02Game']]],
+  ['infiltrator',['Infiltrator',['../classInfiltrator.html#a1eb1e0a0acf4451da046fa0e8381a1a3',1,'Infiltrator']]]
 ];

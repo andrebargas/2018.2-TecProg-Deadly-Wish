@@ -1,5 +1,14 @@
 \hypertarget{classFrostNova}{}\section{Referência à classe Frost\+Nova}
 \label{classFrostNova}\index{Frost\+Nova@{Frost\+Nova}}
+
+
+Cria o Game\+Object \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}, controla sua posição e colisão, atualiza o sprite e o tempo.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/frost\+\_\+nova.\+h\char`\"{}}
+
 Diagrama de heranças da classe Frost\+Nova\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,108 +18,325 @@ Diagrama de heranças da classe Frost\+Nova\begin{figure}[H]
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFrostNova_aae4bca356b3b1439c74fc259e5fb601d}\label{classFrostNova_aae4bca356b3b1439c74fc259e5fb601d}} 
-{\bfseries Frost\+Nova} (Game\+Object $\ast$parent, unsigned mage\+\_\+id, double xp, double yp, double dx, double dy)
-\item 
-\mbox{\Hypertarget{classFrostNova_ad294037668fc3609c127c1e69031865b}\label{classFrostNova_ad294037668fc3609c127c1e69031865b}} 
-bool {\bfseries active} () const
-\item 
-\mbox{\Hypertarget{classFrostNova_a4d70c5ea288631e425dadcf5e479a1b6}\label{classFrostNova_a4d70c5ea288631e425dadcf5e479a1b6}} 
-const Rectangle \& {\bfseries bounding\+\_\+box} () const
-\item 
-\mbox{\Hypertarget{classFrostNova_aa0dd4571d7eb64ee7270f2afb972b410}\label{classFrostNova_aa0dd4571d7eb64ee7270f2afb972b410}} 
-const list$<$ Rectangle $>$ \& {\bfseries hit\+\_\+boxes} () const
-\item 
-\mbox{\Hypertarget{classFrostNova_a9ec9aeb096b42670bf640ea47f27fd84}\label{classFrostNova_a9ec9aeb096b42670bf640ea47f27fd84}} 
-pair$<$ double, double $>$ {\bfseries direction} () const
-\item 
-\mbox{\Hypertarget{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}\label{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}} 
-void {\bfseries on\+\_\+collision} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classFrostNova_aae4bca356b3b1439c74fc259e5fb601d}{Frost\+Nova}} (Game\+Object $\ast$parent, unsigned mage\+\_\+id, double xp, double yp, double dx, double dy)
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFrostNova_aabe26c8431c96cbdaec1c2b1a5f2fc24}\label{classFrostNova_aabe26c8431c96cbdaec1c2b1a5f2fc24}} 
+\mbox{\hyperlink{classFrostNova_aabe26c8431c96cbdaec1c2b1a5f2fc24}{$\sim$\+Frost\+Nova}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFrostNova_ad294037668fc3609c127c1e69031865b}{active}} () const
+\begin{DoxyCompactList}\small\item\em Estado do objeto usado pela Engine. \end{DoxyCompactList}\item 
+const Rectangle \& \mbox{\hyperlink{classFrostNova_a4d70c5ea288631e425dadcf5e479a1b6}{bounding\+\_\+box}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna a caixa delimitadora do objeto criada pela Engine. \end{DoxyCompactList}\item 
+const list$<$ Rectangle $>$ \& \mbox{\hyperlink{classFrostNova_aa0dd4571d7eb64ee7270f2afb972b410}{hit\+\_\+boxes}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna uma lista com a caixa delimitadora do objeto criada pela Engine. \end{DoxyCompactList}\item 
+pair$<$ double, double $>$ \mbox{\hyperlink{classFrostNova_a9ec9aeb096b42670bf640ea47f27fd84}{direction}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna uma dupla com a direção no eixo x e no y do objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}{on\+\_\+collision}} (const Collidable $\ast$who, const Rectangle \&where, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Tipos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classFrostNova_a849f88fb08f1a9d3818200ebb8ba7618}\label{classFrostNova_a849f88fb08f1a9d3818200ebb8ba7618}} 
-enum {\bfseries State} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
+enum \mbox{\hyperlink{classFrostNova_a849f88fb08f1a9d3818200ebb8ba7618}{State}} \{ {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+L\+E\+FT}, 
 {\bfseries M\+O\+V\+I\+N\+G\+\_\+\+R\+I\+G\+HT}
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Enum com o estado de movimentação para a esquerda e para a direita. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a217d48933042a86cda21d019e09abd9c}\label{classFrostNova_a217d48933042a86cda21d019e09abd9c}} 
-enum {\bfseries Sprite\+State} \{ {\bfseries C\+A\+S\+T\+I\+NG}, 
+enum \mbox{\hyperlink{classFrostNova_a217d48933042a86cda21d019e09abd9c}{Sprite\+State}} \{ {\bfseries C\+A\+S\+T\+I\+NG}, 
 {\bfseries M\+O\+V\+I\+NG}, 
 {\bfseries H\+I\+T\+T\+I\+NG}
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Enum com o estado da sprite. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a2c04b9868751e17aeb351c684cc7e725}\label{classFrostNova_a2c04b9868751e17aeb351c684cc7e725}} 
-enum {\bfseries Players} \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
+enum \mbox{\hyperlink{classFrostNova_a2c04b9868751e17aeb351c684cc7e725}{Players}} \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1}, 
 {\bfseries P\+L\+A\+Y\+E\+R\+\_\+2}, 
 {\bfseries P\+L\+A\+Y\+E\+R\+\_\+3}, 
 {\bfseries P\+L\+A\+Y\+E\+R\+\_\+4}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum com os 4 jogadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFrostNova_a67b11608de8a77e5db5820f422f66e79}\label{classFrostNova_a67b11608de8a77e5db5820f422f66e79}} 
-void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classFrostNova_a0300555461a04885ec1596d60a5a82b7}\label{classFrostNova_a0300555461a04885ec1596d60a5a82b7}} 
-void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned, unsigned)
-\item 
-\mbox{\Hypertarget{classFrostNova_a90f2c154189b0bf90591181dd0493ab0}\label{classFrostNova_a90f2c154189b0bf90591181dd0493ab0}} 
-void {\bfseries update\+\_\+sprite\+\_\+state} ()
-\item 
-\mbox{\Hypertarget{classFrostNova_ab70b5520c6db428c77aef44fe8e85570}\label{classFrostNova_ab70b5520c6db428c77aef44fe8e85570}} 
-void {\bfseries update\+\_\+time} (unsigned now)
-\item 
-\mbox{\Hypertarget{classFrostNova_afc420630fdfd93b865ea086b0e0c55ba}\label{classFrostNova_afc420630fdfd93b865ea086b0e0c55ba}} 
-string {\bfseries choose\+\_\+sprite\+\_\+path} (unsigned player\+\_\+id)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classFrostNova_a67b11608de8a77e5db5820f422f66e79}{update\+\_\+self}} (unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Função para atualizar o tempo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFrostNova_a0300555461a04885ec1596d60a5a82b7}{draw\+\_\+self}} (Canvas $\ast$canvas, unsigned, unsigned)
+\begin{DoxyCompactList}\small\item\em Método que faz o desenho gráfico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFrostNova_a94a2cd8221910ffa0abe0930ca9d5934}{update\+\_\+sprite\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Função não implementada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFrostNova_ab70b5520c6db428c77aef44fe8e85570}{update\+\_\+time}} (unsigned now)
+\begin{DoxyCompactList}\small\item\em Método que atualiza os tempos da \mbox{\hyperlink{classFrostNova}{Frost\+Nova}} e seu frame considerando sua textura e largura. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classFrostNova_afc420630fdfd93b865ea086b0e0c55ba}{choose\+\_\+sprite\+\_\+path}} (unsigned player\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Método que retorna o caminho do sprite de acordo com o id do jogador. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classFrostNova_ab400bee3d7b37b396b43e99498bca6ee}\label{classFrostNova_ab400bee3d7b37b396b43e99498bca6ee}} 
-unsigned {\bfseries frost\+\_\+character\+\_\+id}
-\item 
+unsigned \mbox{\hyperlink{classFrostNova_ab400bee3d7b37b396b43e99498bca6ee}{frost\+\_\+character\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o frost\+\_\+character\+\_\+id. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a1e4a13428ec6018ec32826352f5b3303}\label{classFrostNova_a1e4a13428ec6018ec32826352f5b3303}} 
-State {\bfseries frost\+\_\+state}
-\item 
+\mbox{\hyperlink{classFrostNova_a849f88fb08f1a9d3818200ebb8ba7618}{State}} \mbox{\hyperlink{classFrostNova_a1e4a13428ec6018ec32826352f5b3303}{frost\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o estado do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a8f4c3ad74186879c1364212c4a3316db}\label{classFrostNova_a8f4c3ad74186879c1364212c4a3316db}} 
-Sprite\+State {\bfseries frost\+\_\+sprite\+\_\+state}
-\item 
+\mbox{\hyperlink{classFrostNova_a217d48933042a86cda21d019e09abd9c}{Sprite\+State}} \mbox{\hyperlink{classFrostNova_a8f4c3ad74186879c1364212c4a3316db}{frost\+\_\+sprite\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o estado do sprite do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a6629b7e6dca4a9cc39b475a7e1308b35}\label{classFrostNova_a6629b7e6dca4a9cc39b475a7e1308b35}} 
-double {\bfseries frost\+\_\+axis\+\_\+x\+\_\+direction}
-\item 
+double \mbox{\hyperlink{classFrostNova_a6629b7e6dca4a9cc39b475a7e1308b35}{frost\+\_\+axis\+\_\+x\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Variável que indica a direção no eixo x. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a256719b17a21ec85291b5970a4209f65}\label{classFrostNova_a256719b17a21ec85291b5970a4209f65}} 
-double {\bfseries frost\+\_\+axis\+\_\+y\+\_\+direction}
-\item 
+double \mbox{\hyperlink{classFrostNova_a256719b17a21ec85291b5970a4209f65}{frost\+\_\+axis\+\_\+y\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Variável que indica a direção no eixo y. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_aa804b9ee177657db6a8651c825b2ea01}\label{classFrostNova_aa804b9ee177657db6a8651c825b2ea01}} 
-int {\bfseries frost\+\_\+damage}
-\item 
+int \mbox{\hyperlink{classFrostNova_aa804b9ee177657db6a8651c825b2ea01}{frost\+\_\+damage}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o dano do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a6d73e795f2a7379f9db5f04ca96c5b30}\label{classFrostNova_a6d73e795f2a7379f9db5f04ca96c5b30}} 
-double {\bfseries frost\+\_\+speed}
-\item 
+double \mbox{\hyperlink{classFrostNova_a6d73e795f2a7379f9db5f04ca96c5b30}{frost\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em Variável que indica a velocidade do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_ac86bc4b1a3fa29a5d756ec8272168bca}\label{classFrostNova_ac86bc4b1a3fa29a5d756ec8272168bca}} 
-int {\bfseries frost\+\_\+frame}
-\item 
+int \mbox{\hyperlink{classFrostNova_ac86bc4b1a3fa29a5d756ec8272168bca}{frost\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o frame do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a06f3570a18cfbd5dc174892c6afe5b87}\label{classFrostNova_a06f3570a18cfbd5dc174892c6afe5b87}} 
-string {\bfseries frost\+\_\+sprite\+\_\+path}
-\item 
+string \mbox{\hyperlink{classFrostNova_a06f3570a18cfbd5dc174892c6afe5b87}{frost\+\_\+sprite\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o caminho da pasta da sprite do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a6d4b037d224fbb3a24e440f0a65ea91f}\label{classFrostNova_a6d4b037d224fbb3a24e440f0a65ea91f}} 
-unsigned {\bfseries frost\+\_\+start}
-\item 
+unsigned \mbox{\hyperlink{classFrostNova_a6d4b037d224fbb3a24e440f0a65ea91f}{frost\+\_\+start}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o tempo inicial do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_a0c361e55db3b455ef7f9853827c499e9}\label{classFrostNova_a0c361e55db3b455ef7f9853827c499e9}} 
-unsigned {\bfseries frost\+\_\+current\+\_\+time}
-\item 
-\mbox{\Hypertarget{classFrostNova_af786aadc5bfb732dbede1d0b9739a13e}\label{classFrostNova_af786aadc5bfb732dbede1d0b9739a13e}} 
-shared\+\_\+ptr$<$ Texture $>$ {\bfseries frost\+\_\+texture}
-\item 
+unsigned \mbox{\hyperlink{classFrostNova_a0c361e55db3b455ef7f9853827c499e9}{frost\+\_\+current\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Variável que indica o tempo atual do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFrostNova_a34d5bfebf5d22040885618cc33d8cdee}\label{classFrostNova_a34d5bfebf5d22040885618cc33d8cdee}} 
+shared\+\_\+ptr$<$ Texture $>$ \mbox{\hyperlink{classFrostNova_a34d5bfebf5d22040885618cc33d8cdee}{frost\+\_\+texture}}
+\begin{DoxyCompactList}\small\item\em Variável que indica a textura do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFrostNova_afaaeffacf92544fe075ae03eb044b261}\label{classFrostNova_afaaeffacf92544fe075ae03eb044b261}} 
-Rectangle {\bfseries frost\+\_\+bounding\+\_\+box}
-\end{DoxyCompactItemize}
+Rectangle \mbox{\hyperlink{classFrostNova_afaaeffacf92544fe075ae03eb044b261}{frost\+\_\+bounding\+\_\+box}}
+\begin{DoxyCompactList}\small\item\em Variável que indica a caixa delimitadora do \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Cria o Game\+Object \mbox{\hyperlink{classFrostNova}{Frost\+Nova}}, controla sua posição e colisão, atualiza o sprite e o tempo. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classFrostNova_aae4bca356b3b1439c74fc259e5fb601d}\label{classFrostNova_aae4bca356b3b1439c74fc259e5fb601d}} 
+\index{Frost\+Nova@{Frost\+Nova}!Frost\+Nova@{Frost\+Nova}}
+\index{Frost\+Nova@{Frost\+Nova}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{Frost\+Nova()}{FrostNova()}}
+{\footnotesize\ttfamily Frost\+Nova\+::\+Frost\+Nova (\begin{DoxyParamCaption}\item[{Game\+Object $\ast$}]{parent,  }\item[{unsigned}]{mage\+\_\+id,  }\item[{double}]{xp,  }\item[{double}]{yp,  }\item[{double}]{dx,  }\item[{double}]{dy }\end{DoxyParamCaption})}
+
+
+
+Método construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$parent} & Ponteiro para o Game\+Object \\
+\hline
+{\em mage\+\_\+id} & \\
+\hline
+{\em xp} & posição em x \\
+\hline
+{\em yp} & posição em y \\
+\hline
+{\em dx} & \\
+\hline
+{\em dy} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classFrostNova_ad294037668fc3609c127c1e69031865b}\label{classFrostNova_ad294037668fc3609c127c1e69031865b}} 
+\index{Frost\+Nova@{Frost\+Nova}!active@{active}}
+\index{active@{active}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily bool Frost\+Nova\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Estado do objeto usado pela Engine. 
+
+\begin{DoxyReturn}{Retorna}
+bool fixo em true 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classSkill_a1744c0c7f03304b1a0444a1bd95661c0}{Skill}}.
+
+\mbox{\Hypertarget{classFrostNova_a4d70c5ea288631e425dadcf5e479a1b6}\label{classFrostNova_a4d70c5ea288631e425dadcf5e479a1b6}} 
+\index{Frost\+Nova@{Frost\+Nova}!bounding\+\_\+box@{bounding\+\_\+box}}
+\index{bounding\+\_\+box@{bounding\+\_\+box}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{bounding\+\_\+box()}{bounding\_box()}}
+{\footnotesize\ttfamily const Rectangle \& Frost\+Nova\+::bounding\+\_\+box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que retorna a caixa delimitadora do objeto criada pela Engine. 
+
+\begin{DoxyReturn}{Retorna}
+Rectangle\& para habilidade \mbox{\hyperlink{classFrostNova}{Frost\+Nova}} 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classSkill}{Skill}}.
+
+\mbox{\Hypertarget{classFrostNova_afc420630fdfd93b865ea086b0e0c55ba}\label{classFrostNova_afc420630fdfd93b865ea086b0e0c55ba}} 
+\index{Frost\+Nova@{Frost\+Nova}!choose\+\_\+sprite\+\_\+path@{choose\+\_\+sprite\+\_\+path}}
+\index{choose\+\_\+sprite\+\_\+path@{choose\+\_\+sprite\+\_\+path}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{choose\+\_\+sprite\+\_\+path()}{choose\_sprite\_path()}}
+{\footnotesize\ttfamily string Frost\+Nova\+::choose\+\_\+sprite\+\_\+path (\begin{DoxyParamCaption}\item[{unsigned}]{player\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que retorna o caminho do sprite de acordo com o id do jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em player\+\_\+id} & Identificador do jogador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFrostNova_a9ec9aeb096b42670bf640ea47f27fd84}\label{classFrostNova_a9ec9aeb096b42670bf640ea47f27fd84}} 
+\index{Frost\+Nova@{Frost\+Nova}!direction@{direction}}
+\index{direction@{direction}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily pair$<$ double, double $>$ Frost\+Nova\+::direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que retorna uma dupla com a direção no eixo x e no y do objeto. 
+
+\begin{DoxyReturn}{Retorna}
+pair$<$double, double$>$ direção da habilidade \mbox{\hyperlink{classFrostNova}{Frost\+Nova}} 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classSkill}{Skill}}.
+
+\mbox{\Hypertarget{classFrostNova_a0300555461a04885ec1596d60a5a82b7}\label{classFrostNova_a0300555461a04885ec1596d60a5a82b7}} 
+\index{Frost\+Nova@{Frost\+Nova}!draw\+\_\+self@{draw\+\_\+self}}
+\index{draw\+\_\+self@{draw\+\_\+self}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{draw\+\_\+self()}{draw\_self()}}
+{\footnotesize\ttfamily void Frost\+Nova\+::draw\+\_\+self (\begin{DoxyParamCaption}\item[{Canvas $\ast$}]{canvas,  }\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que faz o desenho gráfico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canvas} & Canvas$\ast$ Ponteiro para objeto da classe responsavel pela renderização do jogo. \\
+\hline
+{\em unsigned} & \\
+\hline
+{\em unsigned} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFrostNova_aa0dd4571d7eb64ee7270f2afb972b410}\label{classFrostNova_aa0dd4571d7eb64ee7270f2afb972b410}} 
+\index{Frost\+Nova@{Frost\+Nova}!hit\+\_\+boxes@{hit\+\_\+boxes}}
+\index{hit\+\_\+boxes@{hit\+\_\+boxes}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{hit\+\_\+boxes()}{hit\_boxes()}}
+{\footnotesize\ttfamily const list$<$ Rectangle $>$ \& Frost\+Nova\+::hit\+\_\+boxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que retorna uma lista com a caixa delimitadora do objeto criada pela Engine. 
+
+\begin{DoxyReturn}{Retorna}
+list$<$\+Rectangle$>$\& para habilidade \mbox{\hyperlink{classFrostNova}{Frost\+Nova}} 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classSkill}{Skill}}.
+
+\mbox{\Hypertarget{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}\label{classFrostNova_aeda0ee508c08250e8e36a9a0f2c24d96}} 
+\index{Frost\+Nova@{Frost\+Nova}!on\+\_\+collision@{on\+\_\+collision}}
+\index{on\+\_\+collision@{on\+\_\+collision}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{on\+\_\+collision()}{on\_collision()}}
+{\footnotesize\ttfamily void Frost\+Nova\+::on\+\_\+collision (\begin{DoxyParamCaption}\item[{const Collidable $\ast$}]{who,  }\item[{const Rectangle \&}]{where,  }\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$parent} & Ponteiro para o Game\+Object \\
+\hline
+{\em mage\+\_\+id} & \\
+\hline
+{\em xp} & posição em x \\
+\hline
+{\em yp} & posição em y \\
+\hline
+{\em dx} & \\
+\hline
+{\em dy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classSkill_ae236be2ad572352fdf5f1e69eabe3dd3}{Skill}}.
+
+\mbox{\Hypertarget{classFrostNova_a67b11608de8a77e5db5820f422f66e79}\label{classFrostNova_a67b11608de8a77e5db5820f422f66e79}} 
+\index{Frost\+Nova@{Frost\+Nova}!update\+\_\+self@{update\+\_\+self}}
+\index{update\+\_\+self@{update\+\_\+self}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{update\+\_\+self()}{update\_self()}}
+{\footnotesize\ttfamily void Frost\+Nova\+::update\+\_\+self (\begin{DoxyParamCaption}\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Função para atualizar o tempo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em now} & unsigned Tempo atual do jogo \\
+\hline
+{\em last} & unsigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFrostNova_a94a2cd8221910ffa0abe0930ca9d5934}\label{classFrostNova_a94a2cd8221910ffa0abe0930ca9d5934}} 
+\index{Frost\+Nova@{Frost\+Nova}!update\+\_\+sprite\+\_\+state@{update\+\_\+sprite\+\_\+state}}
+\index{update\+\_\+sprite\+\_\+state@{update\+\_\+sprite\+\_\+state}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{update\+\_\+sprite\+\_\+state()}{update\_sprite\_state()}}
+{\footnotesize\ttfamily Frost\+Nova\+::update\+\_\+sprite\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Função não implementada. 
+
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFrostNova_ab70b5520c6db428c77aef44fe8e85570}\label{classFrostNova_ab70b5520c6db428c77aef44fe8e85570}} 
+\index{Frost\+Nova@{Frost\+Nova}!update\+\_\+time@{update\+\_\+time}}
+\index{update\+\_\+time@{update\+\_\+time}!Frost\+Nova@{Frost\+Nova}}
+\subsubsection{\texorpdfstring{update\+\_\+time()}{update\_time()}}
+{\footnotesize\ttfamily void Frost\+Nova\+::update\+\_\+time (\begin{DoxyParamCaption}\item[{unsigned}]{now }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que atualiza os tempos da \mbox{\hyperlink{classFrostNova}{Frost\+Nova}} e seu frame considerando sua textura e largura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em now} & Tempo do jogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/frost\+\_\+nova.\+h\item 
-src/frost\+\_\+nova.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{frost__nova_8h}{frost\+\_\+nova.\+h}}\item 
+src/\mbox{\hyperlink{frost__nova_8cpp}{frost\+\_\+nova.\+cpp}}\end{DoxyCompactItemize}

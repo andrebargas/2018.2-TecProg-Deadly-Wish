@@ -1,5 +1,14 @@
 \hypertarget{classMainLevel}{}\section{Referência à classe Main\+Level}
 \label{classMainLevel}\index{Main\+Level@{Main\+Level}}
+
+
+Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/main\+\_\+level.\+h\char`\"{}}
+
 Diagrama de heranças da classe Main\+Level\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,36 +35,170 @@ enum \{ {\bfseries P\+L\+A\+Y\+E\+R\+\_\+1},
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}\label{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}} 
-{\bfseries Main\+Level} (const string \&next=\char`\"{}\char`\"{}, vector$<$ int $>$ players\+\_\+characters=\{\})
-\item 
-\mbox{\Hypertarget{classMainLevel_ae4d34d88753d7ebe90320e3cdd3e9e17}\label{classMainLevel_ae4d34d88753d7ebe90320e3cdd3e9e17}} 
-bool {\bfseries done} () const
-\item 
-\mbox{\Hypertarget{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}\label{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}} 
-string {\bfseries next} () const
-\item 
-\mbox{\Hypertarget{classMainLevel_ae101ab154173ca819a5eb701508ad635}\label{classMainLevel_ae101ab154173ca819a5eb701508ad635}} 
-string {\bfseries audio} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}{Main\+Level}} (const string \&\mbox{\hyperlink{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}{next}}=\char`\"{}\char`\"{}, vector$<$ int $>$ players\+\_\+characters=\{\})
+\begin{DoxyCompactList}\small\item\em Método construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainLevel_ad8795dada6fdf0c1c0fb19695ae236d2}\label{classMainLevel_ad8795dada6fdf0c1c0fb19695ae236d2}} 
+\mbox{\hyperlink{classMainLevel_ad8795dada6fdf0c1c0fb19695ae236d2}{$\sim$\+Main\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Método destrutor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMainLevel_ae4d34d88753d7ebe90320e3cdd3e9e17}{done}} () const
+\begin{DoxyCompactList}\small\item\em Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}{next}} () const
+\begin{DoxyCompactList}\small\item\em Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMainLevel_ae101ab154173ca819a5eb701508ad635}{audio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}\label{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}} 
-void {\bfseries update\+\_\+self} (unsigned now, unsigned last)
-\item 
-\mbox{\Hypertarget{classMainLevel_aabad926cf0366de353d716065ab792ad}\label{classMainLevel_aabad926cf0366de353d716065ab792ad}} 
-void {\bfseries draw\+\_\+self} (Canvas $\ast$canvas, unsigned now, unsigned last)
-\item 
+void \mbox{\hyperlink{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}{update\+\_\+self}} (unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Função para atualizar o tempo de inicio do level, e setar atributo \#winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainLevel_aabad926cf0366de353d716065ab792ad}{draw\+\_\+self}} (Canvas $\ast$canvas, unsigned now, unsigned last)
+\begin{DoxyCompactList}\small\item\em Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMainLevel_a8b5a146b3b3186081ca2a0ad49bbad29}\label{classMainLevel_a8b5a146b3b3186081ca2a0ad49bbad29}} 
 void {\bfseries set\+\_\+players\+\_\+characters\+\_\+position} (unsigned player\+\_\+id, double \&x\+\_\+pos, double \&y\+\_\+pos)
 \item 
 \mbox{\Hypertarget{classMainLevel_a89ed36254771a662797d0ec50105015f}\label{classMainLevel_a89ed36254771a662797d0ec50105015f}} 
 void {\bfseries verify\+\_\+bases} ()
 \end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainLevel_ac73ac0af37dc694036a7da248d70ba75}\label{classMainLevel_ac73ac0af37dc694036a7da248d70ba75}} 
+bool {\bfseries main\+\_\+level\+\_\+done}
+\item 
+\mbox{\Hypertarget{classMainLevel_aa17ebbec1a36f9001ce5d8a9e282bbcf}\label{classMainLevel_aa17ebbec1a36f9001ce5d8a9e282bbcf}} 
+string {\bfseries main\+\_\+level\+\_\+next}
+\item 
+\mbox{\Hypertarget{classMainLevel_a65bd52645923038402ab92b25af97b59}\label{classMainLevel_a65bd52645923038402ab92b25af97b59}} 
+int {\bfseries main\+\_\+level\+\_\+start}
+\item 
+\mbox{\Hypertarget{classMainLevel_a6322c1a74e91e0b54dfa8368602963ad}\label{classMainLevel_a6322c1a74e91e0b54dfa8368602963ad}} 
+bool {\bfseries main\+\_\+level\+\_\+has\+\_\+winner}
+\item 
+\mbox{\Hypertarget{classMainLevel_a8095418f188c09501ada69571a131594}\label{classMainLevel_a8095418f188c09501ada69571a131594}} 
+vector$<$ \mbox{\hyperlink{classBase}{Base}} $\ast$$>$ {\bfseries main\+\_\+level\+\_\+bases}
+\item 
+\mbox{\Hypertarget{classMainLevel_a19560b2041a11b7780e5921b52dd7bb6}\label{classMainLevel_a19560b2041a11b7780e5921b52dd7bb6}} 
+vector$<$ int $>$ {\bfseries main\+\_\+level\+\_\+players\+\_\+characters}
+\item 
+\mbox{\Hypertarget{classMainLevel_acf7f81373b053b58b0755934e5ec75b9}\label{classMainLevel_acf7f81373b053b58b0755934e5ec75b9}} 
+shared\+\_\+ptr$<$ Texture $>$ {\bfseries main\+\_\+level\+\_\+texture}
+\item 
+\mbox{\Hypertarget{classMainLevel_a67fb31550c22320459d70d1d8834238f}\label{classMainLevel_a67fb31550c22320459d70d1d8834238f}} 
+int {\bfseries main\+\_\+level\+\_\+map} \mbox{[}M\+A\+X\+\_\+\+W\+I\+D\+TH\mbox{]}\mbox{[}M\+A\+X\+\_\+\+H\+E\+I\+G\+HT\mbox{]}
+\item 
+\mbox{\Hypertarget{classMainLevel_a017084aa4aa83cfd18195025a6b5a703}\label{classMainLevel_a017084aa4aa83cfd18195025a6b5a703}} 
+\mbox{\hyperlink{classCharacterFactory}{Character\+Factory}} {\bfseries main\+\_\+level\+\_\+character\+\_\+factory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}\label{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}} 
+\index{Main\+Level@{Main\+Level}!Main\+Level@{Main\+Level}}
+\index{Main\+Level@{Main\+Level}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{Main\+Level()}{MainLevel()}}
+{\footnotesize\ttfamily Main\+Level\+::\+Main\+Level (\begin{DoxyParamCaption}\item[{const string \&}]{next = {\ttfamily \char`\"{}\char`\"{}},  }\item[{vector$<$ int $>$}]{players\+\_\+characters = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Método construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em next} & const string\& Parametro para o proximo level. Valor constante igual \char`\"{} \char`\"{}, final do jogo. \\
+\hline
+{\em players\+\_\+characters} & vector$<$ int $>$ Lista de character presentes no jogo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classMainLevel_ae101ab154173ca819a5eb701508ad635}\label{classMainLevel_ae101ab154173ca819a5eb701508ad635}} 
+\index{Main\+Level@{Main\+Level}!audio@{audio}}
+\index{audio@{audio}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{audio()}{audio()}}
+{\footnotesize\ttfamily string Main\+Level\+::audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna qual é o audio do level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+string string constante \char`\"{}.\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMainLevel_ae4d34d88753d7ebe90320e3cdd3e9e17}\label{classMainLevel_ae4d34d88753d7ebe90320e3cdd3e9e17}} 
+\index{Main\+Level@{Main\+Level}!done@{done}}
+\index{done@{done}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily bool Main\+Level\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+bool retorna \textquotesingle{}true\textquotesingle{} se o level acabou 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMainLevel_aabad926cf0366de353d716065ab792ad}\label{classMainLevel_aabad926cf0366de353d716065ab792ad}} 
+\index{Main\+Level@{Main\+Level}!draw\+\_\+self@{draw\+\_\+self}}
+\index{draw\+\_\+self@{draw\+\_\+self}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{draw\+\_\+self()}{draw\_self()}}
+{\footnotesize\ttfamily void Main\+Level\+::draw\+\_\+self (\begin{DoxyParamCaption}\item[{Canvas $\ast$}]{canvas,  }\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canvas} & Canvas$\ast$ Ponteiro para objeto da classe responsavel pela renderização do jogo. \\
+\hline
+{\em now} & unsigned Tempo atual do jogo \\
+\hline
+{\em last} & unsigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}\label{classMainLevel_ac5631405cb489d6ca9d90eb385c91293}} 
+\index{Main\+Level@{Main\+Level}!next@{next}}
+\index{next@{next}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily string Main\+Level\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+\begin{DoxyReturn}{Retorna}
+string retorna qual sera o proximo level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}\label{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}} 
+\index{Main\+Level@{Main\+Level}!update\+\_\+self@{update\+\_\+self}}
+\index{update\+\_\+self@{update\+\_\+self}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{update\+\_\+self()}{update\_self()}}
+{\footnotesize\ttfamily void Main\+Level\+::update\+\_\+self (\begin{DoxyParamCaption}\item[{unsigned}]{now,  }\item[{unsigned}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Função para atualizar o tempo de inicio do level, e setar atributo \#winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em now} & unsigned Tempo atual do jogo \\
+\hline
+{\em last} & unsigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/main\+\_\+level.\+h\item 
+include/\mbox{\hyperlink{main__level_8h}{main\+\_\+level.\+h}}\item 
 src/main\+\_\+level.\+cpp\end{DoxyCompactItemize}

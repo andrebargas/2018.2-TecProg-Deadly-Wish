@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['set_5fbase',['set_base',['../classCharacter.html#a4cb413b53515a09d025fa0b3fe5a4e9f',1,'Character']]],
-  ['set_5fspawn_5fposition',['set_spawn_position',['../classCharacter.html#a75f825ad6509fa1601d2e2bc2ac04b3c',1,'Character']]],
-  ['soldier',['Soldier',['../classSoldier.html#ac0fd0515763f51a11b2785e5cac088e6',1,'Soldier']]]
+  ['on_5fcollision',['on_collision',['../classCharacter.html#a9559ad61239800e744931814826ae39b',1,'Character::on_collision()'],['../classFrostNova.html#aeda0ee508c08250e8e36a9a0f2c24d96',1,'FrostNova::on_collision()'],['../classSkill.html#ae236be2ad572352fdf5f1e69eabe3dd3',1,'Skill::on_collision()']]],
+  ['on_5fevent',['on_event',['../classCharacter.html#a92d3a1ad2ceba203bf72584c4c4029d7',1,'Character::on_event()'],['../classCharacterSelection.html#af7d87f81c8bc895a89d9f13c09ed6b35',1,'CharacterSelection::on_event()']]]
 ];

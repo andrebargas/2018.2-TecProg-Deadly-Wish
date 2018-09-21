@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['get_5fid',['get_id',['../classCharacter.html#af5a0058d7cc922c1045f304b480a211c',1,'Character']]],
-  ['get_5fnumber_5fof_5flives',['get_number_of_lives',['../classCharacter.html#ad3fc9bf9dc3667f9d01b05f5e1940ae6',1,'Character']]]
+  ['fireball',['Fireball',['../classFireball.html#a4035f700f882afc6e0760b4195e90ffc',1,'Fireball']]],
+  ['frostnova',['FrostNova',['../classFrostNova.html#aae4bca356b3b1439c74fc259e5fb601d',1,'FrostNova']]]
 ];

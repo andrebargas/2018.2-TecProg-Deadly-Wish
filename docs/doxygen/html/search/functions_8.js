@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mage',['Mage',['../classMage.html#a691d8def05ca8cbda1a2b9229c52748b',1,'Mage']]]
+  ['kill_5fcharacter',['kill_character',['../classCharacter.html#adb0d4f9c0ebbc0f9b19cb0a1f4b20df7',1,'Character']]],
+  ['knight',['Knight',['../classKnight.html#af091272d130fbfee62b308e1059e9c5e',1,'Knight']]]
 ];

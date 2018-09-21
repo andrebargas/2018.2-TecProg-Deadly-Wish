@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['respawn_5fcharacter',['respawn_character',['../classCharacter.html#afc90256ef2253670aee9def34f700247',1,'Character']]]
+  ['next',['next',['../classMainLevel.html#ac5631405cb489d6ca9d90eb385c91293',1,'MainLevel::next()'],['../classWinnerLevel.html#a927da981a2a9c97d0ff41d3a33b3457a',1,'WinnerLevel::next()']]]
 ];
