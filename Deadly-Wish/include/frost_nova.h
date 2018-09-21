@@ -1,3 +1,7 @@
+/** \file frost_nova.h
+  * \brief Este é o arquivo header da classe FrostNova, uma
+  * habilidade do Character Mage, com herança da classe Skill
+  */
 #ifndef FROST_NOVA_H
 #define FROST_NOVA_H
 

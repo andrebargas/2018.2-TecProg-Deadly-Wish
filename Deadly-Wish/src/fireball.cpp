@@ -1,3 +1,7 @@
+/** \file fireball.cpp
+  * \brief Este é o arquivo da classe Fireball, uma habilidade
+  * do Character Mage, com herança da classe Skill
+  */
 #include "fireball.h"
 #include "character.h"
 

@@ -1,3 +1,7 @@
+/** \file frost_nova.cpp
+  * \brief Este é o arquivo da classe FrostNova, uma habilidade
+  * do Character Mage, com herança da classe Skill
+  */
 #include "frost_nova.h"
 #include "character.h"
 
