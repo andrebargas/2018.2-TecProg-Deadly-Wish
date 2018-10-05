@@ -11,7 +11,7 @@
 //! Poder de ataque (special) do infiltrador
 #define INFILTRATOR_SPECIAL_COOLDOWN 5000
 //! Poder de ataque (heavy_atack) do infiltrador
-#define INFILTRATOR_ATTACK_COOLDOWN 2000
+#define INFILTRATOR_HEAVY_ATTACK_COOLDOWN 2000
 //! Poder de ataque (light_atack) do infiltrador
 #define INFILTRATOR_LIGHT_ATTACK_COOLDOWN 300
 //! Poder de defesa do infiltrador
@@ -39,13 +39,13 @@ Infiltrator::Infiltrator(vector<string> sprite_paths, unsigned id, double x, dou
     character_defense_cooldown = INFILTRATOR_DEFENSE_COOLDOWN;
     //! Último uso do poder especial
     character_last_used_special = -INFILTRATOR_SPECIAL_COOLDOWN;
-    //! Último uso do poder heavy_atack   
+    //! Último uso do poder heavy_atack
     character_last_used_heavy_attack = -INFILTRATOR_HEAVY_ATTACK_COOLDOWN;
     //! Último uso do poder ligth_atack
     character_last_used_light_attack = -INFILTRATOR_LIGHT_ATTACK_COOLDOWN;
     //! Último uso da defesa
     character_last_used_defense = -INFILTRATOR_DEFENSE_COOLDOWN;
-    //! Personagem ativo 
+    //! Personagem ativo
     character_active = true;
 }
 
