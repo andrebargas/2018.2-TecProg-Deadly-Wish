@@ -96,7 +96,7 @@ CreditsLevel::draw_self(Canvas *canvas, unsigned, unsigned)
     for(string credit : credits_level_strings) {
         canvas->draw(credit, 10, credits_y_position);
         //faz a quebra de linha entre os creditos
-        credits_y_pos += LINE_BREAK;
+        credits_y_position += LINE_BREAK;
     }
 
     //Desenha a instrução de saida dos créditos
