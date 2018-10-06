@@ -1,21 +1,24 @@
-/** \file moving_state.cpp
-  * \brief Esta é o arquivo da classe MovingState, que é ativado quando
-  *  ...tem a uma entrada de movimentação do player.
+/**\file moving_state.cpp
+  *\brief Esta é o arquivo da classe MovingState, que é ativado quando
+  *...tem a uma entrada de movimentação do player.
   */
 
  //Incluindo arquivo da classe MovingState
 #include "moving_state.h"
+#include <assert.h>
 
-/** \fn MovingState()
-  * \public
-  * \brief Método construtor
-  * \não recebe parâmetros
+/**\fn MovingState()
+  *\public
+  *\brief Método construtor
+  *\não recebe parâmetros
   */
 MovingState::MovingState()
     :CharacterState()
 {
-    //Representa o estado atual do player.
+    //Tranforma o estado atual do player para em movimento.
     current_state = MOVING_STATE;
+    assert(MOVING_STATE == 1);
     //Tempo de duração de um estado em milissegundos
     state_refresh_rate = 100;
+    assert(state_refresh_rate == 100);
 }
