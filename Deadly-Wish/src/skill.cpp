@@ -22,8 +22,8 @@ Skill::Skill(GameObject *parent, double x_posiotion, double y_posiotion, int dam
     : GameObject(parent, x_posiotion, y_posiotion), skill_character_id(character_id)
 {
     assert(parent != nullptr);
-    assert(x_posiotion > 0);
-    assert(y_posiotion > 0);
+    assert(x_posiotion !=NULL);
+    assert(y_posiotion !=NULL);
     assert(damage > 0);
     assert(character_id >= 1 && character_id <= 4);
     

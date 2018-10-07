@@ -4,6 +4,7 @@
   */
 #include "fireball.h"
 #include "character.h"
+#include "assert.h"
 
 #include <ijengine/engine.h>
 #include <ijengine/rectangle.h>
@@ -31,12 +32,24 @@ Fireball::Fireball(GameObject *parent, unsigned mage_id, double xp, double yp, d
             fireball_axis_x_direction(dx/hypot(dx, dy)),
             fireball_axis_y_direction(dy/hypot(dx, dy)), fireball_speed(100.0)
 {
+    assert(parent != nullptr);
+    assert(mage_id >= 1 && mage_id <= 4);
+    assert(xp != NULL);
+    assert(yp != NULL);
+    assert(dx != NULL);
+    assert(dy != NULL);
+
+
     fireball_frame = 0;
+    assert(fireball_frame != NULL);
     fireball_start = 0;
+    assert(fireball_start != NULL);
     fireball_sprite_path = choose_sprite_path(mage_id);
     fireball_texture = ijengine::resources::get_texture(fireball_sprite_path);
+    assert(m_x != NULL);
+    assert(m_y != NULL);
     fireball_bounding_box = Rectangle(m_x, m_y, 20, 20);
-
+    
     //Atributos de GameObject
     fireball_axis_x_direction = xp;
     fireball_axis_y_direction = yp;
@@ -71,6 +84,8 @@ Fireball::~Fireball()
 void
 Fireball::draw_self(Canvas *canvas, unsigned, unsigned)
 {
+    assert(canvas != NULL);
+    assert(FIREBALL_WIDTH == 32);
     Rectangle rect {(double)FIREBALL_WIDTH * fireball_frame,
                     (double)FIREBALL_WIDTH * fireball_state,
                     (double)FIREBALL_WIDTH, (double)FIREBALL_WIDTH};
@@ -90,12 +105,17 @@ Fireball::draw_self(Canvas *canvas, unsigned, unsigned)
 void
 Fireball::update_self(unsigned now, unsigned last)
 {
+    assert(now != NULL);
+    assert(last != NULL);
+
     update_time(now);
 
     if(fireball_current_time - fireball_start > 300) {
         double new_y = y() + fireball_axis_y_direction *  fireball_speed * (now - last) / 1000.0;
         double new_x = x() + fireball_axis_x_direction *  fireball_speed * (now - last) / 1000.0;
         set_position(new_x, new_y);
+        assert(new_y !=NULL);
+        assert(new_x !=NULL);
 
         fireball_bounding_box.set_position(x(), y());
     }
@@ -209,6 +229,7 @@ Fireball::choose_sprite_path(unsigned player_id)
     string directory = "Green";
     string sprite_path;
 
+    assert(player_id == PLAYER_1 || player_id == PLAYER_2 || player_id == PLAYER_3 || player_id == PLAYER_4);
     switch(player_id) {
         case PLAYER_1:
             directory = "Green";
