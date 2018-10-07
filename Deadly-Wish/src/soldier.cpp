@@ -33,20 +33,36 @@ Soldier::Soldier(vector<string> sprite_paths, unsigned id, double x, double y, i
 {
     //! tempo de uso de ataque - 5000
     character_special_cooldown = SOLDIER_SPECIAL_COOLDOWN;
+    assert(character_special_cooldown == 5000);
+    
     //! tempo de uso de ataque - 2000
     character_heavy_attack_cooldown = SOLDIER_HEAVY_ATTACK_COOLDOWN;
+    assert(character_heavy_attack_cooldown == 2000);
+
     //! tempo de uso de ataque - 300
     character_light_attack_cooldown = SOLDIER_LIGHT_ATTACK_COOLDOWN;
+    assert(character_light_attack_cooldown = 300);
+
     //! tempo de uso de defesa - 300
     character_defense_cooldown = SOLDIER_DEFENSE_COOLDOWN;
+    assert(character_defense_cooldown == 300);
+
     //! tempo de uso do poder especial
     character_last_used_special = -character_special_cooldown;
+    assert(character_special_cooldown == -5000);
+
     //! reseta ultimo uso do poder pesado
     character_last_used_heavy_attack = -character_heavy_attack_cooldown;
+    assert(character_heavy_attack_cooldown == 2000);
+
     //! reseta ultimo uso do poder leve
     character_last_used_light_attack = -character_light_attack_cooldown;
+    assert(character_light_attack_cooldown = 300);
+
     //! reseta ultimo uso da defesa
     character_last_used_defense = -character_defense_cooldown;
+    assert(character_defense_cooldown == 300);
+
     //! reseta personagem ativo
     character_active = true;
 }
@@ -99,11 +115,11 @@ Soldier::do_light_attack() {
     //! posicao do ataque
     double light_attack_x_pos = 0.0;
 
-    //! personagem virado para direita
+    //! personagem se movendo para a direita
     if(character_moving_state == MOVING_RIGHT) {
         light_attack_x_pos = x() + 15;
     }
-    //! personagem em outras direções
+    //! personagem se movendo para a esquerda
     else{
         light_attack_x_pos = x() - 15;
     }
