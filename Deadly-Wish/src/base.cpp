@@ -84,15 +84,19 @@ Base::update_self(unsigned now, unsigned last)
     //Se a base não estiver iniciada, será iniciada com o tempo atual
     if(base_start == -1) {
         base_start = now;
+        assert(base_start == now);
     }
     //Se for o modo Base, o status da base deve ser alterado de acordo com a vida
     if(game_mode::choosen_mode == "base-mode"){
         change_base_status();
+        assert(!nullptr);
     }
     // atualiza o frame da base
     if(now - base_start > 400) {
         base_start += 400;
+        assert(base_start != NULL);
         base_frame = (base_frame + 1) % (base_texture->w() / BASE_WIDTH);
+        assert(base_frame != NULL);
     }
 }
 //PBS
@@ -107,15 +111,17 @@ Base::update_self(unsigned now, unsigned last)
 void
 Base::draw_self(Canvas *canvas, unsigned now, unsigned last)
 {
-    assert(canvas != NULL);
+    assert(canvas != nullptr);
     assert(now != NULL);
     assert(last != NULL);
+
     Rectangle rect {(double) base_width * base_frame, (double) base_height * base_status, (double) base_width, (double) base_height};
     assert(base_width != NULL);
     assert(base_frame!= NULL);
     assert(base_status!= NULL);
     assert(base_width != NULL);
     assert(base_height != NULL);
+
     canvas->draw(base_texture.get(), rect, x(), y());
 }
 
@@ -134,22 +140,30 @@ Base::set_base_position(unsigned player_id, double& x_pos, double& y_pos)
     switch(player_id) {
         case PLAYER_1:
             x_pos = BASE_X_ADJUSTMENT;
+            assert(x_pos == 16.0);
             y_pos = BASE_Y_ADJUSTMENT;
+            assert(y_pos == 20.0);
             break;
 
         case PLAYER_2:
             x_pos = (double) SCREEN_WIDTH - (double)BASE_WIDTH - BASE_X_ADJUSTMENT;
+            assert(x_pos == 272.0);
             y_pos = BASE_Y_ADJUSTMENT;
+            assert(y_pos == 20.0);
             break;
 
         case PLAYER_3:
             x_pos = BASE_X_ADJUSTMENT;
+            assert(x_pos == 16.0);
             y_pos = (double) SCREEN_HEIGHT - (double)BASE_WIDTH - BASE_Y_ADJUSTMENT;
+            assert(y_pos == 188.0);
             break;
 
         case PLAYER_4:
             x_pos = (double) SCREEN_WIDTH - (double)BASE_WIDTH - BASE_X_ADJUSTMENT;
+            assert(x_pos == 272.0);
             y_pos = (double) SCREEN_HEIGHT - (double)BASE_WIDTH - BASE_Y_ADJUSTMENT;
+            assert(y_pos == 188.0);
             break;
 
         default:
@@ -211,6 +225,7 @@ Base::on_collision(const Collidable *who, const Rectangle& where, unsigned now, 
           (((1 << (base_player_id + 4)) & s->get_collided()) == 0)) {
 
             base_life -= s->get_damage();
+            assert( base_life != NULL);
             printf("BASE HP: %d\n", base_life);
             printf("Vida da base: %d\n", base_life);
         }
@@ -227,6 +242,7 @@ Base::on_collision(const Collidable *who, const Rectangle& where, unsigned now, 
 pair<double, double>
 Base::direction() const
 {
+    assert(base_axis_x_speed != NULL && base_axis_y_speed != NULL);
     return pair<double, double>(base_axis_x_speed, base_axis_y_speed);
 }
 
@@ -241,30 +257,39 @@ Base::change_base_status()
 {
     if(base_life > 3500) {
         base_status = BALLS_8;
+        assert(base_status == 0);
     }
     else if(3500 >= base_life and base_life > 3000) {
         base_status = BALLS_7;
+         assert(base_status == 1);
     }
     else if(3000 >= base_life and base_life > 2500) {
         base_status = BALLS_6;
+         assert(base_status == 2);
     }
     else if(2500 >= base_life and base_life > 2000) {
         base_status = BALLS_5;
+         assert(base_status == 3);
     }
     else if(2000 >= base_life and base_life > 1500) {
         base_status = BALLS_4;
+         assert(base_status == 4);
     }
     else if(1500 >= base_life and base_life > 1000) {
         base_status = BALLS_3;
+         assert(base_status == 5);
     }
     else if(1000 >= base_life and base_life > 500) {
         base_status = BALLS_2;
+         assert(base_status == 6);
     }
     else if(500 >= base_life and base_life > 1) {
         base_status = BALLS_1;
+         assert(base_status == 7);
     }
     else {
         base_status = DESTROYED;
+         assert(base_status == 8);
     }
 }
 
@@ -279,4 +304,5 @@ Base::set_base_status(int new_base_status)
 {
     assert(new_base_status != NULL);
     base_status = new_base_status;
+    assert(base_status == new_base_status);
 }
