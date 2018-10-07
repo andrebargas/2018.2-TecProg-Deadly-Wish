@@ -8,7 +8,7 @@
 #include "ije02_game.h"
 #include "skill.h"
 #include "light_attack.h"
-
+#include "assert.h"
 #include <vector>
 #include <string>
 
@@ -40,22 +40,31 @@ Mage::Mage(vector<string> sprite_paths, unsigned id, double x, double y, int cha
 {
     //! Poder de ataque especial - 5000
     character_special_cooldown = MAGE_SPECIAL_COOLDOWN;
+    assert(character_special_cooldown = 5000);
     //! Poder de ataque heavy_atack - 2000
     character_heavy_attack_cooldown = MAGE_HEAVY_ATTACK_COOLDOWN;
+    assert(character_heavy_attack_cooldown == 2000);
     //! Poder de ataque light_atack - 300
     character_light_attack_cooldown = MAGE_LIGHT_ATTACK_COOLDOWN;
+    assert(character_light_attack_cooldown == 300);
     //! Poder de defesa - 300
     character_defense_cooldown = MAGE_DEFENSE_COOLDOWN;
+    assert(character_defense_cooldown == 300);
     //! Último uso do poder special   
     character_last_used_special = -character_special_cooldown;
+    assert(character_last_used_special == -5000);
     //! Último uso do poder heavy_atack   
     character_last_used_heavy_attack = -character_heavy_attack_cooldown;
+    assert(character_last_used_heavy_attack == -2000);
     //! Último uso do poder ligth_atack
     character_last_used_light_attack = -character_light_attack_cooldown;
+    assert(character_last_used_light_attack == -300);
     //! Último uso da defesa
     character_last_used_defense = -character_defense_cooldown;
+    assert(character_last_used_defense == -300);
     //! Personagem ativo 
     character_active = true;
+    assert(character_active == true);
 }
 
 /** \fn do_heavy_attack()
@@ -72,12 +81,16 @@ Mage::do_heavy_attack()
 
     // Direção e posição a fireball (eixo x)
     double fireball_dx = 0.0;
+    assert(fireball_dx == 0.0);
     double fireball_x_pos = 0.0;
+    assert(fireball_x_pos == 0.0);
 
     // Se o personagem estiver se movendo para a direita
     if(character_moving_state == MOVING_RIGHT) {
         fireball_dx = 1.0;
+        assert(fireball_dx == 1.0);
         fireball_x_pos = x() + 20;
+        assert(fireball_x_pos == 20);
     }
     else{
         fireball_dx = -1.0;
@@ -88,6 +101,7 @@ Mage::do_heavy_attack()
 
     // Muda o estado do personagem
     change_character_state(HEAVY_ATTACK_STATE);
+
 }
 
 /** \fn do_light_attack()
@@ -103,6 +117,7 @@ Mage::do_light_attack() {
 
     // posicao do ataque no eixo x
     double light_attack_x_pos = 0.0;
+    assert (light_attack_x_pos == 0.0);
 
     // se o personagem estiver se movendo para a direita 
     if(character_moving_state == MOVING_RIGHT) {
@@ -145,4 +160,5 @@ Mage::do_special() {
 
     // muda o estado do personagem
     change_character_state(SPECIAL_STATE);
+
 }
