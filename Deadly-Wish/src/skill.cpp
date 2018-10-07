@@ -4,6 +4,7 @@
 #include "skill.h"
 #include "character.h"
 #include "base.h"
+#include "assert.h"
 
 #include <ijengine/engine.h>
 #include <ijengine/rectangle.h>
@@ -20,6 +21,12 @@
 Skill::Skill(GameObject *parent, double x_posiotion, double y_posiotion, int damage, int character_id)
     : GameObject(parent, x_posiotion, y_posiotion), skill_character_id(character_id)
 {
+    assert(parent != nullptr);
+    assert(x_posiotion > 0);
+    assert(y_posiotion > 0);
+    assert(damage > 0);
+    assert(character_id >= 1 && character_id <= 4);
+    
     skill_collided = 0;
     printf("registrando skill nas fisica\n");
     skill_damage = damage;
@@ -42,6 +49,10 @@ Skill::~Skill()
  */
 void Skill::on_collision(const Collidable *who, const Rectangle &where, unsigned now, unsigned last)
 {
+    assert(who != nullptr);
+    assert(now > 0);
+    assert(last > 0);
+
     const Character *c = dynamic_cast<const Character *>(who);
     const Base *b = dynamic_cast<const Base *>(who);
 

@@ -11,6 +11,7 @@
 #include <ijengine/canvas.h>
 #include <ijengine/collidable.h>
 #include <ijengine/engine.h>
+#include <assert.h>
 
 using namespace ijengine;
 
@@ -44,17 +45,23 @@ class Skill : public GameObject, public Collidable
     //! Método que retorna a habilidade de um personagem
     unsigned get_character_id() const
     {
+        assert(skill_character_id >= 1 && skill_character_id <=4);
         return skill_character_id;
     }
 
     //! Método que retorna a skill_damage
     int get_damage() const
     {
+        assert(skill_damage > 0);
         return skill_damage;
     }
 
     //! Método que retorna a colisão
-    int get_collided() const { return skill_collided; }
+    int get_collided() const 
+    { 
+        assert(skill_collided > 0);
+        return skill_collided; 
+    }
 
     //! Métodos virtuais de colisão
     virtual bool active() const = 0;
