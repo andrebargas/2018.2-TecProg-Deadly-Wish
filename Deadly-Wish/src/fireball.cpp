@@ -113,9 +113,10 @@ Fireball::update_self(unsigned now, unsigned last)
     if(fireball_current_time - fireball_start > 300) {
         double new_y = y() + fireball_axis_y_direction *  fireball_speed * (now - last) / 1000.0;
         double new_x = x() + fireball_axis_x_direction *  fireball_speed * (now - last) / 1000.0;
-        set_position(new_x, new_y);
         assert(new_y !=NULL);
         assert(new_x !=NULL);
+        set_position(new_x, new_y);
+        
 
         fireball_bounding_box.set_position(x(), y());
     }

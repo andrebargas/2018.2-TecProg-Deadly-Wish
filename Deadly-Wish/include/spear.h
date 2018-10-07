@@ -17,6 +17,7 @@
 
 #include <memory>
 #include <vector>
+#include <assert.h>
 
 using std::shared_ptr;
 using std::vector;

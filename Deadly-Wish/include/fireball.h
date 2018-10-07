@@ -132,15 +132,33 @@ protected:
 		/** \enum State
       * \brief Enum com o estado de movimentação para a esquerda e para a direita
       */
-    typedef enum { MOVING_LEFT, MOVING_RIGHT} State;
+    typedef enum 
+    { 
+        MOVING_LEFT, 
+        MOVING_RIGHT
+    } 
+    State;
 		/** \enum SpriteState
       * \brief Enum com o estado da sprite
       */
-    typedef enum { CASTING, MOVING, HITTING } SpriteState;
+    typedef enum 
+    { 
+        CASTING, 
+        MOVING, 
+        HITTING 
+    } 
+    SpriteState;
 		/** \enum Players
       * \brief Enum com os 4 jogadores
       */
-    typedef enum {PLAYER_1, PLAYER_2, PLAYER_3, PLAYER_4} Players;
+    typedef enum 
+    {   
+        PLAYER_1, 
+        PLAYER_2, 
+        PLAYER_3, 
+        PLAYER_4
+    } 
+    Players;
 		/** \var State fireball_state
       * \brief Variável que indica o estado da Fireball
       */
