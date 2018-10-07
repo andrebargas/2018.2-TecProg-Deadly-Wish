@@ -27,7 +27,6 @@ using std::max;
 //! variável que define a velocidade do personagem
 const double SPEED = 80.00;
 
-
 //! Classe que descreve o personagem de forma geral
 /*! Permite que o personagem tenha poderes de defesa e ataque,
 personagem ativo ou não e suas posições nos eixos x e y
@@ -47,15 +46,20 @@ Character::Character(const vector<string> sprite_paths, unsigned id, double x, d
     for(int i = 0; i < min((int) sprite_paths.size(), (int) NUMBER_OF_STATES); i++) {
         character_textures.push_back(resources::get_texture(sprite_paths[i]));
     }
-
+    assert(SPEED == 80.00);
+    
     //! variável que indica estado atual do personagem
     character_state = nullptr;
+    assert(character_state == nullptr);
     //! variável que indica o tempo de reaparecimento do personagem  
     character_respawn_time = RESPAWN_TIME;
+    assert(character_respawn_time == 10000);
     //! variável que indica o último som tocado
     character_last_sound_played = -RESPAWN_TIME;
+    assert(character_last_sound_played == 10000);
     //! variável que indica que o personagem está ativo
     character_active = true;
+    assert(character_active == true);
 
     //! variável que indica caixa delimitadora do personagem (x,y, height, width)
     character_bounding_box = Rectangle(x, y, 24, 24);
@@ -65,8 +69,10 @@ Character::Character(const vector<string> sprite_paths, unsigned id, double x, d
 
     //! variável que indica a largura do personagem
     character_width = CHARACTER_WIDTH;
+    assert(character_width == 32);
     //! variável que indica a altura do personagem
     character_height = CHARACTER_HEIGHT;
+    assert(character_height == 32);
 
     //! Modo de jogo - deathmatch (cada jogador tem 5 vidas)
     if(game_mode::choosen_mode == "deathmatch-mode") {
@@ -92,11 +98,14 @@ Character::~Character()
 void
 Character::update_self(unsigned now, unsigned last)
 {
-
+    assert(SPEED == 80.00);
+    assert(now > 0);
+    assert(last > 0);
+    
     //!Método que manipula o controle do estado
     handle_state();
 
-    //! base-mode (vida das bases menor que 0) ou death-match-mode(numero de vidas menor que 0)
+    //! base-mode (vida das bases menor que 1) ou death-match-mode(numero de vidas menor que 1)
     //! invalida o jogo - alguem ganhou
     if(((game_mode::choosen_mode == "base-mode") and character_base->get_base_life() <= 0) ||
         (game_mode::choosen_mode == "deathmatch-mode") and character_number_of_lives <= 0) {
@@ -107,7 +116,7 @@ Character::update_self(unsigned now, unsigned last)
     if (character_start == -1)
         character_start = now;
 
-    //! se o personagem morreu, reaparece depois do tempo de 5 segundos
+    //! se o personagem morreu, reaparece depois do tempo de 10 segundos
     if((character_dead) and now - character_start > character_respawn_time) {
         character_start = now;
         character_dead = false;
@@ -128,7 +137,7 @@ Character::update_self(unsigned now, unsigned last)
         return;
     }
 
-    //! Atualiza o som de acordo com o personagem
+    //! Repete o som do movimento do personagem a cada 400 milissegundos
     if(now - character_last_sound_played > 400) {
         character_last_sound_played = now;
         switch(character_code) {
@@ -151,7 +160,8 @@ Character::update_self(unsigned now, unsigned last)
     }
 
 
-   
+    assert(now > 0);
+    assert(last > 0);
     update_position(now, last);
 
     character_bounding_box.set_position(x(), y());
@@ -166,20 +176,27 @@ Character::update_self(unsigned now, unsigned last)
 */ 
 inline void
 Character::update_position(const unsigned &now, const unsigned &last, bool backwards) {
+    assert(now > 0);
+    assert(last > 0);
+    
     int multiplier = (backwards) ? -1 : 1;
     double summer = 1.0;
     bool ok = character_code == INFILTRATOR && character_state->get_current_state() == HEAVY_ATTACK_STATE;
     if(ok) {
+        assert(character_code == INFILTRATOR);
+        assert(character_state->get_current_state() == HEAVY_ATTACK_STATE);
         summer *= 1.75;
     }
     if(not character_freeze || ok) {
         double new_y = y() + multiplier * character_axis_y_speed * summer * (now - last) / 1000.0;
         new_y = min(new_y, SCREEN_HEIGHT - (double)CHARACTER_WIDTH - 16.00);
         new_y = max(new_y, 10.0);
+        assert(new_y >= 10.00);
 
         double new_x = x() + multiplier * character_axis_x_speed * summer * (now - last) / 1000.0;
         new_x = min(new_x, SCREEN_WIDTH - (double)CHARACTER_WIDTH);
         new_x = max(new_x, 0.0);
+        assert(new_x >= 0.0);
 
         set_y(new_y);
         set_x(new_x);
@@ -190,7 +207,12 @@ Character::update_position(const unsigned &now, const unsigned &last, bool backw
 void
 Character::draw_self(Canvas *canvas, unsigned, unsigned)
 {
+    assert(canvas != nullptr);
     if(not character_dead) {
+        assert(character_frame != 0);
+        assert(character_moving_state != NULL);
+        assert(character_height == 32);
+        assert(character_width == 32);
         Rectangle rect {(double) character_width * character_frame,
                         (double) character_height * character_moving_state,
                         (double) character_width, (double) character_height};
@@ -202,6 +224,8 @@ Character::draw_self(Canvas *canvas, unsigned, unsigned)
 bool
 Character::on_event(const GameEvent& event)
 {
+    assert(SPEED == 80.00);
+
     bool p1_heavy_attack_validation = event.id() == game_event::HEAVY_ATTACK_P1 && get_id() == 0;
     bool p2_heavy_attack_validation = event.id() == game_event::HEAVY_ATTACK_P2 && get_id() == 1;
     bool p3_heavy_attack_validation = event.id() == game_event::HEAVY_ATTACK_P3 && get_id() == 2;
@@ -310,11 +334,17 @@ Character::hit_boxes() const
 void
 Character::on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last)
 {
+    assert(who != nullptr);
+    assert(now > 0);
+    assert(last > 0);
+    
     const Skill *s = dynamic_cast<const Skill *>(who);
     const Character *c = dynamic_cast<const Character *>(who);
     const Base *b = dynamic_cast<const Base *>(who);
 
     if(c or b) {
+        assert(now > 0);
+        assert(last > 0);
         update_position(now, last, true);
     }
     else if(character_state->get_current_state() != DEFENSE_STATE and s->get_character_id() != character_id and
@@ -330,7 +360,7 @@ void
 Character::change_character_state(State next_state, bool respawning )
 {
     if(respawning) {
-        printf("respawnando");
+        printf("respawnando...\n");
         character_state = new_character_state_factory.change_character_state(next_state);
         return;
     }
@@ -390,6 +420,7 @@ void Character::handle_state()
 void
 Character::set_spawn_position()
 {
+    assert(character_id == PLAYER_1 || character_id == PLAYER_2 || character_id == PLAYER_3 || character_id == PLAYER_4);
     switch(character_id) {
         case PLAYER_1:
             m_x = X_ADJUSTMENT;
@@ -432,6 +463,7 @@ Character::respawn_character()
 
     character_frame = 0;
     character_current_life = character_max_life;
+    assert(character_current_life > 0);
 
     character_freeze = false;
     character_dead = false;
@@ -468,5 +500,6 @@ Character::kill_character()
 //! Indica a base de cada personagem
 void
 Character::set_base(Base *base) {
+    assert(base != nullptr);
     character_base = base;
 }

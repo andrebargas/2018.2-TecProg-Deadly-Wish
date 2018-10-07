@@ -18,6 +18,7 @@
 #include <utility>
 #include <string>
 #include <unordered_map>
+#include <assert.h>
 
 using std::shared_ptr;
 using std::vector;
@@ -97,12 +98,14 @@ public:
 
     //! Método que retorna o identificador do personagem
     unsigned get_id() const { 
+        assert(character_id >= 1 && character_id <= 4);
         return character_id; 
     }
 
 
     //! Método que retorna o número de vidas do personagem
     int get_number_of_lives() const { 
+        assert(character_number_of_lives >= 0);
         return character_number_of_lives; 
     }
 
