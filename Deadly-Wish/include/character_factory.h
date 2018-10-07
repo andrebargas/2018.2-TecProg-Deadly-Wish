@@ -22,7 +22,7 @@ using std::string;
 
 using namespace util;
 
-/** \class CharacterFactory character_factory.h "include/character_factory.h"
+/** \class CharacterFactory
  *  \brief Classe usada para instanciar objetos de personagens do jogo. Sendo relativos a
  *  escolha dos jogadores em cada partida.
  */
