@@ -20,8 +20,8 @@ CharacterSelection::CharacterSelection(const string sprite_path, int base_x, int
     : m_base_x(base_x), m_base_y(base_y), m_player_id(player_id), m_frame(player_id), m_start(-1), m_current_selection(KNIGHT)
 {
     m_texture = resources::get_texture(sprite_path);
-    m_w = 8;
-    m_h = 9;
+    m_width = 8;
+    m_height = 9;
 
     m_chosen = false;
 
@@ -91,7 +91,7 @@ CharacterSelection::update_position()
 void
 CharacterSelection::draw_self(Canvas *canvas, unsigned, unsigned)
 {
-    Rectangle rect {0.0, (m_texture->h() / (double) 4) * m_frame, (double) m_w, (double) m_h};
+    Rectangle rect {0.0, (m_texture->h() / (double) 4) * m_frame, (double) m_width, (double) m_height};
     canvas->draw(m_texture.get(), rect, x(), y());
 }
 

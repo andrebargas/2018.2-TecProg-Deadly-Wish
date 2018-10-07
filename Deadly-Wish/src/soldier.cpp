@@ -9,14 +9,14 @@
 
 //! Vida total do personagem
 #define MAX_LIFE 120
-//! Intervalo de tempo de uso da Knight_special
-#define KNIGHT_SPECIAL_COOLDOWN 5000
+//! Intervalo de tempo de uso da SOLDIER_special
+#define SOLDIER_SPECIAL_COOLDOWN 5000
 //! Intervalo de tempo de uso da heavy_atack
-#define KNIGHT_HEAVY_ATTACK_COOLDOWN 2000
+#define SOLDIER_HEAVY_ATTACK_COOLDOWN 2000
 //! Intervalo de tempo de uso da light_atack
-#define KNIGHT_LIGHT_ATTACK_COOLDOWN 300
+#define SOLDIER_LIGHT_ATTACK_COOLDOWN 300
 //! Intervalo de tempo de uso da defense_cooldown
-#define KNIGHT_DEFENSE_COOLDOWN 300
+#define SOLDIER_DEFENSE_COOLDOWN 300
 
     
 /** \fn Soldier(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)

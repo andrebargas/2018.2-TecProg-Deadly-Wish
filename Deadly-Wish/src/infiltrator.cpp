@@ -11,7 +11,7 @@
 //! Poder de ataque (special) do infiltrador
 #define INFILTRATOR_SPECIAL_COOLDOWN 5000
 //! Poder de ataque (heavy_atack) do infiltrador
-#define INFILTRATOR_ATTACK_COOLDOWN 2000
+#define INFILTRATOR_HEAVY_ATTACK_COOLDOWN 2000
 //! Poder de ataque (light_atack) do infiltrador
 #define INFILTRATOR_LIGHT_ATTACK_COOLDOWN 300
 //! Poder de defesa do infiltrador
