@@ -1,3 +1,7 @@
+/** \file character_factory.h
+  * \brief Arquivo da classe que constroi os estados do personagem
+  */
+
 #ifndef CHARACTER_STATE_FACTORY_H
 #define CHARACTER_STATE_FACTORY_H
 
@@ -12,6 +16,9 @@
 #include "util.h"
 
 using namespace util;
+/** \class CharacterStateFactory
+ *  \brief Classe usada para criar os estados de personagem
+ */
 
 class CharacterStateFactory {
 public:
@@ -22,7 +29,7 @@ public:
     CharacterState* change_character_state(int next_state);
 
 protected:
-    
+
 };
 
 #endif

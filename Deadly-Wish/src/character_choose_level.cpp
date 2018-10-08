@@ -1,3 +1,8 @@
+/** \file character_choose_level.cpp
+  * \brief Esta é o arquivo da classe do level CharacterChooseLevel que mostra o menu para a seleão
+  *  dos personagens
+  */
+
 #include "character_choose_level.h"
 #include "engine.h"
 #include "character.h"
@@ -14,6 +19,12 @@ using namespace std;
 using namespace ijengine;
 using std::vector;
 
+/** \fn CharacterChooseLevel(const string& next = "")
+  * \public
+  * \brief Método construtor
+  * \param next const string& Parametro para o proximo level. Valor constante igual " ",
+  *
+  */
 CharacterChooseLevel::CharacterChooseLevel(const string& next_level)
     : character_choose_level_done(false), character_choose_level_next(next_level),
       character_choose_level_start(-1)
@@ -44,27 +55,63 @@ CharacterChooseLevel::CharacterChooseLevel(const string& next_level)
     event::register_listener(this);
 }
 
+/** \fn ~CharacterChooseLevel()
+  * \public
+  * \brief Método destrutor
+  */
 CharacterChooseLevel::~CharacterChooseLevel() {
     event::unregister_listener(this);
 }
 
+// PBS
+/** \fn done()
+  * \public
+  * \brief Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado
+  * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
+  * \return bool retorna 'true' se o level acabou
+  */
 bool
 CharacterChooseLevel::done() const
 {
     return character_choose_level_done;
 }
 
+//PBS
+/** \fn next()
+  * \public
+  * \brief Retorna qual sera o proximo level. Nome não pode ser mudado
+  * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
+  * \return string retorna qual sera o proximo level
+  */
 string
 CharacterChooseLevel::next() const
 {
     return character_choose_level_next;
 }
 
+
+//PBS
+/** \fn audio()
+  * \public
+  * \brief Retorna qual é o audio do level. Nome não pode ser mudado
+  * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
+  * \return string string constante "."
+  */
 string
 CharacterChooseLevel::audio() const {
     return "music/menu_v1.ogg";
 }
 
+
+/** \fn update_self(unsigned now, unsigned last)
+  * \protected
+  * \brief Função para atualizar o tempo de inicio do level, e setar atributo
+  *  #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
+  *  protegida pelo escopo do projeto
+  * \param now unsigned Tempo atual do jogo
+  * \param last unsigned
+  * \return void
+  */
 void
 CharacterChooseLevel::update_self(unsigned now, unsigned)
 {
@@ -87,6 +134,16 @@ CharacterChooseLevel::update_self(unsigned now, unsigned)
     }
 }
 
+
+/** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
+  * \protected
+  * \brief Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um
+  *  metodo herdado da classe pai, protegida pelo escopo do projeto
+  * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
+  * \param now unsigned Tempo atual do jogo
+  * \param last unsigned
+  * \return void
+  */
 void
 CharacterChooseLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 {
@@ -111,6 +168,13 @@ CharacterChooseLevel::draw_self(Canvas *canvas, unsigned, unsigned)
     }
 }
 
+/** \fn on_event(const GameEvent& event)
+  * \protected
+  * \brief Encerra o level quando a o jogador precisiona o botão equivalente
+  *  ao do light attack (x no joystick)
+  * \param const event GameEvent& Entrada do usuário
+  * \return bool retorna true quando ocorre o evento
+  */
 bool
 CharacterChooseLevel::on_event(const GameEvent& event) {
     return false;

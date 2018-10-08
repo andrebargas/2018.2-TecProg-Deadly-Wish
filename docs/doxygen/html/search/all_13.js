@@ -1,14 +1,11 @@
 var searchData=
 [
-  ['_7echaracter',['~Character',['../classCharacter.html#a9e9be564d05ded80962b2045aa70b3fc',1,'Character']]],
-  ['_7echaracterfactory',['~CharacterFactory',['../classCharacterFactory.html#a27508feea862d22571bb6b9344f34f44',1,'CharacterFactory']]],
-  ['_7echaracterselection',['~CharacterSelection',['../classCharacterSelection.html#ace651140d3df740be6c26fb984ce5f7f',1,'CharacterSelection']]],
-  ['_7efireball',['~Fireball',['../classFireball.html#a60938554b4140792132d3cd993d78eef',1,'Fireball']]],
-  ['_7efrostnova',['~FrostNova',['../classFrostNova.html#aabe26c8431c96cbdaec1c2b1a5f2fc24',1,'FrostNova']]],
-  ['_7eije02game',['~Ije02Game',['../classIje02Game.html#aeeebc6b2bdfc7dd9ccabffcf96a8299f',1,'Ije02Game']]],
-  ['_7elightattack',['~LightAttack',['../classLightAttack.html#acd73b8d61fd269e6077555a50e674cfb',1,'LightAttack']]],
-  ['_7emainlevel',['~MainLevel',['../classMainLevel.html#ad8795dada6fdf0c1c0fb19695ae236d2',1,'MainLevel']]],
-  ['_7eskill',['~Skill',['../classSkill.html#a6525c1f0b7299ff447ee14f36b55967a',1,'Skill']]],
-  ['_7espear',['~Spear',['../classSpear.html#a22de46c86af13969a9a1a3f4db5bbde7',1,'Spear']]],
-  ['_7ewinnerlevel',['~WinnerLevel',['../classWinnerLevel.html#aa410b28c353e7dcb6feb9c2d9e897957',1,'WinnerLevel']]]
+  ['winner_5flevel_2ecpp',['winner_level.cpp',['../winner__level_8cpp.html',1,'']]],
+  ['winner_5flevel_2eh',['winner_level.h',['../winner__level_8h.html',1,'']]],
+  ['winner_5flevel_5fcongratulations',['winner_level_congratulations',['../classWinnerLevel.html#a1efac0902d25b1988498e594b64aba80',1,'WinnerLevel']]],
+  ['winner_5flevel_5fdone',['winner_level_done',['../classWinnerLevel.html#ab80668cd7c7bfd279a71dd693b1ce7ff',1,'WinnerLevel']]],
+  ['winner_5flevel_5fnext',['winner_level_next',['../classWinnerLevel.html#a02fe4d829b5bf04ba9759a43930ec3e0',1,'WinnerLevel']]],
+  ['winner_5flevel_5fstart',['winner_level_start',['../classWinnerLevel.html#a7aaaf28d27b0f09fca07ccbdc9ee2a57',1,'WinnerLevel']]],
+  ['winner_5flevel_5fwinner_5fplayer',['winner_level_winner_player',['../classWinnerLevel.html#ae85ff8c3635d50c24ab69884fc32a8f6',1,'WinnerLevel']]],
+  ['winnerlevel',['WinnerLevel',['../classWinnerLevel.html',1,'WinnerLevel'],['../classWinnerLevel.html#a63bb2594f3694e69e2735e143448b799',1,'WinnerLevel::WinnerLevel()']]]
 ];
