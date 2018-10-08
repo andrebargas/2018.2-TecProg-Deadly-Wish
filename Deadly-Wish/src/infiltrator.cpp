@@ -31,22 +31,39 @@ Infiltrator::Infiltrator(vector<string> sprite_paths, unsigned id, double x, dou
 {
     //! Poder de ataque especial - 5000
     character_special_cooldown = INFILTRATOR_SPECIAL_COOLDOWN;
+    assert(character_special_cooldown == 5000);
+    
     //! Poder de ataque heavy_atack - 2000
     character_heavy_attack_cooldown = INFILTRATOR_HEAVY_ATTACK_COOLDOWN;
+    assert(character_heavy_attack_cooldown == 2000);
+    
     //! Poder de ataque light_atack - 300
     character_light_attack_cooldown = INFILTRATOR_LIGHT_ATTACK_COOLDOWN;
+    assert(character_light_attack_cooldown == 300);
+    
     //! Poder de defesa - 300
     character_defense_cooldown = INFILTRATOR_DEFENSE_COOLDOWN;
+    assert(character_defense_cooldown == 300);
+
     //! Último uso do poder especial
     character_last_used_special = -INFILTRATOR_SPECIAL_COOLDOWN;
+    assert(character_last_used_special == -5000);
+
     //! Último uso do poder heavy_atack
     character_last_used_heavy_attack = -INFILTRATOR_HEAVY_ATTACK_COOLDOWN;
+    assert(character_last_used_heavy_attack == -2000);
+
     //! Último uso do poder ligth_atack
     character_last_used_light_attack = -INFILTRATOR_LIGHT_ATTACK_COOLDOWN;
+    assert(character_last_used_light_attack == -300);
+
     //! Último uso da defesa
     character_last_used_defense = -INFILTRATOR_DEFENSE_COOLDOWN;
+    assert(character_last_used_defense == -300);
+
     //! Personagem ativo
     character_active = true;
+    assert(character_active == true);
 }
 
 /** \fn do_heavy_attack()
@@ -60,9 +77,12 @@ Infiltrator::do_heavy_attack()
     audio::play_sound_effect("res/sound/fx/infiltrador_heavy.ogg", EFFECTS_VOLUME, 0);
     //! Personagem deixa de ficar ativo
     character_active = false;
+    assert(character_active == false);
+
     Character::character_active = false;
     //! Muda o estado do personagem
     change_character_state(HEAVY_ATTACK_STATE);
+    assert(HEAVY_ATTACK_STATE != NULL);
 }
 
 /** \fn do_light_attack()
@@ -78,6 +98,7 @@ Infiltrator::do_light_attack() {
 
     //! Posição do ataque no eixo X - tipo Double
     double light_attack_x_pos = 0.0;
+    assert(light_attack_x_pos == 0.0);
 
     //! Personagem se movimentando para direita
     if(character_moving_state == MOVING_RIGHT) {
@@ -92,6 +113,7 @@ Infiltrator::do_light_attack() {
 
     //! Muda o estado do personagem
     change_character_state(LIGHT_ATTACK_STATE);
+    assert(LIGHT_ATTACK_STATE != NULL);
 }
 
 /** \fn do_defense()
@@ -104,6 +126,7 @@ Infiltrator::do_defense() {
     audio::play_sound_effect("res/sound/fx/infiltrador_block.ogg", EFFECTS_VOLUME, 0);
     //! Muda o estado do personagem
     change_character_state(DEFENSE_STATE);
+    assert(DEFENSE_STATE != NULL);
 }
 
 /** \fn do_special()
@@ -116,6 +139,7 @@ Infiltrator::do_special() {
     audio::play_sound_effect("res/sound/fx/infiltrador_ultimate.ogg", EFFECTS_VOLUME, 0);
     //! Muda o estado do personagem
     change_character_state(SPECIAL_STATE);
+    assert(SPECIAL_STATE != NULL);
 }
 
 /** \fn active()

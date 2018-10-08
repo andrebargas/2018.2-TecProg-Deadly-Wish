@@ -9,7 +9,7 @@
 
 #include <memory>
 #include <string>
-
+#include "assert.h"
 using std::shared_ptr;
 using std::string;
 using namespace ijengine;
@@ -44,11 +44,17 @@ public:
     };
 
     //! variável que indica o jogador que vai escolher
-    int current_selection() const { return m_current_selection; }
+    int current_selection() const { return m_current_selection;
+        assert(m_current_selection != NULL);
+    }
     //! variável que indica o identificador do player
-    int player_id() const { return m_player_id;}
+    int player_id() const { return m_player_id;
+        assert(m_player_id != NULL);
+    }
     //! variável que retorna se ja escolheu ou não um jogador
-    bool chosen() const {return m_chosen;}
+    bool chosen() const {return m_chosen;
+        assert(m_chosen != NULL);
+    }
 
 
 //! Métodos protegidos 

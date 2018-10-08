@@ -31,21 +31,39 @@ Knight::Knight(vector<string> sprite_paths, unsigned id, double x, double y, int
 {
     //! Poder de ataque especial - 5000
     character_special_cooldown = KNIGHT_SPECIAL_COOLDOWN;
+    assert(character_special_cooldown == 5000);
+    
     //! Poder de ataque heavy_atack - 2000
     character_heavy_attack_cooldown = KNIGHT_HEAVY_ATTACK_COOLDOWN;
+    assert(character_heavy_attack_cooldown == 2000);
+    
     //! Poder de ataque ligth_atack - 300
     character_light_attack_cooldown = KNIGHT_LIGHT_ATTACK_COOLDOWN;
+    
+    assert(character_light_attack_cooldown == 300);
     //! Poder de defesa - 300
     character_defense_cooldown = KNIGHT_DEFENSE_COOLDOWN;
+    assert(character_defense_cooldown == 300);
+
+    //! Último uso do special
     character_last_used_special = -character_special_cooldown;
+    assert(character_last_used_special == -5000);
+
     //! Último uso do heavy_atack
     character_last_used_heavy_attack = -character_heavy_attack_cooldown;
+    assert(character_last_used_heavy_attack == -2000);
+
     //! Último uso do light_atack 
     character_last_used_light_attack = -character_light_attack_cooldown;
+    assert(character_last_used_light_attack == -300);
+
     //! ÚLtimo uso da defesa
     character_last_used_defense = -character_defense_cooldown;
+    assert(character_last_used_defense == -300);
+
     //! Indica que o peronsagem esta ativo
     character_active = true;
+    assert(character_active == true);
 }
 
 /** \fn do_heavy_attack()
@@ -70,7 +88,7 @@ Knight::do_light_attack() {
     printf("p = %p\n", (void *) p);
 
     double light_attack_x_pos = 0.0;
-
+    assert (light_attack_x_pos == 0.0);
     if(character_moving_state == MOVING_RIGHT) {
         light_attack_x_pos = x() + 15;
     }
