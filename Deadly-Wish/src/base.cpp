@@ -89,7 +89,6 @@ Base::update_self(unsigned now, unsigned last)
     //Se for o modo Base, o status da base deve ser alterado de acordo com a vida
     if(game_mode::choosen_mode == "base-mode"){
         change_base_status();
-        assert(!nullptr);
     }
     // atualiza o frame da base
     if(now - base_start > 400) {
@@ -137,6 +136,7 @@ Base::draw_self(Canvas *canvas, unsigned now, unsigned last)
 void
 Base::set_base_position(unsigned player_id, double& x_pos, double& y_pos)
 {
+    assert(player_id >= 0 && player_id <= 3);
     switch(player_id) {
         case PLAYER_1:
             x_pos = BASE_X_ADJUSTMENT;
