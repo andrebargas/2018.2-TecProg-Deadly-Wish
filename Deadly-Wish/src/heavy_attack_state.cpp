@@ -1,15 +1,15 @@
-/** \file heavy_attack_state.cpp
-  * \brief Este é o arquivo da classe do HeavyAttackState,que é ativado quando
-  *  o player usa o estado de ataque forte.
+/**\file heavy_attack_state.cpp
+  *\brief Este é o arquivo da classe do HeavyAttackState,que é ativado quando
+  *...o player usa o estado de ataque forte.
   */
 
 //Incluindo arquivo da classe HeavyAttackState
 #include "heavy_attack_state.h"
 
-/** \fn HeavyAttackState()
-  * \public
-  * \brief Método construtor
-  * \não recebe parâmetros
+/**\fn HeavyAttackState()
+  *\public
+  *\brief Método construtor
+  *não recebe parâmetros
   */
 HeavyAttackState::HeavyAttackState()
     :CharacterState()

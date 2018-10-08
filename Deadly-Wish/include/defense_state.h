@@ -15,17 +15,18 @@
  */
 class DefenseState : public CharacterState {
 public:
-    /** \fn DefenseState()
-      * \public
-      * \brief Método construtor
-      * \Não recebe parâmetros.
-      * \Atualiza o estado do player para defesa e seu respectivo tempo de duração para 100 milissegundos.
+    /**\fn DefenseState()
+      *\public
+      *\brief Método construtor
+      *Não recebe parâmetros.
+      *Atualiza o estado do player para "utilizando defesa" 
+      *e seu respectivo tempo de duração para 100 milissegundos.
       */
     DefenseState();
     
-    /** \fn ~DefenseState()
-      * \public
-      * \brief Método destrutor
+    /**\fn ~DefenseState()
+      *\public
+      *\brief Método destrutor
       */
     ~DefenseState();
 };
