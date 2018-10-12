@@ -17,8 +17,8 @@ MovingState::MovingState()
 {
     //Tranforma o estado atual do player para em movimento.
     current_state = MOVING_STATE;
-    assert(MOVING_STATE == 1);
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos
     state_refresh_rate = 100;
-    assert(state_refresh_rate == 100);
+    assert(state_refresh_rate);
 }

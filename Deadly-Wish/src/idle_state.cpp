@@ -18,8 +18,8 @@ IdleState::IdleState()
 {
     //Transforma o estado do player para parado.
     current_state = IDLE_STATE;
-    assert(IDLE_STATE == 0);
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 275;
-    assert(state_refresh_rate == 275);
+    assert(state_refresh_rate);
 }

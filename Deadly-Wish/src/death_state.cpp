@@ -18,9 +18,9 @@ DeathState::DeathState()
 {
     //Representa o estado atual do player.
     current_state = DEATH_STATE;
-    assert(DEATH_STATE == 2);
+    assert(current_state);
 
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 275;
-    assert(state_refresh_rate == 275);
+    assert(state_refresh_rate);
 }

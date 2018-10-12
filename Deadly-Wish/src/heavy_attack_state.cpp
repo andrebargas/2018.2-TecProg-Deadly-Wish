@@ -17,8 +17,8 @@ HeavyAttackState::HeavyAttackState()
 {
     //Representa o estado atual do player.
     current_state = HEAVY_ATTACK_STATE;
-    assert(HEAVY_ATTACK_STATE == 4);
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 100;
-    assert(state_refresh_rate == 100);
+    assert(state_refresh_rate);
 }

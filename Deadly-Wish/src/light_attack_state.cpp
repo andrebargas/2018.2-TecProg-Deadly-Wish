@@ -17,8 +17,8 @@ LightAttackState::LightAttackState()
 {
     //Representa o estado atual do player.
     current_state = LIGHT_ATTACK_STATE;
-    assert(LIGHT_ATTACK_STATE == 3);
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 100;
-    assert(state_refresh_rate == 100);
+    assert(state_refresh_rate);
 }

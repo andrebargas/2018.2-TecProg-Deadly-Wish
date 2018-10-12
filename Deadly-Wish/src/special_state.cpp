@@ -17,8 +17,8 @@ SpecialState::SpecialState()
 {
     //Transforma o estado atual do player para "utilizando especial"
     current_state = SPECIAL_STATE;
-    assert(SPECIAL_STATE == 5);
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos
     state_refresh_rate = 100;
-    assert(state_refresh_rate == 100);
+    assert(state_refresh_rate);
 }

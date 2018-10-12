@@ -38,11 +38,8 @@ Base::Base(int player_id)
     assert(base_texture != NULL);
 
     base_width = BASE_WIDTH;
-    assert(base_width == 32);
     base_height = BASE_WIDTH;
-    assert(base_height == 32);
     base_life = MAX_LIFE;
-    assert(base_life == 4000);
 
     set_base_position(player_id, m_x, m_y);
     assert(player_id >= 1 && player_id <= 4);
@@ -79,8 +76,8 @@ Base::~Base()
 void
 Base::update_self(unsigned now, unsigned last)
 {
-    assert(now != NULL);
-    assert(last != NULL);
+    assert(now >= 0);
+    assert(last >= 0);
     //Se a base não estiver iniciada, será iniciada com o tempo atual
     if(base_start == -1) {
         base_start = now;
@@ -98,6 +95,7 @@ Base::update_self(unsigned now, unsigned last)
         assert(base_frame != NULL);
     }
 }
+
 //PBS
 /**\fn draw_self(()
 *\protected
@@ -114,13 +112,14 @@ Base::draw_self(Canvas *canvas, unsigned now, unsigned last)
     assert(now != NULL);
     assert(last != NULL);
 
-    Rectangle rect {(double) base_width * base_frame, (double) base_height * base_status, (double) base_width, (double) base_height};
     assert(base_width != NULL);
     assert(base_frame!= NULL);
     assert(base_status!= NULL);
     assert(base_width != NULL);
     assert(base_height != NULL);
 
+    Rectangle rect {(double) base_width * base_frame, (double) base_height * base_status, (double) base_width, (double) base_height};
+    
     canvas->draw(base_texture.get(), rect, x(), y());
 }
 
@@ -140,21 +139,17 @@ Base::set_base_position(unsigned player_id, double& x_pos, double& y_pos)
     switch(player_id) {
         case PLAYER_1:
             x_pos = BASE_X_ADJUSTMENT;
-            assert(x_pos == 16.0);
             y_pos = BASE_Y_ADJUSTMENT;
-            assert(y_pos == 20.0);
             break;
 
         case PLAYER_2:
             x_pos = (double) SCREEN_WIDTH - (double)BASE_WIDTH - BASE_X_ADJUSTMENT;
             assert(x_pos == 272.0);
             y_pos = BASE_Y_ADJUSTMENT;
-            assert(y_pos == 20.0);
             break;
 
         case PLAYER_3:
             x_pos = BASE_X_ADJUSTMENT;
-            assert(x_pos == 16.0);
             y_pos = (double) SCREEN_HEIGHT - (double)BASE_WIDTH - BASE_Y_ADJUSTMENT;
             assert(y_pos == 188.0);
             break;
@@ -182,6 +177,7 @@ Base::set_base_position(unsigned player_id, double& x_pos, double& y_pos)
 bool
 Base::active() const
 {
+    assert(true);
     return true;
 }
 
@@ -217,15 +213,19 @@ Base::hit_boxes() const
 void
 Base::on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last)
 {
+    assert(who != nullptr);
+    assert(now >= 0);
+    assert(last >= 0);
+
     //Esse trecho serve para causar dano a base de algum inimigo
     if(game_mode::choosen_mode == "base-mode"){
         const Skill *s = dynamic_cast<const Skill *>(who);
+        assert(s != nullptr);
 
         if(s and s->get_character_id() != base_player_id and s->valid() and
           (((1 << (base_player_id + 4)) & s->get_collided()) == 0)) {
 
             base_life -= s->get_damage();
-            assert( base_life != NULL);
             printf("BASE HP: %d\n", base_life);
             printf("Vida da base: %d\n", base_life);
         }
@@ -304,5 +304,4 @@ Base::set_base_status(int new_base_status)
 {
     assert(new_base_status != NULL);
     base_status = new_base_status;
-    assert(base_status == new_base_status);
 }

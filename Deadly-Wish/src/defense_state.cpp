@@ -17,8 +17,8 @@ DefenseState::DefenseState()
 {
     //Representa o estado atual do player.
     current_state = DEFENSE_STATE;
-    assert(DEFENSE_STATE == 6);
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 100;
-    assert(state_refresh_rate == 100);
+    assert(state_refresh_rate);
 }
