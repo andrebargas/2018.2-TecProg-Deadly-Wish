@@ -10,7 +10,7 @@
 using namespace std;
 
 //! Inicializando o método construtor
-/*! 
+/*!
 \param sprite_path guarda o caminho do sprite do personagem
 \param base_x guarda a posição da base no eixo x
 \param base_y guarda a posição da base no eixo y
@@ -20,8 +20,8 @@ CharacterSelection::CharacterSelection(const string sprite_path, int base_x, int
     : m_base_x(base_x), m_base_y(base_y), m_player_id(player_id), m_frame(player_id), m_start(-1), m_current_selection(KNIGHT)
 {
     m_texture = resources::get_texture(sprite_path);
-    m_w = 8;
-    m_h = 9;
+    m_width = 8;
+    m_height = 9;
 
     m_chosen = false;
 
@@ -91,7 +91,7 @@ CharacterSelection::update_position()
 void
 CharacterSelection::draw_self(Canvas *canvas, unsigned, unsigned)
 {
-    Rectangle rect {0.0, (m_texture->h() / (double) 4) * m_frame, (double) m_w, (double) m_h};
+    Rectangle rect {0.0, (m_texture->h() / (double) 4) * m_frame, (double) m_width, (double) m_height};
     canvas->draw(m_texture.get(), rect, x(), y());
 }
 
@@ -103,7 +103,7 @@ CharacterSelection::on_event(const GameEvent &event)
     if(((event.id() == game_event::MOVEMENT_P1 && m_player_id == 0) ||
        (event.id() == game_event::MOVEMENT_P2 && m_player_id == 1) ||
        (event.id() == game_event::MOVEMENT_P3 && m_player_id == 2) ||
-       (event.id() == game_event::MOVEMENT_P4 && m_player_id == 3)) and 
+       (event.id() == game_event::MOVEMENT_P4 && m_player_id == 3)) and
        (m_chosen == false)) {
         string axis = event.get_property<string>("axis");
         int value = event.get_property<int>("value");
@@ -124,7 +124,7 @@ CharacterSelection::on_event(const GameEvent &event)
                 m_current_selection = (m_current_selection + 2) % 4;
             }
         }
-        
+
         if(m_current_selection < 0) {
             m_current_selection += 4;
         }
