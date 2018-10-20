@@ -28,203 +28,187 @@ using std::unordered_map;
 using namespace ijengine;
 using namespace util;
 
-//! Classe que descreve o personagem de forma geral
-/*! Permite que o personagem tenha poderes de defesa e ataque,
-personagem ativo ou não e suas posições nos eixos x e y
-\param sprite paths indica o vetor que desena o personagem
-\param id indica o identificado do personagem
-\param x indica a posição x do personagem
-\param y indica a posição y do personagem
-\param max_life indica a vida maxima do personagem
-\param character_Code indica o codigo do personagem
+//! Class that describes the character in general
+/*! Allows the character to have defense and attack powers,
+active character or not and their positions in the x and y axes
+\param sprite paths indicates the vector that detaches the character
+\param id indicates the identified character
+\param x indicates the x position of the character
+\param and indicates the y position of the character
+\param max_life indicates the maximum life of the character
+\param character_Code indicates the character code
 */
 class Character : public GameObject, public GameEventsListener, public Collidable {
 public:
 	Character(const vector<string> sprite_paths, unsigned id, double x, double y, int max_life, int character_code);
 	~Character();
 
-//! Enumerado com os possiveis personagens
+//! Enumerated with the possible characters
     enum 
     {
-        //! variavel Enum que representa o cavaleiro
         KNIGHT, 
-        //! variável Enum que representa o soldado
         SOLDIER,
-        //! variável Enum que representa o mago
         MAGE,
-        //! variável Enum que representa o infiltrador
         INFILTRATOR
     };
 
-//! Enumerado com os possiveis eventos
+//! Listed with possible events
     enum 
     {
-        //! variável que indica inicio de movimento para baixo
         START_MOVING_DOWN,
-        //! variável que indica inicio de movimento para esquerda
         START_MOVING_LEFT,
-        //! variável que indica inicio de movimento para direita
         START_MOVING_RIGHT,
-        //! variável que indica inicio de movimento para cima
         START_MOVING_UP,
-        //! variável que indica fim de movimento para baixo
         STOP_MOVING_DOWN,
-        //! variável que indica fim de movimento para esquerda
         STOP_MOVING_LEFT,
-        //! variável que indica fim de movimento para direita
         STOP_MOVING_RIGHT,
-        //! variável que indica fim de movimento para cima
         STOP_MOVING_UP,
-        //! variável que indica light_atack
         LIGHT_ATTACK,
-        //! variável que indica heavy_atack
         HEAVY_ATTACK,
-        //! variável que indica defesa
         DEFENSE,
-        //! variável que indica ataque especial
         SPECIAL,
-        //! variável que indica número de eventos dos personagens
         NUMBER_OF_CHARACTER_EVENTS
     };
 
 
-    //! Métodos virtuais de colisão
+    //! Virtual Collision Methods
     virtual bool active() const;
     const Rectangle& bounding_box() const;
     const list<Rectangle>& hit_boxes() const;
-		void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);
-		pair<double, double> direction() const;
+    void on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last);
+    pair<double, double> direction() const;
 
 
-    //! Método que retorna o identificador do personagem
+    //! Method that returns the character identifier
     unsigned get_id() const { 
         assert(character_id >= 1 && character_id <= 4);
         return character_id; 
     }
 
 
-    //! Método que retorna o número de vidas do personagem
+    //! Method that returns the number of lives of the character
     int get_number_of_lives() const { 
         assert(character_number_of_lives >= 0);
         return character_number_of_lives; 
     }
 
-    //! Método que coloca as bases com os seus devidos personagens
+    //! Method that puts the bases with their proper characters
     void set_base(Base *base);
 
 
-//!Métodos protegidos
+//!Protected methods
 protected:
 
-    //! Método que muda o estado do personagem
+//! Method that changes character status
     /*
-    \param next_state é um objeto que indica o próximo estado do personagem
-    \param bool respawing é uma variável que indica o reaparecimento do personagem
-    */
+     \param next_state is an object that indicates the next state of the character
+     \param bool respawing is a variable that indicates the reappearance of the character
+     */
     void change_character_state(State next_state, bool respawning = false);
-    //! Método que trata o estado
+    //! Method that handles the state
     void handle_state();
-    //! Método que define onde o personagem irá ser "desovado"
+    //! Method that defines where the character will be "spawned"
     void set_spawn_position();
-    //! Método que permite o reaparecimento do personagem
+    //! Method that allows the reappearance of the character
     void respawn_character();
-    //! Método que define se o personagem foi morto
+    //! Method that defines whether the character was killed
     void kill_character();
-    //! Pacote que desenha o personagem
-    /* 
-    \param player_id mostrar o identificador de cada personagem
-    */
+     //! Package that draws the character
+     /*
+     \ param player_id show the identifier of each character
+     */
     string choose_sprite_path(unsigned player_id);
-    //! Método que retorna os eventos em geral 
+    //! Method that returns the events in general
     bool on_event(const GameEvent& event);
-    //! Método virtual do ataque especial
+    //! Virtual Attack Special Method
     virtual void do_heavy_attack() = 0;
-    //! Método virtual do ataque ligth_atack
+    //! Virtual attack method ligth_atack
     virtual void do_light_attack() = 0;
-    //! Método virtual da defesa
+    //! Virtual defense method
     virtual void do_defense() = 0;
-    //! Método virtual do ataque especial
+    //! Virtual Attack Special Method
     virtual void do_special() = 0;
 
-    //! Enuemrado que define o tipo de movimento
+    //! Enuemrado that defines the type of movement
     typedef enum 
     {
-        MOVING_RIGHT, //! Movimento para direita
-        MOVING_LEFT //! Movimento para esquerda
+        MOVING_RIGHT, 
+        MOVING_LEFT
+
     } MovingState;
 
-		//! Métodos virtual de gameobject
+		//! virtual methods of gameobject
 		void update_self(unsigned now, unsigned last);
 		void draw_self(Canvas *canvas, unsigned now, unsigned last);
 
 
 protected:
-    //! Estado do movimento do personagem
+    //! Character movement status
     MovingState character_moving_state;
-    //! Estado do personagem
+    //! State of character
     CharacterState* character_state;
-    //! Construindo o personagem
+    //! Building the character
     CharacterStateFactory new_character_state_factory;
-    //! variável que indica se o personagem esta ativo
+    //! variable that indicates whether the character is active
     bool character_active;
-    //! variável que serve para identificador do personagem
+    //! variable that serves to identify the character
     unsigned character_id;
-    //! variável que indica vida maxima de cada personagem
+    //! variable that indicates the maximum life of each character
     int character_max_life;
-    //! variável que indica a vida atual de cada personagem
+    //! variable that indicates the current life of each character
     int character_current_life;
-    //! variável que indica o número de vidas
+    //! variable that indicates the number of lives
     int character_number_of_lives;
-    //! variável que indica frame do personagem
+    //! variable that indicates character frame
     int character_frame;
-    //! variável que indica que o Personagem foi iniciado
+    //! variable that indicates that the character has been started
     int character_start;
-    //! variável que indica a largura do personagem
+    //! variable that indicates the width of the character
     int character_width;
-    //! variável que indica a altura do personagem
+    //! variable that indicates the height of the character
     int character_height;
-    //! variável que indica o ataque pesado do personagem
+    //! variable that indicates the character's heavy attack
     int character_heavy_attack_cooldown;
-    //! variável que indica ataque leve do personagem
+    //! variable indicating light character attack
     int character_light_attack_cooldown;
-    //! variável que indica defesa do personagem
+    //! variable that indicates character defense
     int character_defense_cooldown;
-    //! variável que indica ataque especial do personangem
+    //! variable that indicates the character's special attack
     int character_special_cooldown;
-    //! variável que indica o ultimo uso dos ataques e defesas
+    //! variables that indicate the last use of the attacks and defenses
     int character_last_used_heavy_attack;
     int character_last_used_light_attack;
     int character_last_used_defense;
     int character_last_used_special;
-    //! variável que indica o tempo de reaparecimento
+    //! variable indicating the reappearance time
     int character_respawn_time;
-    //! variável que indica codigo do personagem
+    //! variable that indicates character code
     int character_code;
-    //! variável que indica o último som que foi tocado
+    //! variable that indicates the last sound that was played
     int character_last_sound_played;
-    //! variável que indica o congelamento do personagem
+    //! variable that indicates the freezing of the character
     bool character_freeze;
-    //! personagem vivo ou morto
+    //! dead or alive character
     bool character_dead;
-    //! velocidade no eixo x
+    //! speed on the x axis
     double character_axis_x_speed;
-    //! velocidade no eixo y
+    //! speed on the y-axis
     double character_axis_y_speed;
-    //! variável que indica a velocidade do personagem
+    //! variable that indicates the speed of the character
     double character_speed;
-    //! variável que indica base do personagem
+    //! variable indicating base of character
     Base* character_base;
     vector< shared_ptr<Texture> > character_textures;
     unordered_map<string, pair<double, double> > character_speed_vector;
     Rectangle character_bounding_box;
     vector<string> character_sprite_paths;
 
-// Método que indica que vai atualizar poisção do personagem
-/* 
-\param now indica o tempo atual
-\param last indica o último evento
-\param backwards indica a posição anterior
-*/    
+// Method that indicates that character update will update
+/*
+\param now indicates the current time
+\param last indicates the last event
+\param backwards indicates the previous position
+*/ 
 
     inline void update_position(const unsigned &now, const unsigned &last, bool backwards = false);
 };
