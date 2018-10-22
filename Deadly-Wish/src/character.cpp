@@ -90,11 +90,12 @@ Character::~Character()
     event::unregister_listener(this);
 }
 
-//! Método que indica atualizar o personagem
+//! A method that prompts you to update the character
 /*!
 \param now indica atualização agora
 \param las indica a última atualizção
 */
+
 void
 Character::update_self(unsigned now, unsigned last)
 {
@@ -271,7 +272,7 @@ Character::on_event(const GameEvent& event)
     bool p3_special_validation = event.id() == game_event::SPECIAL_P3 && get_id() == 2;
     bool p4_special_validation = event.id() == game_event::SPECIAL_P4 && get_id() == 3;
 
-    printf("EVENT ID: %d\n", (int) event.id());
+    cout << "Event ID: " << (int) event.id() << endl;
     if((event.id() == game_event::MOVEMENT_P1 && character_id == 0) ||
        (event.id() == game_event::MOVEMENT_P2 && character_id == 1) ||
        (event.id() == game_event::MOVEMENT_P3 && character_id == 2) ||
@@ -279,23 +280,29 @@ Character::on_event(const GameEvent& event)
         string axis = event.get_property<string>("axis");
         int value = event.get_property<int>("value");
 
-        if(axis == "X") {
+        if(axis == "X") 
+        {
             character_axis_x_speed = SPEED * ((double) value / 32768);
-            if(value > 0) {
+            if(value > 0) 
+            {
                 character_moving_state = MOVING_RIGHT;
             }
-            else if(value < 0) {
+            else if(value < 0) 
+            {
                 character_moving_state = MOVING_LEFT;
             }
-            else {
+            else 
+            {
                 //Nothing to do
             }
         }
-        else if(axis == "Y") {
+        else if(axis == "Y") 
+        {
             character_axis_y_speed = SPEED * ((double) value / 32768);
         }
 
-        else {
+        else 
+        {
             return true;
         }
 
@@ -377,7 +384,8 @@ Character::on_collision(const Collidable *who, const Rectangle& where, unsigned 
     const Base *b = dynamic_cast<const Base *>(who);
 
     //! c is character b is base
-    if(c or b) {
+    if(c or b) 
+    {
         assert(now > 0);
         assert(last > 0);
         update_position(now, last, true);
@@ -385,10 +393,12 @@ Character::on_collision(const Collidable *who, const Rectangle& where, unsigned 
     else if(character_state->get_current_state() != DEFENSE_STATE and s->get_character_id() != character_id and
             s->valid() and (((1 << character_id) & s->get_collided()) == 0)) {
         character_current_life -= s->get_damage();
-        printf("Sofreu dano! Vida atual: %d\n", character_current_life);
+        cout << "Suffered damage, Current Life: " << character_current_life << endl;
+         
     }
-    else {
-        cout << "Nenhum dano";
+    else 
+    {
+        cout << "No damage";
     }
 }
 
@@ -398,11 +408,13 @@ void
 Character::change_character_state(State next_state, bool respawning )
 {
     //! respawn state
-    if(respawning) {
+    if(respawning) 
+    {
         character_state = new_character_state_factory.change_character_state(next_state);
         return;
     }
-    else {
+    else 
+    {
         //! Nothing to do
     }
     //! character dead and respawn = false
@@ -410,19 +422,23 @@ Character::change_character_state(State next_state, bool respawning )
         return;
     }
     //! next_state is the same of current state
-    else if(character_state != nullptr and next_state == character_state->get_current_state()) {
+    else if(character_state != nullptr and next_state == character_state->get_current_state()) 
+    {
         return;
     }
-    else {
+    else 
+    {
         //! Nothing to do
     }
 
     //! check new state if character is not freeze
-    if(not character_freeze) {
+    if(not character_freeze) 
+    {
         character_state = new_character_state_factory.change_character_state(next_state);
         character_frame = 0;
     }
-    else {
+    else 
+    {
         //! Nothing to do
     }
 }
@@ -432,14 +448,17 @@ Character::change_character_state(State next_state, bool respawning )
 void Character::handle_state()
 {
     //! base-mode and deathstate
-    if((character_current_life <= 0) || (character_base->get_base_life() <= 0 and game_mode::choosen_mode == "base-mode")) {
+    if((character_current_life <= 0) || (character_base->get_base_life() <= 0 and game_mode::choosen_mode == "base-mode")) 
+    {
         change_character_state(DEATH_STATE);
     }
-
-    if(character_state->get_current_state() == HEAVY_ATTACK_STATE) {
+    //! if Heavy-Atack state
+    if(character_state->get_current_state() == HEAVY_ATTACK_STATE) 
+    {
         character_freeze = true;
     }
-    else {
+    else 
+    {
         character_freeze = false;
         character_active = true;
     }
@@ -449,26 +468,38 @@ void Character::handle_state()
         kill_character();
         return;
     }
+    else 
+    {
+        //! Nothing to do
+    }
 
     if(character_state->get_current_state() != DEATH_STATE && character_state->get_current_state() != MOVING_STATE and
         (character_frame + 1) % (character_textures[character_state->get_current_state()]->w() / CHARACTER_WIDTH) == 0) {
         character_freeze = false;
         change_character_state(IDLE_STATE);
     }
+    else 
+    {
+        //! Nothing to do
+    }
 
-    if(character_axis_x_speed == 0.0 && character_axis_y_speed == 0.0) {
+    if(character_axis_x_speed == 0.0 && character_axis_y_speed == 0.0) 
+    {
         if(character_state->get_current_state() == MOVING_STATE ||
           (character_state->get_current_state() == IDLE_STATE && ((character_frame + 1) % (character_textures[IDLE_STATE]->w() / CHARACTER_WIDTH)) == 0)) {
             change_character_state(IDLE_STATE);
         }
     }
-    else if(character_state->get_current_state() == IDLE_STATE) {
+    else if(character_state->get_current_state() == IDLE_STATE) 
+    {
         change_character_state(MOVING_STATE);
+    }
+    else{
+        //! Nothing to do
     }
 }
 
-
-//! Define posição de desova do personagem
+//! Sets the character's spawn position
 void
 Character::set_spawn_position()
 {
@@ -495,14 +526,14 @@ Character::set_spawn_position()
             break;
 
         default:
-            printf("Valor errado no set_spawn_position!\n");
-            printf("m_id: %d", character_id);
+            cout << "Valor errado no set_spawn_position" << endl;
+            cout << "m_id: " << character_id << endl;
             break;
     }
 }
 
 
-//! Reaparecimento do personagem
+//! Respawn Character
 void
 Character::respawn_character()
 {
@@ -526,12 +557,11 @@ Character::respawn_character()
     else {
         character_moving_state = MOVING_LEFT;
     }
-
-    printf("Vida atual: %d\n", character_current_life);
+    cout << "Vida atual: " << character_current_life << endl;
 }
 
 
-//! Indica a morte do personagem
+//! Indicates the death of the character
 void
 Character::kill_character()
 {
@@ -539,7 +569,7 @@ Character::kill_character()
     m_y = -12.0;
     character_bounding_box.set_position(x(), y());
     character_frame = 0;
-    printf("Personagem morreu!\n");
+    cout << "Personagem morreu" << endl;
     physics::unregister_object(this);
     event::unregister_listener(this);
     character_dead = true;
@@ -549,7 +579,6 @@ Character::kill_character()
     }
 }
 
-//! Indica a base de cada personagem
 void
 Character::set_base(Base *base) {
     assert(base != nullptr);
