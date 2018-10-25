@@ -1,5 +1,5 @@
 /** \file spear.h
-  * \brief Este é o arquivo da classe Spear que exibe a spear(lança) do soldier, com herança da classe Skill
+  * \brief This is a Spear class, which displays the spear (spear) of the soldier character, inherits from the Skill class.
   */
 #include "spear.h"
 #include "character.h"
@@ -9,9 +9,9 @@
 #include <ijengine/rectangle.h>
 #include <ijengine/game_object.h>
 
-//! Valor Dano do SPEAR_BASE_DAMAGE
+//! Damage Value SPEAR_BASE_DAMAGE
 #define SPEAR_BASE_DAMAGE 20
-//! Largurado SPEAR(lança)
+//! Width SPEAR
 #define SPEAR_WIDTH 32
 
 using namespace std;
@@ -19,11 +19,11 @@ using namespace ijengine;
 
 /** fn LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp)
  * \public
- * \breif Método Construtor LightAttack
- * \param *parent Ponteiro para o GameObject
- * \param soldier_id identificador do personagem soldier
- * \param xp double posição no eixo X
- * \param yp double posição no eixo y
+ * \breif Builder Method LightAttack
+ * \param *parent Pointer to GameObject
+ * \param soldier_id soldier character identifier
+ * \param xp double X axis position
+ * \param yp double Y axis position
  */
 Spear::Spear(GameObject *parent, unsigned soldier_id, double xp, double yp, double dx,
              double dy)
@@ -59,12 +59,12 @@ Spear::Spear(GameObject *parent, unsigned soldier_id, double xp, double yp, doub
     }
 }
 
-//! Destrutor da Classe LightAttack
+//! LightAttack Class Destructor
 Spear::~Spear()
 {
 }
 
-//! Métodos virtual de gameobject
+//! gameobject Virtual methods
 void Spear::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     assert(canvas != NULL);
@@ -74,10 +74,10 @@ void Spear::draw_self(Canvas *canvas, unsigned, unsigned)
     canvas->draw(spear_texture.get(), rect, x(), y());
 }
 
-//! Método que indica atualizar o Spear
+//! Spear update methods
 /*!
-\param now indica atualização agora
-\param las indica a última atualizção
+\param update now(now update)
+\param update last(last update)
 */
 void Spear::update_self(unsigned now, unsigned last)
 {
@@ -98,13 +98,13 @@ void Spear::update_self(unsigned now, unsigned last)
     }
 }
 
-//! Spear ativo
+//! Spear active
 bool Spear::active() const
 {
     return true;
 }
 
-//! Delimitação da Spear
+//! Spear Delimitation
 const Rectangle &
 Spear::bounding_box() const
 {
@@ -118,7 +118,7 @@ Spear::hit_boxes() const
     return boxes;
 }
 
-//! Direção da Spear
+//! Spear direction
 pair<double, double>
 Spear::direction() const
 {
@@ -127,7 +127,7 @@ Spear::direction() const
 
 /** \fn string update_sprite_state()
   * \protected
-  * \brief Função atualiza o sprite_state utilizando o SPEAR_WIDTH.
+  * \brief Function updates sprite_state using SPEAR_WIDTH.
   */
 void Spear::update_sprite_state()
 {
@@ -144,7 +144,7 @@ void Spear::update_sprite_state()
 
 /** \fn string update_time()
   * \protected
-  * \brief Função atualiza o tempo do spear.
+  * \brief Spear time update.
   */
 void Spear::update_time(unsigned now)
 {
@@ -169,10 +169,10 @@ void Spear::update_time(unsigned now)
 
 /** \fn string choose_sprite_path(unsigned player_id)
   * \protected
-  * \brief Função que escolhe qual sera o caminho para o sprite de cada um dos jogadores e
-  *  personagem, ja as cores e densenhos de cada um são diferentes.
-  * \param player unsigned Código de para o player
-  * \return o sprite_path com o caminho das imagens.
+  * \Function that chooses which will be the way to the sprite of 
+  * each of the players and character.
+  * \param player unsigned player ID.
+  * \return sprite_path images path.
   */
 string
 Spear::choose_sprite_path(unsigned player_id)
@@ -180,7 +180,7 @@ Spear::choose_sprite_path(unsigned player_id)
     string directory = "Green";
     string sprite_path;
 
-    // Switch atribuir a variavel directory a partir da variavel player_id
+    // Switch aassign the variable directory using variable player_id
     assert(player_id == PLAYER_1 || player_id == PLAYER_2 || player_id == PLAYER_3 || player_id == PLAYER_4);
     switch (player_id)
     {
