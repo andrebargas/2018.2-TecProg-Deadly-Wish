@@ -16,7 +16,8 @@
 #include <iostream>
 
 //Number of character in the game
-#define NUMBER_OF_CHARACTERS (double)CHARACTER_WIDTH 32
+#define NUMBER_OF_CHARACTERS 4
+#define CHARACTER_WIDTH 32
 
 using namespace std;
 using namespace ijengine;

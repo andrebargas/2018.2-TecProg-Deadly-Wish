@@ -132,6 +132,9 @@ CreditsLevel::on_event(const GameEvent& event)
         credits_level_done = true;
         return true;
      }
+     else{
+       return false;
+     }
 }
 
 // PBS
