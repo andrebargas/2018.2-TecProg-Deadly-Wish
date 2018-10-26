@@ -16,6 +16,7 @@
 #define RESPAWN_TIME 10000
 #define CHARACTER_WIDTH 32
 #define CHARACTER_HEIGHT 32
+#define CHARACTER_DEATH_MATCH_LIFE 5
 
 using std::cout;
 using std::endl;
@@ -75,8 +76,9 @@ Character::Character(const vector<string> sprite_paths, unsigned id, double x, d
     
 
     //! Game mode - deathmatch (each player has 5 lives)
-    if(game_mode::choosen_mode == "deathmatch-mode") {
-        character_number_of_lives = 5;
+    if(game_mode::choosen_mode == "deathmatch-mode") 
+    {
+        character_number_of_lives = CHARACTER_DEATH_MATCH_LIFE;
     }
 
     //! Respawn if current life > 0
@@ -112,7 +114,13 @@ Character::update_self(unsigned now, unsigned last)
 
     //! start player
     if (character_start == -1)
+    {
         character_start = now;
+    }
+    else
+    {
+        //! Nothing to do
+    }
 
     //! if the character died, respawn after the time of 10 seconds
     if((character_dead) and now - character_start > character_respawn_time) {
@@ -120,31 +128,44 @@ Character::update_self(unsigned now, unsigned last)
         character_dead = false;
         respawn_character();
     }
+    else
+    {
+        //! Character also respawn
+    }
+
     //! if the character didn't died, refresh your state
     if ((not character_dead) and now - character_start > character_state->get_refresh_rate())
     {
         character_start += character_state->get_refresh_rate();
         character_frame = (character_frame + 1) % (character_textures[character_state->get_current_state()]->w() / CHARACTER_WIDTH);
     }
+    else
+    {
+        //! Character dead
+    }
 
     //! if speed of character is zero and heavy atack is call update your position
     if(character_axis_y_speed == 0.0 && character_axis_x_speed == 0.0) {
-        if(character_code == INFILTRATOR && character_state->get_current_state() == HEAVY_ATTACK_STATE) {
+        if(character_code == INFILTRATOR && character_state->get_current_state() == HEAVY_ATTACK_STATE) 
+        {
             update_position(now, last);
         }
-        else{
+        else
+        {
             //! Nothing to do
         }
 
         return;        
     }
 
-    else{
+    else
+    {
        //! Nothing to do 
     }
 
     //! Repeats the sound of the character's movement every 400 milliseconds
-    if(now - character_last_sound_played > 400) {
+    if(now - character_last_sound_played > 400) 
+    {
         character_last_sound_played = now;
         switch(character_code) {
             case KNIGHT:
@@ -418,7 +439,8 @@ Character::change_character_state(State next_state, bool respawning )
         //! Nothing to do
     }
     //! character dead and respawn = false
-    if((character_state != nullptr and character_state->get_current_state() == DEATH_STATE) and not respawning) {
+    if((character_state != nullptr and character_state->get_current_state() == DEATH_STATE) and not respawning) 
+    {
         return;
     }
     //! next_state is the same of current state
@@ -464,7 +486,8 @@ void Character::handle_state()
     }
 
     if(character_state->get_current_state() == DEATH_STATE and
-        (character_frame + 1) % (character_textures[character_state->get_current_state()]->w() / CHARACTER_WIDTH) == 0) {
+        (character_frame + 1) % (character_textures[character_state->get_current_state()]->w() / CHARACTER_WIDTH) == 0) 
+    {
         kill_character();
         return;
     }
@@ -474,7 +497,8 @@ void Character::handle_state()
     }
 
     if(character_state->get_current_state() != DEATH_STATE && character_state->get_current_state() != MOVING_STATE and
-        (character_frame + 1) % (character_textures[character_state->get_current_state()]->w() / CHARACTER_WIDTH) == 0) {
+        (character_frame + 1) % (character_textures[character_state->get_current_state()]->w() / CHARACTER_WIDTH) == 0) 
+    {
         character_freeze = false;
         change_character_state(IDLE_STATE);
     }
@@ -494,7 +518,8 @@ void Character::handle_state()
     {
         change_character_state(MOVING_STATE);
     }
-    else{
+    else
+    {
         //! Nothing to do
     }
 }
@@ -526,7 +551,7 @@ Character::set_spawn_position()
             break;
 
         default:
-            cout << "Valor errado no set_spawn_position" << endl;
+            cout << "Wrong answer no set_spawn_position" << endl;
             cout << "m_id: " << character_id << endl;
             break;
     }
@@ -551,13 +576,15 @@ Character::respawn_character()
     character_freeze = false;
     character_dead = false;
 
-    if(character_id %2 == 0) {
+    if(character_id %2 == 0) 
+    {
         character_moving_state = MOVING_RIGHT;
     }
-    else {
+    else 
+    {
         character_moving_state = MOVING_LEFT;
     }
-    cout << "Vida atual: " << character_current_life << endl;
+    cout << "Current life: " << character_current_life << endl;
 }
 
 
@@ -569,11 +596,12 @@ Character::kill_character()
     m_y = -12.0;
     character_bounding_box.set_position(x(), y());
     character_frame = 0;
-    cout << "Personagem morreu" << endl;
+    cout << "Character died" << endl;
     physics::unregister_object(this);
     event::unregister_listener(this);
     character_dead = true;
-    if(game_mode::choosen_mode == "deathmatch-mode") {
+    if(game_mode::choosen_mode == "deathmatch-mode") 
+    {
         character_number_of_lives--;
         character_base->set_base_status(8 - character_number_of_lives);
     }
