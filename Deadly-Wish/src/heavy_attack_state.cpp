@@ -1,21 +1,23 @@
 /**\file heavy_attack_state.cpp
-  *\brief Este é o arquivo da classe do HeavyAttackState,que é ativado quando
-  *...o player usa o estado de ataque forte.
-  */
+  *\brief This is the file of the HeavyAttackState class, which is activated when
+  *... the player uses the strong attack state.
+  */
 
-//Incluindo arquivo da classe HeavyAttackState
+// Including file from class HeavyAttackState
 #include "heavy_attack_state.h"
 
-/**\fn HeavyAttackState()
-  *\public
-  *\brief Método construtor
-  *não recebe parâmetros
-  */
+#define STATE 100
+
+/**\fn HeavyAttackState ()
+  *\public
+  *\brief constructor method
+  *does not receive parameters
+  */
 HeavyAttackState::HeavyAttackState()
     :CharacterState()
 {
-    //Representa o estado atual do player.
-    current_state = HEAVY_ATTACK_STATE;
-    //Tempo de duração de um estado em milissegundos.
-    state_refresh_rate = 100;
+    // Represents the current state of the player.
+    current_state = HEAVY_ATTACK_STATE;
+    // Time duration of a state in milliseconds.
+    state_refresh_rate = STATE;
 }

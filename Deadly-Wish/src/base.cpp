@@ -1,4 +1,3 @@
-//aplicar modulo 5
 /**\file base.cpp
   *\brief Este é o arquivo dos metodos da classe do Base que é a base 'fortaleza' do player no game.
   */
@@ -15,6 +14,7 @@
 
 #define BASE_WIDTH 32
 #define MAX_LIFE 4000
+
 /**\fn Base()
 *\public
 *\brief Método construtor

@@ -1,34 +1,34 @@
-/** \file defense_state.h
-  * \brief Este é o arquivo da classe do DefenseState,que é ativado quando
-  *  ...algum player usa defesa.
-  */
- 
+/**\file defense_state.h
+  *\brief This is the DefenseState class file, which is activated when
+  *... some player uses defense.
+  */
 #ifndef DEFENSE_STATE_H
 #define DEFENSE_STATE_H
 
-//Incluindo arquivo da classe CharacterState
+// Including file of class CharacterState
 #include "character_state.h"
 
-/** \class DefenseState defense_state.h "include/defense_state.h"
- *  \brief Classe usada para definir estado de defesa de um
- *  players no jogo.
- */
+/**\class DefenseState defense_state.h "include / defense_state.h"
+  *\brief Class used to define the defensive state of a
+  *players in the game.
+  */
 class DefenseState : public CharacterState {
+  
 public:
-    /**\fn DefenseState()
-      *\public
-      *\brief Método construtor
-      *Não recebe parâmetros.
-      *Atualiza o estado do player para "utilizando defesa" 
-      *e seu respectivo tempo de duração para 100 milissegundos.
-      */
-    DefenseState();
-    
-    /**\fn ~DefenseState()
-      *\public
-      *\brief Método destrutor
-      */
-    ~DefenseState();
+    /**\fn DefenseState ()
+    *\public
+    *\brief constructor method
+    *Does not receive parameters.
+    *Updates the state of the player to "using defense"
+    *and their respective duration time to 100 milliseconds.
+    */
+   DefenseState ();
+
+    /**\fn ~ DefenseState ()
+    *\public
+    *\brief destructor method
+    */
+   ~DefenseState ();
 };
 
 #endif

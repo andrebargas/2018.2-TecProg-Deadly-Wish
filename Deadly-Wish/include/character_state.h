@@ -1,7 +1,7 @@
-/**\file character_state.h
-  *\brief Este é o arquivo da classe do CharacterState,que é ativado quando
-  *...algum player assume um estado no jogo.
-  */
+/*\file character_state.h
+  * \brief This is the CharacterState class file, which is activated when
+  *... some player assumes a state in the game.
+  */
 
 #ifndef CHARACTER_STATE_H
 #define CHARACTER_STATE_H
@@ -9,7 +9,7 @@
 #include <memory>
 #include <vector>
 
-//Incluindo arquivo util.h que contém constantes enumeradas 
+//! Including util.h file that contains enumerated constants 
 #include "util.h"
 
 using std::shared_ptr;
@@ -19,47 +19,49 @@ using namespace ijengine;
 using namespace util;
 
 /**\class CharacterState character_state.h "include/character_state.h"
- *\brief Classe usada para definir o estado de um player no jogo.
- */
+ * \brief Class used to define the state of a player in the game.
+ */
 class CharacterState {
 public:
-    /**\fn CharacterState()
-      *\public
-      *\brief Método construtor
-      *não recebe parâmetros
-      */
-    CharacterState();
-    /**\fn ~CharacterState()
-      *\public
-      *\brief Método destrutor
-      *\não recebe parâmetros
-      */
-    ~CharacterState();
+  /**\ fn CharacterState ()
+    * \public
+    * \brief constructor method
+    * \does not receive parameters
+    */
+  CharacterState ();
 
-    /**\fn get_current_state()
-      *\public
-      *\brief Método get
-      *\return State retorna o estado do player 
-      */
-    State get_current_state() const { return current_state; }
-    /**\fn get_refresh_rate()
-      *\public
-      *\brief Método get
-      *\return unsigned retorna a duração de um estado do player
-      */
-    unsigned get_refresh_rate() const { return state_refresh_rate; }
+  /**\fn ~CharacterState ()
+    * \public
+    * \brief destructor method
+    * \does not receive parameters
+    */
+  ~CharacterState ();
 
-protected:
+  /**\fn get_current_state ()
+    * \public
+    * \brief get method
+    * \return State returns the state of the player
+    */
+  State get_current_state() const { return current_state; }
+
+  /**\fn get_refresh_rate ()
+    * \ public
+    * \ brief get method
+    * \return unsigned returns the duration of a player state
+    */
+  unsigned get_refresh_rate() const { return state_refresh_rate; }
+
+  protected:
+
     /*\var current_state
-     *\brief Representa o estado atual do player.
-     */
+     * \brief Represents the current state of the player.
+     */
     State current_state;
 
     /*\var state_refresh_rate
-     *\brief Tempo de duração de um estado em milissegundos
-     */
+     * \brief Duration time of a state in milliseconds
+     */
     unsigned state_refresh_rate;
-
 };
 
 #endif
