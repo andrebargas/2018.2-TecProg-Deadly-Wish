@@ -222,17 +222,19 @@ Character::update_position(const unsigned &now, const unsigned &last, bool backw
     //! if character not freeze or not using heavy atack
     if(not character_freeze || ok) {
 
-        double new_y = multiplier * character_axis_y_speed * summer * (now - last);
-        new_y = new_y / 1000.0;
-        new_y =  y() + new_y; 
+        double new_y = multiplier * character_axis_y_speed;
+        new_y *=  summer * (now - last);
+        new_y /= 1000.0;
+        new_y +=  y();
 
         new_y = min(new_y, SCREEN_HEIGHT - (double)CHARACTER_WIDTH - 16.00);
         new_y = max(new_y, 10.0);
         assert(new_y >= 10.00);
 
-        double new_x = multiplier * character_axis_x_speed * summer * (now - last);
-        new_x = new_x / 1000.0;
-        new_x = new_x + x();
+        double new_x = multiplier * character_axis_x_speed;
+        new_x *=  summer * (now - last);
+        new_x /= 1000.0;
+        new_x +=  x();
 
         new_x = min(new_x, SCREEN_WIDTH - (double)CHARACTER_WIDTH);
         new_x = max(new_x, 0.0);
