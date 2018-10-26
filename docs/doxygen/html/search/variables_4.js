@@ -1,16 +1,10 @@
 var searchData=
 [
-  ['m_5factive',['m_active',['../classInfiltrator.html#a57568f6f782efc405e959e5bfffc8163',1,'Infiltrator']]],
-  ['m_5fbase_5fx',['m_base_x',['../classCharacterSelection.html#aeb7a11351418002b57587f6abed12a00',1,'CharacterSelection']]],
-  ['m_5fbase_5fy',['m_base_y',['../classCharacterSelection.html#a09610c3c8cca5a24ba210131aaa4b1c8',1,'CharacterSelection']]],
-  ['m_5fchosen',['m_chosen',['../classCharacterSelection.html#aadc3d49c3cee49de9b3c886cac52897e',1,'CharacterSelection']]],
-  ['m_5fcurrent_5fselection',['m_current_selection',['../classCharacterSelection.html#a85f71f1b73dc6b86bcbc29eadd3a9ad7',1,'CharacterSelection']]],
-  ['m_5fframe',['m_frame',['../classCharacterSelection.html#aa55f4689637450838d51090e921e036f',1,'CharacterSelection']]],
-  ['m_5fheight',['m_height',['../classCharacterSelection.html#a70832b1668915aa4a91d4ac5eea5fed1',1,'CharacterSelection']]],
-  ['m_5fplayer_5fid',['m_player_id',['../classCharacterSelection.html#a952c2ea6bcda9f86e5af153180c4e1ff',1,'CharacterSelection']]],
-  ['m_5fsprite_5fstate',['m_sprite_state',['../classLightAttack.html#a35e5a2ed495b159eb73d27e04cc6f489',1,'LightAttack']]],
-  ['m_5fstart',['m_start',['../classCharacterSelection.html#a99178a5ff9afda03b0c19ca72ed9aa41',1,'CharacterSelection']]],
-  ['m_5fstate',['m_state',['../classLightAttack.html#ad98d1f8f6cd1578461fc200f53758e1a',1,'LightAttack']]],
-  ['m_5ftexture',['m_texture',['../classWinnerLevel.html#a1ca683921327202b36bd4e77a3330101',1,'WinnerLevel']]],
-  ['m_5fwidth',['m_width',['../classCharacterSelection.html#a7a360b0a1d33063f37ff160cefbf75c8',1,'CharacterSelection']]]
+  ['light_5fattack_5faxis_5fx_5fdirection',['light_attack_axis_x_direction',['../classLightAttack.html#a6a0c4b116ccc6e440bb4a7751903b386',1,'LightAttack']]],
+  ['light_5fattack_5fcurrent_5ftime',['light_attack_current_time',['../classLightAttack.html#aee4f749c8ca775a69cd4131c19161f02',1,'LightAttack']]],
+  ['light_5fattack_5fdamage',['light_attack_damage',['../classLightAttack.html#a33ff61300d69a5227cdc7a41c4de9a61',1,'LightAttack']]],
+  ['light_5fattack_5fframe',['light_attack_frame',['../classLightAttack.html#a28c2ddb59b87f80ab69c6b4676395bf8',1,'LightAttack']]],
+  ['light_5fattack_5fspeed',['light_attack_speed',['../classLightAttack.html#a2020d5cc3d91c3f4c597e50bfb249d19',1,'LightAttack']]],
+  ['light_5fattack_5fsprite_5fpath',['light_attack_sprite_path',['../classLightAttack.html#a252572bfbcf4d80aca70f11e3dc3a4bd',1,'LightAttack']]],
+  ['light_5fattack_5fstart',['light_attack_start',['../classLightAttack.html#af67aff57a2acdac82b0d0a090af783d7',1,'LightAttack']]]
 ];

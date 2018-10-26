@@ -24,8 +24,14 @@ using namespace ijengine;
 
 //NSC
 //UC
-//Constantes não estão sendo usadas
-#define MAX_WIDTH 16
+//DC
+/** \def MAX_WIDTH 16
+  * \brief define largura da tela do level
+  */
+ #define MAX_WIDTH 16
+ /** \def MAX_HEIGHT 12
+   * \brief define altura da tela do level
+   */
 #define MAX_HEIGHT 12
 
 /** \class WinnerLevel winner_level.h "include/winner_level.h"

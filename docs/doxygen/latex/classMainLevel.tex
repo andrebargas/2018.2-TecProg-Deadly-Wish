@@ -2,7 +2,7 @@
 \label{classMainLevel}\index{Main\+Level@{Main\+Level}}
 
 
-Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece.  
+Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece no modo \char`\"{}bases\char`\"{}.  
 
 
 
@@ -50,49 +50,47 @@ string \mbox{\hyperlink{classMainLevel_ae101ab154173ca819a5eb701508ad635}{audio}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}{update\+\_\+self}} (unsigned now, unsigned last)
-\begin{DoxyCompactList}\small\item\em Função para atualizar o tempo de inicio do level, e setar atributo \#winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Função para atualizar o tempo de inicio do level, e setar atributo winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMainLevel_aabad926cf0366de353d716065ab792ad}{draw\+\_\+self}} (Canvas $\ast$canvas, unsigned now, unsigned last)
 \begin{DoxyCompactList}\small\item\em Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classMainLevel_a8b5a146b3b3186081ca2a0ad49bbad29}\label{classMainLevel_a8b5a146b3b3186081ca2a0ad49bbad29}} 
-void {\bfseries set\+\_\+players\+\_\+characters\+\_\+position} (unsigned player\+\_\+id, double \&x\+\_\+pos, double \&y\+\_\+pos)
-\item 
-\mbox{\Hypertarget{classMainLevel_a89ed36254771a662797d0ec50105015f}\label{classMainLevel_a89ed36254771a662797d0ec50105015f}} 
-void {\bfseries verify\+\_\+bases} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMainLevel_a2e4098c0cac4f42f94b7fa6ecb14c7c7}{set\+\_\+players\+\_\+characters\+\_\+position}} (unsigned player\+\_\+id, double \&axis\+\_\+x\+\_\+position, double \&axis\+\_\+y\+\_\+position)
+\begin{DoxyCompactList}\small\item\em seta a posição inicial de cada persongem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainLevel_a89ed36254771a662797d0ec50105015f}{verify\+\_\+bases}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se ainda há bases remanecentes, e se existe um vencedor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classMainLevel_ac73ac0af37dc694036a7da248d70ba75}\label{classMainLevel_ac73ac0af37dc694036a7da248d70ba75}} 
-bool {\bfseries main\+\_\+level\+\_\+done}
-\item 
-\mbox{\Hypertarget{classMainLevel_aa17ebbec1a36f9001ce5d8a9e282bbcf}\label{classMainLevel_aa17ebbec1a36f9001ce5d8a9e282bbcf}} 
-string {\bfseries main\+\_\+level\+\_\+next}
-\item 
-\mbox{\Hypertarget{classMainLevel_a65bd52645923038402ab92b25af97b59}\label{classMainLevel_a65bd52645923038402ab92b25af97b59}} 
-int {\bfseries main\+\_\+level\+\_\+start}
-\item 
+bool \mbox{\hyperlink{classMainLevel_ac73ac0af37dc694036a7da248d70ba75}{main\+\_\+level\+\_\+done}}
+\begin{DoxyCompactList}\small\item\em Variavel que é setada com True quando o level chega ao final. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainLevel_a59fd5d005f67e7bc45f470531b68614b}\label{classMainLevel_a59fd5d005f67e7bc45f470531b68614b}} 
+string \mbox{\hyperlink{classMainLevel_a59fd5d005f67e7bc45f470531b68614b}{main\+\_\+level\+\_\+next}}
+\begin{DoxyCompactList}\small\item\em Variavel com o nome do proximo level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainLevel_aadcc3ea08aae9bab68c5cd4a5583e8ea}\label{classMainLevel_aadcc3ea08aae9bab68c5cd4a5583e8ea}} 
+int \mbox{\hyperlink{classMainLevel_aadcc3ea08aae9bab68c5cd4a5583e8ea}{main\+\_\+level\+\_\+start}}
+\begin{DoxyCompactList}\small\item\em Variavel para persistir o tempo de inicio de jogo. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMainLevel_a6322c1a74e91e0b54dfa8368602963ad}\label{classMainLevel_a6322c1a74e91e0b54dfa8368602963ad}} 
-bool {\bfseries main\+\_\+level\+\_\+has\+\_\+winner}
-\item 
-\mbox{\Hypertarget{classMainLevel_a8095418f188c09501ada69571a131594}\label{classMainLevel_a8095418f188c09501ada69571a131594}} 
-vector$<$ \mbox{\hyperlink{classBase}{Base}} $\ast$$>$ {\bfseries main\+\_\+level\+\_\+bases}
-\item 
+bool \mbox{\hyperlink{classMainLevel_a6322c1a74e91e0b54dfa8368602963ad}{main\+\_\+level\+\_\+has\+\_\+winner}}
+\begin{DoxyCompactList}\small\item\em Variavel que é setada com true quando existe um jogador ganhador. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainLevel_a12e4db8964ee51a21bf0b3f3c04dafef}\label{classMainLevel_a12e4db8964ee51a21bf0b3f3c04dafef}} 
+vector$<$ \mbox{\hyperlink{classBase}{Base}} $\ast$$>$ \mbox{\hyperlink{classMainLevel_a12e4db8964ee51a21bf0b3f3c04dafef}{main\+\_\+level\+\_\+bases}}
+\begin{DoxyCompactList}\small\item\em Vetor com os ponteiros para as bases presentes no jogo. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMainLevel_a19560b2041a11b7780e5921b52dd7bb6}\label{classMainLevel_a19560b2041a11b7780e5921b52dd7bb6}} 
-vector$<$ int $>$ {\bfseries main\+\_\+level\+\_\+players\+\_\+characters}
-\item 
-\mbox{\Hypertarget{classMainLevel_acf7f81373b053b58b0755934e5ec75b9}\label{classMainLevel_acf7f81373b053b58b0755934e5ec75b9}} 
-shared\+\_\+ptr$<$ Texture $>$ {\bfseries main\+\_\+level\+\_\+texture}
-\item 
+vector$<$ int $>$ \mbox{\hyperlink{classMainLevel_a19560b2041a11b7780e5921b52dd7bb6}{main\+\_\+level\+\_\+players\+\_\+characters}}
+\begin{DoxyCompactList}\small\item\em Vetor com o código de cada personagem presente no jogo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainLevel_a5c5fdaaeb16160365128667f7846a5c0}\label{classMainLevel_a5c5fdaaeb16160365128667f7846a5c0}} 
+shared\+\_\+ptr$<$ Texture $>$ \mbox{\hyperlink{classMainLevel_a5c5fdaaeb16160365128667f7846a5c0}{main\+\_\+level\+\_\+texture}}
+\begin{DoxyCompactList}\small\item\em Vetor com as texturas utilizadas para renderizar o jogo. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMainLevel_a67fb31550c22320459d70d1d8834238f}\label{classMainLevel_a67fb31550c22320459d70d1d8834238f}} 
-int {\bfseries main\+\_\+level\+\_\+map} \mbox{[}M\+A\+X\+\_\+\+W\+I\+D\+TH\mbox{]}\mbox{[}M\+A\+X\+\_\+\+H\+E\+I\+G\+HT\mbox{]}
-\item 
+int \mbox{\hyperlink{classMainLevel_a67fb31550c22320459d70d1d8834238f}{main\+\_\+level\+\_\+map}} \mbox{[}M\+A\+X\+\_\+\+W\+I\+D\+TH\mbox{]}\mbox{[}M\+A\+X\+\_\+\+H\+E\+I\+G\+HT\mbox{]}
+\begin{DoxyCompactList}\small\item\em matriz para fazer o grid do jogo, com sua respectiva altura e largura \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMainLevel_a017084aa4aa83cfd18195025a6b5a703}\label{classMainLevel_a017084aa4aa83cfd18195025a6b5a703}} 
-\mbox{\hyperlink{classCharacterFactory}{Character\+Factory}} {\bfseries main\+\_\+level\+\_\+character\+\_\+factory}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classCharacterFactory}{Character\+Factory}} \mbox{\hyperlink{classMainLevel_a017084aa4aa83cfd18195025a6b5a703}{main\+\_\+level\+\_\+character\+\_\+factory}}
+\begin{DoxyCompactList}\small\item\em Instancia da classe \mbox{\hyperlink{classCharacterFactory}{Character\+Factory}} responsavel pela criação dos personagens do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Descrição detalhada}
-Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece. 
+Classe usada para definir level que aparece após a seleção de personagem e escolha do modo de jogo. É onde o core do jogo acontece no modo \char`\"{}bases\char`\"{}. 
 
 \subsection{Documentação dos Construtores \& Destrutor}
 \mbox{\Hypertarget{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}\label{classMainLevel_a0d8c61bddf5781cea1ba8496bd0a3d80}} 
@@ -176,6 +174,28 @@ Retorna qual sera o proximo level. Nome não pode ser mudado por ser um metodo h
 \begin{DoxyReturn}{Retorna}
 string retorna qual sera o proximo level 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classMainLevel_a2e4098c0cac4f42f94b7fa6ecb14c7c7}\label{classMainLevel_a2e4098c0cac4f42f94b7fa6ecb14c7c7}} 
+\index{Main\+Level@{Main\+Level}!set\+\_\+players\+\_\+characters\+\_\+position@{set\+\_\+players\+\_\+characters\+\_\+position}}
+\index{set\+\_\+players\+\_\+characters\+\_\+position@{set\+\_\+players\+\_\+characters\+\_\+position}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{set\+\_\+players\+\_\+characters\+\_\+position()}{set\_players\_characters\_position()}}
+{\footnotesize\ttfamily void Main\+Level\+::set\+\_\+players\+\_\+characters\+\_\+position (\begin{DoxyParamCaption}\item[{unsigned}]{player\+\_\+id,  }\item[{double \&}]{axis\+\_\+x\+\_\+position,  }\item[{double \&}]{axis\+\_\+y\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+seta a posição inicial de cada persongem 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em player\+\_\+id} & unsigned Id do player que tera a posição do personagem setada \\
+\hline
+{\em axis\+\_\+x\+\_\+position} & double\& Endereço da posição do persoangem no eixo x \\
+\hline
+{\em axis\+\_\+y\+\_\+position} & double\& Endereço da posição do persoangem no eixo y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}\label{classMainLevel_a4978a0e152f6a7b55bed0bad74dc7d5a}} 
 \index{Main\+Level@{Main\+Level}!update\+\_\+self@{update\+\_\+self}}
 \index{update\+\_\+self@{update\+\_\+self}!Main\+Level@{Main\+Level}}
@@ -184,7 +204,7 @@ string retorna qual sera o proximo level
 
 
 
-Função para atualizar o tempo de inicio do level, e setar atributo \#winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
+Função para atualizar o tempo de inicio do level, e setar atributo winner\+\_\+level\+\_\+start. Nome não pode ser mudado por ser um metodo herdado da classe pai, protegida pelo escopo do projeto. 
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -196,9 +216,22 @@ Função para atualizar o tempo de inicio do level, e setar atributo \#winner\+\
 \begin{DoxyReturn}{Retorna}
 void 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classMainLevel_a89ed36254771a662797d0ec50105015f}\label{classMainLevel_a89ed36254771a662797d0ec50105015f}} 
+\index{Main\+Level@{Main\+Level}!verify\+\_\+bases@{verify\+\_\+bases}}
+\index{verify\+\_\+bases@{verify\+\_\+bases}!Main\+Level@{Main\+Level}}
+\subsubsection{\texorpdfstring{verify\+\_\+bases()}{verify\_bases()}}
+{\footnotesize\ttfamily void Main\+Level\+::verify\+\_\+bases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Verifica se ainda há bases remanecentes, e se existe um vencedor. 
+
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
 include/\mbox{\hyperlink{main__level_8h}{main\+\_\+level.\+h}}\item 
-src/main\+\_\+level.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{main__level_8cpp}{main\+\_\+level.\+cpp}}\end{DoxyCompactItemize}
