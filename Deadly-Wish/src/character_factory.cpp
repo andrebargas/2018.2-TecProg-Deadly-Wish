@@ -36,7 +36,8 @@ CharacterFactory::~CharacterFactory()
   * \return pointer to the created character
   */
 Character*
-CharacterFactory::make_character(int character_code, unsigned player_id, double x_position, double y_position)
+CharacterFactory::make_character(int character_code, unsigned player_id, double x_position,
+                                 double y_position)
 {
     character_sprites_paths = choose_sprite_path(character_code, player_id);
 
