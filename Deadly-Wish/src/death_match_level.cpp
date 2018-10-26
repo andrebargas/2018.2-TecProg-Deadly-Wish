@@ -1,3 +1,8 @@
+/** \file death_match_level.cpp
+  * \brief File for the class DeathMatchLevel, that is the level for one of the two main
+  * game mode levels
+  */
+
 #include "death_match_level.h"
 #include "engine.h"
 #include "character.h"
@@ -10,8 +15,8 @@
 #include <cstdlib>
 #include <iostream>
 
-//Numero de personagens no jogo
-#define NUMBER_OF_CHARACTERS 4
+//Number of character in the game
+#define NUMBER_OF_CHARACTERS (double)CHARACTER_WIDTH 32
 
 using namespace std;
 using namespace ijengine;
@@ -169,10 +174,10 @@ DeathMatchLevel::verify_characters()
 
 /** \fn set_players_characters_position(unsigned player_id, double& x_pos, double& y_pos)
   * \protected
-  * \brief seta a posição inicial de cada persongem
-  * \param player_id unsigned Id do player que tera a posição do personagem setada
-  * \param axis_x_position double& Endereço da posição do persoangem no eixo x
-  * \param axis_y_position double& Endereço da posição do persoangem no eixo y
+  * \brief set the inicial position for each character de cada persongem
+  * \param player_id unsigned Id of the player that will have the position set
+  * \param axis_x_position double& Position of the character in x axis
+  * \param axis_y_position double& Position of the character in y axis
   * \return void
   */
 void
@@ -190,7 +195,7 @@ DeathMatchLevel::set_players_characters_position(unsigned player_id, double& x_p
         //Player 2 na posição do canto superior direito, correspondente a posição
         // (tamanho da tela - largura do personagem),0 do grid
         case PLAYER_2:
-            x_pos = (double) SCREEN_WIDTH - 32.0 - X_ADJUSTMENT;
+            x_pos = (double) SCREEN_WIDTH - (double)CHARACTER_WIDTH - X_ADJUSTMENT;
             y_pos = Y_ADJUSTMENT;
             break;
 
@@ -198,20 +203,19 @@ DeathMatchLevel::set_players_characters_position(unsigned player_id, double& x_p
         // 0, (tamanho da tela - largura do personagem) do grid
         case PLAYER_3:
             x_pos = X_ADJUSTMENT;
-            y_pos = (double) SCREEN_HEIGHT - 32.0 - Y_ADJUSTMENT;
+            y_pos = (double) SCREEN_HEIGHT - (double)CHARACTER_WIDTH - Y_ADJUSTMENT;
             break;
 
         //Player 4 na posição do canto inferior direito, correspondente a posição
         //(tamanho da tela - largura do personagem) , (tamanho da tela - largura do personagem) do grid
         case PLAYER_4:
-            x_pos = (double) SCREEN_WIDTH - 32.0 - X_ADJUSTMENT;
-            y_pos = (double) SCREEN_HEIGHT - 32.0 - Y_ADJUSTMENT;
+            x_pos = (double) SCREEN_WIDTH - (double)CHARACTER_WIDTH - X_ADJUSTMENT;
+            y_pos = (double) SCREEN_HEIGHT - (double)CHARACTER_WIDTH - Y_ADJUSTMENT;
             break;
         //UC
         // Player ID passado invalido
         default:
-            printf("Valor errado no set_base_position_position!\n");
-            printf("player_id: %d", player_id);
+            cout << "Invalid value in set_base_position_position!\n";
             break;
     }
 }

@@ -1,20 +1,19 @@
 /** \file character_choose_level.h
-  * \brief Esta é o arquivo da classe do level CharacterChooseLevel que mostra o menu para a seleão
-  *  dos personagens
+  * \brief File to class that define level for character selection
   */
 #ifndef CHARACTER_CHOOSE_LEVEL_h
 #define CHARACTER_CHOOSE_LEVEL_h
 
-//faz o import das classes da ijegine
+//Import ijegine classes
 #include <ijengine/level.h>
 #include <ijengine/texture.h>
 #include <ijengine/event.h>
 #include <ijengine/game_events_listener.h>
 
-//import de classes do jogo
+//Import game classes
 #include "character_selection.h"
 
-//import de bibliotecas da linguagem
+//Import Cpp libraries
 #include <string>
 #include <memory>
 #include <vector>
@@ -27,26 +26,26 @@ using std::shared_ptr;
 using namespace ijengine;
 
 /** CharacterChooseLevel : public Level, public GameEventsListener
- *  \brief Classe usada para definir level do menu de seleção de personagens
+ *  \brief Class used to character selection menu
  */
 class CharacterChooseLevel : public Level, public GameEventsListener {
 public:
 
     /** \fn CharacterChooseLevel(const string& next = "")
       * \public
-      * \brief Método construtor
-      * \param next const string& Parametro para o proximo level. Valor constante igual " ",
+      * \brief Constructor Method
+      * \param next const string& Name of the next level
       *
       */
     CharacterChooseLevel(const string& next = "");
 
     /** \fn ~CharacterChooseLevel()
       * \public
-      * \brief Método destrutor
+      * \brief Destructor method
       */
     ~CharacterChooseLevel();
 
-    //enum para elementos da interface
+    //enum to interface elements
     enum {
         BACKGROUND,
         PORTRAITS,
@@ -55,40 +54,39 @@ public:
 
     /** \fn const vector < int > get_players_characters()
       * \public
-      * \brief função para fazer o "get" no atributo privado do vetor de personagens selecionados
-      * \return const vector < int > retorna o vetor de personagens selecionados
+      * \brief method to get the selected characters
+      * \return const vector < int > return vector of selected characters
       */
     const vector < int >
     get_players_characters() const { return character_choose_level_players_characters; }
 
     /** \var vector < int > character_choose_level_players_characters
-      *  \brief Vetor com o id dos personagens possiveis jogaveis
+      *  \brief Vector with all the selected character for each player
       */
     vector < int > character_choose_level_players_characters;
 
     // PBS
     /** \fn done()
       * \public
-      * \brief Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado
-      * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
-      * \return bool retorna 'true' se o level acabou
+      * \brief Return True when the level is over
+      * \return bool Return True when the level is over
       */
     bool done() const;
 
     //PBS
     /** \fn next()
       * \public
-      * \brief Retorna qual sera o proximo level. Nome não pode ser mudado
-      * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
-      * \return string retorna qual sera o proximo level
+      * \brief Return the name of the next level to be donne. The name can't be changed due to the
+      *  project scoope
+      * \return string return the name of the next level
       */
     string next() const;
 
     //PBS
     /** \fn audio()
       * \public
-      * \brief Retorna qual é o audio do level. Nome não pode ser mudado
-      * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
+      * \brief Return the name of the audio file of the level. The name can't be changed due to the
+      *  project scoope
       * \return string string constante "."
       */
     string audio() const;
@@ -108,10 +106,10 @@ protected:
 
     /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
       * \protected
-      * \brief Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um
-      *  metodo herdado da classe pai, protegida pelo escopo do projeto
-      * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
-      * \param now unsigned Tempo atual do jogo
+      * \brief Method used to draw the level. The name can't be changed due to the
+      *  project scoope
+      * \param canvas Canvas* Pointer to the class object that do the drawing
+      * \param now unsigned Current time
       * \param last unsigned
       * \return void
       */
@@ -119,10 +117,9 @@ protected:
 
     /** \fn on_event(const GameEvent& event)
       * \protected
-      * \brief Encerra o level quando a o jogador precisiona o botão equivalente
-      *  ao do light attack (x no joystick)
-      * \param const event GameEvent& Entrada do usuário
-      * \return bool retorna true quando ocorre o evento
+      * \brief Method to the behavior of the level when it happens a event
+      * \param const event GameEvent& User input
+      * \return bool retorn true when it happens a valid event
       */
     bool on_event(const GameEvent& event);
 
@@ -130,17 +127,17 @@ protected:
 private:
 
     /** \var bool character_choose_level_done
-      *  \brief Variavel que é setada com True quando o level chega ao final
+      *  \brief Var that are set true when the level is donne
       */
     bool character_choose_level_done;
 
     /** \var string character_choose_level_next
-      *  \brief Variavel com o nome do proximo level
+      *  \brief Var with the name of the next level
       */
     string character_choose_level_next;
 
     /** \var int character_choose_level_start
-      *  \brief Variavel para persistir o tempo de inicio de jogo
+      *  \brief Var to save the time the level started
       */
     int character_choose_level_start;
 
@@ -148,31 +145,31 @@ private:
     int character_choose_level_frame;
 
     /** \var int vector<int> character_choose_level_selected_characters
-      *  \brief Vetor para os ids dos personagens que foram selecionados
+      *  \brief Vector to the selected characters
       */
     vector<int> character_choose_level_selected_characters;
 
     /** \var int character_choose_level_current_player
-      *  \brief id do player que esta fazendo a seleção
+      *  \brief Id of the current player that are choosing the character
       */
     int character_choose_level_current_player;
     /** \var int character_choose_level_number_of_players
-      *  \brief numero de jogadores que estão na seleção de personagens
+      *  \brief Numbers of players that are choosing the game
       */
     int character_choose_level_number_of_players;
 
     /** \var vector<CharacterSelection *> character_choose_level_character_selections
-      *  \brief Vetor de CharacterSelection de personagem
+      *  \brief Vector to the characters
       */
     vector<CharacterSelection *> character_choose_level_character_selections;
 
     /** \var int character_choose_level_current_player_character
-      *  \brief id do personagem que esta na com o foco
+      *  \brief id of the character that are with focus
       */
     int character_choose_level_current_player_character;
 
     /** \var shared_ptr<Texture> character_choose_level_textures
-      *  \brief Vetor com as texturas utilizadas para renderizar o level
+      *  \brief Vector with the textures used to render the level
       */
     vector< shared_ptr<Texture> > character_choose_level_textures;
 

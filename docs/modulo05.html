@@ -68,39 +68,47 @@
                                 <h2 class="section-title">Introdução</h2>
                                 <div  class="section-block">
                                   <p>&emsp;&emsp; O objetivo deste módulo é a aplicação das técnicas de refatoração de
-                                     código com foco no melhoramento da clareza e simplicidade do código.
+                                     código com foco no melhoramento da clareza e simplicidade do código. As maiores preocupações
+                                     para a execução desse modulo foram preservar uma a boa apresentação do código, para que o caminho
+                                     "feliz" para a execução do mesmo esteja sempre claro, e mater as contruções logicas e operações o mais
+                                     simples possíveis, ou seja "Keep it simple!"
                                    </p>
                                 </div>
                                 </section><!--//doc-section-->
                             <section id="content-section" class="doc-section">
                             <h2 class="section-title">Técnicas do Modulo:</h2>
                                 <div  class="section-block">
-                                  <h3 class="block-title">Inserir Assertivas no código</h3>
-                                  <p>&emsp;&emsp; </p>
-                                  <p>&emsp;&emsp; <b>Exemplo</b> de código sem assert:</p>
+                                  <h3 class="block-title">Comportamento Default</h3>
+                                  <p>&emsp;&emsp; Está técnica pede que todos as estruturas condicionais do código tenham um comportamento
+                                    "default", oque siginifica utilizar "elses" para todos os "ifs", e o "case Default" para "switch-cases".
+                                    caso haja um comportamento inesperado, é necessario que fiquei claro que é uma falha.</p>
+                                  <p>&emsp;&emsp; <b>Exemplo</b>:</p>
                                   <br>
-                                  <img src="assets/images/Modulo04_exemplo_sem_asserts.png"  >
+                                  <img src="assets/images/modulo05/modulo5ifelse.png"  >
                                   <br>
                                   <br>
-                                  <p>&emsp;&emsp; <b>Exemplo</b> de código com assert:</p>
-                                  <img src="assets/images/Modulo04_exemplo_com_assert.png"  >
+                                  <img src="assets/images/modulo05/modulo5Shitch.png"  >
                                 </div>
                                 <hr>
                                <div  class="section-block">
-                                  <h3 class="block-title">Exemplo de Assert no código</h3>
+                                  <h3 class="block-title">Tipos descritivos:</h3>
                                   <p>&emsp;&emsp; </p>
-                                  <p>&emsp;&emsp; <b>Exemplo</b> de código sem Assert:</p>
+                                  <p>&emsp;&emsp; <b>Exemplo</b> do uso de enum:</p>
                                   <br>
-                                  <img src="assets/images/Modulo04_Exmplo_pre_sem_assert.png"  >
+                                  <img src="assets/images/modulo05/modulo5enumcharacter.png"  >
                                   <br>
                                   <br>
-                                  <p>&emsp;&emsp; <b>Exemplo</b> de código com Assert:</p>
-                                  <img src="assets/images/Modulo04_Exemplo_pre_com_assert.png"  >
+                                  <img src="assets/images/modulo05/modulo5enumPlayers.png"  >
+                                  <br>
+                                  <br>
+                                  <p>&emsp;&emsp; <b>Exemplo</b> do uso de  const:</p>
+                                  <img src="assets/images/modulo05/modulo5const.png"  >
                                 </div>
                                 <hr>
                                 <div  class="section-block">
-                                    <h3 class="block-title">Exemplo de Assert e DbC</h3>
-                                    <p>&emsp;&emsp; </p>
+                                    <h3 class="block-title">Utilizar recursos com cuidado</h3>
+                                    <p>&emsp;&emsp; Ter cuidado ao utilizar os recursos significa não abusar no momento da alocação de memoria, ou a utilizaçãol
+                                    de recursos em geral. Para isso é recomendado que classes de objetos tenham sempre métodos destrutores e metodos para "deletar" instacias </p>
                                     <p>&emsp;&emsp; <b>Exemplo</b> checando valor de constantes:</p>
                                     <br>
                                     <img src="assets/images/Modulo04_checando_constantes.png"  >
