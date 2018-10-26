@@ -1,7 +1,9 @@
 /** \file character_factory.cpp
-  * \brief Este é o arquivo da classe que cria os personagens do jogo.
+  * \brief This file describe the class that create the charactes in the game
   */
 #include "character_factory.h"
+
+#include <assert.h>
 
 #include <vector>
 #include <string>
@@ -12,13 +14,13 @@ using std::string;
 using std::cout;
 using std::endl;
 
-// Metodo construtor
+// Constructor Method
 CharacterFactory::CharacterFactory()
 {
 
 }
 
-// Metodo destrutor
+// Destructor Method
 CharacterFactory::~CharacterFactory()
 {
 
@@ -26,39 +28,50 @@ CharacterFactory::~CharacterFactory()
 
 /** \fn Character* make_character(int character_code, unsigned player_id, double x_pos, double y_pos)
   * \public
-  * \brief Fução que instacia um pesornagem
-  * \param character_code int codigo relacionado ao personagem do enum. Valor entre 0 e 3.
-  * \param player_id unsigned id do players. Valor entre 1 e 4.
-  * \param x_position double  posição inicial do personagem a ser criado no eixo x
-  * \param y_position double  posição inicial do personagem a ser criado no eixo y
-  * \return um ponteiro para um Character.
+  * \brief Method to create a character in the game
+  * \param character_code int code related to the a possible character. Must be between 0 and 3.
+  * \param player_id unsigned id for players. Must be between 1 e 4.
+  * \param x_position double Position in axis X of the character to be created
+  * \param y_position double Position in axis Y of the character to be created
+  * \return pointer to the created character
   */
 Character*
 CharacterFactory::make_character(int character_code, unsigned player_id, double x_position, double y_position)
 {
     character_sprites_paths = choose_sprite_path(character_code, player_id);
 
+    //Asserts to validate data
+    assert(character_code >= 0);
+    assert(character_code < 4);
+    assert(player_id < 4);
+    assert(player_id >= 0);
+    assert(x_position >= 0);
+    assert(y_position >= 0);
 
-      //Switch case definir qual dos personagens sera criado.
+    //Switch case to define which will be created
     switch(character_code) {
         case INFILTRATOR:
-            return new Infiltrator(character_sprites_paths, player_id, x_position, y_position, character_code);
+            return new Infiltrator(character_sprites_paths, player_id, x_position, y_position,
+                                   character_code);
             break;
 
         case MAGE:
-            return new Mage(character_sprites_paths, player_id, x_position, y_position, character_code);
+            return new Mage(character_sprites_paths, player_id, x_position, y_position,
+                            character_code);
             break;
 
         case SOLDIER:
-            return new Soldier(character_sprites_paths, player_id, x_position, y_position, character_code);
+            return new Soldier(character_sprites_paths, player_id, x_position, y_position,
+                               character_code);
             break;
 
         case KNIGHT:
-            return new Knight(character_sprites_paths, player_id, x_position, y_position, character_code);
+            return new Knight(character_sprites_paths, player_id, x_position, y_position,
+                              character_code);
             break;
-        //Caso entrada seja invalida dipara mensagem no log e retorna nullptr
+        //In case of invalid enter, will not happen due to asserts
         default:
-            printf("Valor inválido na CharacterFactory\n");
+            cout << "Invalid value in CharacterFactory\n";
             return nullptr;
             break;
     }
@@ -66,21 +79,25 @@ CharacterFactory::make_character(int character_code, unsigned player_id, double 
 
 /** \fn vector<string> choose_sprite_path(int character_code, unsigned player_id)
   * \protected
-  * \brief Função que escolhe qual sera o caminho para o sprite de cada um dos jogadores e
-  *  personagem, ja as cores e densenhos de cada um são diferentes.
-  * \param character_code int Código de para o personagem
-  * \param player unsigned Código de para o player
-  * \return o vetor com paths paras as sprites no formato de String.
+  * \brief Method to choose the path to the sprite of the respective player and character.
+  * \param character_code int id of the character, a enum is used
+  * \param player unsigned id of the player, a enum is used
+  * \return a string vector with the paths to the sprites
   */
 vector<string>
 CharacterFactory::choose_sprite_path(int character_code, unsigned player_id)
 {
+    //Asserts to validate data
+    assert(character_code >= 0);
+    assert(character_code < 4);
+    assert(player_id < 4);
+    assert(player_id >= 0);
     /** \var strings choosen_class
-      * Varaivel para salver nome do tipo de personagem a partir de seu código
+      * Variable to save the choosen character class
       */
     string choosen_class;
 
-    // Switch atribuir a variavel choosen_class a partir da variavel character_code
+    // Switch to set the choosen character class
     switch(character_code) {
         case INFILTRATOR:
             choosen_class = "Infiltrator";
@@ -98,8 +115,9 @@ CharacterFactory::choose_sprite_path(int character_code, unsigned player_id)
             choosen_class = "Pesado";
             break;
 
+        //In case of invalid enter, will not happen due to asserts
         default:
-            printf("Valor inválido na CharacterFactory\n");
+            cout << "Invalid value in CharacterFactory\n";
             break;
     }
 
@@ -108,7 +126,7 @@ CharacterFactory::choose_sprite_path(int character_code, unsigned player_id)
       * Varaivel para salver nome da cor da equipe de cada um dos players
       */
     string directory;
-    // Switch atribuir a variavel directory a partir da variavel player_id
+    // Switch set the dictory to the sprite path
     switch(player_id) {
         case PLAYER_1:
             directory = "Green";
@@ -127,7 +145,7 @@ CharacterFactory::choose_sprite_path(int character_code, unsigned player_id)
             break;
 
         default:
-            printf("Valor inválido na CharacterFactory\n");
+            cout << "Invalid value in  CharacterFactory\n";
             break;
     }
 

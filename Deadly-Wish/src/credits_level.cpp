@@ -1,6 +1,5 @@
 /** \file credits_level.cpp
-  * \brief Esta é o arquivo da classe do level DeathMatchLevel que mostra os creditos do jogo
-  * com o nome de seus criadores e etc.
+  * \brief File for the class CreditsLevel, that is the level for the credits
   */
 #include "credits_level.h"
 #include "engine.h"
@@ -12,7 +11,7 @@
 #include <cstdlib>
 #include <iostream>
 
-// Distancia entre as linhas dos creditos
+// Distance between the credits lines
 #define LINE_BREAK 25
 
 using namespace std;
@@ -21,9 +20,9 @@ using namespace util;
 
 /** \fn CreditsLevel(const string& next = "")
   * \public
-  * \brief Método construtor
-  * \param next const string& Parametro para o proximo level. Valor constante igual " ",
-  * final do jogo.
+  * \brief Constructor Method
+  * \param next const string& Name of the next level
+  *
   */
 CreditsLevel::CreditsLevel(const string& next_level)
     : credits_level_done(false), credits_level_next(next_level), credits_level_start(-1)
@@ -31,18 +30,18 @@ CreditsLevel::CreditsLevel(const string& next_level)
     //UC
     printf("Construtor dos créditos!\n");
 
-    //para a musica que estava tocando e inicia a musica do level
+    //stop the music and start the level music
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/credits.ogg", 30, 10);
 
-    // Faz o set dos texto que ira apecer nos creditos
+    // Set the text that is going to be show in the credits
     set_credits_strings();
     event::register_listener(this);
 }
 
 /** \fn ~CreditsLevel()
   * \public
-  * \brief Método destrutor
+  * \brief Destructor Method
   */
 CreditsLevel::~CreditsLevel()
 {
@@ -52,7 +51,7 @@ CreditsLevel::~CreditsLevel()
 /** \fn update_self(unsigned now, unsigned last)
   * \protected
   * \brief Função para atualizar o tempo de inicio do level, e setar atributo
-  *  #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
+  *  #credits_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
   *  protegida pelo escopo do projeto
   * \param now unsigned Tempo atual do jogo
   * \param last unsigned
@@ -67,10 +66,10 @@ CreditsLevel::update_self(unsigned now, unsigned)
 
 /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
   * \protected
-  * \brief Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um
-  *  metodo herdado da classe pai, protegida pelo escopo do projeto
-  * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
-  * \param now unsigned Tempo atual do jogo
+  * \brief Method used to draw the level. The name can't be changed due to the
+  *  project scoope
+  * \param canvas Canvas* Pointer to the class object that do the drawing
+  * \param now unsigned Current time
   * \param last unsigned
   * \return void
   */
@@ -106,7 +105,7 @@ CreditsLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 
 /** \fn set_credits_strings()
   * \protected
-  * \brief seta a qual sera o texto que ira aparecer nos creditos
+  * \brief Set the text to be show in the credits
   * \return void
   */
 void
@@ -123,12 +122,10 @@ CreditsLevel::set_credits_strings()
 
 /** \fn on_event(const GameEvent& event)
   * \protected
-  * \brief Encerra o level quando a o jogador precisiona o botão equivalente
-  *  ao do light attack (x no joystick)
-  * \param const event GameEvent& Entrada do usuário
-  * \return bool retorna true quando ocorre o evento
+  * \brief Method to the behavior of the level when it happens a event
+  * \param const event GameEvent& User input
+  * \return bool retorn true when it happens a valid event
   */
-bool
 CreditsLevel::on_event(const GameEvent& event)
 {
      if(event.id() == game_event::LIGHT_ATTACK_P1) {
@@ -140,9 +137,8 @@ CreditsLevel::on_event(const GameEvent& event)
 // PBS
 /** \fn done()
   * \public
-  * \brief Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado
-  * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
-  * \return bool retorna 'true' se o level acabou
+  * \brief Return True when the level is over
+  * \return bool Return True when the level is over
   */
 bool
 CreditsLevel::done() const

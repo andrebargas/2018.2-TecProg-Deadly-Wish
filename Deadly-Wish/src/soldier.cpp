@@ -18,7 +18,7 @@
 //! Intervalo de tempo de uso da defense_cooldown
 #define SOLDIER_DEFENSE_COOLDOWN 300
 
-    
+
 /** \fn Soldier(vector<string> sprite_paths, unsigned id, double x, double y, int character_code)
   * \public
   * \brief Método Construtor

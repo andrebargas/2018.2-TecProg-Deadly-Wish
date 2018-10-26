@@ -1,10 +1,10 @@
 /** \file translator.h
-  * \brief Este é o arquivo da classe que traduz os eventos dos inputs em eventos do jogo.
+  * \brief File of the class that translate the inputs to game events
   */
 #ifndef IJE02_TRANSLATOR_H
 #define IJE02_TRANSLATOR_H
 
-//Import as bibliotecas da ijengine que tratam eventos externos e o tradutor da engine
+//Import ijengine classes that read the inputs 
 #include <ijengine/mouse_event.h>
 #include <ijengine/system_event.h>
 #include <ijengine/keyboard_event.h>

@@ -50,7 +50,7 @@ Character::Character(const vector<string> sprite_paths, unsigned id, double x, d
 
     //! variável que indica estado atual do personagem
     character_state = nullptr;
-    //! variável que indica o tempo de reaparecimento do personagem  
+    //! variável que indica o tempo de reaparecimento do personagem
     character_respawn_time = RESPAWN_TIME;
     //! variável que indica o último som tocado
     character_last_sound_played = -RESPAWN_TIME;
@@ -151,7 +151,7 @@ Character::update_self(unsigned now, unsigned last)
     }
 
 
-   
+
     update_position(now, last);
 
     character_bounding_box.set_position(x(), y());
@@ -159,11 +159,11 @@ Character::update_self(unsigned now, unsigned last)
 
 
 // Método que indica que vai atualizar poisção do personagem com a velocidade
-/* 
+/*
 \param now indica o tempo atual
 \param last indica o último evento
 \param backwards indica a posição anterior
-*/ 
+*/
 inline void
 Character::update_position(const unsigned &now, const unsigned &last, bool backwards) {
     int multiplier = (backwards) ? -1 : 1;

@@ -1,6 +1,5 @@
-/** \file character_choose_level.cpp
-  * \brief Esta é o arquivo da classe do level CharacterChooseLevel que mostra o menu para a seleão
-  *  dos personagens
+/** \file character_choose_level.h
+  * \brief File to class that define level for character selection
   */
 
 #include "character_choose_level.h"
@@ -21,8 +20,8 @@ using std::vector;
 
 /** \fn CharacterChooseLevel(const string& next = "")
   * \public
-  * \brief Método construtor
-  * \param next const string& Parametro para o proximo level. Valor constante igual " ",
+  * \brief Constructor Method
+  * \param next const string& Name of the next level
   *
   */
 CharacterChooseLevel::CharacterChooseLevel(const string& next_level)
@@ -30,24 +29,32 @@ CharacterChooseLevel::CharacterChooseLevel(const string& next_level)
       character_choose_level_start(-1)
 {
     character_choose_level_textures.push_back
-    (resources::get_texture("character_selection/character_selection_background.png"));
+      (resources::get_texture("character_selection/character_selection_background.png"));
     character_choose_level_textures.push_back
-    (resources::get_texture("character_selection/CharacterPortraits.png"));
+      (resources::get_texture("character_selection/CharacterPortraits.png"));
     character_choose_level_textures.push_back
-    (resources::get_texture("character_selection/Icons.png"));
+      (resources::get_texture("character_selection/Icons.png"));
 
     character_choose_level_number_of_players = 4;
     character_choose_level_current_player = 1;
     character_choose_level_frame = 0;
 
     int base_x = 120;
+
     for(int i = 0; i < character_choose_level_number_of_players; i++) {
-        character_choose_level_character_selections.push_back(new CharacterSelection("character_selection/Pointers.png", base_x + 10 * i, 73, i));
+
+        x_position = base_x + 10 * i
+        y_position = 73
+
+        character_choose_level_character_selections.push_back(new CharacterSelection("character_selection/Pointers.png",
+                                                                                      x_position, y_position, i));
         add_child(character_choose_level_character_selections[i]);
     }
 
     character_choose_level_selected_characters.resize(4);
 
+
+    /UC
     printf("antes de add o filho\n");
     printf("depois de add o filho\n");
     fflush(stdout);
@@ -57,7 +64,7 @@ CharacterChooseLevel::CharacterChooseLevel(const string& next_level)
 
 /** \fn ~CharacterChooseLevel()
   * \public
-  * \brief Método destrutor
+  * \brief Destructor method
   */
 CharacterChooseLevel::~CharacterChooseLevel() {
     event::unregister_listener(this);
@@ -66,9 +73,8 @@ CharacterChooseLevel::~CharacterChooseLevel() {
 // PBS
 /** \fn done()
   * \public
-  * \brief Retorna verdadeiro quando o level chega ao final. Nome não pode ser mudado
-  * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
-  * \return bool retorna 'true' se o level acabou
+  * \brief Return True when the level is over
+  * \return bool Return True when the level is over
   */
 bool
 CharacterChooseLevel::done() const
@@ -79,9 +85,9 @@ CharacterChooseLevel::done() const
 //PBS
 /** \fn next()
   * \public
-  * \brief Retorna qual sera o proximo level. Nome não pode ser mudado
-  * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
-  * \return string retorna qual sera o proximo level
+  * \brief Return the name of the next level to be donne. The name can't be changed due to the
+  *  project scoope
+  * \return string return the name of the next level
   */
 string
 CharacterChooseLevel::next() const
@@ -93,8 +99,8 @@ CharacterChooseLevel::next() const
 //PBS
 /** \fn audio()
   * \public
-  * \brief Retorna qual é o audio do level. Nome não pode ser mudado
-  * por ser um metodo herdado da classe pai, protegida pelo escopo do projeto
+  * \brief Return the name of the audio file of the level. The name can't be changed due to the
+  *  project scoope
   * \return string string constante "."
   */
 string
@@ -106,7 +112,7 @@ CharacterChooseLevel::audio() const {
 /** \fn update_self(unsigned now, unsigned last)
   * \protected
   * \brief Função para atualizar o tempo de inicio do level, e setar atributo
-  *  #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
+  *  #character_choose_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
   *  protegida pelo escopo do projeto
   * \param now unsigned Tempo atual do jogo
   * \param last unsigned
@@ -115,6 +121,7 @@ CharacterChooseLevel::audio() const {
 void
 CharacterChooseLevel::update_self(unsigned now, unsigned)
 {
+    //Var to save how many players have done the selection
     int dones = 0;
     for(int i = 0; i < character_choose_level_number_of_players; i++) {
         dones += character_choose_level_character_selections[i]->chosen();
@@ -130,17 +137,22 @@ CharacterChooseLevel::update_self(unsigned now, unsigned)
                 character_selection::players_characters.push_back(selection);
             }
         }
-        character_choose_level_done = true;
+        else{
+          character_choose_level_done = true;
+        }
     }
+    else(
+      return;
+    )
 }
 
 
 /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
   * \protected
-  * \brief Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um
-  *  metodo herdado da classe pai, protegida pelo escopo do projeto
-  * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
-  * \param now unsigned Tempo atual do jogo
+  * \brief Method used to draw the level. The name can't be changed due to the
+  *  project scoope
+  * \param canvas Canvas* Pointer to the class object that do the drawing
+  * \param now unsigned Current time
   * \param last unsigned
   * \return void
   */
@@ -170,10 +182,9 @@ CharacterChooseLevel::draw_self(Canvas *canvas, unsigned, unsigned)
 
 /** \fn on_event(const GameEvent& event)
   * \protected
-  * \brief Encerra o level quando a o jogador precisiona o botão equivalente
-  *  ao do light attack (x no joystick)
-  * \param const event GameEvent& Entrada do usuário
-  * \return bool retorna true quando ocorre o evento
+  * \brief Method to the behavior of the level when it happens a event
+  * \param const event GameEvent& User input
+  * \return bool retorn true when it happens a valid event
   */
 bool
 CharacterChooseLevel::on_event(const GameEvent& event) {
