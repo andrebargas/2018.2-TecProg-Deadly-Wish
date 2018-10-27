@@ -1,6 +1,6 @@
-/** \file light_attack.h
-  * \brief Este é o arquivo header da classe Light_Attack, com herança da classe Skill
-  */
+/**\file light_attack.h
+  * \brief This is the header file of the Light_Attack class, inherited from the Skill class
+  */
 #ifndef LIGHT_ATTACK_H
 #define LIGHT_ATTACK_H
 
@@ -8,7 +8,7 @@
 
 #include <cmath>
 
-//! Inclui os arquivos da engine do jogo
+//! Includes game engine files
 #include <ijengine/game_object.h>
 #include <ijengine/rectangle.h>
 #include <ijengine/color.h>
@@ -25,112 +25,120 @@ using std::vector;
 using namespace std;
 using namespace ijengine;
 
-/** \class LightAttack light_attack.h "include/light_attack.h"
- *  \brief Classe que controla o LightAttack indica direção, velocidade, player, 
- * com herança da classe Skill
- *  \param *parent Ponteiro para o GameObject
- *  \param mage_id
- *  \param xp posição em x 
- *  \param yp posição em y
- */
+/**\class LightAttack light_attack.h "include / light_attack.h"
+ * \brief Class that controls LightAttack indicates direction, speed, player,
+ * with Skill class inheritance
+ * \param * parent Pointer to GameObject
+ * \param mage_id
+ * \param xp position in x
+ * \param yp position in y
+ */
 class LightAttack : public Skill
 {
-public:
-  /** \fn LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp);
-      * \public
-      * \brief Método construtor
-      */
-  LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp);
+  public:
+    /**\fn LightAttack (GameObject * parent, unsigned mage_id, double xp, double yp);
+       * \public
+       * \brief constructor method
+       */
+    LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp);
 
-  /** \fn ~LightAttack()
-      * \public
-      * \brief Método destrutor
-      */
-  ~LightAttack();
+    /**\fn ~ LightAttack ()
+      * \public
+      * \brief destructor method
+      */
+    ~LightAttack();
 
-  //! Métodos virtuais de colisão
-  bool active() const;
-  const Rectangle &bounding_box() const;
-  const list<Rectangle> &hit_boxes() const;
-  pair<double, double> direction() const;
+    //! Virtual Collision Methods
+    bool active() const;
+    const Rectangle &bounding_box() const;
+    const list<Rectangle> &hit_boxes() const;
+    pair<double, double> direction() const;
 
-protected:
-  /** \fn update_self(unsigned now, unsigned last)
-      * \protected
-      * \brief Função para atualizar o tempo de inicio do level, e setar atributo
-      *  #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
-      *  protegida pelo escopo do projeto
-      * \param now unsigned Tempo atual do jogo
-      * \param last unsigned
-      * \return void
-      */
-  void update_self(unsigned now, unsigned last);
+  protected:
+    /**\fn update_self (unsigned now, unsigned last)
+      * \protected
+      * \brief Function to update level start time, and set attribute
+      * #winner_level_start. Name can not be changed because it is a method inherited from the parent class,
+      * protected by project scope
+      * \param now unsigned Current game time
+      * \param last unsigned
+      * \return void
+      */
+    void update_self(unsigned now, unsigned last);
 
-  /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
-      * \protected
-      * \brief Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um
-      *  metodo herdado da classe pai, protegida pelo escopo do projeto
-      * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
-      * \param now unsigned Tempo atual do jogo
-      * \param last unsigned
-      * \return void
-      */
-  void draw_self(Canvas *canvas, unsigned, unsigned);
+    /**\fn draw_self (Canvas * canvas, unsigned now, unsigned last)
+      * \protected
+      * \brief Method that makes the graphic design of the game. Name can not be changed because it is a
+      * method inherited from parent class, protected by project scope
+      * \param canvas Canvas * Pointer to class object responsible for rendering the game.
+      * \param now unsigned Current game time
+      * \param last unsigned
+      * \return void
+      */
+    void draw_self(Canvas *canvas, unsigned, unsigned);
 
-  void update_sprite_state();
-  void update_time(unsigned now);
-  string choose_sprite_path(unsigned player_id);
+    void update_sprite_state();
+    void update_time(unsigned now);
+    string choose_sprite_path(unsigned player_id);
 
-  unsigned light_attack_character_id;
+    unsigned light_attack_character_id;
 
-  //! enum para escolher a direção do LightAttack
-  typedef enum
-  {
-    MOVING_LEFT,
-    MOVING_RIGHT
-  } State;
+    //! enum to chose the LightAttack direction
+    typedef enum
+    {
+      MOVING_LEFT,
+      MOVING_RIGHT
+    } State;
 
-  //! struct com enum para SpriteState do LightAttack
-  typedef enum
-  {
-    CASTING,
-    MOVING,
-    HITTING
-  } SpriteState;
+    //! struct with enum for SpriteState from LightAttack
+    typedef enum
+    {
+      CASTING,
+      MOVING,
+      HITTING
+    } SpriteState;
 
-  //! struct com enum para Players
-  typedef enum
-  {
-    PLAYER_1,
-    PLAYER_2,
-    PLAYER_3,
-    PLAYER_4
-  } Players;
+    //! struct with enum for Players
+    typedef enum
+    {
+      PLAYER_1,
+      PLAYER_2,
+      PLAYER_3,
+      PLAYER_4
+    } Players;
 
-  //! Variável que indica o state usada na engine
-  State m_state;
-  //! Variável que indica o SpriteState usada na engine
-  SpriteState m_sprite_state;
-  //! Variáveis que indicam a direção em x e y do light_attack
-  double light_attack_axis_x_direction, light_attack_axis_y_direction;
-  //! Variável que indica o dano do light_attack
-  int light_attack_damage;
-  //! Variável que indica a velocidade do light_attack
-  double light_attack_speed;
-  //! Variável que indica frame do light_attack
-  int light_attack_frame;
-  //! Variável do light_attack_sprite_path
-  string light_attack_sprite_path;
-  //! Variável que indica o inicio do light_attack
-  unsigned light_attack_start;
-  //! Variável que indica o tempo do light_attack
-  unsigned light_attack_current_time;
+    //! Variable that indicates the state used in engine
+    State m_state;
 
-  shared_ptr<Texture> light_attack_texture;
+    //! Variable that indicates the SpriteState used in engine
+    SpriteState m_sprite_state;
 
-  Rectangle light_attack_bounding_box;
+    //! Variable that indicates the direction in x and y from light_attack
+    double light_attack_axis_x_direction, light_attack_axis_y_direction;
 
-  //    bool on_event(const GameEvent& event);
+    //! Variable that indicates the damage of light_attack
+    int light_attack_damage;
+
+    //! Variable that indicates the speed of light_attack
+    double light_attack_speed;
+
+    //! Variable that indicates the frame of light_attack
+    int light_attack_frame;
+
+    //! Variable of light_attack_sprite_path
+    string light_attack_sprite_path;
+
+    //! Variable that indicates the begining of light_attack
+    unsigned light_attack_start;
+
+    //! Variable that indicates the time of light_attack
+    unsigned light_attack_current_time;
+
+    shared_ptr<Texture> light_attack_texture;
+
+    Rectangle light_attack_bounding_box;
+
+    //bool on_event(const GameEvent& event);
 };
 
 #endif

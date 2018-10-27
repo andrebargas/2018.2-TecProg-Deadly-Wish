@@ -1,16 +1,17 @@
 /** \file light_attack.h
-  * \brief Este é o arquivo da classe Light_Attack, com herança da classe Skill
+  * \brief This is a file from class Light_Attack, with inheritance of class Skill
   */
 #include "light_attack.h"
 #include "character.h"
+#include "assert.h"
 
 #include <ijengine/engine.h>
 #include <ijengine/rectangle.h>
 #include <ijengine/game_object.h>
 
-//! Valor Dano do LIGHT_ATTACK_BASE_DAMAGE
+//! Vale of damage LIGHT_ATTACK_BASE_DAMAGE
 #define LIGHT_ATTACK_BASE_DAMAGE 10
-//! Largurado LIGHT_ATTACK
+//! Width of LIGHT_ATTACK
 #define LIGHT_ATTACK_WIDTH 10
 
 using namespace std;
@@ -18,83 +19,106 @@ using namespace ijengine;
 
 /** fn LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp)
  * \public
- * \breif Método Construtor LightAttack
- * \param *parent Ponteiro para o GameObject
- * \param mage_id identificador do personagem mage
- * \param xp double posição no eixo X
- * \param yp double posição no eixo y
+ * \breif Constructor method of LightAttack
+ * \param *parent Pointer for GameObject
+ * \param mage_id identifier of character mage
+ * \param xp double posicion on axis X
+ * \param yp double posicion on axis y
  */
 LightAttack::LightAttack(GameObject *parent, unsigned mage_id, double xp, double yp)
     : Skill(parent, xp, yp, LIGHT_ATTACK_BASE_DAMAGE, mage_id), light_attack_character_id(mage_id),
       light_attack_speed(100.0)
 {
+    assert(parent != nullptr);
+    assert(mage_id >= 1 && mage_id <= 4);
+    assert(xp != NULL);
+    assert(yp != NULL);
+
     light_attack_frame = 0;
+    assert(light_attack_frame != NULL);
+
     light_attack_start = 0;
+    assert(light_attack_start != NULL);
+
     m_x = xp;
     m_y = yp;
+    assert(m_x != NULL);
+    assert(m_y != NULL);
+
     light_attack_bounding_box = Rectangle(m_x, m_y, (double)LIGHT_ATTACK_WIDTH, (double)LIGHT_ATTACK_WIDTH);
     light_attack_damage = LIGHT_ATTACK_BASE_DAMAGE;
 }
 
-//! Destrutor da Classe LightAttack
+//! Destructor of Class LightAttack
 LightAttack::~LightAttack()
 {
 }
 
-//! Métodos virtual de gameobject
+//! Virtual method of gameobject
 void LightAttack::draw_self(Canvas *canvas, unsigned, unsigned)
 {
+    assert(canvas != NULL);
+    assert(canvas != nullptr);
+
 }
 
-//! Método que indica atualizar o LightAttack
+//! Method the indicates the update of LightAttack
 /*!
-\param now indica atualização agora
-\param las indica a última atualizção
+\param now indicates the current update
+\param las indicates the last update
 */
 void LightAttack::update_self(unsigned now, unsigned last)
 {
+    assert(now != NULL);
+    assert(last != NULL);
+
     update_time(now);
 }
 
-//! LightAttack ativo
+//! Activate the LightAttack
 bool LightAttack::active() const
 {
     return true;
 }
 
-//! Delimitação LightAttack
-const Rectangle &
-LightAttack::bounding_box() const
+//! Delimitation of LightAttack
+const Rectangle & LightAttack::bounding_box() const
 {
     return light_attack_bounding_box;
 }
 
-const list<Rectangle> &
-LightAttack::hit_boxes() const
+const list<Rectangle> & LightAttack::hit_boxes() const
 {
     static list<Rectangle> boxes{light_attack_bounding_box};
     return boxes;
 }
 
-//! Direção do LightAttack
-pair<double, double>
-LightAttack::direction() const
+//! Direction of LightAttack
+pair<double, double> LightAttack::direction() const
 {
     return pair<double, double>(light_attack_axis_x_direction, light_attack_axis_y_direction);
 }
 
-//! Atualiza o LightAttack
+//! Update of LightAttack
 void LightAttack::update_time(unsigned now)
 {
-    // Se for a primeira auto-atualização
+    // If is the first self-update
     if (light_attack_start == 0)
     {
         light_attack_start = now;
         light_attack_current_time = now;
     }
+    else{
+        //Nothing to do!
+    }
 
-    if ((now - light_attack_start) > 100)
+    unsigned int time_updated = now - light_attack_start;
+
+    if ( time_updated > 100)
     {
         invalidate();
+    }
+    else{
+        //Nothing to do!
     }
 }

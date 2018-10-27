@@ -1,22 +1,24 @@
-/**\file death_state.cpp
-  *\brief Este é o arquivo da classe do DeathState,
-  *...que é ativado quando algum player morre no jogo.
+/**\file death_state.h
+  *\brief This is the archive of DeathState class,
+  *...that is activate when a player dies
   */
- 
-//Incluindo arquivo da classe DeathState
+
+//Including the file of DeathState class
 #include "death_state.h"
+#define DEATH_STATE_DURATION 275
 
 /**\fn DeathState()
   *\public
-  *\brief Método construtor
-  *Não recebe parâmetros.
-  *Atualiza o estado do player para morto e seu respectivo tempo de duração para 275 milissegundos.
+  *\brief Constructor method
+  *No parameters
+  *Update the player status to "dead" and
+  *it`s duration time is 275 miliseconds.
   */
 DeathState::DeathState()
     :CharacterState()
 {
-    //Representa o estado atual do player.
+    //Update player status to "dead"
     current_state = DEATH_STATE;
-    //Tempo de duração de um estado em milissegundos.
-    state_refresh_rate = 275;
+    //Duration of the state is in miliseconds
+    state_refresh_rate = DEATH_STATE_DURATION;
 }

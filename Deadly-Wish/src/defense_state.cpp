@@ -1,21 +1,23 @@
 /**\file defense_state.cpp
-  *\brief Este é o arquivo da classe do DefenseState,que é ativado quando
-  *...algum player usa defesa.
-  */
+  *\brief This is the DefenseState class file, which is activated when
+  *...some player uses defense.
+  */
 
- //Incluindo arquivo da classe DefenseState
+// Including file of class DefenseState
 #include "defense_state.h"
 
-/**\fn DefenseState()
-  *\public
-  *\brief Método construtor
-  *não recebe parâmetros
-  */
+#define STATE 100
+
+/**\fn DefenseState ()
+  *\public
+  *\brief constructor method
+  *does not receive parameters
+  */
 DefenseState::DefenseState()
     :CharacterState()
 {
-    //Representa o estado atual do player.
+    // Represents the current state of the player.
     current_state = DEFENSE_STATE;
-    //Tempo de duração de um estado em milissegundos.
-    state_refresh_rate = 100;
+    // Time duration of a state in milliseconds.
+    state_refresh_rate = STATE;
 }

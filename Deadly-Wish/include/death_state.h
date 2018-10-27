@@ -1,30 +1,31 @@
 /**\file death_state.h
-  *\brief Este é o arquivo da classe do DeathState,
-  *...que é ativado quando algum player morre no jogo.
+  *\brief This is the archive of DeathState class,
+  *...that is activate when a player dies
   */
- 
+
 #ifndef DEATH_STATE_H
 #define DEATH_STATE_H
 
-//Incluindo arquivo da classe CharacterState
+//Including the file of CharacterState class
 #include "character_state.h"
 
 /**\class DeathState death_state.h "include/death_state.h"
- *\brief Classe usada para definir se um player morreu no jogo.
+ *\brief Class used to define the state of death to a player.
  */
 class DeathState : public CharacterState {
 public:
     /**\fn DeathState()
       *\public
-      *\brief Método construtor
-      *Não recebe parâmetros.
-      *Atualiza o estado do player para morto e seu respectivo tempo de duração para 275 milissegundos.
+      *\brief Constructor method
+      *No parameters
+      *Update the player status to "dead" and
+      *it`s duration time is 275 miliseconds.
       */
     DeathState();
-    
+
     /**\fn ~DeathState()
       *\public
-      *\brief Método destrutor
+      *\brief Destructor method
       */
     ~DeathState();
 };

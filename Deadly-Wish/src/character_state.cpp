@@ -1,14 +1,14 @@
 /**\file character_state.cpp
-  *\brief Este é o arquivo da classe do CharacterState,que é ativado quando
-  *...algum player assume um estado no jogo.
+  *\brief This is the archive of CharacterState class, that is activate when
+  *...a player change his state in the game
   */
-//Incluindo arquivo da classe CharacterState
+//Including file of CharacterState class
 #include "character_state.h"
 
 /**\fn CharacterState()
   *\public
-  *\brief Método construtor
-  *\Não recebe parâmetros.
+  *\brief Constructor method
+  *\No parameters.
   */
 CharacterState::CharacterState()
 {
@@ -17,10 +17,10 @@ CharacterState::CharacterState()
 
 /**\fn CharacterState()
   *\public
-  *\brief Método destrutor
-  *\Não recebe parâmetros.
+  *\brief Destructor method
+  *\No parameters
   */
 CharacterState::~CharacterState()
 {
-    
+
 }

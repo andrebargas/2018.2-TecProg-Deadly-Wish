@@ -1,31 +1,30 @@
-/**\file idle_state.h
-  *\brief Este é o arquivo da classe do IdleState,que é ativado quando
-  *o player está parado.
+/**\file idle_state.cpp
+  *\brief This is the archive of IdleState,that is activate when
+  *the player is idle.
   */
 
 #ifndef IDLE_STATE_H
 #define IDLE_STATE_H
 
-//Incluindo arquivo da classe CharacterState
+//Including the file of CharacterState class
 #include "character_state.h"
 
 /**\class IdleState idle_state.h "include/idle_state.h"
- *\brief Classe usada para definir estado ocioso de um
- *players.
+ *\brief Class used to define the state of idle to a player.
  */
 class IdleState : public CharacterState {
 public:
     /**\fn IdleState()
       *\public
-      *\brief Método construtor
-      *Não recebe parâmetros.
-      *Atualiza o estado do player para ocioso 
-      *e seu respectivo tempo de duração para 275 milissegundos.
+      *\brief Constructor Method
+      *\No parameters
+      *Update the player status to "idle" and
+      *it`s duration time is 275 miliseconds.
       */
     IdleState();
     /**\fn ~IdleState()
       *\public
-      *\brief Método destrutor
+      *\brief Destructor method
       */
     ~IdleState();
 };
