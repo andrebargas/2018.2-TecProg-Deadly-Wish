@@ -42,10 +42,11 @@ public:
       *\brief Método get
       *\return State retorna o estado do player 
       */
+  
     State get_current_state() 
     const { return current_state;
      assert(current_state >= 0 && current_state <= 7 ); }
-    
+
     /**\fn get_refresh_rate()
       *\public
       *\brief Método get

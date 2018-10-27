@@ -76,8 +76,10 @@ Base::~Base()
 void
 Base::update_self(unsigned now, unsigned last)
 {
+
     assert(now >= 0);
     assert(last >= 0);
+
     //Se a base não estiver iniciada, será iniciada com o tempo atual
     if(base_start == -1) {
         base_start = now;
