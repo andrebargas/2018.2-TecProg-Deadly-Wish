@@ -7,7 +7,7 @@
 #include "skill.h"
 #include <cmath>
 
-//! Inclui os arquivos da engine do jogo
+//! Include game engine files
 #include <ijengine/game_object.h>
 #include <ijengine/rectangle.h>
 #include <ijengine/color.h>
@@ -26,13 +26,13 @@ using namespace std;
 using namespace ijengine;
 
 /** \class Spear spear.h "include/spear.h"
- *  \brief Classe que herda de GameObject e Collidable
- *  que calcula o dano recebido pelos personagens.
- * \breif Método Construtor Spear
- * \param *parent Ponteiro para o GameObject
- * \param soldier_id identificador do personagem soldier
- * \param xp double posição no eixo X
- * \param yp double posição no eixo y
+ *  \brief Class inheriting from GameObject and Collidable that calculates
+ *  the damage received by the characters.
+ * \breif Spear builder method
+ * \param *parent Pointer to GameObject
+ * \param soldier_id soldier character identifier
+ * \param xp double X axis position
+ * \param yp double Y axis position
  */
 class Spear : public Skill
 {
@@ -40,18 +40,18 @@ class Spear : public Skill
     /** \fn Spear(GameObject *parent, unsigned soldier_id, double xp, double yp,
           double dx, double dy);
      * \public
-     * \brief Método construtor
+     * \brief builder method
      */
     Spear(GameObject *parent, unsigned soldier_id, double xp, double yp,
           double dx, double dy);
 
     /** \fn ~Spear()
       * \public
-      * \brief Método destrutor
+      * \brief Destructor Method
       */
     ~Spear();
 
-    //! Métodos virtuais de colisão
+    //! Virtual Collision Methods
     bool active() const;
     const Rectangle &bounding_box() const;
     const list<Rectangle> &hit_boxes() const;
@@ -60,23 +60,22 @@ class Spear : public Skill
   protected:
     /** \fn update_self(unsigned now, unsigned last)
       * \protected
-      * \brief Função para atualizar o tempo de inicio do level, e setar atributo
-      *  #winner_level_start. Nome não pode ser mudado por ser um metodo herdado da classe pai,
-      *  protegida pelo escopo do projeto
-      *  Metodos virtual de GameObject
-      * \param now unsigned Tempo atual do jogo
+      * \brief Function to update the start time of the level, and set attribute #winner_level_start. 
+      *  Name can not be changed because it is a method inherited from the parent class,
+      *  protected by project scope
+      *  GameObjectVirtual Methods 
+      * \param now unsigned current time
       * \param last unsigned
       * \return void
       */
     void update_self(unsigned now, unsigned last);
 
-    /** \fn draw_self(Canvas *canvas, unsigned now, unsigned last)
+    /**\fn draw_self (Canvas * canvas, unsigned now, unsigned last)
       * \protected
-      * \brief Método que faz o desenho grafico do jogo. Nome não pode ser mudado por ser um
-      *  metodo herdado da classe pai, protegida pelo escopo do projeto
-      *  Metodos virtual de GameObject
-      * \param canvas Canvas* Ponteiro para objeto da classe responsavel pela renderização do jogo.
-      * \param now unsigned Tempo atual do jogo
+      * \brief Method that makes the graphic design of the game. Name can not be changed because it is a
+      * method inherited from parent class, protected by project scope
+      * \param canvas Canvas * Pointer to class object responsible for rendering the game.
+      * \param now unsigned Current game time
       * \param last unsigned
       * \return void
       */
@@ -86,14 +85,14 @@ class Spear : public Skill
     void update_time(unsigned now);
     string choose_sprite_path(unsigned player_id);
 
-    //! enum para escolher a direção do Spear
+    //! enum to choose the direction of Spear
     typedef enum
     {
         MOVING_LEFT,
         MOVING_RIGHT
     } State;
 
-    //! struct com enum para SpriteState do Spear
+    //! struct with enum for Spear SpriteState
     typedef enum
     {
         THROW,
@@ -102,7 +101,7 @@ class Spear : public Skill
         HITTING
     } SpriteState;
 
-    //! struct com enum para Players
+    //! struct enum Players
     typedef enum
     {
         PLAYER_1,
@@ -111,27 +110,27 @@ class Spear : public Skill
         PLAYER_4
     } Players;
 
-    //! Variável que intica o spear_id_character
+    //! Variable that spear_id_character
     unsigned spear_character_id;
-    //! Variável que indica o state do spear
+    //! Variable indicating the state of the spear
     State spear_state;
-    //! Variável que indica o SpriteState usada na engine
+    //! Variable indicating the SpriteState used in the engine
     SpriteState spear_sprite_state;
-    //! Variável que indica a direção em x e y do spear
+    //! Variable that indicates the direction in x and y of the spear
     double spear_axis_x_direction;
-    //! Variável que indica a direção em x e y do spear
+    //! Variable that indicates the direction in x and y of the spear
     double spear_axis_y_direction;
-    //! Variável que indica o dano do spear
+    //! Variable indicating spear damage
     int spear_damage;
-    //! Variável que indica velocidade da spear
+    //! Spear velocity variable
     double spear_speed;
-    //! Variável que indica o frame da spear
+    //! Variable that indicates the frame of the spear
     int spear_frame;
-    //! Variável que indica o sprite_path
+    //! Variable that indicates the sprite_path
     string spear_sprite_path;
-    //! Variável que indica o inicio da spear(lança)
+    //! Variable that indicates the begining of spear(lança)
     unsigned spear_start;
-    //! Variável que indica o tempo da spear
+    //! Variable that indicates the time of spear
     unsigned spear_current_time;
     shared_ptr<Texture> spear_texture;
     Rectangle spear_bounding_box;

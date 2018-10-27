@@ -1,5 +1,5 @@
 /** \file skill.cpp
-  * \brief Este é o arquivo da classe de habilidade dos personagens no jogo, tamanho do dano da habilidade.
+  * \brief This is the character class file of the characters in the game, skill damage size..
   */
 #include "skill.h"
 #include "character.h"
@@ -11,12 +11,12 @@
 
 /** fn Skill(GameObject *parent, double x_posiotion, double y_posiotion, int damage, int character_id)
  * \public
- * \breif Método Construtor Skill
- * \param *parent Ponteiro para o GameObject
- * \param x_posiotion double posição no eixo X
- * \param y_posiotion double posição no eixo y
- * \param damage int dano da habilidade
- * \param character_id int identificador do personagem
+ * \breif Skill buider method
+ * \param *parent Pointer to GameObject
+ * \param x_posiotion double X position axis
+ * \param y_posiotion double y position axis
+ * \param damage int skill damage
+ * \param character_id int
  */
 Skill::Skill(GameObject *parent, double x_posiotion, double y_posiotion, int damage, int character_id)
     : GameObject(parent, x_posiotion, y_posiotion), skill_character_id(character_id)
@@ -28,24 +28,24 @@ Skill::Skill(GameObject *parent, double x_posiotion, double y_posiotion, int dam
     assert(character_id >= 1 && character_id <= 4);
     
     skill_collided = 0;
-    printf("registrando skill nas fisica\n");
+    cout << "registrando skill nas fisica\n" << endl;
     skill_damage = damage;
     physics::register_object(this);
 }
-//! Método destrutor
+//! Destructor method
 Skill::~Skill()
 {
-    printf("desregistrando skill nas fisica\n");
+    cout << "desregistrando skill nas fisica" << endl;
     physics::unregister_object(this);
 }
 
 /** fn on_collision(const Collidable *who, const Rectangle &where, unsigned now, unsigned last)
  * \public
- * \brief Construtor on_collision
- * \param *who qual personagem está usando
+ * \brief Builder on_collision
+ * \param *who Character choose
  * \param &where endereço onde a habilidade será usada
- * \param now momento atual
- * \param last ultimo momento que a habilidade foi usada
+ * \param now Current state
+ * \param last - last moment skill was used
  */
 void Skill::on_collision(const Collidable *who, const Rectangle &where, unsigned now, unsigned last)
 {
@@ -57,8 +57,12 @@ void Skill::on_collision(const Collidable *who, const Rectangle &where, unsigned
     const Base *b = dynamic_cast<const Base *>(who);
 
     if ((c and c->get_id() != skill_character_id) || (b and b->get_base_player_id() != skill_character_id))
-    {
-        printf("OI\n");
+        {
+        cout << "Character invalidete!" << endl;
         invalidate();
+        }
+    else
+    {
+        //Nothing to do!
     }
 }

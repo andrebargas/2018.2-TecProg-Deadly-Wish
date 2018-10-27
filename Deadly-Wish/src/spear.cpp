@@ -69,7 +69,8 @@ void Spear::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     assert(canvas != NULL);
     assert(SPEAR_WIDTH == 32);
-    Rectangle rect{(double)SPEAR_WIDTH * spear_frame, (double)SPEAR_WIDTH * spear_state,
+    Rectangle rect{(double)SPEAR_WIDTH * spear_frame, 
+                   (double)SPEAR_WIDTH * spear_state,
                    (double)SPEAR_WIDTH, (double)SPEAR_WIDTH};
     canvas->draw(spear_texture.get(), rect, x(), y());
 }
@@ -95,6 +96,10 @@ void Spear::update_self(unsigned now, unsigned last)
         
 
         spear_bounding_box.set_position(x(), y());
+    }
+    else
+    {
+        //Nothing to do!
     }
 }
 
@@ -150,20 +155,32 @@ void Spear::update_time(unsigned now)
 {
     assert(now > 0);
     if (spear_start == 0)
-    {
+        {
         spear_start = now;
         spear_current_time = now;
+        }
+    else
+    {
+        //Nothing to do!
     }
 
     if (now - spear_current_time > 35)
-    {
+        {
         spear_current_time += 35;
         update_sprite_state();
+        }
+    else
+    {
+        //Nothing to do!
     }
 
     if ((spear_current_time - spear_start) > 2000)
-    {
+        {
         invalidate();
+        }
+    else
+    {
+        //Nothing to do!
     }
 }
 
@@ -201,7 +218,7 @@ Spear::choose_sprite_path(unsigned player_id)
         break;
 
     default:
-        printf("Valor inválido na Spear\n");
+        cout << "Valor inválido na Spear!";
         break;
     }
 
