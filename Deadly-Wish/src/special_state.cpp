@@ -1,21 +1,21 @@
 /**\file special_state.cpp
-  *\brief Este é o arquivo da classe do SpecialState,que é ativado quando
-  *...algum player utiliza sua skill especial.
+  *\brief This is the archive of SpecialState class, that is activate when
+  *...a player do his special skill.
   */
 
-//Incluindo arquivo da classe SpecialState
+//Including file of SpecialState class
 #include "special_state.h"
-
+#define SPECIAL_STATE_DURATION 100
 /**\fn SpecialState()
   *\public
-  *\brief Método construtor
-  *\não recebe parâmetros
+  \brief Constructor Method
+  *\No parameters
   */
 SpecialState::SpecialState()
     :CharacterState()
 {
-    //Transforma o estado atual do player para "utilizando especial"
+    //Update player status to "doing a special skill"
     current_state = SPECIAL_STATE;
-    //Tempo de duração de um estado em milissegundos
-    state_refresh_rate = 100;
+    //Duration of the state is in miliseconds
+    state_refresh_rate = SPECIAL_STATE_DURATION;
 }

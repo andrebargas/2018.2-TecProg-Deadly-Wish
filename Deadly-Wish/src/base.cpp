@@ -1,32 +1,35 @@
-/**\file base.cpp
-  *\brief Este é o arquivo dos metodos da classe do Base que é a base 'fortaleza' do player no game.
+//aplicar modulo 5
+/** \file base.cpp
+  * \brief This is the file with the methods of the Base Class, that is the
+  *'Fortress' of the player in game.
   */
-  //Incluindo arquivo da classe Base
+
+#include<bits/stdc++.h>
+ //Including file of Base class
 #include "base.h"
-//Incluindo arquivo da classe GameObject
+//Including file of GameObject class
 #include "ije02_game.h"
-//Incluindo arquivo da classe Skill
+//Including file of Skill class
 #include "skill.h"
-//Incluindo arquivo da classe TestLevelFactory
+//Including file of TestLevelFactory class
 #include "test_level_factory.h"
 
 #include <ijengine/canvas.h>
 
 #define BASE_WIDTH 32
 #define MAX_LIFE 4000
-
 /**\fn Base()
 *\public
-*\brief Método construtor
-*\param player_id int Id do player.Não é inicializado.
+*\brief Constructor method
+*\param player_id int Id of player.Not initialized.
 */
 Base::Base(int player_id)
     :base_player_id(player_id), base_frame(0), base_start(-1)
 {
     /**\fn push_back()
     *\public
-    *\brief funcao que recupera o Sprite da base para poder ser mostrado
-    *\param string caminho/path da imagem da base
+    *\brief function that retrieves the Base`s Sprite to be showed
+    *\param string path of the Base`s image
     */
     base_sprite_paths.push_back("Spritesheets/Green/SpritesheetGreenBase.png");
     base_sprite_paths.push_back("Spritesheets/Blue/SpritesheetBlueBase.png");
@@ -41,59 +44,75 @@ Base::Base(int player_id)
 
     set_base_position(player_id, m_x, m_y);
 
-    //A base aparece no jogo caso seja o modo Base
+    //The base is showed in game if it`s Base mode
     if(game_mode::choosen_mode == "base-mode"){
         base_bounding_box = Rectangle(m_x, m_y, 20, 12);
         physics::register_object(this);
     }
+    else{
+      //do nothing
+    }
 }
 /**\fn ~Base()
 *\public
-*\brief Método destrutor
+*\brief Destructor method
 */
 Base::~Base()
 {
-    //A base deve ser destruida apenas se for o modo Base
+    //The base must be destroied only if it`s Base Mode
     if(game_mode::choosen_mode == "base-mode"){
         physics::unregister_object(this);
+    }
+    else{
+      //do nothing
     }
 }
 
 /**\fn update_self()
 *\protected
-*\brief Método virtual de GameObject
-*\param now unsigned situacao atual
-*\param last unsigned ultima situacao passada
+*\brief Virtual method of GameObject
+*\param now unsigned actual state
+*\param last unsigned last state
 *\return void
 */
 void
 Base::update_self(unsigned now, unsigned last)
 {
-    //Se a base não estiver iniciada, será iniciada com o tempo atual
+    //if base isn`t initialized, it will be initialized with the actual time
     if(base_start == -1) {
         base_start = now;
     }
-    //Se for o modo Base, o status da base deve ser alterado de acordo com a vida
+    else{
+      //do nothing
+    }
+
+    //If the game mode is Base mode, the base status must be changed based in the base life
     if(game_mode::choosen_mode == "base-mode"){
         change_base_status();
     }
-    // atualiza o frame da base
+    else{
+      //do nothing
+    }
+
+    // Update the base frame
     if(now - base_start > 400) {
         base_start += 400;
         base_frame = (base_frame + 1) % (base_texture->w() / BASE_WIDTH);
+    }
+    else{
+      //do nothing
     }
 }
 //PBS
 /**\fn draw_self(()
 *\protected
-*\brief funcao que Desenha a base
+*\brief Draw the base
 *\param *canvas Canvas
 *\param unsigned
 *\param unsigned
 *\return void
 */
-void
-Base::draw_self(Canvas *canvas, unsigned, unsigned)
+void Base::draw_self(Canvas *canvas, unsigned, unsigned)
 {
     Rectangle rect {(double) base_width * base_frame, (double) base_height * base_status, (double) base_width, (double) base_height};
     canvas->draw(base_texture.get(), rect, x(), y());
@@ -102,10 +121,10 @@ Base::draw_self(Canvas *canvas, unsigned, unsigned)
 //PBS
 /**\fn set_base_position()
 *\protected
-*\brief Método set para a localização da base em determinada posição
-*\param player_id unsigned id do personagem
-*\param x_pos double& posição no eixo x
-*\param y_pos double& posição no eixo y
+*\brief Set method for put the base in the right position
+*\param player_id unsigned id of the player
+*\param x_pos double& x_axys_position
+*\param y_pos double& y_axys_position
 *\return void
 */
 void
@@ -133,20 +152,19 @@ Base::set_base_position(unsigned player_id, double& x_pos, double& y_pos)
             break;
 
         default:
-            printf("Valor errado no set_base_position_position!\n");
-            printf("player_id: %d", player_id);
+            cout << "Wrong value in set_base_position_position!\n";
+            cout << "player_id: " << player_id << "\n";
             break;
     }
 }
 
-//metodos virtual de Collidable
+//Collidable virtual method
 /**\fn active()
 *\public
-*\brief Método virtual de Collidable que retorna True se a base esta ativa
-*\return bool retorna o status da base se ativa = True
+*\brief Collidable virtual method that return True if the base is active
+*\return bool return the base status, it`s active if True
 */
-bool
-Base::active() const
+bool Base::active() const
 {
     return true;
 }
@@ -154,7 +172,7 @@ Base::active() const
 //PBS
 /**\fn bounding_box()
 *\public
-*\brief Método que delimita os limites da base
+*\brief Method that delimeters the base`s limits
 *\return const Rectangle&
 */
 const Rectangle&
@@ -165,11 +183,10 @@ Base::bounding_box() const
 
 /**\fn hit_boxs()
 *\public
-*\brief Método que delimita os pontos de contato da base
+*\brief Method that delimeters the base`s contact points
 *\return const list<Rectangle>&
 */
-const list<Rectangle>&
-Base::hit_boxes() const
+const list<Rectangle>& Base::hit_boxes() const
 {
     static list<Rectangle> boxes {base_bounding_box};
     return boxes;
@@ -177,13 +194,12 @@ Base::hit_boxes() const
 
 /**\fn on_collision()
 *\public
-*\brief Método que age quando hà colisão
+*\brief Method that acts if was a colision
 *\return void
 */
-void
-Base::on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last)
+void Base::on_collision(const Collidable *who, const Rectangle& where, unsigned now, unsigned last)
 {
-    //Esse trecho serve para causar dano a base de algum inimigo
+    //This block is to do damage to a Enemy base
     if(game_mode::choosen_mode == "base-mode"){
         const Skill *s = dynamic_cast<const Skill *>(who);
 
@@ -191,18 +207,23 @@ Base::on_collision(const Collidable *who, const Rectangle& where, unsigned now, 
           (((1 << (base_player_id + 4)) & s->get_collided()) == 0)) {
 
             base_life -= s->get_damage();
-            printf("BASE HP: %d\n", base_life);
-            printf("Vida da base: %d\n", base_life);
+            cout << "BASE HP: " << base_life << "\n";
+        }
+        else{
+          //do nothing
         }
 
         change_base_status();
+    }
+    else{
+      //do nothing
     }
 }
 
 /**\fn direction()
 *\public
-*\brief Método que retorna velocidade da base em determinada direção
-*\return pair<double,double> retorna a velocidade da base na posiçao x e y
+*\brief Method that returns the speed of the base in a direction
+*\return pair<double,double> returns the velocity of the base in x and y position
 */
 pair<double, double>
 Base::direction() const
@@ -213,11 +234,10 @@ Base::direction() const
 //PBS
 /**\fn change_base_status()
 *\protected
-*\brief Método que muda o status da base (numero de esferas no desenho)
+*\brief Mehotd that change the base`s status (number of balls)
 *\return void
 */
-void
-Base::change_base_status()
+void Base::change_base_status()
 {
     if(base_life > 3500) {
         base_status = BALLS_8;
@@ -250,12 +270,11 @@ Base::change_base_status()
 
 /**\fn set_base_status()
 *\public
-*\brief Método set
-*\param new_base_status int novo estado de uma base no game
+*\brief Set method
+*\param new_base_status int new state of a base in the game
 *\return void
 */
-void
-Base::set_base_status(int new_base_status)
+void Base::set_base_status(int new_base_status)
 {
     base_status = new_base_status;
 }

@@ -1,32 +1,31 @@
 /** \file light_attack_state.h
-  * \brief Este é o arquivo da classe do LightAttackState,que é ativado quando
-  *  o player realiza um ataque fraco.
+  * \brief This is the archive of LightAttackState class, that is activate when
+  *  the player do a light atack
   */
 
 #ifndef LIGHT_ATTACK_STATE_H
 #define LIGHT_ATTACK_STATE_H
 
-//Incluindo arquivo da classe CharacterState
+//Including file of CharacterState class
 #include "character_state.h"
 
 /**\class LightAttackState light_attack_state.h "include/light_attack_state.h"
- *\brief Classe usada para definir o estado de ataque fraco, quando algum dos
- *players o invoca.
+ *\brief Class used to define the light atack state, when a player do it
  */
 class LightAttackState : public CharacterState {
 public:
     /**\fn LightAttackState()
       *\public
-      *\brief Método construtor
-      *Não recebe parâmetros.
-      *Atualiza o estado do player para "utilizando ataque fraco"
-      *e seu respectivo tempo de duração para 100 milissegundos.
+      *\brief Constructor Method
+      *No parameters
+      *Update player status to "doing a light atack"
+      *and this state has a duration of  100 miliseconds.
       */
     LightAttackState();
-    
+
     /**\fn ~LightAttackState()
       *\public
-      *\brief Método destrutor
+      *\brief Destructor method
       */
     ~LightAttackState();
 };
