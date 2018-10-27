@@ -5,6 +5,7 @@
  
 //Incluindo arquivo da classe DeathState
 #include "death_state.h"
+#include <assert.h>
 
 /**\fn DeathState()
   *\public
@@ -17,6 +18,9 @@ DeathState::DeathState()
 {
     //Representa o estado atual do player.
     current_state = DEATH_STATE;
+    assert(current_state);
+
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 275;
+    assert(state_refresh_rate);
 }

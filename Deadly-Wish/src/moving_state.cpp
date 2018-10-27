@@ -5,6 +5,7 @@
 
  //Incluindo arquivo da classe MovingState
 #include "moving_state.h"
+#include <assert.h>
 
 /**\fn MovingState()
   *\public
@@ -16,6 +17,8 @@ MovingState::MovingState()
 {
     //Tranforma o estado atual do player para em movimento.
     current_state = MOVING_STATE;
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos
     state_refresh_rate = 100;
+    assert(state_refresh_rate);
 }

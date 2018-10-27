@@ -5,6 +5,7 @@
 
 //Incluindo arquivo da classe IdleState
 #include "idle_state.h"
+#include <assert.h>
 
 /**\fn IdleState()
   *\public
@@ -17,6 +18,8 @@ IdleState::IdleState()
 {
     //Transforma o estado do player para parado.
     current_state = IDLE_STATE;
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 275;
+    assert(state_refresh_rate);
 }

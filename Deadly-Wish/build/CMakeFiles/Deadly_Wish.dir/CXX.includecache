@@ -115,6 +115,8 @@ memory
 -
 vector
 -
+assert.h
+-
 util.h
 ../include/util.h
 
@@ -427,6 +429,8 @@ test_level_factory.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/test_level_factory.h
 ijengine/canvas.h
 -
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/character.cpp
 character.h
@@ -549,10 +553,14 @@ iostream
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/death_state.cpp
 death_state.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/death_state.h
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/defense_state.cpp
 defense_state.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/defense_state.h
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/fireball.cpp
 fireball.h
@@ -581,10 +589,14 @@ ijengine/game_object.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/heavy_attack_state.cpp
 heavy_attack_state.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/heavy_attack_state.h
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/idle_state.cpp
 idle_state.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/idle_state.h
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/ije02_game.cpp
 ije02_game.h
@@ -631,6 +643,8 @@ ijengine/game_object.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/light_attack_state.cpp
 light_attack_state.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/light_attack_state.h
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/mage.cpp
 mage.h
@@ -699,6 +713,8 @@ cstdlib
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/moving_state.cpp
 moving_state.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/moving_state.h
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/skill.cpp
 skill.h
@@ -737,6 +753,8 @@ ijengine/game_object.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/special_state.cpp
 special_state.h
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/special_state.h
+assert.h
+-
 
 /home/fabiana/TECPROG/2018.2-TecProg-Deadly-Wish/Deadly-Wish/src/test_level_factory.cpp
 main_level.h

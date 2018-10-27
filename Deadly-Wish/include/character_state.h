@@ -8,6 +8,7 @@
 
 #include <memory>
 #include <vector>
+#include <assert.h>
 
 //Incluindo arquivo util.h que contém constantes enumeradas 
 #include "util.h"
@@ -41,13 +42,19 @@ public:
       *\brief Método get
       *\return State retorna o estado do player 
       */
-    State get_current_state() const { return current_state; }
+  
+    State get_current_state() 
+    const { return current_state;
+     assert(current_state >= 0 && current_state <= 7 ); }
+
     /**\fn get_refresh_rate()
       *\public
       *\brief Método get
       *\return unsigned retorna a duração de um estado do player
       */
-    unsigned get_refresh_rate() const { return state_refresh_rate; }
+    unsigned get_refresh_rate() 
+    const { return state_refresh_rate;
+    assert(state_refresh_rate != NULL);}
 
 protected:
     /*\var current_state

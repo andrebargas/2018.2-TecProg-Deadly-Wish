@@ -5,6 +5,7 @@
 
 //Incluindo arquivo da classe SpecialState
 #include "special_state.h"
+#include <assert.h>
 
 /**\fn SpecialState()
   *\public
@@ -16,6 +17,8 @@ SpecialState::SpecialState()
 {
     //Transforma o estado atual do player para "utilizando especial"
     current_state = SPECIAL_STATE;
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos
     state_refresh_rate = 100;
+    assert(state_refresh_rate);
 }

@@ -5,6 +5,7 @@
 
 //Incluindo arquivo da classe HeavyAttackState
 #include "heavy_attack_state.h"
+#include <assert.h>
 
 /**\fn HeavyAttackState()
   *\public
@@ -16,6 +17,8 @@ HeavyAttackState::HeavyAttackState()
 {
     //Representa o estado atual do player.
     current_state = HEAVY_ATTACK_STATE;
+    assert(current_state);
     //Tempo de duração de um estado em milissegundos.
     state_refresh_rate = 100;
+    assert(state_refresh_rate);
 }
