@@ -14,3 +14,5 @@ Deadly_Wish
 .vscode
 CMakeCache.txt
 *.metadata
+build
+ijengine

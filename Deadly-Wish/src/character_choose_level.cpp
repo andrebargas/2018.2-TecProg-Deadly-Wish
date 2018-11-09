@@ -43,8 +43,8 @@ CharacterChooseLevel::CharacterChooseLevel(const string& next_level)
 
     for(int i = 0; i < character_choose_level_number_of_players; i++) {
 
-        x_position = base_x + 10 * i
-        y_position = 73
+        int x_position = base_x + 10 * i;
+        int y_position = 73;
 
         character_choose_level_character_selections.push_back(new CharacterSelection("character_selection/Pointers.png",
                                                                                       x_position, y_position, i));
@@ -54,7 +54,7 @@ CharacterChooseLevel::CharacterChooseLevel(const string& next_level)
     character_choose_level_selected_characters.resize(4);
 
 
-    /UC
+    //UC
     printf("antes de add o filho\n");
     printf("depois de add o filho\n");
     fflush(stdout);
@@ -141,9 +141,9 @@ CharacterChooseLevel::update_self(unsigned now, unsigned)
           character_choose_level_done = true;
         }
     }
-    else(
-      return;
-    )
+    else{
+
+    }
 }
 
 

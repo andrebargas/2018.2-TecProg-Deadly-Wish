@@ -126,7 +126,7 @@ CreditsLevel::set_credits_strings()
   * \param const event GameEvent& User input
   * \return bool retorn true when it happens a valid event
   */
-CreditsLevel::on_event(const GameEvent& event)
+bool CreditsLevel::on_event(const GameEvent& event)
 {
      if(event.id() == game_event::LIGHT_ATTACK_P1) {
         credits_level_done = true;
