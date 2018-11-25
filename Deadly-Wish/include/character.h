@@ -44,16 +44,16 @@ public:
 	~Character();
 
 //! Enumerated with the possible characters
-    enum 
+    enum
     {
-        KNIGHT, 
+        KNIGHT,
         SOLDIER,
         MAGE,
         INFILTRATOR
     };
 
 //! Listed with possible events
-    enum 
+    enum
     {
         START_MOVING_DOWN,
         START_MOVING_LEFT,
@@ -80,16 +80,16 @@ public:
 
 
     //! Method that returns the character identifier
-    unsigned get_id() const { 
+    unsigned get_id() const {
         assert(character_id >= 1 && character_id <= 4);
-        return character_id; 
+        return character_id;
     }
 
 
     //! Method that returns the number of lives of the character
-    int get_number_of_lives() const { 
+    int get_number_of_lives() const {
         assert(character_number_of_lives >= 0);
-        return character_number_of_lives; 
+        return character_number_of_lives;
     }
 
     //! Method that puts the bases with their proper characters
@@ -120,6 +120,22 @@ protected:
     string choose_sprite_path(unsigned player_id);
     //! Method that returns the events in general
     bool on_event(const GameEvent& event);
+
+		//! heavy_atack event
+		bool on_event_heavy_atack(const GameEvent& event);
+
+		//! ligth_atack event
+		bool on_event_ligth_atack(const GameEvent& event);
+
+		//! defense event
+		bool on_event_defense(const GameEvent& event);
+
+		//! special atack event
+		bool on_event_special(const GameEvent& event);
+
+		//! movement
+		bool on_event_movement(const GameEvent& event);
+
     //! Virtual Attack Special Method
     virtual void do_heavy_attack() = 0;
     //! Virtual attack method ligth_atack
@@ -130,9 +146,9 @@ protected:
     virtual void do_special() = 0;
 
     //! Enuemrado that defines the type of movement
-    typedef enum 
+    typedef enum
     {
-        MOVING_RIGHT, 
+        MOVING_RIGHT,
         MOVING_LEFT
 
     } MovingState;
@@ -208,7 +224,7 @@ protected:
 \param now indicates the current time
 \param last indicates the last event
 \param backwards indicates the previous position
-*/ 
+*/
 
     inline void update_position(const unsigned &now, const unsigned &last, bool backwards = false);
 };
