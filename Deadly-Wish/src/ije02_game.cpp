@@ -5,6 +5,8 @@
 
 #include "character.h"
 
+#include "deadly_log.h"
+
 #include <ijengine/system_event.h>
 #include <ijengine/keyboard_event.h>
 
@@ -69,6 +71,7 @@ Ije02Game::Ije02Game(const string& title, int weigth, int height, double scale)
     audio::set_audio_dir("res/sound");
 
     physics::set_collision_mode(physics::Mode::ALL_TO_ALL, nullptr);
+
 }
 
 /** \fn ~Ije02Game()
@@ -89,5 +92,7 @@ Ije02Game::~Ije02Game()
 int
 Ije02Game::run(const string& level_id)
 {
+    DeadlyLog::init_logs();
+    DeadlyLog::do_log(1, "ije02_game","Jogo rodando!");
     return ije_game.run(level_id);
 }

@@ -1,0 +1,4 @@
+	***** INFO LOG *****
+
+	File name 	|			Log message
+	ije02_game 					Jogo rodando!

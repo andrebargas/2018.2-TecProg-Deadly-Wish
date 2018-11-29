@@ -9,6 +9,8 @@
 #include "ije02_game.h"
 #include "util.h"
 #include "test_level_factory.h"
+#include "deadly_log.h"
+
 
 #include <ijengine/canvas.h>
 #include <ijengine/keyboard_event.h>
@@ -36,47 +38,26 @@ DeathMatchLevel::DeathMatchLevel(const string& next_level, vector < int > player
     //para a musica que estava tocando e inicia a musica do level
     audio::stop_audio_channel(0);
     audio::play_sound_effect("res/sound/music/ingame.ogg", 30, 50);
-    //UC
-    printf("Entrou na Death Match level!\n");
-    //Seta o path para a textura que sera usado no jogo
-    death_match_level_texture = resources::get_texture("map/Map003.jpg");
-
-    //Faz o set de todas as posições do grid do jogo com '1'
-    for (int i = 0; i < MAX_WIDTH; ++i)
-        for (int j = 0; j < MAX_HEIGHT; ++j)
-            death_match_level_map[i][j] = 1;
-
-    //Faz o set das extremidades do grid do jogo com 0
-    death_match_level_map[0][0] = 0;
-    death_match_level_map[0][MAX_HEIGHT - 1] = 0;
-    death_match_level_map[MAX_WIDTH - 1][0] = 0;
-    death_match_level_map[MAX_WIDTH - 1][MAX_HEIGHT - 1] = 0;
-
-
+    //log de infomação
+    DeadlyLog::do_log(1, "death_match_level","Entrou na Death Match level");
     //Faz o set do vetor dos caracteres com o parametro de entrada
     death_match_level_players_characters = players_characters;
-
     //Inicializa variaveis locais para fazer a iteração em main_level_players_characters
     double axis_x =0.0;
     double axis_y = 0.0;
     unsigned player_id = 0;
-
     //Faz a iteração em main_level_players_characters
     for(const int &current_player_character : death_match_level_players_characters) {
-
         //Seta a posição inicial de cada um dos personagens
         set_players_characters_position(player_id, axis_x, axis_y);
-
         //Define um novo ponteiro do tipo Character para receber um novo personagem, feito
         //pela instacia da classe CharacterFactory
         Character *current_character =
         death_match_level_character_factory.make_character(current_player_character,player_id,
                                                            axis_x, axis_y);
-
         //Define um novo ponteiro do tipo Base para receber uma nova base, feita
         //a partir da classe Base
         Base *current_base = new Base(player_id);
-
         //Utiliza a Base recem criada para atribuila ao personagem recem criado
         current_character->set_base(current_base);
         //Adiciona a base recem criada ao vetor main_level_bases
@@ -95,6 +76,30 @@ DeathMatchLevel::DeathMatchLevel(const string& next_level, vector < int > player
 DeathMatchLevel::~DeathMatchLevel()
 {
 
+}
+
+/** \fn set_initial_map_grip()
+  * \private
+  * \brief Inicializa grip do mapa quando level é iniciado
+  * \return void
+  */
+void
+DeathMatchLevel::set_initial_map_grip()
+{
+  //Seta o path para a textura que sera usado no jogo
+  death_match_level_texture = resources::get_texture("map/Map003.jpg");
+
+  //Faz o set de todas as posições do grid do jogo com '1'
+  for (int i = 0; i < MAX_WIDTH; ++i)
+      for (int j = 0; j < MAX_HEIGHT; ++j)
+          death_match_level_map[i][j] = 1;
+
+  //Faz o set das extremidades do grid do jogo com 0
+  death_match_level_map[0][0] = 0;
+  death_match_level_map[0][MAX_HEIGHT - 1] = 0;
+  death_match_level_map[MAX_WIDTH - 1][0] = 0;
+  death_match_level_map[MAX_WIDTH - 1][MAX_HEIGHT - 1] = 0;
+  DeadlyLog::do_log(1, "death_match_level","Grid de mapa inicializado");
 }
 
 //CD

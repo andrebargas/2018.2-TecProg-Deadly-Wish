@@ -144,6 +144,12 @@ protected:
     void verify_characters();
 
 private:
+    /** \fn set_initial_map_grip()
+      * \private
+      * \brief Inicializa grip do mapa quando level é iniciado
+      * \return void
+      */
+    void set_initial_map_grip();
     /** \var bool death_match_level_done
       *  \brief Variavel que é setada com True quando o level chega ao final
       */
