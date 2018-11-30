@@ -105,7 +105,8 @@ Character::update_self(unsigned now, unsigned last)
     }
 
     //! if the character died, respawn after the time of 10 seconds
-    if((character_dead) and now - character_start > character_respawn_time) {
+    if((character_dead) and now - character_start > character_respawn_time)
+    {
         character_start = now;
         character_dead = false;
         respawn_character();
@@ -182,20 +183,21 @@ Character::update_self(unsigned now, unsigned last)
 \param last indicates the last event
 \param backwards indicates the previous position
 */
+//! Técnica de modularização de função
 inline void
 Character::update_position(const unsigned &now, const unsigned &last, bool backwards) {
 
-    assert(now > 0);
-    assert(last > 0);
-
+    //! Variável para multiplicar a constante da posição
     int multiplier = (backwards) ? -1 : 1;
     double summer = 1.0;
     bool ok = character_code == INFILTRATOR && character_state->get_current_state() == HEAVY_ATTACK_STATE;
 
-    if(ok) {
+    if(ok)
+    {
         summer = summer * 1.75;
     }
-    else{
+    else
+    {
         //! Nothing to do
     }
 
@@ -204,28 +206,48 @@ Character::update_position(const unsigned &now, const unsigned &last, bool backw
     if(not character_freeze || ok) {
 
         //! Character moviment axio y
-        double new_y = multiplier * character_axis_y_speed;
-        new_y *=  summer * (now - last);
-        new_y /= 1000.0;
-        new_y +=  y();
-        new_y = min(new_y, SCREEN_HEIGHT - (double)CHARACTER_WIDTH - 16.00);
-        new_y = max(new_y, 10.0);
+        update_position_axio_y(now, last, multiplier, summer);
 
         //!Character moviment axio x
-        double new_x = multiplier * character_axis_x_speed;
-        new_x *=  summer * (now - last);
-        new_x /= 1000.0;
-        new_x +=  x();
-        new_x = min(new_x, SCREEN_WIDTH - (double)CHARACTER_WIDTH);
-        new_x = max(new_x, 0.0);
+        update_position_axio_x(now, last, multiplier, summer);
 
-        set_y(new_y);
-        set_x(new_x);
     }
 
     else {
         //! Nothing to do
     }
+}
+
+
+//! Update axio y position character
+void
+Character::update_position_axio_y(const unsigned &now, const unsigned &last, int multiplier, double summer)
+{
+
+      double new_y = multiplier * character_axis_y_speed;
+      new_y *=  summer * (now - last);
+      new_y /= 1000.0;
+      new_y +=  y();
+      new_y = min(new_y, SCREEN_HEIGHT - (double)CHARACTER_WIDTH - 16.00);
+      new_y = max(new_y, 10.0);
+
+      set_y(new_y);
+
+}
+
+//! Update axio x position character
+void
+Character::update_position_axio_x(const unsigned &now, const unsigned &last, int multiplier, double summer){
+
+      double new_x = multiplier * character_axis_x_speed;
+      new_x *=  summer * (now - last);
+      new_x /= 1000.0;
+      new_x +=  x();
+      new_x = min(new_x, SCREEN_WIDTH - (double)CHARACTER_WIDTH);
+      new_x = max(new_x, 0.0);
+
+      set_x(new_x);
+
 }
 
 //! Virtual Method of GameObject
@@ -471,10 +493,6 @@ Character::change_character_state(State next_state, bool respawning )
     {
         return;
     }
-    else
-    {
-        //! Nothing to do
-    }
 
     //! check new state if character is not freeze
     if(not character_freeze)
@@ -487,7 +505,6 @@ Character::change_character_state(State next_state, bool respawning )
         //! Nothing to do
     }
 }
-
 
 //! Check character status
 void Character::handle_state()
@@ -541,10 +558,7 @@ void Character::handle_state()
     {
         change_character_state(MOVING_STATE);
     }
-    else
-    {
-        //! Nothing to do
-    }
+
 }
 
 //! Sets the character's spawn position

@@ -136,6 +136,15 @@ protected:
 		//! movement
 		bool on_event_movement(const GameEvent& event);
 
+		//! Update position in axio x
+		void update_position_axio_x(const unsigned &now, const unsigned &last, int multiplier, double summer);
+
+		//! Update position in axio y
+		void update_position_axio_y(const unsigned &now, const unsigned &last, int multiplier, double summer);
+
+
+
+
     //! Virtual Attack Special Method
     virtual void do_heavy_attack() = 0;
     //! Virtual attack method ligth_atack
